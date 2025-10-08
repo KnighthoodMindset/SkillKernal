@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <!-- Quiz Section -->
+  <main class="quiz-container">
+    <h2>Cybersecurity - Week 1 Quiz</h2>
+    <form id="quizForm">
+      
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. What is the primary goal of Cybersecurity?</p>
+        <label><input type="radio" name="q1" value="a"> To restrict internet usage</label><br>
+        <label><input type="radio" name="q1" value="b"> To safeguard confidentiality, integrity, and availability of data</label><br>
+        <label><input type="radio" name="q1" value="c"> To store data only offline</label>
+        <div class="answer" data-correct="b" data-expl="Cybersecurity ensures Confidentiality, Integrity, and Availability (CIA triad) of data."></div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. What does 'Vulnerability' mean in cybersecurity?</p>
+        <label><input type="radio" name="q2" value="a"> A tool to secure systems</label><br>
+        <label><input type="radio" name="q2" value="b"> A weakness that attackers can exploit</label><br>
+        <label><input type="radio" name="q2" value="c"> A secure firewall</label>
+        <div class="answer" data-correct="b" data-expl="A vulnerability is a weakness in systems or networks that attackers exploit."></div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. What is the difference between Cybersecurity and Privacy?</p>
+        <label><input type="radio" name="q3" value="a"> Both mean the same</label><br>
+        <label><input type="radio" name="q3" value="b"> Cybersecurity protects systems; Privacy controls personal information</label><br>
+        <label><input type="radio" name="q3" value="c"> Cybersecurity is for individuals, privacy is for organizations</label>
+        <div class="answer" data-correct="b" data-expl="Cybersecurity secures data and systems; Privacy is about control over personal information."></div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. What is Phishing?</p>
+        <label><input type="radio" name="q4" value="a"> Sending fraudulent messages to steal information</label><br>
+        <label><input type="radio" name="q4" value="b"> Encrypting files for ransom</label><br>
+        <label><input type="radio" name="q4" value="c"> Testing firewalls</label>
+        <div class="answer" data-correct="a" data-expl="Phishing is tricking users into giving sensitive data through fake messages."></div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. What is Spear Phishing?</p>
+        <label><input type="radio" name="q5" value="a"> Generic phishing emails sent to everyone</label><br>
+        <label><input type="radio" name="q5" value="b"> Targeted phishing attacks using personal details</label><br>
+        <label><input type="radio" name="q5" value="c"> Phishing over phone calls</label>
+        <div class="answer" data-correct="b" data-expl="Spear phishing is highly targeted and more dangerous as it uses personal info."></div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question">
+        <p>6. What is Ransomware?</p>
+        <label><input type="radio" name="q6" value="a"> Malware that encrypts files and demands payment</label><br>
+        <label><input type="radio" name="q6" value="b"> Virus that deletes all data</label><br>
+        <label><input type="radio" name="q6" value="c"> Spyware used for surveillance</label>
+        <div class="answer" data-correct="a" data-expl="Ransomware locks/encrypts files and demands ransom for decryption."></div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question">
+        <p>7. Why is healthcare data sensitive?</p>
+        <label><input type="radio" name="q7" value="a"> Because it is large in size</label><br>
+        <label><input type="radio" name="q7" value="b"> Because leaks cause embarrassment, financial loss, or harm</label><br>
+        <label><input type="radio" name="q7" value="c"> Because it cannot be encrypted</label>
+        <div class="answer" data-correct="b" data-expl="Healthcare leaks expose sensitive personal info, causing serious consequences."></div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question">
+        <p>8. What percentage of organizations face at least one cyber incident annually?</p>
+        <label><input type="radio" name="q8" value="a"> 25%</label><br>
+        <label><input type="radio" name="q8" value="b"> 50%</label><br>
+        <label><input type="radio" name="q8" value="c"> 91%</label>
+        <div class="answer" data-correct="c" data-expl="Nearly 91% of organizations report at least one cyber incident yearly."></div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question">
+        <p>9. Which is the Bright Side of digital transformation?</p>
+        <label><input type="radio" name="q9" value="a"> Cyber attacks increase</label><br>
+        <label><input type="radio" name="q9" value="b"> Faster communication, innovation, growth</label><br>
+        <label><input type="radio" name="q9" value="c"> Privacy loss</label>
+        <div class="answer" data-correct="b" data-expl="The bright side includes faster communication, growth, and innovation."></div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question">
+        <p>10. Why does Cybersecurity matter to everyone?</p>
+        <label><input type="radio" name="q10" value="a"> Only IT staff need to worry</label><br>
+        <label><input type="radio" name="q10" value="b"> Because breaches affect financial, privacy, and reputation of all</label><br>
+        <label><input type="radio" name="q10" value="c"> It only affects government systems</label>
+        <div class="answer" data-correct="b" data-expl="Cybersecurity matters because everyone faces risks like theft, downtime, or privacy loss."></div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+  </main>
+
+
+  <div id="result" class="result-box"></div>
+    <script src="quiz.js"></script>
+
+</body>
+</html>
