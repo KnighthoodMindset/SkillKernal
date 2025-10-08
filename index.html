@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillKernel - Main Page</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #0077b6, #00b4d8, #0096c7);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0077b6, #00b4d8, #48cae4);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 2em;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,183,255,0.6);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+    }
+    .tagline {
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #f1f1f1;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .subject-card {
+      background: rgb(255, 255, 255);
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(16, 8, 168, 0.12);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .subject-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 25px rgba(21, 27, 143, 0.25);
+    }
+    .subject-card h2 {
+      margin-bottom: 12px;
+      color: #0077b6;
+      font-size: 1.5em;
+    }
+    footer {
+      background: linear-gradient(135deg, #0077b6, #00b4d8, #0096c7);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernel</h1>
+      <p class="tagline">Learn • Practice • Master</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="subject-card" onclick="goToSubject('cybersecurity.html')">
+      <h2>Cybersecurity & Privacy</h2>
+      <p>12 Weeks of notes, lectures, and quizzes.</p>
+    </div>
+    <div class="subject-card" onclick="goToSubject('software_testing.html')">
+      <h2>Software Testing</h2>
+      <p>12 Weeks of notes, lectures, and quizzes.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 SkillKernel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goToSubject(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>
