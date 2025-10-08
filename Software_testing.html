@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillKernel - Software Testing</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #50c9ce, #4a90e2);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4a90e2, #50c9ce, #70d6ff);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 2em;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(74,144,226,0.6);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .tagline {
+      margin-top: 5px;
+      font-size: 1.1em;
+      color: #f1f1f1;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .week-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #4a90e2;
+    }
+    .week-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(74,144,226,0.2);
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 20px auto;
+      background: #50c9ce;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .back-btn:hover {
+      background: #007b91;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>Software Testing</h1>
+      <p class="tagline">12 Weeks • Notes • Quizzes</p>
+    </div>
+  </header>
+
+  <div style="text-align:center;">
+    <a href="index.html" class="back-btn">⬅ Back to Main Page</a>
+  </div>
+
+  <div class="container">
+    <div class="week-card" onclick="goToWeek(1)">Week 1</div>
+    <div class="week-card" onclick="goToWeek(2)">Week 2</div>
+    <div class="week-card" onclick="goToWeek(3)">Week 3</div>
+    <div class="week-card" onclick="goToWeek(4)">Week 4</div>
+    <div class="week-card" onclick="goToWeek(5)">Week 5</div>
+    <div class="week-card" onclick="goToWeek(6)">Week 6</div>
+    <div class="week-card" onclick="goToWeek(7)">Week 7</div>
+    <div class="week-card" onclick="goToWeek(8)">Week 8</div>
+    <div class="week-card" onclick="goToWeek(9)">Week 9</div>
+    <div class="week-card" onclick="goToWeek(10)">Week 10</div>
+    <div class="week-card" onclick="goToWeek(11)">Week 11</div>
+    <div class="week-card" onclick="goToWeek(12)">Week 12</div>
+  </div>
+
+  <script>
+    function goToWeek(week) {
+      window.location.href = "softwaretesting_week" + week + ".html";
+    }
+  </script>
+
+</body>
+</html>
