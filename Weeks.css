@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+}
+
+.quiz-btn {
+  background: #0096c7;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.quiz-btn:hover {
+  background: #023e8a;
+}
+
+.back-btn {
+  display: inline-block;
+  margin: 20px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #0077b6;
+}
+
+/* Link Color */
+a {
+  color: rgb(19, 195, 177); /* sets all links to green */
+  text-decoration: none; /* optional, removes underline */
+}
+
+a:hover {
+  color: rgb(19, 195, 177); /* darker green on hover */
+}
+

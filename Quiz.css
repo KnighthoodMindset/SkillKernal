@@ -1,0 +1,155 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #0077b6, #00b4d8, #0096c7);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0077b6, #00b4d8, #48cae4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2em;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,183,255,0.6);
+}
+h1 {
+  margin: 0;
+  font-size: 2.8em;
+}
+.tagline {
+  margin-top: 5px;
+  font-size: 1.2em;
+  color: #f1f1f1;
+}
+
+.quiz-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(16,8,168,0.12);
+}
+.quiz-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0077b6;
+}
+
+.question {
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f1faff;
+  border: 1px solid #cce5ff;
+}
+.question p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.answer {
+  margin-top: 10px;
+}
+.correct {
+  color: green;
+  font-weight: bold;
+}
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.submit-btn:hover {
+  background: #0096c7;
+}
+
+footer {
+  background: linear-gradient(135deg, #0077b6, #00b4d8, #0096c7);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.95em;
+}
+.back-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}
+.result-box {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.3em;
+  font-weight: bold;
+  background: #f1faff;
+  border: 2px solid #cce5ff;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.15);
+}
+
+.result-box h3 {
+  margin: 0;
+  padding: 10px;
+}
+
+/* Good score */
+.result-box.good {
+  background: #e6ffed;
+  border: 2px solid #34a853;
+  color: #1e7c3c;
+}
+
+/* Average score */
+.result-box.average {
+  background: #fffbea;
+  border: 2px solid #fbbc05;
+  color: #9c6d00;
+}
+
+/* Low score */
+.result-box.bad {
+  background: #ffeaea;
+  border: 2px solid #ea4335;
+  color: #9c1c1c;
+}
