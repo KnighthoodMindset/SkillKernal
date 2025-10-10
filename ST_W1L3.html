@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing - Week 1 | lecture 3 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing based on models and criteria</h3>
+    </section>
+    <section>
+        <p>In software engineering, testability defines how easily software can be tested to uncover potential faults and failures. A system with high testability allows testers to design and execute tests efficiently, observe internal states, and control the flow of execution with minimal effort.</p>
+        <p>Testing effectiveness heavily depends on factors such as observability, controllability, and the structure of the software itself.</p>
+        <p>Understanding these principles helps in creating better test cases, identifying potential weaknesses early, and ensuring a higher quality final product.</p>
+    </section>
+    <section>
+        <h4>Software Testability</h4>
+        <p>Software testability measures the degree to which a software system supports testing in terms of ease of control, observation, and isolation of faults.</p>
+        <p>A system is highly testable when:</p>
+        <li>Its behavior is predictable and observable.</li>
+        <li>It allows easy control of inputs and internal variables.</li>
+        <li>Faults can be easily traced back to their causes</li>
+        <p>A poorly testable system, on the other hand, hides its internal behavior, has complex dependencies, or produces vague outputs that make it difficult to determine the source of faults.</p>
+        <p>Key aspects include:</p>
+        <li><abbr>Design Simplicity: </abbr>Simple, modular, and independent code units are easier to test.</li>
+        <li><abbr>Observability: </abbr>The degree to which internal behavior is visible through outputs or logs.</li>
+        <li><abbr>Controllability:</abbr>The ability to control inputs, states, and execution paths during testing.</li>
+    </section>
+    <section>
+    <h4>Observability and Controllability</h4>
+    <h5>Observability</h5>
+    <p>Observability refers to how well a tester can <strong>see the internal state</strong> and behavior of the system through its outputs. If the effect of each input and internal variable can be clearly observed in the output, the system has <strong>high observability</strong>.</p>
+    <p><strong>Example:</strong> A login system that clearly indicates whether a username or password is incorrect is more observable than one that only says “Login failed.”</p>
+    <p><strong>To improve observability:</strong></p>
+    <ul>
+        <li>Use detailed logging and debugging information.</li>
+        <li>Implement clear error messages.</li>
+        <li>Provide visual or textual feedback for each operation.</li>
+    </ul>
+</section>
+<section>
+    <h5>Controllability</h5>
+    <p>Controllability defines how easily a tester can <strong>set internal states and provide inputs</strong> to drive the system toward specific test conditions. A controllable system allows testers to execute desired paths and conditions freely.</p>
+    <p><strong>To improve controllability:</strong></p>
+    <ul>
+        <li>Include test hooks, configuration parameters, and mock interfaces.</li>
+        <li>Modularize code so each component can be tested independently.</li>
+    </ul>
+        <strong>Balance:</strong> Both controllability and observability must work together. High observability without controllability (or vice versa) still limits effective testing.
+</section>
+<section>
+    <h4>RIPR Model of Testing</h4>
+    <p>The <strong>RIPR Model</strong>, proposed by Jeff Offutt, explains how <strong>defects propagate</strong> through a program during testing. RIPR stands for <strong>Reachability, Infection, Propagation, and Revealability</strong>.</p>
+    <ol>
+        <li><strong>Reachability:</strong> The test must reach the <strong>faulty part</strong> of the code. If the faulty code is never executed, the defect cannot be detected.</li>
+        <li><strong>Infection:</strong> Once executed, the fault must <strong>infect the program state</strong>, meaning it must cause some internal variable or state to differ from its correct value.</li>
+        <li><strong>Propagation:</strong> The infected state must <strong>propagate</strong> to an observable point — i.e., the incorrect internal value must affect some output variable.</li>
+        <li><strong>Revealability:</strong> Finally, the incorrect output must be <strong>revealed</strong> to the tester, either through output, log messages, or visible results.</li>
+    </ol>
+    <p><strong>Testing Goal:</strong> A test is only effective if it satisfies all four RIPR conditions. Missing any one of these stages means the fault remains undetected.</p>
+</section>
+<section>
+    <h4>RIPR Model of Testing</h4>
+    <p>The <strong>RIPR Model</strong>, proposed by Jeff Offutt, explains how <strong>defects propagate</strong> through a program during testing. RIPR stands for <strong>Reachability, Infection, Propagation, and Revealability</strong>.</p>
+    <ol>
+        <li><strong>Reachability:</strong> The test must reach the <strong>faulty part</strong> of the code. If the faulty code is never executed, the defect cannot be detected.</li>
+        <li><strong>Infection:</strong> Once executed, the fault must <strong>infect the program state</strong>, meaning it must cause some internal variable or state to differ from its correct value.</li>
+        <li><strong>Propagation:</strong> The infected state must <strong>propagate</strong> to an observable point — i.e., the incorrect internal value must affect some output variable.</li>
+        <li><strong>Revealability:</strong> Finally, the incorrect output must be <strong>revealed</strong> to the tester, either through output, log messages, or visible results.</li>
+    </ol>
+    <p><strong>Testing Goal:</strong> A test is only effective if it satisfies all four RIPR conditions. Missing any one of these stages means the fault remains undetected.</p>
+</section>
+<section>
+    <h4>Model-Based Testing</h4>
+    <p><strong>Model-Based Testing (MBT)</strong> is an advanced testing approach where <strong>models of system behavior</strong> are used to <strong>generate and evaluate test cases</strong> automatically.</p>
+
+    <h5>Key Concepts</h5>
+    <ul>
+        <li>A <strong>model</strong> represents the system’s functionality, inputs, outputs, and possible transitions between states.</li>
+        <li>Using the model, <strong>test cases</strong> are derived systematically rather than manually guessing them.</li>
+        <li>The goal is to ensure <strong>complete and structured testing coverage</strong>.</li>
+    </ul>
+
+    <h5>Advantages</h5>
+    <ul>
+        <li>Reduces manual effort in test design.</li>
+        <li>Ensures consistency between requirements, models, and tests.</li>
+        <li>Enables automation in test case generation.</li>
+    </ul>
+
+    <h5>Examples of Models Used</h5>
+    <ul>
+        <li><strong>Finite State Machines (FSM)</strong></li>
+        <li><strong>Decision Tables</strong></li>
+        <li><strong>Flow Graphs</strong></li>
+        <li><strong>Data Flow Models</strong></li>
+    </ul>
+
+    <p>Each model highlights different aspects of system behavior and helps identify missing transitions, invalid states, or unreachable conditions.</p>
+</section>
+<section>
+    <h4>Coverage Criteria</h4>
+    <p><strong>Coverage criteria</strong> provide a way to measure how thoroughly the software has been tested. They help in identifying untested parts of the program and in evaluating the quality of test cases.</p>
+
+    <h5>Common types include:</h5>
+    <ol>
+        <li><strong>Statement Coverage:</strong> Ensures that every executable statement in the code has been executed at least once.</li>
+        <li><strong>Branch (Decision) Coverage:</strong> Ensures that every possible branch (true/false decision) in the code has been tested.</li>
+        <li><strong>Condition Coverage:</strong> Tests every individual condition within a decision, verifying both true and false outcomes.</li>
+        <li><strong>Path Coverage:</strong> Ensures all possible execution paths through the code have been taken at least once.</li>
+        <li><strong>Data Flow Coverage:</strong> Focuses on how data values are defined, used, and propagated through variables.</li>
+    </ol>
+
+    <p>Coverage metrics give a <strong>quantitative measure</strong> of testing completeness and are often represented as percentages (e.g., 90% statement coverage).</p>
+</section>
+<section>
+    <h4>Subsumption Relationships</h4>
+    <p>Coverage criteria have <strong>hierarchical relationships</strong>, meaning some are stronger than others. If a stronger criterion is satisfied, the weaker ones are automatically satisfied — this concept is called <strong>Subsumption</strong>.</p>
+
+    <h5>Example of Subsumption Order</h5>
+    <pre>
+Path Coverage
+   ↓
+Branch Coverage
+   ↓
+Statement Coverage
+    </pre>
+
+    <p>So:</p>
+    <ul>
+        <li>If all paths are tested (path coverage), all branches and statements are inherently covered.</li>
+        <li>But the reverse isn’t true — achieving full statement coverage doesn’t guarantee that all branches were tested.</li>
+    </ul>
+
+    <p>Subsumption helps testers <strong>choose efficient strategies</strong> — balancing thoroughness and cost.</p>
+</section>
+<section>
+    <h4>Summary / Takeaways</h4>
+    <ul>
+        <li><strong>Testability</strong> reflects how easily software can be tested through controllability and observability.</li>
+        <li>The <strong>RIPR model</strong> describes the path from fault creation to fault detection — reach, infect, propagate, and reveal.</li>
+        <li><strong>Model-Based Testing</strong> uses formal models to generate structured test cases.</li>
+        <li><strong>Coverage Criteria</strong> measure how completely tests explore the software’s logic.</li>
+        <li><strong>Subsumption</strong> shows how certain coverage types inherently include others.</li>
+        <li>Effective testing balances all these factors to ensure comprehensive fault detection with minimal redundancy.</li>
+    </ul>
+</section>
+
+<section>
+    <h4>Conclusion</h4>
+    <p>In conclusion, testing is not merely about executing programs but about ensuring <strong>testability, observability, and measurability</strong>. By understanding how defects propagate (RIPR), leveraging models, and applying coverage metrics strategically, testers can <strong>achieve higher efficiency and reliability</strong> in software verification.</p>
+</section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_W1l3_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

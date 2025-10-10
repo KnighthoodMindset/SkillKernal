@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing | Week 1| lecture 3 - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Week 1 - lecture 3 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>Which of the following best defines software testability?</p>
+  <label><input type="radio" name="q1" value="0"> The ability to write complex algorithms</label><br>
+  <label><input type="radio" name="q1" value="1"> The ease with which software can be tested and faults can be identified</label><br>
+  <label><input type="radio" name="q1" value="2"> The ability of software to run without errors</label><br>
+  <label><input type="radio" name="q1" value="3"> The degree to which users can control hardware devices</label>
+  <div class="answer" data-correct="1" data-expl="Software testability measures how easily software can be tested to uncover potential faults and failures."></div>
+</div>
+
+<div class="question">
+  <p>What does high observability in software testing mean?</p>
+  <label><input type="radio" name="q2" value="0"> The software hides its internal operations from testers</label><br>
+  <label><input type="radio" name="q2" value="1"> The tester can easily see internal states through outputs or logs</label><br>
+  <label><input type="radio" name="q2" value="2"> Testers can only modify input files</label><br>
+  <label><input type="radio" name="q2" value="3"> The system runs faster during testing</label>
+  <div class="answer" data-correct="1" data-expl="Observability means the tester can observe internal behavior and state through outputs, logs, and feedback."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following improves software controllability?</p>
+  <label><input type="radio" name="q3" value="0"> Reducing test hooks and parameters</label><br>
+  <label><input type="radio" name="q3" value="1"> Increasing hidden dependencies</label><br>
+  <label><input type="radio" name="q3" value="2"> Including configuration options and mock interfaces</label><br>
+  <label><input type="radio" name="q3" value="3"> Removing debugging tools</label>
+  <div class="answer" data-correct="2" data-expl="Controllability can be improved by using configuration parameters, mock interfaces, and modular code."></div>
+</div>
+
+<div class="question">
+  <p>In the RIPR model, what does 'Reachability' refer to?</p>
+  <label><input type="radio" name="q4" value="0"> The fault must cause an incorrect internal state</label><br>
+  <label><input type="radio" name="q4" value="1"> The faulty part of the code must be executed</label><br>
+  <label><input type="radio" name="q4" value="2"> The incorrect state must propagate to the output</label><br>
+  <label><input type="radio" name="q4" value="3"> The incorrect output must be visible to the tester</label>
+  <div class="answer" data-correct="1" data-expl="Reachability means the test must execute the faulty portion of the program to detect the defect."></div>
+</div>
+
+<div class="question">
+  <p>According to the RIPR model, which stage involves the incorrect output being visible to the tester?</p>
+  <label><input type="radio" name="q5" value="0"> Propagation</label><br>
+  <label><input type="radio" name="q5" value="1"> Infection</label><br>
+  <label><input type="radio" name="q5" value="2"> Revealability</label><br>
+  <label><input type="radio" name="q5" value="3"> Reachability</label>
+  <div class="answer" data-correct="2" data-expl="Revealability refers to making the incorrect result observable to the tester through output or logs."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following best describes Model-Based Testing (MBT)?</p>
+  <label><input type="radio" name="q6" value="0"> Tests are created randomly without a structure</label><br>
+  <label><input type="radio" name="q6" value="1"> Models are used to automatically generate test cases</label><br>
+  <label><input type="radio" name="q6" value="2"> It is limited only to manual testing approaches</label><br>
+  <label><input type="radio" name="q6" value="3"> It does not rely on system behavior</label>
+  <div class="answer" data-correct="1" data-expl="Model-Based Testing generates and evaluates test cases automatically from system behavior models."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following models is commonly used in Model-Based Testing?</p>
+  <label><input type="radio" name="q7" value="0"> Class diagrams</label><br>
+  <label><input type="radio" name="q7" value="1"> Finite State Machines</label><br>
+  <label><input type="radio" name="q7" value="2"> Flowcharts only</label><br>
+  <label><input type="radio" name="q7" value="3"> Entity Relationship Diagrams</label>
+  <div class="answer" data-correct="1" data-expl="Finite State Machines (FSM) are one of the common models used in Model-Based Testing."></div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion ensures every possible path in the code is executed?</p>
+  <label><input type="radio" name="q8" value="0"> Statement Coverage</label><br>
+  <label><input type="radio" name="q8" value="1"> Branch Coverage</label><br>
+  <label><input type="radio" name="q8" value="2"> Path Coverage</label><br>
+  <label><input type="radio" name="q8" value="3"> Condition Coverage</label>
+  <div class="answer" data-correct="2" data-expl="Path Coverage ensures that all possible execution paths in the code are executed at least once."></div>
+</div>
+
+<div class="question">
+  <p>In Subsumption relationships, which of the following correctly represents the hierarchy?</p>
+  <label><input type="radio" name="q9" value="0"> Statement → Branch → Path</label><br>
+  <label><input type="radio" name="q9" value="1"> Path → Branch → Statement</label><br>
+  <label><input type="radio" name="q9" value="2"> Branch → Statement → Path</label><br>
+  <label><input type="radio" name="q9" value="3"> Condition → Statement → Branch</label>
+  <div class="answer" data-correct="1" data-expl="The correct order is Path Coverage → Branch Coverage → Statement Coverage in the Subsumption hierarchy."></div>
+</div>
+
+<div class="question">
+  <p>According to the summary, which statement best represents the goal of effective software testing?</p>
+  <label><input type="radio" name="q10" value="0"> Running the software multiple times without errors</label><br>
+  <label><input type="radio" name="q10" value="1"> Ensuring testability, observability, and measurability for reliable results</label><br>
+  <label><input type="radio" name="q10" value="2"> Detecting only syntax-level bugs</label><br>
+  <label><input type="radio" name="q10" value="3"> Writing as many test cases as possible without execution</label>
+  <div class="answer" data-correct="1" data-expl="Effective testing ensures testability, observability, and measurability to achieve reliability and efficiency."></div>
+</div>
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

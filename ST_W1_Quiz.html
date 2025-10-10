@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Cybersecurity - Overall Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>Suppose a method M1 calls a method M2, which in turn calls another method M3. The level of testing that tests for the interface of calls from M1 to M2 and then to M3 is called as:</p>
+  <label><input type="radio" name="q1" value="0"> Functional testing.</label><br>
+  <label><input type="radio" name="q1" value="1"> Unit testing.</label><br>
+  <label><input type="radio" name="q1" value="2"> Integration testing.</label><br>
+  <label><input type="radio" name="q1" value="3"> System testing.</label>
+  <div class="answer" data-correct="2" data-expl="Integration testing focuses on verifying interfaces and interactions between modules such as M1, M2, and M3."></div>
+</div>
+
+<div class="question">
+  <p>State true or false: A coverage criterion C1 is said to subsume another coverage criterion C2 if there is at least one test case that satisfies C1 which also satisfies C2.</p>
+  <label><input type="radio" name="q2" value="0"> True.</label><br>
+  <label><input type="radio" name="q2" value="1"> False.</label>
+  <div class="answer" data-correct="1" data-expl="Subsumption means every test case satisfying C1 also satisfies C2, not just one test case."></div>
+</div>
+
+<div class="question">
+  <p>State true or false: Testing can be used to find all the errors in code.</p>
+  <label><input type="radio" name="q3" value="0"> True.</label><br>
+  <label><input type="radio" name="q3" value="1"> False.</label>
+  <div class="answer" data-correct="1" data-expl="Testing can reveal the presence of bugs, not their absence. It’s impossible to prove software is error-free by testing."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following are practiced in level 3 thinking during testing?</p>
+  <label><input type="radio" name="q4" value="0"> Testing is a mental discipline, everyone in an organization strives to test thoroughly.</label><br>
+  <label><input type="radio" name="q4" value="1"> Testing is done mainly by developers, to debug their code.</label><br>
+  <label><input type="radio" name="q4" value="2"> Testing is done to identify failures and reduce risks.</label><br>
+  <label><input type="radio" name="q4" value="3"> Testing is done to show absence of errors.</label>
+  <div class="answer" data-correct="2" data-expl="At level 3 thinking, testing aims to identify failures and reduce risks rather than proving correctness."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following best defines usability testing?</p>
+  <label><input type="radio" name="q5" value="0"> Testing done to ensure that the software looks nice.</label><br>
+  <label><input type="radio" name="q5" value="1"> Testing done to ensure that the software is usable by all the users.</label><br>
+  <label><input type="radio" name="q5" value="2"> Testing done to understand how users can use a software.</label><br>
+  <label><input type="radio" name="q5" value="3"> Testing done to ensure that the user interface of the software is as specified in the requirements.</label>
+  <div class="answer" data-correct="3" data-expl="Usability testing ensures that the user interface meets the design and requirement specifications effectively."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a list of white-box testing techniques?</p>
+  <label><input type="radio" name="q6" value="0"> Unit testing, performance testing.</label><br>
+  <label><input type="radio" name="q6" value="1"> Integration testing, stress testing.</label><br>
+  <label><input type="radio" name="q6" value="2"> Unit testing, integration testing.</label><br>
+  <label><input type="radio" name="q6" value="3"> Usability testing, performance testing.</label>
+  <div class="answer" data-correct="2" data-expl="White-box testing focuses on internal code logic, which includes unit and integration testing."></div>
+</div>
+
+<div class="question">
+  <p>As per the lectures, which of the following sentences best defines a test case?</p>
+  <label><input type="radio" name="q7" value="0"> A test case contains only inputs to the software artifact.</label><br>
+  <label><input type="radio" name="q7" value="1"> A test case contains inputs to the software artifact along with the expected outputs.</label><br>
+  <label><input type="radio" name="q7" value="2"> A test case contains inputs to the software artifact and a decision on pass or fail.</label><br>
+  <label><input type="radio" name="q7" value="3"> A test case contains inputs to the software artifact, which is run and the actual output is also recorded as a part of the test case.</label>
+  <div class="answer" data-correct="1" data-expl="A test case specifies inputs and expected outputs to verify if the software behaves as intended."></div>
+</div>
+
+<div class="question">
+  <p>When do we say that a set of test cases T satisfies the test requirements TR for a coverage criterion C?</p>
+  <label><input type="radio" name="q8" value="0"> For every test requirement tr ∈ TR, there is exactly one test case t ∈ T such that t satisfies tr.</label><br>
+  <label><input type="radio" name="q8" value="1"> For some test requirement tr ∈ TR, there is some test case t such that t ∈ T and satisfies tr.</label><br>
+  <label><input type="radio" name="q8" value="2"> For some test requirement tr ∈ TR, all the test cases t ∈ T are such that t satisfies tr.</label><br>
+  <label><input type="radio" name="q8" value="3"> For every test requirement tr ∈ TR, there is at least one test case t ∈ T such that t satisfies tr.</label>
+  <div class="answer" data-correct="3" data-expl="A coverage criterion is satisfied when each test requirement has at least one test case that fulfills it."></div>
+</div>
+
+<div class="question">
+  <p>When do we say that a coverage criterion C1 subsumes a coverage criterion C2?</p>
+  <label><input type="radio" name="q9" value="0"> C1 subsumes C2 iff some test case that satisfies C1 also satisfies C2.</label><br>
+  <label><input type="radio" name="q9" value="1"> C1 subsumes C2 iff every test case that satisfies C1 also satisfies C2.</label>
+  <div class="answer" data-correct="1" data-expl="Subsumption means that every test satisfying the stronger criterion (C1) also satisfies the weaker criterion (C2)."></div>
+</div>
+
+<div class="question">
+  <p>What does the JUnit assertion <code>assertFalse(val1 > val2)</code> return when val1 is less than val2?</p>
+  <label><input type="radio" name="q10" value="0"> True.</label><br>
+  <label><input type="radio" name="q10" value="1"> False.</label>
+  <div class="answer" data-correct="0" data-expl="Since val1 is less than val2, val1 > val2 is false, hence assertFalse() passes and returns true."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is an example of software used in financial systems?</p>
+  <label><input type="radio" name="q1" value="0"> Facebook</label><br>
+  <label><input type="radio" name="q1" value="1"> ATM Machines</label><br>
+  <label><input type="radio" name="q1" value="2"> HVAC Systems</label><br>
+  <label><input type="radio" name="q1" value="3"> Google Maps</label>
+  <div class="answer" data-correct="1" data-expl="Financial systems include Paytm, Online Banking, and ATM Machines."></div>
+</div>
+
+<div class="question">
+  <p>What caused the failure of the Ariane 5 Rocket?</p>
+  <label><input type="radio" name="q2" value="0"> Communication failure</label><br>
+  <label><input type="radio" name="q2" value="1"> Power supply issue</label><br>
+  <label><input type="radio" name="q2" value="2"> Overflow error while converting a 64-bit float to 16-bit integer</label><br>
+  <label><input type="radio" name="q2" value="3"> Memory leak during launch</label>
+  <div class="answer" data-correct="2" data-expl="The Ariane 5 rocket failed due to a 64-bit to 16-bit conversion overflow error."></div>
+</div>
+
+<div class="question">
+  <p>Which real-world failure was caused by a race condition in radiation therapy software?</p>
+  <label><input type="radio" name="q3" value="0"> Intel Pentium Bug</label><br>
+  <label><input type="radio" name="q3" value="1"> Therac-25 Incident</label><br>
+  <label><input type="radio" name="q3" value="2"> Toyota Brake Failure</label><br>
+  <label><input type="radio" name="q3" value="3"> Amazon Discount Error</label>
+  <div class="answer" data-correct="1" data-expl="Therac-25’s race condition led to radiation overdoses, killing six patients."></div>
+</div>
+
+<div class="question">
+  <p>What was the major impact of the Intel Pentium Processor Bug?</p>
+  <label><input type="radio" name="q4" value="0"> Incorrect mathematical calculations</label><br>
+  <label><input type="radio" name="q4" value="1"> System crashes</label><br>
+  <label><input type="radio" name="q4" value="2"> Power failure</label><br>
+  <label><input type="radio" name="q4" value="3"> Data loss</label>
+  <div class="answer" data-correct="0" data-expl="The Pentium FDIV bug caused incorrect mathematical calculations, forcing Intel to recall processors."></div>
+</div>
+
+<div class="question">
+  <p>According to NIST (2002), how much does inadequate testing cost the US economy annually?</p>
+  <label><input type="radio" name="q5" value="0"> $1–5 billion</label><br>
+  <label><input type="radio" name="q5" value="1"> $10–15 billion</label><br>
+  <label><input type="radio" name="q5" value="2"> $22–59 billion</label><br>
+  <label><input type="radio" name="q5" value="3"> $100 billion</label>
+  <div class="answer" data-correct="2" data-expl="The NIST report estimated $22–59 billion annual loss due to inadequate testing."></div>
+</div>
+
+<div class="question">
+  <p>Which type of software is commonly used in safety-critical systems like airplanes and medical devices?</p>
+  <label><input type="radio" name="q6" value="0"> Web Applications</label><br>
+  <label><input type="radio" name="q6" value="1"> Enterprise Software</label><br>
+  <label><input type="radio" name="q6" value="2"> Embedded Control Software</label><br>
+  <label><input type="radio" name="q6" value="3"> Open Source Software</label>
+  <div class="answer" data-correct="2" data-expl="Embedded Control Software operates in cars, airplanes, and medical devices, requiring strict safety testing."></div>
+</div>
+
+<div class="question">
+  <p>At which phase is fixing software errors the most expensive?</p>
+  <label><input type="radio" name="q7" value="0"> During design</label><br>
+  <label><input type="radio" name="q7" value="1"> During integration testing</label><br>
+  <label><input type="radio" name="q7" value="2"> After release (post-deployment)</label><br>
+  <label><input type="radio" name="q7" value="3"> During unit testing</label>
+  <div class="answer" data-correct="2" data-expl="Fixing errors after release is extremely costly compared to early design or testing phases."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a myth about software testing?</p>
+  <label><input type="radio" name="q8" value="0"> Testing finds errors</label><br>
+  <label><input type="radio" name="q8" value="1"> Testing proves software is correct</label><br>
+  <label><input type="radio" name="q8" value="2"> Debugged code still needs testing</label><br>
+  <label><input type="radio" name="q8" value="3"> Tools assist but cannot replace testers</label>
+  <div class="answer" data-correct="1" data-expl="Testing cannot prove correctness; it can only find errors."></div>
+</div>
+
+<div class="question">
+  <p>At which maturity level do developers and testers collaborate to reduce errors and manage risk?</p>
+  <label><input type="radio" name="q9" value="0"> Level 0</label><br>
+  <label><input type="radio" name="q9" value="1"> Level 1</label><br>
+  <label><input type="radio" name="q9" value="2"> Level 2</label><br>
+  <label><input type="radio" name="q9" value="3"> Level 3</label>
+  <div class="answer" data-correct="3" data-expl="At Level 3, collaboration occurs between developers and testers to reduce errors and manage risks."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following statements is TRUE about software testing?</p>
+  <label><input type="radio" name="q10" value="0"> Testing proves correctness of software</label><br>
+  <label><input type="radio" name="q10" value="1"> More test cases always mean better testing</label><br>
+  <label><input type="radio" name="q10" value="2"> Effective testing balances human intelligence and systematic methods</label><br>
+  <label><input type="radio" name="q10" value="3"> Testing can be completely automated</label>
+  <div class="answer" data-correct="2" data-expl="Effective testing relies on human intelligence and creative test design, not just the number of test cases or automation."></div>
+</div>
+
+
+
+<!-- Question 1 -->
+<div class="question">
+  <p>Which of the following best describes the difference between Verification and Validation?</p>
+  <label><input type="radio" name="q1" value="0"> Verification ensures the final product meets customer needs, while Validation checks internal correctness.</label><br>
+  <label><input type="radio" name="q1" value="1"> Verification checks if we are building the product right, while Validation checks if we are building the right product.</label><br>
+  <label><input type="radio" name="q1" value="2"> Verification and Validation are the same process in testing.</label><br>
+  <label><input type="radio" name="q1" value="3"> Validation is performed before coding, and Verification is done after deployment.</label>
+  <div class="answer" data-correct="1" data-expl="Verification checks whether each development phase meets its specifications, while Validation ensures the final product meets user requirements."></div>
+</div>
+
+<!-- Question 2 -->
+<div class="question">
+  <p>In software testing terminology, which statement is TRUE?</p>
+  <label><input type="radio" name="q2" value="0"> A fault occurs only during program execution.</label><br>
+  <label><input type="radio" name="q2" value="1"> A failure is a defect in code or design.</label><br>
+  <label><input type="radio" name="q2" value="2"> An error is an incorrect internal state that leads to a failure.</label><br>
+  <label><input type="radio" name="q2" value="3"> Fault and failure mean the same thing.</label>
+  <div class="answer" data-correct="2" data-expl="An error is an incorrect internal state that may cause the software to produce a failure when executed."></div>
+</div>
+
+<!-- Question 3 -->
+<div class="question">
+  <p>What does a Traceability Matrix help ensure?</p>
+  <label><input type="radio" name="q3" value="0"> That every test case has been executed once.</label><br>
+  <label><input type="radio" name="q3" value="1"> That every requirement is linked to at least one test case.</label><br>
+  <label><input type="radio" name="q3" value="2"> That all bugs are fixed before release.</label><br>
+  <label><input type="radio" name="q3" value="3"> That all tests are automated.</label>
+  <div class="answer" data-correct="1" data-expl="A Traceability Matrix maps test cases to requirements, ensuring that all requirements are tested."></div>
+</div>
+
+<!-- Question 4 -->
+<div class="question">
+  <p>Which level of testing focuses on verifying interactions between modules?</p>
+  <label><input type="radio" name="q4" value="0"> Unit Testing</label><br>
+  <label><input type="radio" name="q4" value="1"> Integration Testing</label><br>
+  <label><input type="radio" name="q4" value="2"> System Testing</label><br>
+  <label><input type="radio" name="q4" value="3"> Acceptance Testing</label>
+  <div class="answer" data-correct="1" data-expl="Integration Testing verifies that different modules or components work correctly together."></div>
+</div>
+
+<!-- Question 5 -->
+<div class="question">
+  <p>In Black Box Testing, the tester primarily focuses on:</p>
+  <label><input type="radio" name="q5" value="0"> Internal logic of the code</label><br>
+  <label><input type="radio" name="q5" value="1"> Software performance on hardware</label><br>
+  <label><input type="radio" name="q5" value="2"> Inputs and outputs without knowing the internal code</label><br>
+  <label><input type="radio" name="q5" value="3"> Code coverage of loops and branches</label>
+  <div class="answer" data-correct="2" data-expl="Black Box Testing focuses on inputs and outputs, ignoring internal implementation details."></div>
+</div>
+
+<!-- Question 6 -->
+<div class="question">
+  <p>Which of the following testing types ensures that previously working functions still operate correctly after changes?</p>
+  <label><input type="radio" name="q6" value="0"> Usability Testing</label><br>
+  <label><input type="radio" name="q6" value="1"> Regression Testing</label><br>
+  <label><input type="radio" name="q6" value="2"> Stress Testing</label><br>
+  <label><input type="radio" name="q6" value="3"> Beta Testing</label>
+  <div class="answer" data-correct="1" data-expl="Regression Testing checks that new changes do not break existing functionalities."></div>
+</div>
+
+<!-- Question 7 -->
+<div class="question">
+  <p>According to the Pareto principle in testing, most defects are usually found in:</p>
+  <label><input type="radio" name="q7" value="0"> The most recently added features</label><br>
+  <label><input type="radio" name="q7" value="1"> The smallest modules of the software</label><br>
+  <label><input type="radio" name="q7" value="2"> A small portion of the codebase</label><br>
+  <label><input type="radio" name="q7" value="3"> The documentation and user manuals</label>
+  <div class="answer" data-correct="2" data-expl="The Pareto principle states that most defects are concentrated in a small percentage of the code."></div>
+</div>
+
+<!-- Question 8 -->
+<div class="question">
+  <p>Which property allows testers to observe internal behaviors of software to detect faults?</p>
+  <label><input type="radio" name="q8" value="0"> Controllability</label><br>
+  <label><input type="radio" name="q8" value="1"> Observability</label><br>
+  <label><input type="radio" name="q8" value="2"> Reliability</label><br>
+  <label><input type="radio" name="q8" value="3"> Flexibility</label>
+  <div class="answer" data-correct="1" data-expl="Observability refers to the ability to monitor internal behavior or outputs to detect faults."></div>
+</div>
+
+<!-- Question 9 -->
+<div class="question">
+  <p>Which of the following is NOT a core testing activity?</p>
+  <label><input type="radio" name="q9" value="0"> Test Case Design</label><br>
+  <label><input type="radio" name="q9" value="1"> Test Execution</label><br>
+  <label><input type="radio" name="q9" value="2"> Test Automation</label><br>
+  <label><input type="radio" name="q9" value="3"> Test Marketing</label>
+  <div class="answer" data-correct="3" data-expl="Test Marketing is unrelated to software testing. Core activities include design, automation, execution, and analysis."></div>
+</div>
+
+<!-- Question 10 -->
+<div class="question">
+  <p>Which of the following statements best summarizes the conclusion of this module?</p>
+  <label><input type="radio" name="q10" value="0"> Testing only involves executing programs to find bugs.</label><br>
+  <label><input type="radio" name="q10" value="1"> Testing focuses solely on automation and speed.</label><br>
+  <label><input type="radio" name="q10" value="2"> Testing ensures software quality through verification, observability, and systematic evaluation.</label><br>
+  <label><input type="radio" name="q10" value="3"> Testing replaces the need for validation and debugging.</label>
+  <div class="answer" data-correct="2" data-expl="Effective testing ensures reliability through systematic verification, observability, and measurable quality."></div>
+</div>
+
+
+
+<div class="question">
+  <p>Which of the following best defines software testability?</p>
+  <label><input type="radio" name="q1" value="0"> The ability to write complex algorithms</label><br>
+  <label><input type="radio" name="q1" value="1"> The ease with which software can be tested and faults can be identified</label><br>
+  <label><input type="radio" name="q1" value="2"> The ability of software to run without errors</label><br>
+  <label><input type="radio" name="q1" value="3"> The degree to which users can control hardware devices</label>
+  <div class="answer" data-correct="1" data-expl="Software testability measures how easily software can be tested to uncover potential faults and failures."></div>
+</div>
+
+<div class="question">
+  <p>What does high observability in software testing mean?</p>
+  <label><input type="radio" name="q2" value="0"> The software hides its internal operations from testers</label><br>
+  <label><input type="radio" name="q2" value="1"> The tester can easily see internal states through outputs or logs</label><br>
+  <label><input type="radio" name="q2" value="2"> Testers can only modify input files</label><br>
+  <label><input type="radio" name="q2" value="3"> The system runs faster during testing</label>
+  <div class="answer" data-correct="1" data-expl="Observability means the tester can observe internal behavior and state through outputs, logs, and feedback."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following improves software controllability?</p>
+  <label><input type="radio" name="q3" value="0"> Reducing test hooks and parameters</label><br>
+  <label><input type="radio" name="q3" value="1"> Increasing hidden dependencies</label><br>
+  <label><input type="radio" name="q3" value="2"> Including configuration options and mock interfaces</label><br>
+  <label><input type="radio" name="q3" value="3"> Removing debugging tools</label>
+  <div class="answer" data-correct="2" data-expl="Controllability can be improved by using configuration parameters, mock interfaces, and modular code."></div>
+</div>
+
+<div class="question">
+  <p>In the RIPR model, what does 'Reachability' refer to?</p>
+  <label><input type="radio" name="q4" value="0"> The fault must cause an incorrect internal state</label><br>
+  <label><input type="radio" name="q4" value="1"> The faulty part of the code must be executed</label><br>
+  <label><input type="radio" name="q4" value="2"> The incorrect state must propagate to the output</label><br>
+  <label><input type="radio" name="q4" value="3"> The incorrect output must be visible to the tester</label>
+  <div class="answer" data-correct="1" data-expl="Reachability means the test must execute the faulty portion of the program to detect the defect."></div>
+</div>
+
+<div class="question">
+  <p>According to the RIPR model, which stage involves the incorrect output being visible to the tester?</p>
+  <label><input type="radio" name="q5" value="0"> Propagation</label><br>
+  <label><input type="radio" name="q5" value="1"> Infection</label><br>
+  <label><input type="radio" name="q5" value="2"> Revealability</label><br>
+  <label><input type="radio" name="q5" value="3"> Reachability</label>
+  <div class="answer" data-correct="2" data-expl="Revealability refers to making the incorrect result observable to the tester through output or logs."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following best describes Model-Based Testing (MBT)?</p>
+  <label><input type="radio" name="q6" value="0"> Tests are created randomly without a structure</label><br>
+  <label><input type="radio" name="q6" value="1"> Models are used to automatically generate test cases</label><br>
+  <label><input type="radio" name="q6" value="2"> It is limited only to manual testing approaches</label><br>
+  <label><input type="radio" name="q6" value="3"> It does not rely on system behavior</label>
+  <div class="answer" data-correct="1" data-expl="Model-Based Testing generates and evaluates test cases automatically from system behavior models."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following models is commonly used in Model-Based Testing?</p>
+  <label><input type="radio" name="q7" value="0"> Class diagrams</label><br>
+  <label><input type="radio" name="q7" value="1"> Finite State Machines</label><br>
+  <label><input type="radio" name="q7" value="2"> Flowcharts only</label><br>
+  <label><input type="radio" name="q7" value="3"> Entity Relationship Diagrams</label>
+  <div class="answer" data-correct="1" data-expl="Finite State Machines (FSM) are one of the common models used in Model-Based Testing."></div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion ensures every possible path in the code is executed?</p>
+  <label><input type="radio" name="q8" value="0"> Statement Coverage</label><br>
+  <label><input type="radio" name="q8" value="1"> Branch Coverage</label><br>
+  <label><input type="radio" name="q8" value="2"> Path Coverage</label><br>
+  <label><input type="radio" name="q8" value="3"> Condition Coverage</label>
+  <div class="answer" data-correct="2" data-expl="Path Coverage ensures that all possible execution paths in the code are executed at least once."></div>
+</div>
+
+<div class="question">
+  <p>In Subsumption relationships, which of the following correctly represents the hierarchy?</p>
+  <label><input type="radio" name="q9" value="0"> Statement → Branch → Path</label><br>
+  <label><input type="radio" name="q9" value="1"> Path → Branch → Statement</label><br>
+  <label><input type="radio" name="q9" value="2"> Branch → Statement → Path</label><br>
+  <label><input type="radio" name="q9" value="3"> Condition → Statement → Branch</label>
+  <div class="answer" data-correct="1" data-expl="The correct order is Path Coverage → Branch Coverage → Statement Coverage in the Subsumption hierarchy."></div>
+</div>
+
+<div class="question">
+  <p>According to the summary, which statement best represents the goal of effective software testing?</p>
+  <label><input type="radio" name="q10" value="0"> Running the software multiple times without errors</label><br>
+  <label><input type="radio" name="q10" value="1"> Ensuring testability, observability, and measurability for reliable results</label><br>
+  <label><input type="radio" name="q10" value="2"> Detecting only syntax-level bugs</label><br>
+  <label><input type="radio" name="q10" value="3"> Writing as many test cases as possible without execution</label>
+  <div class="answer" data-correct="1" data-expl="Effective testing ensures testability, observability, and measurability to achieve reliability and efficiency."></div>
+</div>
+
+
+<div class="question">
+  <p>What is the main goal of test case automation in software testing?</p>
+  <label><input type="radio" name="q1" value="0"> To design manual test cases</label><br>
+  <label><input type="radio" name="q1" value="1"> To control, execute, and evaluate test cases automatically</label><br>
+  <label><input type="radio" name="q1" value="2"> To eliminate test cases</label><br>
+  <label><input type="radio" name="q1" value="3"> To generate reports manually</label>
+  <div class="answer" data-correct="1" data-expl="Test case automation controls the execution of tests, compares actual outcomes with expected ones, and records the results automatically."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is NOT a component of an automated executable test script?</p>
+  <label><input type="radio" name="q2" value="0"> Prefix values</label><br>
+  <label><input type="radio" name="q2" value="1"> Postfix values</label><br>
+  <label><input type="radio" name="q2" value="2"> Expected outputs</label><br>
+  <label><input type="radio" name="q2" value="3"> User documentation</label>
+  <div class="answer" data-correct="3" data-expl="Automated test scripts include test inputs, prefix values, postfix values, and expected outputs — not user documentation."></div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of prefix values in automated test scripts?</p>
+  <label><input type="radio" name="q3" value="0"> To verify the final result</label><br>
+  <label><input type="radio" name="q3" value="1"> To prepare the software to a suitable state for execution</label><br>
+  <label><input type="radio" name="q3" value="2"> To clean up resources after testing</label><br>
+  <label><input type="radio" name="q3" value="3"> To record the output logs</label>
+  <div class="answer" data-correct="1" data-expl="Prefix values prepare the system or component to a suitable state before execution, ensuring reachability."></div>
+</div>
+
+<div class="question">
+  <p>Which type of postfix value ensures that the program exits properly after test execution?</p>
+  <label><input type="radio" name="q4" value="0"> Verification value</label><br>
+  <label><input type="radio" name="q4" value="1"> Exit value</label><br>
+  <label><input type="radio" name="q4" value="2"> Assertion value</label><br>
+  <label><input type="radio" name="q4" value="3"> Initial value</label>
+  <div class="answer" data-correct="1" data-expl="Exit values ensure that the program exits properly after execution, revealing any error states."></div>
+</div>
+
+<div class="question">
+  <p>What is the main use of assertions in JUnit testing?</p>
+  <label><input type="radio" name="q5" value="0"> To compile Java programs</label><br>
+  <label><input type="radio" name="q5" value="1"> To evaluate Boolean conditions indicating test success or failure</label><br>
+  <label><input type="radio" name="q5" value="2"> To print all output values</label><br>
+  <label><input type="radio" name="q5" value="3"> To perform code optimization</label>
+  <div class="answer" data-correct="1" data-expl="Assertions in JUnit evaluate Boolean conditions to determine whether a test passes or fails."></div>
+</div>
+
+<div class="question">
+  <p>Which annotations in JUnit are used for defining prefix and postfix values?</p>
+  <label><input type="radio" name="q6" value="0"> @Init and @Cleanup</label><br>
+  <label><input type="radio" name="q6" value="1"> @Before and @After</label><br>
+  <label><input type="radio" name="q6" value="2"> @Start and @Stop</label><br>
+  <label><input type="radio" name="q6" value="3"> @Prefix and @Postfix</label>
+  <div class="answer" data-correct="1" data-expl="JUnit uses @Before for prefix values (setup) and @After for postfix values (cleanup)."></div>
+</div>
+
+<div class="question">
+  <p>JUnit is primarily used for which level of software testing?</p>
+  <label><input type="radio" name="q7" value="0"> System testing</label><br>
+  <label><input type="radio" name="q7" value="1"> Unit testing and integration testing</label><br>
+  <label><input type="radio" name="q7" value="2"> Beta testing</label><br>
+  <label><input type="radio" name="q7" value="3"> Acceptance testing</label>
+  <div class="answer" data-correct="1" data-expl="JUnit is primarily designed for unit testing and integration testing, not system-level testing."></div>
+</div>
+
+<div class="question">
+  <p>In JUnit, what happens if an assertion condition evaluates to false?</p>
+  <label><input type="radio" name="q8" value="0"> The test passes silently</label><br>
+  <label><input type="radio" name="q8" value="1"> JUnit raises an exception or prints a warning message</label><br>
+  <label><input type="radio" name="q8" value="2"> The test is skipped</label><br>
+  <label><input type="radio" name="q8" value="3"> The code stops executing completely</label>
+  <div class="answer" data-correct="1" data-expl="If an assertion fails in JUnit, an exception or warning message is shown indicating test failure."></div>
+</div>
+
+<div class="question">
+  <p>Which feature of JUnit allows testing multiple sets of data using a single test case?</p>
+  <label><input type="radio" name="q9" value="0"> Multi-threading</label><br>
+  <label><input type="radio" name="q9" value="1"> Parameterized tests</label><br>
+  <label><input type="radio" name="q9" value="2"> Data flow coverage</label><br>
+  <label><input type="radio" name="q9" value="3"> Assertion chaining</label>
+  <div class="answer" data-correct="1" data-expl="JUnit supports parameterized tests to test multiple data combinations efficiently using @Parameters."></div>
+</div>
+
+<div class="question">
+  <p>What does the example `assertTrue("Calc sum is incorrect", calc.add(2, 3) == 5)` demonstrate?</p>
+  <label><input type="radio" name="q10" value="0"> Use of postfix values</label><br>
+  <label><input type="radio" name="q10" value="1"> Example of a parameterized test</label><br>
+  <label><input type="radio" name="q10" value="2"> Assertion verifying the correctness of a method</label><br>
+  <label><input type="radio" name="q10" value="3"> Exception handling mechanism</label>
+  <div class="answer" data-correct="2" data-expl="The example uses an assertion to verify that the calculator's addition method returns the correct output."></div>
+</div>
+        
+
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

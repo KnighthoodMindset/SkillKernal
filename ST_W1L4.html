@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing - Week 1 | lecture 4 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Automation-Junit as an example</h3>
+    </section>
+    <section>
+        <h4>Test Case Automation and JUnit Framework</h4>
+        <p>In software testing, there are four primary steps: designing test cases, automating test cases, executing test cases, and evaluating the results. This module focuses on the second step — test case automation — which involves preparing designed test cases so that they can be executed automatically. In the previous module, the concept of software testability was discussed in terms of observability and controllability, measured using the RIPR model — Reachability, Infection, Propagation, and Revealing. These aspects are implemented and ensured during the automation process.</p>
+        <p>Test case automation is the process of controlling the execution of tests, providing necessary prefix and postfix values, comparing actual outcomes to expected outcomes, and recording the results. To recap, a test case consists of test inputs and expected outputs. If the actual output after execution matches the expected output, the test case is considered passed; otherwise, it fails. However, to convert a raw test case into an executable test script, automation adds additional components.</p>
+        <p>Prefix values are inputs that prepare the software or component to a suitable state for execution, ensuring reachability. Postfix values come into play after execution; they ensure that the test results are observable. Postfix values are divided into verification values and exit values. Verification values help confirm whether the test has passed or failed, while exit values ensure that after the test finishes, the program exits properly, revealing any error states. Thus, an automated executable test script contains the test inputs, prefix values, postfix values, and expected outputs.</p>
+        <p>To implement this automation process, a popular open-source tool called JUnit is used. JUnit is widely adopted in the software industry for writing and executing test scripts, especially for Java programs. It can be used as a standalone testing tool or integrated within IDEs like Eclipse. JUnit supports assertions, which are statements that evaluate Boolean conditions and indicate whether a test case passes or fails. If an assertion returns true, the test case passes; if false, it indicates an error or failure. Assertions can also print warning messages to inform the tester about the cause of the error.</p>
+        <p>JUnit offers features for sharing common test data, organizing tests into suites, and executing them through both textual and graphical interfaces. It is particularly useful for unit testing and integration testing, but not for system testing, as it is primarily designed for Java programs. Each test in JUnit is written as a test method, and multiple test methods are grouped into a test class. This test class can include setup and teardown methods for prefix and postfix values respectively.</p>
+        <p>In JUnit, prefix values are defined using the `@Before` method, which sets up the environment or initializes data before each test runs. Similarly, postfix values are defined using the `@After` method, which cleans up or resets data after each test is executed. Assertions are written inside test methods to verify expected outcomes. If the assertion condition fails, JUnit raises an exception or prints a warning message.</p>
+        <p>A simple example is testing a calculator’s addition method. Suppose the method adds two integers, `a` and `b`, and returns their sum. A test case would provide input values for `a` and `b`, and the expected output (their sum). In JUnit, this can be automated using an assertion statement such as `assertTrue("Calc sum is incorrect", calc.add(2, 3) == 5)`. If the condition evaluates to `true`, the test passes; otherwise, it displays the message indicating an error.</p>
+        <p>Another example is a program that finds the minimum element in a list. This program includes exception handling for cases like empty lists, null elements, or incomparable data types (e.g., strings and booleans mixed together). Test cases for this program check whether exceptions like NullPointerException, ClassCastException, and IllegalArgumentException are properly thrown. Using JUnit, testers can automate these tests through assertions such as `fail("Expected NullPointerException")` if a required exception is not thrown, indicating a test failure.</p>
+        <p>JUnit also supports parameterized tests, which allow testing multiple sets of data using a single test case. This is achieved through constructors and the `@Parameters` annotation. For instance, when testing the addition method, you can pass multiple input pairs (1,1 → 2), (2,3 → 5), etc., and automatically verify the outputs for all these test cases. This enables efficient testing of multiple data combinations without rewriting separate test methods.</p>
+        <p>By the end of this automation process, testers are able to design test scripts that include prefix values, postfix values, and assertions, making the execution process completely automated and repeatable. JUnit acts as a framework that brings together all these components—initialization, execution, verification, and result reporting—into a cohesive process.</p>
+        <p>The purpose of this module is not to teach all the extensive features of JUnit, but to demonstrate how it supports test automation. Learners are encouraged to download JUnit and experiment with writing and executing automated test cases on their own Java programs. After understanding automation, the next focus will be on test case design, where mathematical models like graphs, logic expressions, and sets will be used to design effective and criteria-based test cases.</p>
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_W1l4_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

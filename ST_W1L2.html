@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing - Week 1 | lecture 2 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Terminologies</h3>
+    </section>
+    <section>
+      <h4>Introduction to Software Testing</h4>
+      <p>The objective is to clarify key terms such as <strong>verification, validation, and testing</strong>, explore various types and methods of testing, and explain major *testing activities* that will be covered throughout the course.</p>
+    </section>
+    <section>
+      <h4>Verification, Validation, and Testing</h4>
+      <p>According to the IEEE Standard STD-610, verification and validation are distinct but related processes. <abbr>Validation</abbr> is performed at the end of software or system development to ensure that the final product meets all specified requirements. It answers the question, “Are we building the right product?” <abbr>Verification</abbr>, on the other hand, occurs throughout the development process. It involves checking whether each artifact produced during the development—such as requirements, design documents, and code—meets its corresponding specifications. It answers the question, “Are we building the product right?”</p>
+    </section>
+    <section>
+      <h4>Related Areas in Verification</h4>
+      <p>There are several other approaches to ensuring correctness in software and systems. One such approach is Formal Verification, which involves mathematically proving properties of programs. The three major techniques used are Model Checking, Theorem Proving, and Program Analysis. Though related, these are beyond the scope of this course except for Symbolic Execution, which will be studied later in relation to testing.</p>
+      <p>Another related area is Modeling and Simulation, particularly in hardware or system design. For example, a hardware design might be modeled using VHDL or Verilog and simulated to check if it behaves as expected. Similarly, Accreditation is used in safety-critical software—such as autopilot systems—which must be audited and certified by official bodies like FAA or DGCA. While the course won’t focus on the accreditation process itself, it will study the testing approaches used in such contexts.</p>
+    </section>
+    <section>
+      <h4>Faults, Failures, and Errors</h4>
+      <p>Testing terminology distinguishes between faults, failures, and errors</p>
+      <li>A fault (or bug, defect) is a static defect in the software—something wrong in the code or design itself, such as a missing function or incorrect logic.</li>
+      <li>When a program containing a fault is executed and produces incorrect behavior, that incorrect observable behavior is called a failure.</li>
+      <li>The error refers to the internal incorrect state of the program that leads to the failure.</li>
+      <p>Historically, the term “bug” is attributed to Thomas Edison, while Ada Lovelace is credited with the earliest use of the word “error.” In this course, fault, failure, error, defect, and bug are used synonymously to mean something wrong in a software artifact.</p>
+    </section>
+    <section>
+      <h4>Test Case and Traceability</h4>
+      <p>A test case is the basic unit of testing. It includes:</p>
+      <li>1. Inputs to the software under test.</li>
+      <li>2. Expected outputs that should be produced for those inputs.</li>
+      <p>When the software is executed, the actual output is compared with the expected output. If both match, the test case passes; otherwise, it fails, indicating a possible fault in the software.</p>
+      <p>Each test case has an identifier (ID) for tracking and often includes traceability information. Traceability links the test case back to specific requirements or functionalities it verifies. This is maintained using a Traceability Matrix, which helps ensure that all requirements are covered by tests.</p>
+    </section>
+    <section>
+      <h4>Levels of Testing</h4>
+      <p>Testing occurs at different levels during software development:</p>
+      <li><strong>1. Unit Testing: </strong>Conducted by developers on individual methods or functions immediately after coding to ensure that each unit works correctly.</li>
+      <li><strong>2. Integration Testing: </strong>Focuses on interactions between modules or components. It verifies that interfaces, function calls, and data flows between modules work as expected. Integration testing can also involve testing the interaction between hardware and software.</li>
+      <li><strong>3. System Testing: </strong>The complete integrated system is tested end-to-end to ensure that the entire setup—servers, databases, clients, and interfaces—works together properly.</li>
+      <li><strong>4. Acceptance Testing: </strong>Performed by end users to confirm that the system meets their requirements.</li>
+      <li><strong>5. Beta Testing: </strong>A pre-release testing phase where the software is given to external users to identify remaining bugs under real-world conditions.</li>
+    </section>
+    <section>
+      <h4>Types of Testing</h4>
+      <p>There are several testing types based on objectives and conditions:</p>
+      <li><strong>1. Functional Testing: </strong>Ensures that the software performs its intended functions correctly. For example, an ATM system must dispense the correct amount after verifying user credentials and balance.</li>
+      <li><strong>2. Stress Testing: </strong>Evaluates the system under extreme or peak loads, such as a website during exam result announcements.</li>
+      <li><strong>3. Performance Testing: </strong>Checks whether the system meets performance criteria like response time, throughput, and latency.</li>
+      <li><strong>4. Usability Testing: </strong>Verifies the user-friendliness, accessibility, and aesthetics of the user interface. It ensures that the system can be used easily by people, including those with disabilities.</li>
+      <li><strong>5. Regression Testing: </strong>Conducted after changes or updates to confirm that existing functionalities still work correctly and that new features have not introduced new defects.</li>
+    </section>
+    <section>
+      <h4>Testing Methods: Black Box and White Box</h4>
+      <p><strong>1. Black Box Testing: </strong>The software is treated as a closed system. Testers provide inputs and observe outputs without looking at the internal code structure. This method is applicable across all testing levels and is often used for functional, performance, and usability testing.</p>
+      <p><strong>2. White Box Testing: </strong>The tester examines the internal structure of the code and designs test cases that cover statements, branches, and loops. For instance, a tester might design inputs that cause both the “then” and “else” parts of an `if` statement to execute or cause loops to run zero, one, or many times. White box testing is mainly performed during the development phase.</p>
+    </section>
+    <section>
+      <h4>Testing Activities</h4>
+      <p>Testing consists of four core activities:</p>
+      <li><abbr>Test Case Design: </abbr>Creating effective test cases that can detect errors efficiently. This is the most critical part of testing because of the <abbr>Pareto principle</abbr>—most defects are concentrated in a small portion of the code. Effective test case design requires domain knowledge and an understanding of the system.</li>
+      <li><abbr>Test Automation: </abbr>Converting designed test cases into executable scripts using frameworks such as JUnit or Selenium. This allows for automated execution and result recording.</li>
+      <li><abbr>Test Execution: </abbr>Running test cases using tools and collecting actual results. This step is often fully automated.</li>
+      <li><abbr>Result Evaluation and Analysis: </abbr>Comparing actual results with expected results to determine pass/fail status. If a failure occurs, testers analyze and isolate the fault’s cause to aid debugging.</li>
+    </section>
+    <section>
+      <h4>Supporting Activities</h4>
+      <p>Apart from technical testing activities, other supporting processes include:</p>
+      <li><strong>Test Management: </strong>Organizing test teams, planning schedules, and monitoring test progress.</li>
+      <li><strong>Test Maintenance and Documentation: </strong>Reusing, updating, and storing test cases for future use. Good documentation ensures that tests are easily accessible and reusable across versions or projects.</li>
+    </section>
+    <section>
+      <h4>Key Concepts in Test Case Execution</h4>
+      <p>When designing test cases, testers often encounter situations where certain program elements (like loops or conditions) are not directly controlled by input variables. To handle such cases effectively, software must have two essential properties:</p>
+      <p><abbr>Observability: </abbr>The ability to observe the internal behavior or output of the software to detect faults.</p>
+      <p><abbr>Controllability: </abbr>The ability to control the software’s internal state through input conditions to reach specific code paths.</p>
+      <p>These concepts are vital for executing complex test cases and achieving coverage during white box testing.</p>
+    </section>
+    <section>
+      <h4>Concluison</h4>
+      <p>This module provided a comprehensive overview of fundamental concepts in software testing, including definitions, levels, methods, and core activities. It emphasized that testing is an essential verification process to ensure software quality and reliability. The upcoming modules will focus more deeply on test case design techniques and algorithms, exploring formal models and systematic testing approaches.</p>
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_W1l2_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

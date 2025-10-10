@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing - Week 1 | lecture 1 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Introduction - Motivation</h3>
+    </section>
+    <section>
+        <h4>Objective</h4>
+        <p>To understand:</p>
+        <li>The importance of software testing</li>
+        <li>How software errors can lead to massive losses</li>
+        <li>The types of software systems in use today</li>
+        <li>Process maturity levels in testing</li>
+    </section>
+    <section>
+        <h4>1. Importance of Software in the Modern World</h4>
+        <p>Software exists everywhere around us:</p>
+        <li><abbr>Financial Systems:</abbr>Paytm, Online Banking, ATM Machines</li>
+        <li><abbr>Communication:</abbr>Mobile phones, Internet services</li>
+        <li><abbr>Home & Office:</abbr>Heating, Ventilation, Air Conditioning (HVAC) systems</li>
+        <li><abbr>Utilities:</abbr>Electricity grids, Water flow networks</li>
+        <li><abbr>Industries:</abbr>Manufacturing and automation software</li>
+        <li><abbr>Transportation:</abbr>Car systems (braking, autopilot), Aircrafts, Trains</li>
+        <li><abbr>Everyday Use:</abbr>Toys, gadgets, and smart devices</li>
+        <h5>Our Expectations from Software</h5>
+        <ul>
+            <li>Should be <strong>error-free</strong></li>
+            <li>Should respond <strong>quickly</strong> (e.g., ATM or mobile app)</li>
+            <li>Should be <strong>reliable and continuous</strong>, especially in critical systems like autopilot</li>
+        </ul>
+    </section>
+    <section>
+        <h4>2. Real-World Software Failures (Expensive Errors)</h4>
+        <h5>Ariane 5 Rocket Failure</h5>
+        <li><strong>Cause: </strong>Conversion of a 64-bit floating-point value into a 16-bit integer (overflow error)</li>
+        <li><strong>Effect: </strong>Incorrect altitude data transmitted → Rocket exploded 36 seconds after launch</li>
+        <li><strong>Loss: </strong>15 years of work and millions of euros wasted</li>
+        <li><strong>Lesson: </strong>Software bugs can destroy high-value, safety-critical systems</li>
+        <h5>Therac-25 Radiation Therapy Incident</h5>
+        <li><strong>Cause: </strong>Race condition in software controlling radiation dosage</li>
+        <li><strong>Effect: </strong>Overdose of radiation → 6 patients died</li>
+        <li><strong>Loss: </strong>Multiple lawsuits and loss of trust in medical software</li>
+        <li><strong>Lesson: </strong>Testing is vital for life-critical software</li>
+        <h5>Intel Pentium Processor Bug</h5>
+        <li><strong>Cause: </strong>Floating point division (FDIV) bug in Pentium processors</li>
+        <li><strong>Effect: </strong>Incorrect mathematical calculations</li>
+        <li><strong>Loss: </strong>Intel had to recall all processors → Huge financial loss</li>
+        <li><strong>Lesson: </strong>Even computation-related software/hardware must be thoroughly tested</li>
+        <h5>Toyota Brake Failures</h5>
+        <li><strong>Cause: </strong>Software errors in brake systems</li>
+        <li><strong>Effect: </strong>Car crashes, loss of life and property</li>
+        <li><strong>Lesson: </strong>Automotive systems need rigorous testing and safety standards</li>
+        <h5>Amazon Discount Error</h5>
+        <li><strong>Cause: </strong>Software bug doubled discount during a sale</li>
+        <li><strong>Effect: </strong>Massive financial loss before correction</li>
+        <li><strong>Lesson: </strong>Even e-commerce platforms must perform thorough validation testing</li>
+        <h5>Symantec 2007 Report</h5>
+        <li><strong>Observation: </strong>Most security vulnerabilities occur due to **software errors**, not cryptographic faults</li>
+        <li><strong>Lesson: </strong>Secure software = well-tested software</li>
+    </section>
+    <section>
+        <h4>3. Cost of Inadequate Testing</h4>
+        <p>According to a 2002 report by the National Institute of Standards and Technology (NIST):</p>
+        <li>Inadequate testing costs the US economy between **$22 billion to $59 billion annually**</li>
+        <li>Implementing better testing methods could potentially **reduce these losses by half**</li>
+    </section>
+    <section>
+        <h4>4. Types of Software</h4>
+        <h5>1. Embedded Control Software</h5>
+        <li>Found in cars, airplanes, medical devices</li>
+        <li>Runs in safety-critical systems</li>
+        <li>Must meet regulatory standards</li>
+        <li>Requires extensive testing and certification</li>
+        <h5>2. Enterprise Software</h5>
+        <li>Used by banks, railways, large organizations</li>
+        <li>Deals with huge databases and server reliability</li>
+        <li>Testing focuses on performance, reliability, and data integrity</li>
+        <h5>3. Web Applications</h5>
+        <li>Examples: Amazon, Facebook, Banking portals</li>
+        <li>Must ensure security, correctness, and scalability</li>
+        <h5>4. Free/Open Source Software</h5>
+        <li>Users still expect them to be error-free</li>
+        <li>Developers must maintain high-quality testing standards</li>
+    </section>
+    <section>
+        <h4>5. Cost of Fixing Errors in Different Phases</h4>
+        <table>
+            <tr>
+                <th>Phase of Detection</th>
+                <th>Relative Cost to Fix</th>
+            </tr>
+            <tr>
+                <td>Requirements / Design</td>
+                <td>Low cost</td>
+            </tr>
+            <tr>
+                <td>After Integration / System Testing</td>
+                <td>Moderate cost</td>
+            </tr>
+            <tr>
+                <td>After Release (Post-deployment)</td>
+                <td><strong>Extremely high cost</strong></td>
+            </tr>
+        </table>
+        <p><strong>Conclusion:</strong> Detecting and fixing errors <strong>early in development</strong> saves time, money, and reputation.</p>
+    </section>
+    <section>
+        <h4>Myths and facts about Testing</h4>
+        <table>
+            <tr>
+                <th>Myth</th>
+                <th>Fact</th>
+            </tr>
+            <tr>
+                <td>Testing proves the software is correct</td>
+                <td>Wrong — Testing <strong>only finds errors</strong>, it cannot prove correctness</td>
+            </tr>
+            <tr>
+                <td>Debugged and reviewed code doesn’t need testing</td>
+                <td>Still needs to be tested; debugging ≠ testing</td>
+            </tr>
+            <tr>
+                <td>Tools can do all kinds of testing automatically</td>
+                <td>Tools help in execution and reporting, but <strong>human-designed test cases</strong> are essential</td>
+            </tr>
+            <tr>
+                <td>More test cases = better testing</td>
+                <td>Not necessarily; <strong>effective test design</strong> matters more</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h4>Testing Principles</h4>
+        <li>Goal: Find errors effectively, not prove correctness</li>
+        <li>Testing requires <strong>human creativity and understanding</strong></li>
+        <li>Focus on <strong>error-prone areas</strong> (Pareto Principle)</li>
+        <li>Testing is a <strong>mental discipline</strong>, not just a mechanical process</li>
+    </section>
+    <section>
+        <h4>Process Maturity Levels in Testing</h4>
+        <table>
+            <tr>
+                <th>Level</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Level 0</td>
+                <td>No testing. Developers only debug and release software.</td>
+            </tr>
+            <tr>
+                <td>Level 1</td>
+                <td>Developers test to show code is correct (misunderstanding of testing goal).</td>
+            </tr>
+            <tr>
+                <td>Level 2</td>
+                <td>Testing aims to <strong>find errors</strong>; conflict exists between developers and testers.</td>
+            </tr>
+            <tr>
+                <td>Level 3</td>
+                <td>Collaborative testing — developers & testers work together to <strong>reduce errors</strong> and manage <strong>risk</strong>.</td>
+            </tr>
+            <tr>
+                <td>Level 4</td>
+                <td>Testing is a <strong>mental discipline</strong>. Organizations like Microsoft operate here, focusing on excellence and continuous improvement.</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h4>Key Takeaways</h4>
+        <li>Software errors can cause financial losses, accidents, and deaths</li>
+        <li>Testing is essential — not optional</li>
+        <li>The earlier you find a bug, the cheaper it is to fix</li>
+        <li>Testing ≠ Proving correctness — It’s about finding faults</li>
+        <li>Human intelligence is crucial in designing good tests</li>
+        <li>Mature testing processes lead to reliable and safe software</li>
+    </section>
+    
+  </main>
+
+    <footer>
+    <a href="ST_W1l1_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

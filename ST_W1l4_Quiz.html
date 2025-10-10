@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing | Week 1| lecture 4 - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Week 1 - lecture 4 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the main goal of test case automation in software testing?</p>
+  <label><input type="radio" name="q1" value="0"> To design manual test cases</label><br>
+  <label><input type="radio" name="q1" value="1"> To control, execute, and evaluate test cases automatically</label><br>
+  <label><input type="radio" name="q1" value="2"> To eliminate test cases</label><br>
+  <label><input type="radio" name="q1" value="3"> To generate reports manually</label>
+  <div class="answer" data-correct="1" data-expl="Test case automation controls the execution of tests, compares actual outcomes with expected ones, and records the results automatically."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is NOT a component of an automated executable test script?</p>
+  <label><input type="radio" name="q2" value="0"> Prefix values</label><br>
+  <label><input type="radio" name="q2" value="1"> Postfix values</label><br>
+  <label><input type="radio" name="q2" value="2"> Expected outputs</label><br>
+  <label><input type="radio" name="q2" value="3"> User documentation</label>
+  <div class="answer" data-correct="3" data-expl="Automated test scripts include test inputs, prefix values, postfix values, and expected outputs — not user documentation."></div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of prefix values in automated test scripts?</p>
+  <label><input type="radio" name="q3" value="0"> To verify the final result</label><br>
+  <label><input type="radio" name="q3" value="1"> To prepare the software to a suitable state for execution</label><br>
+  <label><input type="radio" name="q3" value="2"> To clean up resources after testing</label><br>
+  <label><input type="radio" name="q3" value="3"> To record the output logs</label>
+  <div class="answer" data-correct="1" data-expl="Prefix values prepare the system or component to a suitable state before execution, ensuring reachability."></div>
+</div>
+
+<div class="question">
+  <p>Which type of postfix value ensures that the program exits properly after test execution?</p>
+  <label><input type="radio" name="q4" value="0"> Verification value</label><br>
+  <label><input type="radio" name="q4" value="1"> Exit value</label><br>
+  <label><input type="radio" name="q4" value="2"> Assertion value</label><br>
+  <label><input type="radio" name="q4" value="3"> Initial value</label>
+  <div class="answer" data-correct="1" data-expl="Exit values ensure that the program exits properly after execution, revealing any error states."></div>
+</div>
+
+<div class="question">
+  <p>What is the main use of assertions in JUnit testing?</p>
+  <label><input type="radio" name="q5" value="0"> To compile Java programs</label><br>
+  <label><input type="radio" name="q5" value="1"> To evaluate Boolean conditions indicating test success or failure</label><br>
+  <label><input type="radio" name="q5" value="2"> To print all output values</label><br>
+  <label><input type="radio" name="q5" value="3"> To perform code optimization</label>
+  <div class="answer" data-correct="1" data-expl="Assertions in JUnit evaluate Boolean conditions to determine whether a test passes or fails."></div>
+</div>
+
+<div class="question">
+  <p>Which annotations in JUnit are used for defining prefix and postfix values?</p>
+  <label><input type="radio" name="q6" value="0"> @Init and @Cleanup</label><br>
+  <label><input type="radio" name="q6" value="1"> @Before and @After</label><br>
+  <label><input type="radio" name="q6" value="2"> @Start and @Stop</label><br>
+  <label><input type="radio" name="q6" value="3"> @Prefix and @Postfix</label>
+  <div class="answer" data-correct="1" data-expl="JUnit uses @Before for prefix values (setup) and @After for postfix values (cleanup)."></div>
+</div>
+
+<div class="question">
+  <p>JUnit is primarily used for which level of software testing?</p>
+  <label><input type="radio" name="q7" value="0"> System testing</label><br>
+  <label><input type="radio" name="q7" value="1"> Unit testing and integration testing</label><br>
+  <label><input type="radio" name="q7" value="2"> Beta testing</label><br>
+  <label><input type="radio" name="q7" value="3"> Acceptance testing</label>
+  <div class="answer" data-correct="1" data-expl="JUnit is primarily designed for unit testing and integration testing, not system-level testing."></div>
+</div>
+
+<div class="question">
+  <p>In JUnit, what happens if an assertion condition evaluates to false?</p>
+  <label><input type="radio" name="q8" value="0"> The test passes silently</label><br>
+  <label><input type="radio" name="q8" value="1"> JUnit raises an exception or prints a warning message</label><br>
+  <label><input type="radio" name="q8" value="2"> The test is skipped</label><br>
+  <label><input type="radio" name="q8" value="3"> The code stops executing completely</label>
+  <div class="answer" data-correct="1" data-expl="If an assertion fails in JUnit, an exception or warning message is shown indicating test failure."></div>
+</div>
+
+<div class="question">
+  <p>Which feature of JUnit allows testing multiple sets of data using a single test case?</p>
+  <label><input type="radio" name="q9" value="0"> Multi-threading</label><br>
+  <label><input type="radio" name="q9" value="1"> Parameterized tests</label><br>
+  <label><input type="radio" name="q9" value="2"> Data flow coverage</label><br>
+  <label><input type="radio" name="q9" value="3"> Assertion chaining</label>
+  <div class="answer" data-correct="1" data-expl="JUnit supports parameterized tests to test multiple data combinations efficiently using @Parameters."></div>
+</div>
+
+<div class="question">
+  <p>What does the example `assertTrue("Calc sum is incorrect", calc.add(2, 3) == 5)` demonstrate?</p>
+  <label><input type="radio" name="q10" value="0"> Use of postfix values</label><br>
+  <label><input type="radio" name="q10" value="1"> Example of a parameterized test</label><br>
+  <label><input type="radio" name="q10" value="2"> Assertion verifying the correctness of a method</label><br>
+  <label><input type="radio" name="q10" value="3"> Exception handling mechanism</label>
+  <div class="answer" data-correct="2" data-expl="The example uses an assertion to verify that the calculator's addition method returns the correct output."></div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
