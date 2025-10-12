@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Cybersecurity - Week 4 | lecture 2 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Contingency - Part 2</h3>
+    </section>
+    <section>
+      <p>Planning within an organization usually begins at the strategic level. Senior management or the board formulates value statements, vision statements, and mission statements to guide the organization’s overall direction. Values represent what principles the organization will adhere to, vision defines where it aims to reach in a given time, and mission specifies the activities it will undertake to achieve that vision. In most organizations, strategic planning is a top-down process, though it can include inputs from lower levels. Translating this idea to the cybersecurity domain means that cybersecurity planning must align with the organization’s overall strategic priorities. Therefore, cybersecurity must be treated as an essential sub-organization within the larger structure, having its own leadership, policies, and plans.</p>
+
+      <p>One critical leadership role in this context is the <abbr>Chief Information Security Officer (CISO)</abbr>. The CISO is a top-level executive responsible for the strategic planning and management of cybersecurity, reporting directly to the Chief Information Officer (CIO). While the CIO oversees the organization’s entire IT infrastructure and digital operations, the CISO specifically focuses on information and cybersecurity governance. The CISO is responsible for preparing strategic security policies, operational plans, budgets, and compliance mechanisms, ensuring adherence to relevant laws and frameworks. Importantly, the Reserve Bank of India (RBI) mandates that all banking institutions must have a dedicated CISO role to ensure strong security oversight. When a cybersecurity incident occurs, the CISO’s role becomes vital in deciding how to respond, what to communicate to the public, and how to coordinate with legal and regulatory bodies.</p>
+
+      <p>Beyond strategic planning, another major aspect of cybersecurity management is <abbr>contingency planning</abbr>. Contingency refers to unforeseen or unexpected events that disrupt normal operations despite prior preparations. The goal of contingency planning is to restore normal operations as quickly and cost-effectively as possible. Large organizations typically form a <abbr>Contingency Plan Management Team (CPMT)</abbr> to oversee this process. The CPMT supervises subcommittees responsible for specific aspects of planning and ensures that proper documentation, procedures, and strategies are in place for potential incidents. Contingency planning involves elements such as Incident Response (IR), Disaster Recovery (DR), and Business Continuity Planning (BCP). These are distinguished based on the severity of impact and the time and cost required for recovery.</p>
+
+      <p>A crucial activity under contingency planning is Business Impact Analysis (BIA). The BIA helps determine the potential consequences of disruptions on critical business processes. Unlike risk management, which focuses on assets, BIA focuses on business processes—for example, what happens if the order fulfillment system or invoicing system fails. Each business process is evaluated for its maximum tolerable downtime (MTD), which is the longest acceptable period a process can remain nonfunctional without causing severe business damage. From MTD, technical teams derive parameters such as Recovery Time Objective (RTO) and Work Recovery Time (WRT)—which together make up the total downtime—as well as the <abbr>Recovery Point Objective (RPO)</abbr>, which defines how much data loss (in time) is acceptable based on backup policies. These parameters form the foundation of a resilient contingency plan.</p>
+
+      <p>In the BIA process, managers and technical teams collaborate to quantify downtime impacts in terms of financial loss and operational disruption. For example, a business process might tolerate a downtime of 72 hours, with a 36-hour RTO and a 36-hour WRT. The RPO depends on the frequency of backups—if backups are taken hourly, only one hour of data loss is acceptable; if taken daily, data loss could be much higher. The BIA team’s role is to analyze all these variables and recommend rational values to minimize both downtime and costs. This introduces the cost balancing concept, where managers must negotiate between the cost of recovery (investing in redundancy, hot sites, or backup systems) and the cost of disruption (financial loss due to downtime). The intersection of these two cost curves indicates the <strong>optimum recovery time</strong> that balances expenditure and business continuity.</p>
+
+      <p>Contingency planning also requires clear procedures and documentation for incident handling. Depending on the severity of the incident, organizations switch from <abbr>Incident Response Plans (IRP)</abbr> to <abbr>Disaster Recovery Plans (DRP)</abbr> or <abbr>Business Continuity Plans (BCP)</abbr>. IRP is typically triggered for minor incidents and is managed by technical teams, DRP for major system disruptions (usually led by the CIO), and BCP for severe incidents that require relocation or complete operational shift (led by the CEO). Effective planning ensures smooth escalation and communication during crises. Organizations must also maintain <abbr>incident documentation</abbr>, capturing details such as what happened, when, where, why, and how the incident occurred.</p>
+
+      <p>Another key element of cyber resilience is <abbr>incident detection</abbr>. Organizations deploy <abbr>Intrusion Detection Systems (IDS)</abbr> and maintain active logging and monitoring mechanisms. Indicators of incidents can be classified as possible, probable, or definite indicators, as proposed by experts like Pipkin. For instance, unexpected changes in system logs are a definite indicator of an ongoing or past attack. It’s also essential to differentiate between threat intelligence, which predicts potential risks, and incident response, which deals with actual events that have occurred.</p>
+
+      <p><abbr>Incident response planning</abbr> involves defining clear roles, responsibilities, and procedures for communication, escalation, and resolution. Well-structured IRP documents, such as those from Carnegie Mellon University, include sections on definitions, methodologies, phases, and post-incident activities. They also emphasize after-action reviews to assess what went well and what needs improvement. A critical aspect of incident handling is law enforcement involvement. Many organizations face uncertainty about when to report incidents to authorities. However, under regulations such as the <abbr>General Data Protection Regulation (GDPR)</abbr> in the European Union, cyber incidents must be reported within <strong>72 hours</strong>. Non-disclosure or concealment can lead to severe legal consequences. Hence, cybersecurity management teams must have clear protocols for incident reporting to government and the public.</p>
+
+      <p>When major disruptions occur, organizations may need to activate their <abbr>Disaster Recovery (DR)</abbr> or <abbr>Business Continuity (BC)</abbr> strategies. These involve relocating operations or switching to alternative sites. Depending on readiness levels, these sites can be hot (fully ready and parallel-running systems), warm (partially ready, needs some setup), or cold (only basic infrastructure available). Modern approaches may also use shared or cloud-based recovery sites. Selecting the right strategy depends on the criticality of business processes, cost tolerance, and recovery priorities.</p>
+
+      <p>Finally, testing contingency plans is essential to ensure organizational readiness. Periodic drills, simulations, or “mock attacks” are conducted to validate preparedness. Many organizations use <abbr>red, blue, and purple teams</abbr> for this purpose—red teams simulate attackers, blue teams defend, and purple teams moderate and provide feedback. Such exercises help identify weaknesses and improve coordination during real incidents. Regular testing ensures that contingency plans remain practical, updated, and effective under real-world conditions.</p>
+
+      <p>Cybersecurity management planning integrates strategic vision with operational resilience. The CISO and CPMT play crucial roles in ensuring alignment between business priorities and cybersecurity preparedness. Through structured Business Impact Analysis, well-defined contingency parameters (MTD, RTO, WRT, RPO), and balanced cost strategies, organizations can maintain continuity even during unexpected disruptions. Effective incident response, legal compliance, and continuous testing ensure that the organization remains agile, secure, and resilient against evolving cyber threats.</p>
+    </section>
+
+    
+       
+  </main>
+
+    <footer>
+    <a href="CP_W4L2_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

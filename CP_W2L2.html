@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Cybersecurity - Week 2 | lecture 2 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Foundation - Part 2</h3>
+    </section>
+    <section>
+      <p>In cybersecurity, three foundational concepts—identification, authentication, and authorization—play a critical role in maintaining confidentiality. These are the first steps toward securing digital systems and ensuring that only legitimate users can access information. Without proper identity management, it becomes impossible to establish or maintain confidentiality. In addition, accountability is essential for assigning responsibility when security breaches or incidents occur.</p>
+    <h5>Identification: The Foundation of Confidentiality</h5>
+    <p>The first step in ensuring confidentiality is identification, which refers to creating a credible and verifiable identity for individuals who access computing resources. Identification answers the question “Who is who?”. Without clear identification, no system can determine who should be granted or denied access.</p>
+    <p>A real-world example is the Aadhaar identification process in India. When individuals enrolled for Aadhaar, they provided personal information and supporting documents, which were verified by authorized vendors before being assigned a unique identification number. This step established a credible identity for each citizen.</p>
+    <p>Similarly, institutions like IIT Madras create student and faculty identities through ID cards issued after verifying documents. The ID card serves as proof of identity and determines one’s role—student, faculty, or staff. In cybersecurity, such identification is the first layer of defense, ensuring that access control begins with verified users.</p>
+    </section>
+    <section>
+      <h4>Authentication: Verifying the Claimed Identity</h4>
+      <p>Once identification is established, the next step is authentication, which verifies that a person truly is who they claim to be. Authentication can be described as the process of verification.</p>
+      <p>For example, when someone claims to be a student at the IIT Madras gate, showing a valid ID card confirms authenticity. Similarly, when applying for a passport or SIM card, an individual must provide valid government-issued identification such as an Aadhaar card to prove citizenship.</p>
+      <p>Authentication can be implemented through various methods:</p>
+      <li><abbr>Passwords: </abbr>something the user knows.</li>
+      <li><abbr>Biometric verification: </abbr>something the user has (e.g., fingerprint or retinal scan).</li>
+      <li><abbr>Smart cards or OTPs: </abbr>additional verification elements.</li>
+      <p>Traditional password-based systems are common but have vulnerabilities; if a password leaks, impersonation becomes possible. Hence, <abbr>multi-factor authentication (MFA)</abbr>—combining multiple methods—is widely adopted to strengthen verification.</p>
+      <p>Authentication therefore forms the gateway to any system, allowing only validated users to access resources.</p>
+    </section>
+    <section>
+      <h4>Authorization: Defining Access Privileges</h4>
+      <p>The third step, authorization, defines what an authenticated user is allowed to access. While identification determines “who you are” and authentication confirms “are you really who you say you are,” authorization determines “what you can do.”</p>
+      <p>For example, a student entering the IIT Madras campus may be authorized to access their hostel room but not faculty offices. Similarly, in digital systems such as Moodle, students and faculty have different login privileges—students can view assignments, whereas faculty can upload materials or grade submissions.</p>
+      <p>Authorization depends on predefined access rights, which map user roles to the information or services they are allowed to use. Effective authorization thus requires proper <abbr>role classification</abbr> and <abbr>information classification</abbr> so that people and data are correctly matched based on access privileges.</p>
+    </section>
+    <section>
+      <h4>Accountability: Responsibility in Case of Incidents</h4>
+      <p>While identification, authentication, and authorization together ensure confidentiality, accountability addresses what happens when things go wrong. Accountability answers the question “Who is responsible?” in the case of a security incident or breach.</p>
+      <p>For example, if someone unauthorized enters a restricted area or accesses a system, accountability ensures that the responsible party (such as a security officer or system administrator) can be identified and corrective action can be taken.</p>
+      <p>To enforce accountability, <abbr>log files</abbr> and <abbr>audit trails</abbr> must be maintained in all organizations. These logs record who accessed what data, when, and from where. In cybersecurity, accountability ensures that every digital action is traceable to a responsible individual or system process, enabling post-incident investigation and preventing recurrence.</p>
+      <h5>Case Study: Target Corporation Data Breach</h5>
+      <p>A famous example illustrating these concepts is the Target Corporation data breach of 2013 in the United States. Target, a leading retail chain and competitor to Walmart, faced a massive cybersecurity incident during the Thanksgiving and Christmas shopping season—its busiest time of year. Hackers stole millions of customers’ credit card details, causing huge reputational and financial losses.</p>
+    </section>
+    <section>
+      <h5>Background and Incident Summary</h5>
+      <p>Target had outsourced its climate control and maintenance systems to a third-party vendor named <abbr>Fazio Mechanical Services</abbr>. Through this vendor, attackers gained unauthorized access to Target’s point-of-sale (POS) systems, where payment information such as credit card data was processed. Although data transmission between systems was encrypted, sensitive data stored in the POS memory was not. This allowed hackers to extract unencrypted card data, leading to the breach.</p>
+    </section>
+    <section>
+      <h5>Technological Vulnerabilities</h5>
+      <p>Several technological vulnerabilities contributed to the breach:</p>
+      <p><strong>1. Unencrypted POS Memory: </strong>Credit card data stored in the POS system’s RAM was not encrypted, making it easy for attackers to access it.</p>
+      <p><strong>2. Disabled Malware Detection Software: </strong>Target had malware detection and reporting systems, but they were turned off due to frequent false alarms. This prevented the detection of malicious software when it was introduced.</p>
+      <p><strong>3. Configuration Flaws: </strong>The vendor had excessive access privileges to Target’s systems, which allowed hackers to exploit the network connection between the vendor and the payment systems.</p>
+      <p>These represent both authorization and technical configuration failures. Even though Target had modern firewalls, intrusion detection systems, and anti-malware tools, improper configuration and disabled monitoring left gaps that attackers exploited.</p>
+    </section>
+    <section>
+      <h4>Managerial and Administrative Vulnerabilities</h4>
+      <p>From an administrative standpoint, Target failed to implement proper oversight and auditing practices. Although systems generated multiple warnings about malware, they were ignored because employees had become desensitized due to frequent false positives. A false positive occurs when legitimate activity is incorrectly flagged as malicious, while a false negative means a threat goes undetected.</p>
+      <p>To avoid operational disruptions, employees often disable or bypass security alerts—a dangerous practice that sacrifices security for convenience. In this case, the conflict between operational efficiency and security became evident. The organization prioritized uninterrupted sales operations over strict security compliance, which ultimately led to the breach.</p>
+      <h5>Lessons on Efficiency vs. Security</h5>
+      <p>The Target case highlights the trade-off between efficiency and security. When cybersecurity measures (like malware scans) slow down operations, employees may turn them off to maintain performance. However, this compromises the organization’s defenses. Every system must balance smooth functioning with robust security enforcement. Bypassing safety protocols for convenience can lead to catastrophic outcomes, as it did for Target.</p>
+      <h5>Accountability and Logging</h5>
+      <p>Proper logging and audit trails could have helped Target detect anomalies sooner. However, log files were either incomplete or not regularly monitored, making post-incident tracing difficult. Maintaining comprehensive logs of system activities is essential to ensure accountability, detect unusual behavior early, and prevent future breaches.</p>
+    </section>
+    <section>
+      <h4>Summary and Conclusion</h4>
+      <p>The Target Corporation breach serves as a powerful lesson in cybersecurity management. The incident was caused not just by technological weaknesses but also by human errors and poor management practices. It revealed how identification, authentication, authorization, and accountability must work together to maintain confidentiality and prevent cyber incidents.</p>
+      <p>Key takeaways include:</p>
+      <li>Identification establishes credible user identity.</li>
+      <li>Authentication verifies claimed identity through credentials.</li>
+      <li>Authorization limits access based on roles and privileges.</li>
+      <li>Accountability ensures responsibility and traceability during incidents.</li>
+      <p>Neglecting any of these principles—whether through technical failure or managerial negligence—can lead to severe consequences, as illustrated by the Target breach. Cybersecurity, therefore, demands both technological rigor and strong administrative discipline.</p>
+    </section>
+
+       
+  </main>
+
+    <footer>
+    <a href="CP_W2L2_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>
