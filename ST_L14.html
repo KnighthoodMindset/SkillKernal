@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 14 | SkillKernal</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing source code : classical coverage criteria</h3>
+    </section>
+    <section>
+        <p>In software testing, <strong>graph-based models</strong> like <strong>Control Flow Graphs (<abbr title="Control Flow Graphs">CFGs</abbr>)</strong> and <strong>Data Flow Graphs (<abbr title="Data Flow Graphs">DFGs</abbr>)</strong> are used to represent source code structure and data dependencies. A control flow graph models the flow of execution between statements, while a data flow graph extends it by showing how data values are defined and used. The coverage criteria based on these models form the basis of <strong>white-box testing</strong>, where the internal structure of code is analyzed to ensure thorough testing.</p>
+        <p>In <strong>white-box testing</strong>, several classical terminologies are widely used to describe different levels of code coverage. These include <strong>statement coverage</strong>, <strong>branch coverage</strong>, <strong>decision coverage</strong>, <strong>modified condition decision coverage (<abbr title="Modified Condition Decision Coverage">MCDC</abbr>)</strong>, <strong>path coverage</strong>, <strong>loop coverage</strong>, <strong>cyclomatic complexity</strong>, <strong>basis path testing</strong>, and <strong>decision-to-decision (<abbr title="Decision-to-Decision">DD</abbr>) path testing</strong>. Each term corresponds to specific structural coverage criteria over the control flow graph.</p>
+        <p><strong>Statement Coverage</strong> ensures that every executable statement in the source code is executed at least once during testing. In CFG terms, it corresponds to <strong>node coverage</strong>, where every node (representing a statement or basic block) is visited by at least one test case.</p>
+        <p><strong>Branch Coverage</strong> focuses on exercising all possible branches or edges in the CFG. It ensures that every branch resulting from decision points like <strong>if</strong>, <strong>switch</strong>, or loop conditions is tested. Hence, <strong>edge coverage</strong> in the graph corresponds directly to branch coverage.</p>
+        <p><strong>Loop Coverage</strong> tests all loops within the program by executing them under different conditions — skipping the loop, executing it once, and running it multiple times within allowed limits. Loop coverage in testing aligns with <strong>prime path coverage</strong> in graph theory, where all maximal simple paths, including loops, are tested.</p>
+        <p><strong>Decision Coverage</strong> and <strong>MCDC (<abbr title="Modified Condition Decision Coverage">MCDC</abbr>)</strong> are used especially for safety-critical systems. Decision coverage ensures that each decision (like true/false outcomes in conditionals) is executed at least once. MCDC is a more stringent form where each condition within a decision must independently affect the outcome, ensuring deep logical coverage.</p>
+    </section>
+    <section>
+        <p>One of the most important classical metrics in white-box testing is <strong>Cyclomatic Complexity</strong>, introduced by <strong>Thomas McCabe</strong> in 1976. It is a <strong>software metric</strong> that measures the complexity of a program in terms of the number of <strong>linearly independent paths</strong> in its control flow graph. Unlike metrics such as <strong>Lines of Code (LOC)</strong>, which simply count statements, cyclomatic complexity quantifies the logical structure of the program. It is calculated using the formula:</p>
+        <p>\[<strong>M = E - N + 2P</strong>\]</p>
+        <p>where <strong>E</strong> is the number of edges, <strong>N</strong> is the number of nodes, and <strong>P</strong> is the number of connected components in the CFG. For a single program or function (where <strong>P = 1</strong>), the formula simplifies to <strong>M = E - N + 2</strong>. Each node in the CFG should represent a <strong>basic block</strong> (a sequence of statements with no internal branching). Cyclomatic complexity equals the number of decision points (like <strong>if</strong>, <strong>for</strong>, <strong>while</strong>, or <strong>case</strong> statements) plus one.</p>
+        </section>
+
+    <section>
+        <p>Cyclomatic complexity reflects the number of <strong>independent execution paths</strong> through a program, which helps determine the minimum number of test cases required for complete branch coverage. Typically, a cyclomatic complexity value between <strong>1 and 10</strong> indicates a maintainable and well-structured program. Higher values suggest more complex and error-prone code that is harder to test and maintain.</p>
+        <p><strong>Basis Path Testing</strong> is a white-box testing technique that directly uses cyclomatic complexity to determine the number of test paths. It involves identifying and executing all <strong>linearly independent paths</strong> (similar to prime paths) in the control flow graph. The goal is to design a minimal yet complete set of test cases that cover all logical paths in the program. Basis path testing <strong>subsumes branch coverage</strong>, meaning that if basis path coverage is achieved, branch coverage is automatically satisfied. However, complete path coverage (testing all possible paths) subsumes basis path testing.</p>
+        <p>Another classical concept is <strong>Decision-to-Decision Path (DD-Path) Testing</strong>. A DD-path represents a sequence of statements between two decision points in a control flow graph. Decision points are nodes where multiple control flow options exist, such as conditional or loop statements. DD-paths help in analyzing the flow of control between such decision-making statements, enabling finer granularity in test design.</p>
+        <p>A <strong>chain</strong> in a graph is a path whose internal vertices each have one incoming and one outgoing edge. A <strong>maximal chain</strong> is one that is not part of any other chain. A DD-path can consist of a single vertex (with zero or multiple incoming/outgoing edges) or a maximal chain connecting two decisions. For example, in a CFG, the initial and final nodes are each separate DD-paths, while nodes representing decisions or simple sequential chains also form DD-paths. Thus, DD-path testing ensures that every possible decision-to-decision transition is verified.</p>
+        <p>In summary, these classical testing terminologies—<strong>statement coverage</strong>, <strong>branch coverage</strong>, <strong>decision coverage</strong>, <strong>MCDC</strong>, <strong>loop coverage</strong>, <strong>cyclomatic complexity</strong>, <strong>basis path testing</strong>, and <strong>DD-path testing</strong>—form the foundation of white-box testing. They are closely related to graph coverage criteria, providing a structured and measurable way to evaluate how thoroughly software has been tested. Understanding their interrelations helps testers design effective and comprehensive test cases, ensuring that both structural and logical aspects of the program are validated.</p>
+
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_l14_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

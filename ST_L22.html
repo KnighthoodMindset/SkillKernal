@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 22 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Logic: Coverage criteria</h3>
+    </section>
+    <section>
+      <p>In logic-based testing, predicate logic is primarily used, focusing on predicates and clauses. A predicate is any expression or formula that evaluates to true or false, while clauses are the smallest Boolean components within a predicate that do not contain logical operators. For example, in the predicate "x > y or C or f(z)," each of "x > y," "C," and "f(z)" represents a clause. Equivalent logical expressions are assumed to produce the same test requirements, regardless of how they are written. For a given software artifact, a set of predicates is denoted by P, and the clauses within a predicate p are represented by Cₚ, with C being the set of all clauses across P.
+</p>
+      <p>Predicate coverage is the most basic coverage criterion, requiring each predicate to be evaluated to true and false at least once. For instance, in a predicate like "x > y or C or f(z)," test cases are designed such that the predicate as a whole evaluates to true in one case and false in another. Predicate coverage corresponds to edge coverage in graph-based testing but may not exercise all individual clauses, potentially leaving some errors undetected. Clause coverage (CC) addresses this by requiring each clause within a predicate to evaluate to true and false at least once, ensuring that all clauses are individually tested. Clause coverage, however, does not necessarily satisfy predicate coverage, as illustrated with the predicate "a or b," where selected test values can meet clause coverage without making the entire predicate false.
+</p>
+      <p>Combinatorial coverage (CoC) extends testing by considering all possible combinations of truth values for clauses within a predicate. While exhaustive, this approach is impractical for predicates with many clauses, as it leads to an exponential number of test cases. To balance effectiveness and efficiency, active clause coverage (ACC) focuses on one clause at a time, called the major clause, while the remaining clauses are treated as minor clauses. A major clause determines the predicate if changes in its truth value affect the overall predicate, given fixed values of minor clauses. ACC requires making the major clause true once and false once, allowing each clause in turn to influence the predicate.
+</p>
+      <p>ACC can be refined into three variations. Generalized active clause coverage (GACC) places no restrictions on the values of minor clauses. Correlated active clause coverage (CACC) requires minor clauses to take values that are true for one major clause value and false for the other, ensuring that changes in the major clause affect the predicate outcome. Restricted active clause coverage (RACC) mandates that minor clauses maintain the same values when the major clause is true and false, further constraining the test cases. For example, in the predicate "a and b or c," multiple combinations of minor clause values satisfy CACC, while specific matched values satisfy RACC. These criteria progressively refine testing to ensure that the effect of each clause on the predicate is thoroughly examined while avoiding the impracticality of testing all possible combinations.
+</p>
+    </section>    
+        
+  </main>
+
+    <footer>
+    <a href="ST_l22_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

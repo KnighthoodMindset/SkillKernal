@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 24 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Logic Coverage Criteria</h3>
+    </section>
+    <section>
+      <p>Logic coverage criteria in software testing provide a structured framework for designing test cases based on the logical structure of predicates. Predicate coverage requires testing each predicate to evaluate to both true and false at least once, while clause coverage focuses on each individual clause within a predicate, ensuring that every clause independently takes true and false values. All combinations coverage extends this approach by testing every possible combination of truth values for all clauses in a predicate, although it quickly becomes impractical due to the exponential number of test cases required as the number of clauses increases. To address this, intermediate coverage criteria were developed, divided into active and inactive clause coverage. In active clause coverage, a chosen major clause is made to determine the predicate while minor clauses take values that allow the major clause to influence the outcome, whereas inactive clause coverage sets minor clauses such that the major clause does not determine the predicate.
+</p>
+      <p>Designing test cases for these criteria involves identifying conditions under which a major clause determines a predicate. This is achieved by replacing the major clause with true and false, simplifying the resulting predicates, and computing their exclusive-or (XOR) to obtain a formula that captures the exact conditions in which the major clause controls the predicate’s outcome. Examples illustrate that for predicates like `a or b`, the clause `a` determines the predicate when `b` is false, while for `a and b`, `a` determines the predicate when `b` is true. Equivalence predicates such as `a if and only if b` demonstrate cases where a clause may never determine the predicate, making some coverage criteria infeasible. Redundant clauses that have no influence on the predicate can be identified through this process and removed to simplify testing.
+</p>
+      <p>Once the conditions for clause determination are established, test requirements for active clause coverage—generalized, correlated, and restricted—can be formulated. Generalized active clause coverage requires each major clause to be true and false while minor clauses assume values that allow determination. Correlated active clause coverage often aligns with generalized coverage in practice, while restricted active clause coverage requires minor clauses to maintain consistent values across both truth assignments of the major clause. Constructing a truth table for the predicate helps visualize these relationships and ensures that the minimal number of test cases is selected without repetitions while satisfying all test requirements.
+</p>
+      <p>This systematic approach enables rigorous testing of program logic, including predicates that occur deep within a program or involve internal variables not directly influenced by inputs. By applying these principles, testers can generate test cases that satisfy logical coverage criteria while accounting for observability and controllability, ensuring that inputs are chosen to reach and exercise the desired predicates. These methods form a foundation for extending logic coverage to practical program testing and specifications, such as finite state machines, thereby ensuring thorough validation of both software implementations and behavioral models.
+</p>
+    </section>
+        
+  </main>
+
+    <footer>
+    <a href="ST_l24_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

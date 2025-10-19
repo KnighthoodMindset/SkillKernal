@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 17 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Design Integration testing and Graph Coverage</h3>
+    </section>
+    <section>
+      <p>In integration testing, graphs can be effectively used to analyze interactions between software modules. Call graphs are the primary model for such testing, where vertices represent modules or, in cases of top-down or bottom-up testing, test stubs and drivers, while edges represent the interfaces or calls between modules. Structural coverage criteria in call graphs focus on ensuring that every module is called appropriately and that all expected calls are executed. Node coverage ensures every module is invoked, verifying their utility, while edge coverage ensures every interface call occurs at least once, helping identify redundant or unused modules. Other coverage criteria like edge pair or prime path coverage are less relevant for call graphs, as loops are uncommon, though specified path coverage can be useful for big bang integration testing. In object-oriented software, class call graphs are less meaningful since classes themselves are not executable; instead, coverage is applied to instantiated objects. Object-oriented call coverage ensures that each reachable node in the call graph of an object is tested, while object call coverage extends this to every object instantiated for each class in the hierarchy.
+</p>
+      <p>Data flow coverage criteria extend structural testing by examining how data is passed across interfaces. This is particularly significant in inheritance testing and scenarios involving parameter, shared data, or external device coupling. In such testing, the focus is on parameters passed between modules, with the last definition (last def) representing the last point where a variable is defined in the caller before being passed, and the first use (first use) representing the first point where the variable is used in the callee. Coupling variables, which are defined in one module and used in another, form the basis for defining coupling du-paths. Three primary data flow coverage criteria apply to these coupling variables: all coupling def coverage, which ensures each last def reaches at least one first use; all coupling use coverage, which ensures each last def reaches every corresponding first use; and all coupling du-paths coverage, which ensures every simple path from last def to first use is executed.
+</p>
+      <p>An example of these principles can be seen in a Java program computing quadratic roots, where a main class calls a root method with coefficients as parameters. Here, x, y, and z represent input parameters, and root1 and root2 are shared variables for storing results. The last definitions of parameters occur during their initialization in the main method, while their first uses occur within the root method. The Boolean variable `ok` returned by the root method also demonstrates coupling, as its value determines subsequent operations in the main method. By identifying last defs, first uses, and coupling du-pairs, testers can apply the data flow coverage criteria to ensure correct handling of parameters and return values across module interfaces. Such analysis is crucial in safety-critical software, where standards like DO-178C mandate evidence of both structural and data coupling testing to ensure reliability in applications such as avionics, nuclear control, and automated transportation systems.
+</p>
+    </section>
+    
+        
+  </main>
+
+    <footer>
+    <a href="ST_l17_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

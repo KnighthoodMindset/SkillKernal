@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 20 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Graph coverage criteria</h3>
+    </section>
+    <section>
+      <p></p>
+    </section>
+
+
+The first video of week five focuses on solving the assignment from week four, which involved design integration testing, graph coverage criteria, sequencing constraints, and data flow coverage criteria. The assignment began with questions on the integration testing phase, which immediately follows unit testing in the V-model or waterfall model, and on scaffolding, where test stubs and test drivers are commonly used to simulate unavailable modules in top-down and bottom-up integration testing. One true/false question addressed the direction of last definitions between caller and callee, which can occur both ways, making the statement that it only occurs from caller to callee false. Another true/false question considered whether default or implicit initializations of global variables in languages like C or Java should be treated as definitions, which they should, as the values exist even if not explicitly stated. A fill-in-the-blank question regarding sequencing constraints highlighted that test requirements are typically written to violate the constraints to flag errors.
+
+The assignment then included a program for computing the square root using a divide-and-conquer approach, implemented with go-to statements instead of loops, inspired by classical research by Rapps and Weyuker. Students were asked to draw a control flow graph (CFG) for the program, with nodes representing sequential statements and decision points, and edges representing branching and loops, particularly around three if statements and corresponding go-to loops. The CFG was crucial for answering subsequent questions. One question required identifying an error in the program, which was due to the incorrect ordering of statements eleven and twelve, causing the program to skip certain computations.
+
+Other questions focused on evaluating test paths for coverage criteria. A given set of paths satisfied edge coverage, as every edge in the CFG was executed at least once. When evaluating all definitions, all uses, and all du-paths coverage, the same set of paths satisfied all uses coverage, which subsumes all defs coverage, but did not satisfy all du-paths coverage due to specific du-paths being left out. A question on the definition and use of variable `c` demonstrated that the definition in node five results in a use only if the path five-two-three is included. Another question on a set of paths highlighted that they satisfied branch coverage, also known as decision coverage, as all branches corresponding to the three if statements were executed.
+
+Overall, this assignment emphasized the process of studying a program, drawing its CFG, annotating it with definitions and uses, and applying structural and data flow coverage criteria to understand testing strategies. From the next lecture onwards, the focus will shift to logical predicate coverage criteria, applying logic-based analysis to source code and specifications.
+
+    
+        
+  </main>
+
+    <footer>
+    <a href="ST_l20_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

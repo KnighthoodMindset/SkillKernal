@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 23 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Coverage criteria, Contd</h3>
+    </section>
+    <section>
+      <p>Logic coverage criteria are used in software testing to ensure that the behavior of predicates in a program is thoroughly tested. A predicate is an expression that evaluates to true or false and is used to label decision statements in programs or guards in design or requirements. Each predicate consists of one or more clauses, which are atomic entities without logical connectors. Predicate coverage tests the predicate to be both true and false, while clause coverage tests each individual clause in the predicate for both truth values. All combinations coverage, also called complete clause coverage, tests the predicate for every possible combination of clause values, which can result in an exponential number of test cases and is usually impractical. Active clause coverage was introduced to determine how individual clauses influence the predicate, focusing on a major clause while other minor clauses take values that do not affect the outcome. Active clause coverage was further refined into generalized active clause coverage, correlated active clause coverage, and restricted active clause coverage. In generalized active clause coverage, minor clauses can take any values; in correlated active clause coverage, minor clauses take values that aid the major clause in determining the predicate; and in restricted active clause coverage, minor clauses take specific values to maintain consistency with the truth or falsity of the predicate.
+</p>
+      <p>Inactive clause coverage (ICC) focuses on understanding how a major clause does not influence the truth or falsity of a predicate. For each predicate, every clause takes turns as the major clause, while minor clauses are chosen such that the major clause does not determine the predicate. The test requirements for inactive clause coverage consist of four conditions: the predicate evaluates to true with the major clause true once and false once, and the predicate evaluates to false with the major clause true once and false once. This ensures that the major clause has no effect on the predicate. Inactive clause coverage subsumes predicate coverage because it guarantees that the predicate is evaluated as both true and false while considering the major clause. Practical applications of inactive clause coverage can be seen in systems such as reactor shutdown software, where certain operations should not affect the system state under specific conditions. For example, in override mode, the reset operation of a reactor control system should be inactive relative to the status of a valve, meaning the valve’s state does not influence the outcome of the reset operation.
+</p>
+      <p>Extensions of inactive clause coverage include generalized ICC and restricted ICC. Generalized ICC allows the minor clauses to vary freely in the four test cases, whereas restricted ICC requires minor clauses to assume the same values in pairs of test cases corresponding to the predicate being true and the predicate being false. Correlated inactive clause coverage does not exist because the major clause is intentionally made inactive, so minor clauses cannot aid it in determining the predicate. Logic coverage criteria, like graph coverage criteria, can face infeasible test requirements in practical scenarios due to additional constraints. Infeasible requirements are handled by either ignoring them or by using alternative feasible coverage criteria. For example, restricted active clause coverage (RACC) might be infeasible under certain constraints, while correlated active clause coverage (CACC) remains feasible and can be used instead. In practical testing, only feasible test case combinations that do not violate system constraints are considered.
+</p>
+      <p>A detailed example involves a system controlled by software with a valve that can be open or closed and system modes that can be operational or standby. Constraints such as the valve being open in operational mode and closed otherwise, and the system not being in both operational and standby modes simultaneously, influence which test cases are valid. A predicate representing a test condition is expressed logically, and only the combinations of truth values for the clauses that satisfy these constraints are considered feasible test cases. Using the truth table for the predicate, feasible test cases are identified and used to satisfy coverage criteria such as CACC, while RACC may become infeasible due to constraints. This illustrates how infeasibility arises and is handled in logic coverage criteria.
+</p>
+      <p>The subsumption relations among different logic coverage criteria indicate how they relate to each other in terms of test case coverage. Clause coverage and predicate coverage do not subsume each other, as achieving one does not guarantee the other. Generalized active clause coverage subsumes clause coverage but not predicate coverage. All inactive clause coverage criteria subsume predicate coverage because they test the predicate for both true and false values. CACC subsumes predicate coverage, and RACC subsumes CACC, which in turn subsumes generalized active clause coverage. Combinatorial coverage, which tests the predicate for every possible combination of clause values, is the most comprehensive and subsumes all other logical coverage criteria. The next step in studying logic coverage involves developing algorithms to determine how clauses influence predicates and how to systematically generate test cases to satisfy these coverage criteria.
+</p>
+    </section>
+    
+        
+  </main>
+
+    <footer>
+    <a href="ST_l23_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

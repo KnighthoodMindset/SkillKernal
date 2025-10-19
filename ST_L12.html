@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 12 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Algoriths: data flow graph coverage criteria</h3>
+    </section>
+    <section>
+        <p><strong>Data flow coverage criteria</strong> are an extension of data flow testing that aim to ensure that all possible paths connecting definitions and uses of variables in a program are properly tested. These criteria are defined on the basis of <strong>definition-use paths</strong> (DU-paths). A DU-path is a path that starts at a point in the program where a variable is defined and ends at a point where the same variable is used, without any redefinition of that variable along the path. In other words, a DU-path represents the flow of data from the point of definition to its corresponding use, ensuring that intermediate nodes remain definition-clear.</p>
+        <p>To organize and analyze DU-paths effectively, they are grouped in two ways — based on <abbr>definitions</abbr> and based on both <abbr>definition and use</abbr>. When DU-paths are grouped according to their definitions, we obtain what is known as a definition path set. For a variable ( v ) defined at a node ( n_i ) in a control flow graph, the definition path set (def-path set) is the collection of all DU-paths that begin at that node for that variable. On the other hand, when DU-paths are grouped according to both definition and use, we obtain a definition-pair set. A def-pair set for a variable ( v ) consists of all DU-paths that begin at a node ( n_i ), where the variable is defined, and end at a node ( n_j ), where the variable is used. Essentially, the def-pair set captures all possible ways through which a variable’s value travels from its definition point to its use point in a program.</p>
+        <p>An example can be drawn from the pattern-matching program discussed earlier, where the variable <strong>isub</strong> was used to index over the subject string. This variable was defined at node 10 in the control flow graph and used at several other nodes and edges. For such a variable, the def-path set at node 10 would include all DU-paths that start at node 10 and end at any of its uses, such as nodes 4, 5, 8, or 9. Similarly, the def-pair set would include DU-paths from node 10 to a specific use, such as only node 4 or node 5. Taking the union of all such DU-paths gives the complete def-path set for isub at node 10.</p>
+        <p>Once these DU-paths are identified, data flow coverage criteria can be defined to guide the creation of effective test cases. Similar to structural coverage criteria, data flow coverage focuses on how definitions reach their uses and how the flow of data affects program behavior. A test path is said to <strong>DU-tour</strong> a subpath if it traverses that definition–use subpath without redefining the variable along the way. This allows side trips and detours as long as they remain definition-clear. In practice, test cases are generated to ensure that these DU-paths are covered according to different coverage criteria, depending on the desired level of thoroughness.</p>
+    </section>
+    <section>
+        <p>There are three fundamental data flow coverage criteria: <strong>All-Defs Coverage, All-Uses Coverage</strong>, and <strong>All-DU-Paths Coverage</strong>.</p>
+        <p>In <strong>All-Defs Coverage</strong>, the objective is to ensure that every definition of each variable reaches at least one of its uses. This ensures that no variable is defined without being used, confirming basic data propagation.</p>
+        <p>In <strong>All-Uses Coverage</strong>, every definition of a variable must reach all its possible uses within the program. This criterion is stricter than All-Defs Coverage because it ensures that all possible uses of each definition are exercised by at least one test case.</p>
+        <p>Finally, in All-DU-Paths Coverage, for every definition–use pair, all possible DU-paths between them must be covered by test cases. This is the most rigorous of the three criteria because it ensures that every distinct path connecting a definition to its uses is tested.</p>
+        <p>To illustrate, consider a program where variable <strong>x</strong> is defined at node 1 and used at nodes 5 and 6. For All-Defs Coverage, any one test path that connects node 1 to either node 5 or 6 would satisfy the criterion. For <strong>All-Uses Coverage</strong>, both uses at nodes 5 and 6 must be covered, requiring at least two separate test paths. For <abbr>All-DU-Paths Coverage</abbr>, every possible path from the definition at node 1 to both uses at nodes 5 and 6 must be tested, ensuring maximum data flow verification.</p>
+    </section>
+    <section>
+        <p>The relationship between these criteria can be understood through subsumption. A stronger coverage criterion subsumes a weaker one, meaning that if a stronger criterion is satisfied, the weaker one is automatically satisfied. Among data flow criteria, All-DU-Paths Coverage subsumes All-Uses Coverage, and All-Uses Coverage in turn subsumes All-Defs Coverage. Thus, the hierarchy of subsumption can be represented as:</p>
+        <p><strong>All-DU-Paths Coverage → All-Uses Coverage → All-Defs Coverage.</strong></p>
+    </section>
+    <section>
+        <p>Data flow criteria can also be related to structural coverage criteria such as node, edge, and prime path coverage. Since each edge in a program graph typically involves the use of at least one variable, All-Uses Coverage implicitly ensures edge coverage. Moreover, because every DU-path is a simple path, Prime Path Coverage subsumes All-DU-Paths Coverage. Therefore, data flow and structural coverage criteria can be visualized together in a unified subsumption hierarchy, where prime path coverage appears above all DU-paths, and all uses coverage lies above edge coverage.</p>
+        <p>When implementing data flow testing in practice, the process begins with performing data flow analysis on the input program. This analysis identifies all definitions and uses of variables and constructs their corresponding DU-pairs. Once the DU-pairs are established, suitable data flow coverage criteria are selected to guide the creation of test cases. Test data are then generated to cover the required DU-paths. If a particular coverage criterion is found infeasible, testers may choose alternative feasible DU-pairs to achieve meaningful coverage.</p>
+        <p>Several algorithmic techniques have been proposed for data flow-based test data generation, including explicit search, random search, symbolic execution, and model checking. Over the past four decades, these techniques have evolved significantly, and extensive research continues in this domain. Foundational work by Rapps and Weyuker in the early 1980s introduced the classical models for data flow testing, which remain relevant today. Their work, along with modern studies and surveys like those published in ACM Computing Surveys (April 2017), provides a comprehensive overview of data flow testing methodologies and algorithms.</p>
+        <p>In conclusion, data flow coverage criteria form an essential part of graph-based software testing. They focus on the logical flow of data through definitions and uses, ensuring that variables are properly defined, propagated, and utilized throughout the program. The three core criteria — All-Defs, All-Uses, and All-DU-Paths Coverage — represent increasing levels of thoroughness in testing. By combining data flow and structural testing approaches, software testers can achieve deeper insights into program behavior, detect hidden data dependencies, and identify subtle bugs that might otherwise remain unnoticed.</p>
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_l12_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

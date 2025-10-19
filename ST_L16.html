@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 16 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Software Design and integration testing</h3>
+    </section>
+    <section>
+      <p>Integration testing is the phase of software testing that focuses on verifying the interactions between different modules of a system once they are combined. After each module has been individually tested during unit testing, integration testing ensures that the modules work together correctly as per the software design. In large software systems, the design is divided into multiple self-contained modules, each responsible for specific functionality. These modules communicate with each other through defined interfaces that handle the transfer of control and data between them. An interface can be seen as a mechanism that allows one module to call another and exchange data.
+</p>
+      <p>There are mainly three types of interfaces used in software systems: procedure call interfaces, shared memory interfaces, and message passing interfaces. In a procedure call interface, a module invokes another module or function by transferring control and parameters, and the called module returns control and data back. In shared memory interfaces, modules communicate through a common memory block, where one module writes data and another reads it. This is often seen in system and embedded software. In message passing interfaces, modules exchange information by sending and receiving messages through communication channels or buffers, which is common in client-server systems, IoT devices, and web applications.
+</p>
+      <p>Testing these interfaces is crucial because empirical studies show that nearly 25% of software errors arise from interface-related issues. Interface errors can occur due to several reasons, such as incorrect functionality assumptions, misplaced modules, wrong parameter types, missing or extra parameters, inadequate error handling, and timing or performance issues. For instance, a module may pass incorrect data types or fail to handle errors returned by another module. These issues can severely affect system performance and reliability, which is why integration testing pays special attention to identifying such problems.
+</p>
+      <p>When performing integration testing, it is not necessary to wait until all modules are fully developed. Instead, testing can begin incrementally as modules become available. To facilitate testing when some parts are missing, testers use scaffolding techniques like test stubs and test drivers. A test stub acts as a dummy module that mimics the behavior of a missing module by returning fixed or simulated outputs, while a test driver acts as a dummy controller that simulates the higher-level module responsible for invoking lower-level modules. Both stubs and drivers are essential tools in integration testing because they allow partial systems to be tested effectively.
+</p>
+      <p>There are five classical approaches to integration testing: incremental, top-down, bottom-up, sandwich, and big bang testing. In incremental testing, modules are integrated and tested in phases, gradually building the complete system while fixing errors at each stage. Top-down integration testing begins from the highest-level module and progresses down the hierarchy. Initially, only the top module and its immediate submodules are tested using stubs for the lower-level modules. As testing proceeds, the stubs are replaced with real modules until the entire system is integrated. This approach helps in early verification of control flow and high-level design.
+</p>
+      <p>In contrast, bottom-up integration testing starts from the lowest-level modules and moves upward. Since the higher-level modules may not yet be available, test drivers are used to simulate their functionality. The drivers call the lower-level modules, and once those modules are tested, the drivers are replaced by the actual higher-level modules. This approach ensures that the foundational components of the system are tested first, leading to stable integration as development progresses.
+</p>
+      <p>Sandwich testing combines both top-down and bottom-up methods, where higher-level modules are tested using top-down techniques and lower-level ones using bottom-up techniques, and then both sets are integrated. The big bang approach, on the other hand, integrates all modules simultaneously and tests the complete system in one go. Although it saves time initially, it makes fault isolation difficult and is therefore not generally preferred for large or complex systems.
+</p>
+      <p>Overall, integration testing ensures that individual software modules interact correctly and that the combined system meets its intended functionality. It validates the interfaces between modules, detects communication and data transfer errors early, and strengthens the overall software reliability. By systematically combining modules and testing their connections, integration testing bridges the gap between unit testing and system testing, forming a critical step in the software development life cycle.
+</p>
+    </section>
+
+        
+  </main>
+
+    <footer>
+    <a href="ST_l16_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

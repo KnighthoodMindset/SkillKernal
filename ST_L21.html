@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 21 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Logic: Basic needed for software testing</h3>
+    </section>
+    <section>
+      <p>In software testing, logical predicates play a crucial role in designing test cases because decision statements in programs, such as if, while, for, and do-while loops, are governed by predicates that evaluate to true or false, determining the execution paths of the program. To design test cases effectively, it is essential to understand the basics of logic, particularly propositional logic and predicate logic. Propositional logic, a subset of formal logic, deals with atomic propositions, which are Boolean entities that are either true or false. These propositions can be combined using Boolean connectives such as negation, disjunction, conjunction, implication, and equivalence. While not and or are sufficient to define all propositional formulas, other operators like and, implies, and equivalence can be derived from them. For instance, the implication “alpha implies beta” can be expressed as “not alpha or beta,” and equivalence as “alpha implies beta and beta implies alpha.” Propositional formulas can be evaluated using a valuation function that assigns truth values to atomic propositions, and the semantics of compound formulas are determined based on these truth values. Truth tables provide a practical method for calculating the truth of formulas, and they are used to determine satisfiability, which checks whether there exists an assignment of truth values to atomic propositions that makes the formula true. A formula is considered valid or a tautology if it evaluates to true under all assignments, whereas a contradiction is always false. Satisfiability for propositional logic is NP-complete, meaning no polynomial-time algorithm is known for solving it.
+</p>
+      <p>Predicate logic extends propositional logic to include variables of different types, functions, and relations, allowing the expression of conditions commonly found in programs. Predicates are expressions that evaluate to true or false and may include integer, floating-point, or Boolean variables, as well as functions that return values. They can be combined using logical operators similar to propositional logic. Within a predicate, each individual component that does not contain a Boolean operator is called a clause, which is essentially a Boolean atomic predicate. For example, in a predicate like “x ≥ y or not flag or f(x),” the clauses are x ≥ y, flag, and f(x). Understanding predicates and clauses is essential for defining coverage criteria in testing.
+</p>
+      <p>The satisfiability problem for predicate logic involves determining whether there exists an assignment of values to the variables that makes the predicate true. Unlike propositional logic, the domain of variables in predicate logic can be infinite, making general satisfiability undecidable. Specialized tools like SAT solvers and SMT solvers can assist in checking satisfiability for practical cases. In testing, the focus is not on finding all satisfying assignments but on verifying whether a given assignment of values makes the predicate true during program execution. Understanding the principles of propositional and predicate logic, including syntax, semantics, truth tables, satisfiability, and the structure of predicates and clauses, provides the foundation for designing test cases based on logical predicates.
+</p>
+    </section>
+
+        
+  </main>
+
+    <footer>
+    <a href="ST_l21_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

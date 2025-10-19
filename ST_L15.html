@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 15 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Data Flow Graph Coverage Criteria</h3>
+    </section>
+    <section>
+      <h4>Testing of Source Code Using Graph Models</h4>
+      <p>Testing of source code using graph models involves representing a program through a control flow graph where each node represents a statement or block of statements and edges show the flow of control between them. To perform more effective white-box testing, the control flow graph is extended with information about variable definitions and uses. This extension allows testers to apply data flow coverage criteria, which help in identifying whether variables defined in the program are correctly used before being redefined or discarded.
+</p>
+      <p>In data flow testing, every variable undergoes two key actions: definition and use. A variable is said to be defined when it is assigned a value, and it is used when its value is read or referenced in an expression or condition. A def-use path is the sequence of program statements that connects a definition of a variable to its corresponding use without any redefinition of the same variable in between. Such paths are called definition-clear paths and form the basis of data flow testing.
+</p>
+      <p>The main criteria in data flow testing are all-defs coverage, all-uses coverage, and all-du-paths coverage. The all-defs criterion ensures that each definition of every variable reaches at least one of its uses, confirming that every assignment has an effect in the program. The all-uses criterion demands that each definition reaches all possible uses of that variable, ensuring that every situation where the variable is used has been tested. The all-du-paths criterion is the strongest because it requires every possible definition-clear path from each definition to each use to be executed at least once.
+</p>
+      <p>By applying these criteria, testers can detect logical errors such as unused definitions, incorrect variable updates, and missing computations. It helps to identify situations where data is defined but never used, or where a variable is used before being properly initialized. This method ensures that data dependencies in the program are thoroughly verified and that variable lifetimes are correctly handled.
+</p>
+      <p>Testing through graph models gives a more structured view of how the program’s control and data flow interact. It ensures that every path a variable can take from definition to use is checked, thereby improving the reliability of the software. Data flow testing using control flow graphs thus strengthens the overall structural testing process by combining both control and data aspects of the program.
+</p>
+    </section>
+        
+  </main>
+
+    <footer>
+    <a href="ST_l15_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

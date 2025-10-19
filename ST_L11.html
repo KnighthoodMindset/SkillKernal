@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 11 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Data Flow Graphs</h3>
+    </section>
+    <section>
+        <p><strong>Data flow testing</strong> is a technique in software testing that focuses on how data moves through a program and how variables are defined and used. In a program, variables are used to store data, and each variable can undergo two key operations — definition and use. A definition of a variable occurs when a value is assigned to it, such as in an assignment statement, an input operation, or during parameter passing. A use of a variable happens when its value is accessed, either for computation, such as appearing on the right-hand side of an assignment or in an output statement, or as part of a condition in control statements like if, while, or for loops.
+</p>
+        <p>To analyze how data flows in a program, testers model the program using a control flow graph (CFG), where each node represents a statement or block of statements and each edge represents the flow of control between them. The CFG is annotated with definitions and uses of variables. For each node and edge, the sets of defined and used variables are identified. Generally, variable definitions occur at nodes where assignments or inputs are made, and variable uses occur either at nodes or on edges, especially when a condition involves variables.
+</p>
+        <p>The key concept in data flow testing is the definition–use (DU) pair. A DU pair connects the location where a variable is defined to the location where it is used. It is denoted as (li, lj), meaning that a variable is defined at statement li and used at statement lj. The main purpose of testing based on DU pairs is to ensure that every variable that is defined is eventually used and that no variable is used without being defined. These pairs form the foundation for defining data flow coverage criteria.
+</p>
+        <p>A simple example of a program used in this context is the pattern-matching program, which checks whether a given pattern occurs in a subject string and returns the index of the first occurrence. This program contains multiple variables such as subject, pattern, NOTFOUND, isub, rtnIndex, ispat, subjectLen, and patternLen. The control structure includes nested loops and conditional statements, which can be represented as a CFG. Each node and edge in this graph has associated definitions and uses of variables. For instance, nodes representing assignment statements define variables like isub and rtnIndex, while edges representing conditional expressions use variables like subject and pattern.
+</p>
+        <p>When performing data flow analysis, it is important to distinguish between local uses and global uses. A local use occurs when a variable is both defined and used within the same statement, such as in x = x + 1. These local uses are often ignored in DU pair analysis since they do not involve a flow of data between different parts of the program. On the other hand, global uses occur when a variable is defined in one statement and used in another, representing a true flow of information through the program.
+</p>
+        <p>Data flow testing also classifies uses into two types: computational use (c-use) and predicate use (p-use). A computational use occurs when the value of a variable is used in a calculation or an output statement. For example, in y = x + 5, the variable x is involved in a computation. Predicate use, on the other hand, occurs when a variable is used in a condition or decision-making statement, such as if (x > 0) or while (x < 10). These distinctions help in designing different types of definition–use pairs: definition–computation use (DCU) pairs and definition–predicate use (DPU) pairs.
+</p>
+        <p>By analyzing all the DU pairs in the program, testers can define data flow coverage criteria. These criteria ensure that the test cases cover all the possible definition–use relationships. The goal is to check that each definition of a variable reaches at least one of its uses and that the data values are properly propagated through different paths of the program. This helps detect potential issues such as unused definitions, variables used before being defined, and incorrect variable propagation across loops and conditions.
+</p>
+        <p>In summary, data flow testing complements structural testing by focusing on how information is defined, transmitted, and used in a program. It uses control flow graphs annotated with definitions and uses of variables to form DU pairs, which serve as test requirements. By covering these pairs through appropriate test paths, testers can ensure that the program’s data handling is both correct and complete. This approach provides deeper insight into the logical flow of data and helps identify subtle defects that structural coverage alone might miss.
+</p>
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_l11_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 13 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Graph-Based Testing and Control Flow Graphs</h3>
+    </section>
+    <section>
+        <p>In software testing, structural coverage criteria based on graphs provide a systematic way to ensure that all parts of a program are adequately tested. Initially, we studied various coverage criteria over graphs—both structural (like node, edge, and path coverage) and data flow-based (like definition-use pairs). However, understanding these concepts theoretically is only the first step. The real challenge lies in applying them to actual software artifacts such as source code, design models, and specifications. In this context, the most commonly used artifact is the source code, which can be modeled as a <abbr>Control Flow Graph (CFG)</abbr>. The CFG serves as a fundamental structure that captures the flow of control during program execution, including sequences, decisions, and loops.
+</p>
+        <p>A Control Flow Graph (CFG) consists of <strong>nodes</strong> and <strong>edges</strong>. The nodes represent program statements or blocks of statements that execute sequentially without internal branches—these are called <strong>basic blocks</strong>. The edges represent the possible transfers of control between these blocks. Typically, a CFG is annotated with branch predicates, showing the condition controlling the flow of execution, and sometimes with information about variable definitions (defs) and uses, especially when data flow testing is considered.
+</p>
+        <p>When modeling source code, different constructs such as conditionals, loops, and exception handling result in distinct graph structures. For example, an <strong>if-else statement</strong> introduces a branching node: if the condition is true, control flows along one edge to execute a set of statements; otherwise, it follows a different edge for the alternative set. Eventually, both branches merge at a common node representing the statement executed after the if-else structure. If the `else` part is absent, one branch leads to the “then” part, while the other directly exits to the next statement. In cases where an `if` statement includes a `return`, the return statement terminates that control path, creating a separate exit node in the CFG.
+</p>
+        <p>A <strong>switch-case statement</strong> represents multiple branches based on variable values. Each case corresponds to a separate edge leading to a specific set of statements. The `break` statement is crucial—without it, the control “falls through” to the next case, introducing an additional edge between the cases in the CFG. The `default` case adds another edge representing the fallback execution path.
+</p>
+        <p>**Loop structures** form the backbone of program flow and are key for control flow graph modeling. In a <abbr>while loop</abbr>, control first checks a predicate; if true, it enters the loop body, executes the statements, and returns to check the condition again. If false, it exits the loop. This cyclic flow between condition checking and loop body execution forms the loop’s graphical structure. Similarly, a <abbr>for loop</abbr> has an initialization node, a predicate-check node, a body node, and an increment node. Control moves sequentially from initialization to condition checking, body execution, incrementing the loop variable, and then back to condition checking. A **do-while loop**, in contrast, executes its body at least once before checking the predicate, resulting in a self-loop structure where the condition is evaluated after the loop body.
+</p>
+        <p>Some loops involve special control-altering statements such as <abbr>break</abbr> and <abbr>continue</abbr>, which modify the normal loop flow. A `break` immediately exits the loop, creating an edge that bypasses remaining iterations and connects directly to the next statement after the loop. A `continue` skips the remaining statements in the loop body and jumps directly to the condition check node. These statements introduce additional edges and nodes, making the CFG more complex and realistic.
+</p>
+        <p>Exception handling mechanisms, such as <strong>try-catch blocks</strong>, also have unique CFG representations. The “try” block is modeled as a normal sequence of statements, while each “catch” block represents a possible alternate path triggered by an exception. Depending on which exception is thrown, control jumps from the try block to the corresponding catch node. If no exception occurs, the normal control flow proceeds to the next statement after the try-catch block.
+</p>
+        <p>Once we understand how to build CFGs for various code constructs, we can model complete programs. For example, consider a Java method that computes basic statistical parameters such as mean, median, variance, and standard deviation for an array of numbers. The CFG of this program would begin with initialization nodes, followed by nodes representing two for-loops—one for computing the sum (to derive the mean and median) and another for computing variance and standard deviation. Each loop involves initialization, condition checking, loop body execution, and incrementing, all captured as nodes and edges within the CFG. The program terminates at nodes representing print statements for each computed value.
+</p>
+        <p>After constructing the CFG, various graph-based coverage criteria can be applied. For instance, edge coverage requires that every edge in the graph be executed at least once by some test case. To achieve edge coverage, we derive test paths that collectively traverse every edge in the CFG. In the statistics program example, a single long path that starts at the initialization node, traverses both loops (including both true and false conditions of the predicates), and reaches the end node can achieve full edge coverage. More advanced criteria, like path coverage or data flow coverage, could also be applied for more thorough testing.
+</p>
+        <p>In conclusion, modeling source code as a Control Flow Graph allows testers to systematically visualize and evaluate all possible execution paths of a program. By applying coverage criteria such as node, edge, and path coverage to these graphs, we can ensure that our test cases explore all significant control structures, leading to better fault detection and higher software reliability. The CFG thus forms the foundation for graph-based testing, bridging the gap between theoretical testing criteria and practical software verification.
+</p>
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_l13_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

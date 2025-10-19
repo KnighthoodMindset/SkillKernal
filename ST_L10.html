@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 10 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Structural Coverage Criteria</h3>
+    </section>
+    <section>
+        <h4>Subsumption among Structural Coverage Criteria</h4>
+        <p>In software testing using graph-based models, coverage criteria are often related through a concept known as subsumption. One criterion is said to <abbr>subsume</abbr> another if every test requirement (TR) that satisfies the first also satisfies the second. The correct order of subsumption among the common criteria is:</p>
+        <p>Prime path coverage ⟶ Edge coverage ⟶ Node coverage.</p>
+        <p>This means that if a test set satisfies prime path coverage, it automatically satisfies both edge and node coverage. Node coverage, however, does not subsume edge coverage, and edge coverage does not necessarily subsume prime path coverage. The hierarchy is therefore essential to understanding how comprehensive each criterion is in terms of test adequacy.</p>
+    </section>
+    <section>
+        <h5>Edge Coverage and Node Coverage Relationship</h5>
+        <p><strong>Node coverage</strong> requires that every vertex (or node) in a graph be visited by at least one test path. In contrast, edge coverage requires that every edge be traversed at least once. Since every edge connects two nodes, edge coverage indirectly ensures node coverage. However, for edge coverage to fully subsume node coverage, the set of test requirements must include paths of length up to one (i.e., paths that represent both nodes and single-edge transitions). This modification ensures that node coverage requirements are inherently satisfied when edge coverage is achieved.</p>
+    </section>
+    <section>
+        <h4>Side Trips and Detours</h4>
+        <p>In graph-based testing, certain test requirements can become infeasible, meaning they cannot be met by any single test path due to structural constraints such as loops or conditional branches. To address this, two concepts are introduced: side trips and detours.</p>
+        <p>A <strong>side trip</strong> occurs when a test path temporarily deviates from the main path, traverses a small section of the graph, and then rejoins the original path at the same vertex. It allows additional parts of the graph to be tested without violating the path’s overall structure.</p>
+        <p>A <strong>detour</strong> is similar but slightly broader — it may skip certain intermediate nodes or edges before rejoining the main path. Both side trips and detours help in making infeasible test requirements feasible, especially in cases involving loops. For instance, in a <strong>do-while loop</strong>, prime path coverage might require a test that skips the loop entirely, even though such execution is not possible in practice. Using a side trip, testers can execute the loop once and still satisfy the requirement logically.</p>
+    </section>
+    <section>
+        <h5>Prime Paths</h5>
+        <p>A prime path is defined as a maximal simple path in the graph — a path that is simple (contains no repeated vertices) and cannot be extended further without losing its simplicity. The word maximal indicates that multiple prime paths can exist with different lengths; it is not restricted to a single longest path.</p>
+        <p>Prime paths are particularly useful for handling loops and complex control structures in a program’s graph model. By focusing on maximal simple paths, testers ensure that important execution sequences are covered, including paths that traverse loops zero, one, or multiple times. Prime path coverage provides a balanced trade-off between exhaustive testing and practicality since complete path coverage is typically infeasible due to infinite paths caused by loops.</p>
+    </section>
+    <section>
+        <h5>Graph Visualization for Coverage</h5>
+        <p>When solving problems or assignments related to graph-based coverage, it is essential to <strong>visualize the graph</strong> before deriving test paths. Drawing the graph allows testers to easily observe node connections, identify loops, and plan paths for node or edge coverage intuitively. Visual representation simplifies reasoning about how paths interact, how cycles form, and where branching occurs. Even if the graph layout is not perfect, having a visual structure significantly aids in constructing test requirements (TRs) and test paths for node, edge, or prime path coverage.</p>
+        <h5>Test Paths for Node and Edge Coverage</h5>
+        <p>A **test path** is any path through the graph that begins at an initial node and ends at a final node. For node coverage, test paths must collectively visit every vertex at least once. For edge coverage, test paths must traverse every edge in the graph at least once. Some paths may satisfy node coverage but not edge coverage, emphasizing the hierarchical difference between these two criteria. Testers often use multiple paths to ensure full coverage, combining direct edges (like 1→7) with longer paths that pass through all intermediate nodes (like 1→2→3→2→4→5→6→1→7).</p>
+        <p>The process of constructing these paths can be aided by <strong>graph traversal algorithms</strong> such as <abbr>Breadth-First Search (BFS)</abbr> or <abbr>Depth-First Search (DFS)</abbr>, which systematically explore nodes and edges.</p>
+    </section>
+    <section>
+        <h4>Specified Path Coverage and Side Trips</h4>
+        <p>When given a specified simple path, testers may need to verify whether their test path covers it directly or indirectly.</p>
+        <li><abbr>Direct coverage </abbr>means the simple path appears as a contiguous subpath within the test path.</li>
+        <li><abbr>Indirect coverage (with a side trip) </abbr>means the simple path’s vertices appear in order but are separated by additional segments (side trips).</li>
+        <p>For example, if the simple path is (3, 2, 4, 5, 6), a test path that includes intermediate detours like (3, 2, 4, 6, 1, 2, 4, 5, 6) still covers the simple path with a side trip. This distinction helps in understanding how different coverage strategies can be applied depending on graph complexity.</p>
+    </section>
+    <section>
+        <h4>Conclusion</h4>
+        <p>Overall, this lecture reinforces the conceptual and algorithmic understanding of structural coverage criteria in graph-based testing. It highlights subsumption among criteria, explains how side trips and detours handle infeasibility, and emphasizes prime paths as a robust criterion for achieving practical yet comprehensive coverage. Visualization and systematic graph traversal remain essential tools in deriving meaningful test requirements and corresponding test paths, ensuring that all structural aspects of software behavior are adequately tested.</p>
+    </section>
+
+    
+  </main>
+
+    <footer>
+    <a href="ST_l10_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 18 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Specification testing and Graph Coverage</h3>
+    </section>
+    <section>
+      <p>Design specifications describe how software is structured into modules, how these modules interact, and the constraints that must be satisfied to ensure the design is correct. Not all design specifications are directly derived from software requirements; some are additional constraints added to verify that the design functions as intended. One important category of design specifications is sequencing constraints, which impose rules on the order in which methods or operations can be invoked. For example, in a queue data structure, enQueue must occur before deQueue to ensure the queue is not empty, and after an enQueue operation, the element is placed at the end of the queue. These sequencing constraints can be expressed as preconditions, postconditions, or assertions and serve as design-level requirements to ensure correct functionality.
+</p>
+      <p>Sequencing constraints are typically not included in formal requirement documents but are defined by designers to maintain the correctness of the design. In the absence of explicit documentation, testers are responsible for identifying and verifying these constraints during integration testing, as violations can lead to errors. For example, in a file abstract data type (ADT) with methods to open, write, and close a file, sequencing constraints dictate that a file must be opened before writing, closed after writing, and that writing should occur before closing to avoid redundant operations. These constraints are often classified using terms like “must” and “should,” where a “must” violation indicates a definite fault, while a “should” violation may not result in a critical fault but indicates improper usage.
+</p>
+      <p>Testing sequencing constraints can be approached statically or dynamically. Static testing analyzes the control flow graph (CFG) of the code to identify potential violations without executing the program, flagging paths that could violate constraints. For instance, a path from opening to closing a file without writing would be a potential violation of the constraint that writing should precede closing. Dynamic testing involves executing the program and writing test requirements aimed at paths that violate sequencing constraints, allowing verification of whether flagged paths represent genuine violations or false positives. Each sequencing constraint is translated into a test requirement, such as covering paths from an open to a write without actually opening the file or paths where a write occurs after a close.
+</p>
+      <p>Sequencing constraints can be simple, like ensuring enQueue precedes deQueue or open precedes write, or they can be stateful, requiring tracking of the number of operations or historical behavior. Stateful sequencing constraints cannot be captured by simple assertions and typically require models like finite state machines to express and verify correct behavior. Identifying and testing these constraints is crucial in integration testing, as missing or incorrectly implemented sequencing constraints are a significant source of errors. Test paths are constructed to deliberately attempt violation of constraints, and if such a path is found, it indicates a fault in the design or its implementation. Sequencing constraints thus ensure that software modules interact correctly, maintain the intended order of operations, and uphold the integrity of design specifications.
+</p>
+    </section>
+    
+        
+  </main>
+
+    <footer>
+    <a href="ST_l18_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

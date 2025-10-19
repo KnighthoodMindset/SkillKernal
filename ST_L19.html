@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 19 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Graph Coverage and Finite State Machines</h3>
+    </section>
+    <section>
+      <p>Finite state machines (FSMs) are a popular model used in software testing to handle situations where state information must be tracked, particularly in control-intensive applications. FSMs represent a system as a finite graph where nodes, called states, describe the values of certain variables at a given point in time, and edges, called transitions, represent changes from one state to another due to execution of program statements or actions. Transitions may have guards or preconditions that determine when they can be taken, and nodes can have entry or exit actions that affect variable values or conditions. FSMs are widely used in modeling the design of embedded software, abstract data types, hardware circuits, and communication protocols. They help detect errors early in the design phase, potentially saving time and development costs, and are supported by popular modeling notations such as UML, including state machine and state chart diagrams.
+</p>
+      <p>In testing FSMs, structural coverage criteria such as node coverage, edge coverage, edge pair coverage, and specified path coverage are applicable, while prime path coverage is generally not useful. Node coverage ensures every state is executed, edge coverage ensures every transition is executed, and edge pair coverage ensures every pair of transitions is executed. Data flow coverage in FSMs is more complex because definitions and uses of variables can occur in entry or exit actions of nodes or along edges with differing guards, making data flow analysis cumbersome. Logical coverage criteria will later be introduced to handle variable-based testing in FSMs more effectively.
+</p>
+      <p>Finite state machines can be applied to abstract data types such as queues, where the state represents the content of the queue and transitions correspond to operations like enqueue and dequeue. For bounded queues, states can represent empty, partially filled, or full conditions, and transitions reflect changes in queue contents caused by method calls. Methods like checking if a queue is empty or full do not change the state, while enqueue and dequeue operations alter the queue contents. Constructing FSMs for such data structures allows systematic testing using graph-based coverage criteria, though solving for actions and guards may require additional analysis. Drawing FSMs from specifications or code helps testers understand system behavior and design effective test cases.
+</p>
+      <p>UML diagrams, including state machines, state charts, and activity diagrams, are examples of design models resembling graphs where coverage criteria such as specified path coverage can be applied for testing. Unlike control flow or call graphs, FSMs explicitly include variable values in states, providing a more detailed representation of system behavior. Over the past weeks, testing based on graph coverage criteria has covered structural and data flow criteria, their application to source code, designs, and specifications, including control flow graphs, call graphs, coupling of variables, and sequencing constraints. FSMs extend this approach to model complex state-dependent behaviors, preparing the foundation for logical predicate-based testing to be covered in subsequent lectures.
+</p>
+    </section>    
+        
+  </main>
+
+    <footer>
+    <a href="ST_l19_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>
