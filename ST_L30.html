@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 30 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Functional Testing</h3>
+    </section>
+    <section>
+      <p><strong>Functional testing</strong>, also known as black box testing, focuses on verifying the functionality of software without any knowledge of its internal structure or implementation. In this approach, testing is based purely on the relationship between inputs and outputs. The tester does not need to know how the code is written, how many loops it contains, or what language it uses. Instead, functional testing treats the program as a function that transforms given inputs into outputs. For example, if a program sorts numbers, the input would be an array of unsorted numbers, and the output would be the same array in sorted order. Similarly, for a compiler, the input could be source code, and the output would be the corresponding object code. The focus of this testing method is to ensure that the output produced for each input matches the expected behavior defined by the program’s requirements or specifications.
+</p>
+      <p>In functional testing, the first step is to identify all possible inputs and outputs, along with their domains or data types. Since it is practically impossible to test every input due to the infinite range of possible values, testers select representative subsets of input values that sufficiently cover the input space. These selected values help verify whether the program produces correct outputs across different scenarios. This process is known as <strong>Input Space Partitioning (ISP)</strong> or <strong>Equivalence Class Partitioning (ECP)</strong>, where the large input domain is divided into smaller, meaningful subsets called equivalence classes. Each class represents a set of inputs for which the program is expected to behave similarly. By testing one input from each class, testers can efficiently verify the program’s correctness without exhaustive testing. For example, in an income tax calculation program, different income ranges (like 1–29,500 or 29,501–58,500) can represent different equivalence classes, and one input value from each range is enough to test the program’s correctness.
+</p>
+      <p>Another key technique in functional testing is <abbr>Boundary Value Analysis (BVA)</abbr>, which focuses on testing input values at and around the boundaries of equivalence classes. This is because most programming errors tend to occur at the boundary conditions, such as off-by-one mistakes or incorrect comparison operators. For example, if a tax program calculates tax differently for incomes below and above 29,500, the boundary values like 29,499, 29,500, and 29,501 should be tested to ensure accurate behavior. Boundary value testing helps identify issues that equivalence class partitioning alone might miss, as it ensures that the program correctly handles inputs that lie on or near the edges of valid input ranges. By combining ECP and BVA, testers can achieve comprehensive coverage of both typical and edge-case inputs, thereby improving the reliability of the software.
+</p>
+      <p>When programs depend on multiple input conditions, <abbr>Decision Table Testing</abbr> is used to handle combinations of different inputs systematically. Decision tables list conditions (inputs) and corresponding actions (outputs) in a structured tabular format. Each combination of input conditions corresponds to a specific rule, and the expected output or effect for that rule is specified. For instance, in a loan management system, the conditions might include whether the repayment amount and the loan term are provided, and the effects could be processing the loan or displaying an error message. Decision tables are particularly useful when multiple inputs interact to produce complex behaviors, as they ensure that all combinations are considered, and no cases are overlooked.
+</p>
+      <p>Another functional testing approach is <strong>Random Testing</strong>, which involves generating random input values from the input domain and checking whether the program produces correct outputs. Though seemingly unstructured, this method is effective for finding unexpected bugs and for stress-testing software under unpredictable conditions. For example, in a program that computes the square root of a number, random testing would generate random inputs within a defined range, calculate the square root, and verify if squaring the result gives a value close to the original input within a permissible error margin. Random testing is particularly useful for testing robustness and handling of exceptional conditions, although it may not guarantee complete coverage. In conclusion, functional testing techniques like equivalence class partitioning, boundary value analysis, decision table testing, and random testing together form a comprehensive framework for testing software functionality based on inputs and outputs without relying on internal code structure.
+</p>
+    </section>
+
+          
+  </main>
+
+    <footer>
+    <a href="ST_l30_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

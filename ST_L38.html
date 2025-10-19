@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 38 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Mutation Testing vs Graph and Logic based testing</h3>
+    </section>
+    <section>
+      <p>Mutation testing is one of the most powerful software testing criteria because it is capable of detecting a wide range of faults by introducing small changes, called mutants, into the source code and checking whether test cases can identify these changes. When compared to other criteria such as graph-based and logical predicate testing, mutation testing is considered stronger because it not only ensures local coverage of statements or branches but also demands that the mutated program produces incorrect outputs. This requirement makes mutation testing a global testing criterion since it verifies both internal execution and final output differences. In contrast, criteria like node coverage and edge coverage focus only on local requirements, such as executing every statement or every branch in the control flow graph, without considering whether these affect the program’s outputs. Mutation testing therefore imposes stricter conditions through the reachability, infection, and propagation model, where the mutant must be executed, cause an internal state change, and finally propagate this change to affect the program’s output.
+</p>
+      <p>When comparing mutation testing with graph coverage criteria, it can be observed that mutation testing subsumes node coverage and edge coverage. Node coverage requires that each block of statements in the control flow graph be executed at least once. This can be achieved in mutation testing by inserting bomb statements at specific nodes; when the bomb is triggered during execution, it confirms that the node has been visited. Similarly, edge coverage is achieved by applying relational operator replacement mutation operators. By replacing decision predicates with their logical opposites, such as changing “greater than” to “less than or equal to,” mutation testing ensures that both true and false branches of each decision are executed, which satisfies the edge coverage criterion. However, mutation testing does not subsume more complex graph criteria like prime path coverage or complete path coverage, as these deal with behavioral sequences of execution paths rather than simple structural elements.
+</p>
+      <p>Mutation testing also subsumes several logical coverage criteria. Predicate coverage, which requires each decision to evaluate to both true and false, is inherently covered by mutation testing since the process of creating mutants that flip logical conditions ensures both outcomes are tested. Clause coverage, which demands that each clause in a predicate be made true and false at least once, is also subsumed by mutation testing through relational, conditional, and logical operator replacements. For instance, a clause like “x ≤ y” can be made false by mutating it to “x > y,” ensuring both truth values are examined. Active clause coverage, specifically generalized active clause coverage (GACC), is also subsumed because mutation testing guarantees that when a clause’s value changes, the overall predicate outcome also changes. However, mutation testing does not subsume correlated active clause coverage (CACC) or restricted active clause coverage (RACC) since these require simultaneous control over multiple clauses, while mutation testing typically modifies one clause at a time. Likewise, combinatorial coverage, which tests all possible combinations of truth values across clauses, is too exhaustive to be achieved through mutation testing.
+</p>
+      <p>In data flow coverage, mutation testing is shown to subsume the all-definitions (all-defs) criterion. This criterion ensures that for every variable definition in the program, there exists at least one path to a corresponding use of that variable. By applying strong mutation testing, where the output must differ, removing a statement that defines a variable creates a mutant that inevitably leads to an incorrect program state. This deletion mutation ensures that the conditions of reachability, infection, and propagation are satisfied because the absence of the definition either directly causes an error or leads to incorrect output propagation. Therefore, mutation testing inherently satisfies all-defs coverage.
+</p>
+      <p>In summary, mutation testing subsumes several existing criteria across different testing models. Under graph-based coverage, it includes node and edge coverage; under logical coverage, it includes predicate, clause, and generalized active clause coverage; and under data flow coverage, it includes all-defs coverage. However, it does not subsume prime path coverage, complete path coverage, combinatorial coverage, CACC, or RACC. The relationship between mutation testing and inactive clause coverage or all-uses criteria remains an open research problem. Mutation testing thus stands as one of the most comprehensive and demanding testing approaches, capable of detecting subtle faults through its emphasis on both structural and behavioral correctness of software.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l38_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 40 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Mutation testing : Mutation for integration</h3>
+    </section>
+    <section>
+      <p>The current part of the course deals with applying mutation testing for testing programs, specifically for integration. Previously, we introduced generic mutation operators that change calling methods, modify calls, and apply various mutations to test interfaces for any programming language that supports procedure or method calls. These five generic mutation operators allow testing of calling methods, method calls, parameter modifications, deletion of method calls, and return expression modifications. This foundation led to focusing on object-oriented integration testing, particularly for languages like Java, as many enterprise and web applications are developed using object-oriented paradigms.
+</p>
+      <p>To understand object-oriented mutation testing, we first recapped essential features including encapsulation, class inheritance, method overriding, variable hiding, constructors, polymorphism, and overloading. Instance variables belong to objects and each object has its own copy, while class variables, declared static, are shared across all instances. Local variables exist within methods. These concepts form the basis for understanding object-oriented integration mutation operators.
+</p>
+      <p>For object-oriented integration testing, the mutation operators focus on information hiding, inheritance, polymorphism, dynamic binding, method overloading, and class structures. The first operator, access modifier change, modifies access levels for instance variables and methods to ensure accessibility rules are enforced. Hiding variable deletion removes overriding or hidden variables, causing references to access parent or ancestor variables, which helps detect common integration errors. Hiding variable insertion adds new declarations to hide ancestor variables and tests whether references to overriding variables are correct. Overriding method deletion removes the declaration of an overriding method so that references use the parent method, testing method invocation correctness. Overriding method moving shifts method calls within the program to detect errors in the timing of parent method invocations. Overriding method rename changes parent method names to test if overriding causes conflicts in method usage. The super keyword deletion removes the super reference, testing whether local or ancestor variables are correctly used. Parent constructor deletion removes calls to super constructors to check if the default parent constructor leads to incorrect initial states.
+</p>
+      <p>Type-related mutation operators include type change, declared type change, and reference type change, which modify the type of objects or parameters to check if type consistency is properly handled during integration. Overloading method change swaps the bodies of overloaded methods, while overloading method deletion removes overloaded method declarations one at a time to ensure proper invocation and coverage of overloaded methods. Argument order change and number of arguments change modify the order and quantity of arguments in method calls to detect common errors in overloading usage.
+</p>
+      <p>The this keyword deletion operator removes the keyword this to test if member variables are correctly accessed when hidden by local variables or parameters. Static modifier change switches instance variables and class variables to test correct usage of static and instance members. Variable initialization deletion removes initializations of member variables to default values to test program behavior under default initialization. Finally, default constructor deletion removes default constructor declarations to verify that user-defined constructors are correctly implemented. This exhaustive list of about twenty mutation operators covers integration testing of methods, classes, inheritance, overriding, overloading, access levels, and related interactions. In practice, testers select appropriate operators based on the specific integration features they wish to validate. The next step in the course will focus on mutation testing for specifications, input grammars, and XML input models.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l40_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

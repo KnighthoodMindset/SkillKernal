@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 39 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Mutation Testing</h3>
+    </section>
+    <section>
+      <p>Mutation testing can be applied in different contexts, including BNF grammar-based testing, program-level testing for unit and integration levels, testing specifications through algebraic specifications, finite state machines, and model checking tools. While some of these areas, such as compilers, algebraic specifications, and model checking, are not covered in this course, the main focus is on applying mutation testing to programs for integration testing. This involves using mutation operators at the interface level to test interactions between functions, procedures, and methods, without focusing on object-oriented relationships initially.
+</p>
+      <p>Integration mutation, also referred to as interface testing, works by creating mutants at the interfaces or connections between components rather than within individual methods. Mutations are applied to both the calling and called methods. Key integration mutation operators include integration parameter variable replacement, integration unary operator insertion, integration parameter exchange, integration method call deletion, and integration return expression modification. Parameter variable replacement involves changing the variables passed to a called method with other compatible variables, ensuring type compatibility. Unary operator insertion modifies expressions in method calls by inserting unary operators, such as negation, to create different input scenarios. Parameter exchange swaps parameters of compatible types in a method call to test different combinations. Method call deletion removes the method call itself while ensuring the program can still compile by replacing the return value with a suitable constant if needed. Return expression modification changes the expressions in return statements of methods using arithmetic or unary operators to test the interface without altering the internal method logic.
+</p>
+      <p>When moving to object-oriented languages, integration testing becomes more complex due to features such as encapsulation, inheritance, polymorphism, method overloading, method overriding, and class constructors. Encapsulation enforces information hiding, restricting access to member variables and methods using different access levels such as private, protected, default, and public. Inheritance allows a subclass to use or override variables and methods from its parent class, with explicit access via the super keyword. Method overriding enables a subclass to redefine an inherited method with the same signature but a different implementation, while variable hiding occurs when a subclass defines a variable with the same name and type as a parent variable. Class constructors initialize objects and can be called explicitly using the super keyword, but they are not inherited like methods.
+</p>
+      <p>Polymorphism allows attributes and methods to take on different types at runtime. Polymorphic attributes are object references that can refer to various types, while polymorphic methods accept parameters of different types. Method overloading enables multiple methods or constructors in the same class to share a name but have different signatures, while instance variables belong to individual objects and class variables, or static variables, are shared across all instances of a class. This overview of object-oriented concepts provides the necessary background for applying mutation testing to integration in object-oriented programs, helping to understand interactions between methods within and across classes. The next lecture will continue with object-oriented mutation testing for integration.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l39_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

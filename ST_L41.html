@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 42 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Mutation Testing : Grammers and inputs</h3>
+    </section>
+    <section>
+      <p>Mutation testing, also known as syntax-based testing, can be categorized into two types: grammar-based testing and program-based mutation testing. Grammar-based testing applies to programs by generating test inputs according to the formal grammar of the input, whereas mutation-based testing modifies programs themselves or their input specifications to detect errors. While grammar-based testing is not applicable for integration testing, mutation-based testing can be applied at all levels, including unit, design integration, and specification levels. Both approaches are applicable for testing input spaces, and when grammars are available, they can be used to systematically derive test cases. In cases where formal grammars are not provided, testers can derive grammars from informal input descriptions, which can often reveal subtle errors or vulnerabilities in the software.
+</p>
+      <p>Inputs with complex structure, such as those encountered in banking systems, web forms, or database transactions, are described using formal languages, typically regular expressions or context-free grammars. For example, bank transaction inputs consisting of deposits and debits can be represented as a regular expression or a context-free grammar. The grammar specifies sequences of actions, such as depositing or debiting amounts from accounts, with non-terminal symbols representing entities like `account` or `amount` and terminals representing keywords or fixed values. Test cases are derived by starting with the designated start symbol of the grammar and repeatedly applying production rules until a string of terminals is obtained, representing a valid input for the program.
+</p>
+      <p>XML serves as a widely used structured input format, particularly in web applications, web services, and embedded systems. XML messages are composed of tags with opening and closing brackets, and elements can be nested hierarchically. Each XML message must be well-formed, with one root element and properly nested child elements. An example of an XML message could describe books, where each book element contains sub-elements such as ISBN, title, author, publisher, price, and year of publication. XML schemas define the precise grammar for these inputs, specifying data types, structure, and constraints. The grammar derived from a schema can be used to generate test inputs systematically, allowing testers to cover the valid input space comprehensively.
+</p>
+      <p>Mutation testing for input spaces extends the approach to generate both valid and invalid test cases. Invalid inputs are particularly important as they help assess whether the program handles exceptions and errors correctly, and they can reveal vulnerabilities or faults in the system. Mutation operators for grammars manipulate elements of the grammar, including non-terminals, terminals, and production rules. Non-terminal replacement involves substituting one non-terminal with another, potentially generating invalid inputs. Terminal replacement substitutes one terminal symbol with another, which can also create invalid or unexpected inputs. Deletion operators remove terminals or non-terminals from a production, producing malformed inputs, while duplication operators replicate terminals or non-terminals, sometimes causing invalid sequences that test the program’s robustness.
+</p>
+      <p>When applying mutation to input grammars such as XML, testers can focus on constraints specified by the schema, such as ensuring that numeric fields have the correct number of digits or that required elements are present. Mutated inputs directly serve as test cases, so there is no notion of “killing” a ground string, unlike program mutation testing, where mutated programs require additional test cases to detect errors. Mutation testing, whether applied to programs or input spaces, is a powerful technique that allows systematic exploration of errors, validation of input handling, and coverage of critical program behaviors. Tools exist for performing mutation testing in various languages, including Java and XML, and testers can leverage these tools to automate the generation and execution of mutated test cases.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l41_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>ST_L39

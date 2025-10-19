@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 35 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Mutation Testing</h3>
+    </section>
+    <section>
+      <p>Mutation testing is a fault-based software testing technique that involves making small syntactic changes to a software artifact and evaluating whether the existing test cases can detect these changes. The term mutation refers to introducing changes, similar to biological mutations. In software testing, the artifact that undergoes mutation can be source code, input data, design documents, or requirements. The purpose of mutation testing is to determine the effectiveness of a test suite by checking whether it can identify differences in behavior between the original artifact and its mutated versions. These small syntactic changes, called mutations, must still result in a valid and compilable program so that testing can proceed normally. Changes that preserve syntactic validity are defined using mutation operators, which are derived from the grammar of the programming language or artifact being tested. Grammars define valid strings, and mutation operators alter derivation rules to generate syntactic variants.
+</p>
+      <p>The original artifact before mutation is called a ground string, and the altered version obtained after applying one mutation operator is called a mutant. A mutation operator specifies how a valid syntactic element can be replaced with another according to the grammar. Each mutant represents the result of applying exactly one mutation operator to the ground string, although multiple operators can technically be applied. In practice, however, only one mutation is applied at a time because applying several makes it difficult to identify which change causes the observed behavior. Mutation testing can be performed not only on program code but also on input data and specifications. When applied to input data, mutation operators can generate invalid inputs to test how a program handles unexpected or incorrect data formats. For example, in programs that process XML files, mutation operators can modify tags or structure to create both valid and invalid variants of input, testing the robustness of input validation mechanisms.
+</p>
+      <p>A mutant is said to be killed when a test case produces different outputs for the original and the mutated versions of the program. If the output remains the same, the mutant survives, meaning the test suite failed to detect the change. The goal of mutation testing is to design test cases that can kill as many mutants as possible, ensuring that the test suite is sensitive to small syntactic and logical changes. The effectiveness of mutation testing is measured by the mutation score, which is the ratio of killed mutants to the total number of generated mutants, expressed as a percentage. For example, if fifteen mutants are created and ten are killed, the mutation score is about seventy-five percent. However, a high mutation score does not necessarily mean the program is more effectively tested, as some mutants might be equivalent to the original program and cannot be killed because they produce identical behavior for all inputs.
+</p>
+      <p>Mutation testing defines several coverage criteria to evaluate completeness. Mutation coverage ensures that every generated mutant is killed by at least one test case. Mutation operator coverage requires that each type of mutation operator is used at least once to produce a mutant, ensuring that all possible syntactic variations are tested. Mutation production coverage extends this idea by requiring that each operator be applied to every relevant production rule in the grammar, generating mutants from different derivation contexts. These coverage criteria collectively determine the thoroughness of the mutation testing process. Exhaustive mutation testing, where every possible operator is applied to every construct, is impractical due to the vast number of mutants that can be generated. Therefore, testers usually select a representative subset of mutation operators and mutants that capture the essential syntactic and semantic variations of the artifact being tested.
+</p>
+      <p>Although mutation testing provides a strong measure of test effectiveness and subsumes many traditional coverage criteria, it is computationally intensive and difficult to automate fully. Generating mutants based on grammars is a systematic process, but designing appropriate test cases to kill each mutant often requires human expertise and domain knowledge. Additionally, the process of deciding which mutation operators to apply and which mutants to retain involves judgment and experience. Despite these challenges, mutation testing remains a powerful method for assessing the adequacy of test suites and improving their quality. It can be applied across various levels of software testing, including unit testing, integration testing, and input validation, and mutation operators exist for several programming languages, specification languages, and data definition languages such as XML and SQL.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l35_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

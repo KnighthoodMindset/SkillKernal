@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 31 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Input Space Partitioning</h3>
+    </section>
+    <section>
+      <p>Equivalence Class Partitioning, also known as Input Space Partitioning, is a fundamental concept in functional testing that involves dividing the input domain of a program into partitions or subsets such that the program behaves similarly for any input within a particular partition. The idea originates from the mathematical notion of partitioning a set, where a set S is divided into several disjoint subsets whose union constitutes the entire set. Each subset, or partition, contains elements that share common characteristics, and no element belongs to more than one subset. In testing, this means dividing the set of possible inputs into groups where all inputs in a group are expected to produce the same output or program behavior. These partitions must be both disjoint and complete—ensuring that no overlap exists between subsets and that all possible inputs are covered.
+</p>
+      <p>In software testing, the set to be partitioned is the input domain of a program, which includes all possible values of the program’s inputs. For instance, if a program accepts two boolean inputs and one integer input, the input domain is the Cartesian product of the sets for each input type. Testers may choose to focus on specific inputs or consider all inputs depending on the level of testing being performed, such as unit or integration testing. Each partition represents a unique characteristic of the input domain, and the belief is that any input taken from a partition will result in identical program behavior, while inputs from different partitions will result in distinct behaviors. This relationship among inputs in a partition is called an equivalence relation. Characteristics used to form partitions can be based on properties like whether an input is null, sorted, or has a particular order. However, the partitions must be carefully defined to satisfy completeness and disjointness, as incomplete or overlapping partitions may lead to invalid or redundant test cases.
+</p>
+      <p>To effectively apply input space partitioning, testers follow a systematic process. They begin by identifying testable functions within a program—those functions that will be directly tested. Next, they determine the parameters influencing each function’s behavior and use these to form the input domain. Characteristics or properties relevant to the function’s behavior are identified to guide partitioning, and from each partition, one representative input is chosen to form a test case. Two major approaches are used for input domain modeling: the interface-based and functionality-based approaches. The interface-based approach focuses on individual input parameters in isolation, without considering how they interact with each other. This approach simplifies identifying characteristics but may overlook dependencies between inputs. In contrast, the functionality-based approach defines partitions based on the overall functionality of the program, ensuring better coverage of program behavior, though it requires deeper domain knowledge and can be more complex to apply.
+</p>
+      <p>Examples demonstrate the difference between the two approaches. In the case of a program that checks if an element is present in a list, the interface-based approach considers properties like whether the list is null or empty, focusing on inputs separately. The functionality-based approach, however, examines the relationship between inputs and considers properties like whether the element occurs in the list and how many times it appears. Another classic example is the triangle classification program, where inputs represent the lengths of the triangle’s sides. The interface-based partitioning divides inputs based on whether each side is greater than, equal to, or less than zero, ensuring coverage of both valid and invalid triangles. The functionality-based approach, on the other hand, classifies the triangle’s type as scalene, isosceles, equilateral, or invalid. To ensure disjoint partitions, conditions such as “isosceles but not equilateral” are defined to avoid overlap. Through such partitioning, representative test cases can be designed to cover all possible input scenarios, ensuring thorough functional testing.
+</p>
+      <p>The goal of equivalence class partitioning is to minimize the number of test cases while maximizing test coverage. By selecting one representative input from each valid and invalid partition, testers can efficiently verify that the program handles all categories of inputs correctly. The process ensures that the partitions are valid for the given data type, as the same partitioning scheme might not be applicable across different data types, such as integers and floating-point numbers. Moreover, partitions must be designed to include both valid and invalid values to test error handling and boundary conditions. Input space partitioning, therefore, provides a systematic and logical foundation for functional test case design, balancing the number of test cases with their effectiveness in detecting defects, and forms a critical component of black-box testing strategies.
+</p>
+    </section>
+
+          
+  </main>
+
+    <footer>
+    <a href="ST_l31_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 33 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Input Space partitioning : Coverage criteria example</h3>
+    </section>
+    <section>
+      <p>Input Space Partitioning (ISP) is a fundamental technique in functional testing that focuses on dividing the input domain of a program into meaningful subsets called partitions. Throughout its study, several coverage criteria are defined to ensure that test cases are selected systematically from these partitions. The most exhaustive form of coverage is called All Combinations Coverage, where every possible combination of partitions from all input variables is tested. While this provides maximum coverage, it leads to a large number of test cases, making it impractical for most programs. The weakest form is Each Choice Coverage, which selects one arbitrary value from each partition, offering minimal coverage and often missing interactions between inputs. Between these two extremes lies Pairwise Coverage, one of the most effective and widely used criteria, where every possible pair of partitions from different inputs is tested at least once. This approach significantly reduces the number of test cases while maintaining a strong fault detection ability. The T-Wise Coverage criterion extends this concept by considering combinations of T partitions at a time, with T equal to or greater than two, and becomes equivalent to All Combinations Coverage when all partitions are included.
+</p>
+      <p>Base Choice Coverage introduces a more intelligent way of testing by selecting one partition from each input as the base choice. A base test case is created using these choices, and additional tests are formed by varying one input at a time while keeping the others fixed. This allows testers to focus on the most important input values. Multiple Base Choice Coverage extends this further by allowing more than one base choice for each input variable, thereby increasing coverage while still keeping the number of test cases manageable. These criteria are especially useful when testers want to focus on specific input characteristics that are more likely to reveal faults.
+</p>
+      <p>To understand how these coverage criteria work, consider the classic example of a triangle classification program, which takes three sides as input and determines whether the triangle is scalene, isosceles, equilateral, or invalid. For input space partitioning, each side can be related to a reference value such as zero or one, forming partitions based on whether a side is greater than zero, equal to zero, equal to one, or less than zero. Applying All Combinations Coverage to this example results in sixty-four test cases since each of the three sides has four possible partitions. Pairwise Coverage, on the other hand, reduces the number of test cases to sixteen by ensuring that all pairs of input partitions are covered without generating every possible combination. Multiple Base Choice Coverage can be applied by selecting two base choices for each side, such as one and two, leading to around sixteen distinct test cases after removing redundancies. Each of these coverage criteria provides a different balance between thoroughness and efficiency, allowing testers to select the most suitable one based on the testing context.
+</p>
+      <p>While using Input Space Partitioning, testers must be aware of infeasible test requirements. These occur when certain combinations of partitions cannot logically exist together. For instance, in a method that finds an element in a list, if one partition specifies that the list has exactly one element and another specifies that the element occurs more than once, this combination is infeasible. Similarly, if all elements in the list are identical, it would be infeasible to have a partition where the element is found only once. Such infeasibilities are captured through constraints that define whether partitions can or cannot be combined. Constraints of the “cannot” type prohibit certain combinations, while “must” constraints enforce that some partitions should appear together to make sense. In exhaustive criteria such as All Combinations or Pairwise Coverage, infeasible test requirements must simply be dropped. However, in Base Choice and Multiple Base Choice Coverage, testers can select base choices strategically to minimize infeasible test cases. Recognizing and handling infeasibility ensures that test cases remain meaningful and executable, making Input Space Partitioning a powerful and practical functional testing approach.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l33_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>
