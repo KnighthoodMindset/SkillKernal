@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 51 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>DART : Directed Automates Random testing 2</h3>
+    </section>
+    <section>
+      <p>Continuing from the previous lecture on Dart, we consider the execution model where each program consists of only assignment statements and conditional statements, represented by sets A and C respectively, and always ends with an abort or halt statement. The execution of a program can be viewed as an execution tree where assignment nodes have a single successor due to the immediate next statement, conditional nodes branch based on the evaluation of the condition, and leaves are labeled by abort or halt. Dart symbolically evaluates expressions by maintaining a symbolic memory, which maps memory addresses to symbolic expressions. For input variables, the symbolic memory directly maps the variable to its symbolic name, whereas internal variables update the mapping using symbolic expressions derived from their computation, such as representing a computation z = x + y as x₀ + y₀, where x₀ and y₀ are symbolic variables corresponding to x and y.
+</p>
+      <p>Symbolic evaluation in Dart is performed recursively for each expression. Simple variables are substituted with their symbolic counterparts, arithmetic expressions are evaluated recursively, and care is taken when nonlinear expressions are encountered. If symbolic evaluation produces a nonlinear expression, which cannot be reliably handled by constraint solvers, Dart switches to concrete evaluation for that expression. Similarly, for pointer expressions, Dart evaluates the pointer target symbolically if the memory location is known; otherwise, it sets a flag indicating unknown locations and evaluates the expression concretely. Dart uses two completeness flags during symbolic evaluation: `all_linear`, which is set to false when a nonlinear expression is encountered, and `all_locs_definite`, which is set to false when the exact memory location of a variable cannot be determined. These flags help ensure that the collected path constraints remain solvable.
+</p>
+      <p>The main Dart test driver initializes these flags along with another boolean variable `forcing_ok`, which indicates whether an error has been detected. The algorithm first generates random inputs for uninitialized parameters and then enters a loop to perform a repeat-until evaluation until either a completeness flag is violated or a program error is found. Within this loop, Dart instruments the program, symbolically executes it, collects path constraints, and performs directed search. Each execution involves updating symbolic memory and evaluating assignment and conditional statements both symbolically and concretely. For assignment statements, the symbolic memory is updated with the new symbolic expressions, while for conditional statements, symbolic evaluation determines the path constraint and updates a stack that tracks the program’s execution path.
+</p>
+      <p>The stack maintains the path constraints encountered during execution, along with branch indicators to distinguish true and false branches. The `compare_and_update_stack` routine ensures that the stack correctly reflects the explored paths, while the `solve_path_constraint` routine calls a constraint solver to generate input values for the next execution, systematically exploring alternative branches. Each run of the instrumented program starts with either a random input (for the first run) or inputs derived from the previous path constraints to perform directed search. If an abort is reached, Dart reports a bug and terminates; if a halt is reached, it continues solving constraints to explore remaining paths. Dart’s execution may terminate successfully after exploring all feasible paths, report a bug when an error is encountered, or potentially run indefinitely if completeness flags prevent termination, reflecting the undecidable nature of general path exploration.
+</p>
+      <p>In summary, Dart combines random testing with symbolic execution to automate unit testing. It instruments the program, evaluates expressions symbolically while falling back to concrete evaluation for nonlinear or unknown memory situations, collects path constraints, and performs directed search using a stack and constraint solver. The correctness of Dart guarantees that any reported bug corresponds to a real input causing an abort, and if it terminates without reporting a bug, all feasible execution paths have been explored. The next step involves applying Dart to a C program to demonstrate interface extraction, test driver generation, and directed search in practice.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l51_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

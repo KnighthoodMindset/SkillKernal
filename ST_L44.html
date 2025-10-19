@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 44 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing of web applications and web services</h3>
+    </section>
+    <section>
+      <p>Web application testing focuses on software deployed on web servers and accessed through browsers via HTTP. Web apps are distributed, heterogeneous, and often dynamic: presentation (HTML/UI), data-content (business logic), data-representation (in-memory structures) and data-storage (persistent) layers are typically separated and must be tested both individually and in integrated system tests. System-level testers frequently work black-box: they lack direct access to server-side source or internal state and must design tests that exercise the application through its client-facing HTML interfaces.
+</p>
+      <p>Dynamic web applications generate pages on demand and depend on previous inputs, session state, and other runtime conditions. Testing dynamic apps is usefully split into client-side testing (scripts, form controls, browser behavior) and server-side testing (request processing, dynamic content generation, backend interactions). Client-side code includes HTML form elements (text boxes, radio buttons, drop-downs, file uploads, etc.) and client-side scripts that validate input; server-side code must handle the requests that reach it, including any inputs that bypass client-side checks.
+</p>
+      <p>Test inputs for web apps may be hand-crafted by testers with domain knowledge, randomly generated (often ineffective), or derived from user-session data collected in real use. Session-derived inputs are often effective because they reflect realistic usage patterns. Exhaustive input enumeration is infeasible for realistic web apps, so testers use selection heuristics; one practical and powerful technique is bypass testing, which intentionally circumvents client-side validation and submits malformed or constraint-violating inputs directly to the server to exercise robustness and security.
+</p>
+      <p>Bypass testing works by removing or altering client-side constraints (HTML attributes or validation scripts) and then submitting the modified form data to the server. Typical client-side constraints include maximum lengths, allowed character sets, fixed values, form control types, and JavaScript-based format checks. To perform bypass testing a tester might remove maxlength attributes, drop JavaScript validation handlers, alter form field types or values (e.g., inject special characters, excessively large numbers, or unexpected formats), change method from POST to GET, or alter the target URL. The objective is to observe whether the server handles the malformed input safely (rejects it, returns a controlled error) or fails (crashes, exposes data, or behaves insecurely).
+</p>
+      <p>When designing client-side tests, testers should prefer realistic but adversarial inputs—derived user-session data manipulated to violate constraints—rather than purely random data. Because HTTP is stateless, web apps rely on cookies or sessions to manage state; testers must be mindful that state is distributed (different clients and servers) and that user actions (back, forward, refresh) can alter control flow mid-transaction. Observability and controllability are both limited: server internals are often inaccessible for security reasons, and complex HTML/JS UI flows limit direct control over inputs, so tests must be crafted to exercise behavior via the public interface.
+</p>
+      <p>In practice, client-side testing emphasizes (1) validating that form controls enforce correct constraints and that client-side scripts behave as intended, and (2) using bypass testing to ensure the server does not trust client-side checks and correctly handles malformed or malicious inputs. Test suites should include tests for input format violations, boundary and out-of-range values, missing/extra fields, unexpected types, special characters (quotes, angle brackets), excessive lengths, and altered request metadata (method, headers, target URL). When done safely (e.g., against test or staging servers), these tests reveal robustness issues, validation gaps, and potential security vulnerabilities that would be missed if the server simply trusted client-side validation.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l44_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 50 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>DART : Directed Automates Random testing</h3>
+    </section>
+    <section>
+      <p>Symbolic testing faces a major challenge in solving path constraints because the satisfiability problem is generally undecidable. While current constraint solvers handle linear path constraints efficiently, constraints involving non-linear expressions such as x squared greater than zero or log squared x greater than zero are difficult to solve. To address these limitations, a hybrid symbolic testing technique called concolic testing was introduced, which combines concrete execution with symbolic execution. Concolic testing allows symbolic testing to proceed even when path constraints are complex, by using actual concrete values alongside symbolic representations. One prominent concolic testing tool is Dart, which stands for Directed Automated Random Testing. Dart automates unit test generation by combining concrete and symbolic execution to systematically explore program paths.
+</p>
+      <p>Dart is particularly useful for unit testing large programs where writing test drivers manually is infeasible. Unlike simple random testing, which may miss rare errors, Dart generates a random input, executes the program, collects symbolic path constraints, and then systematically manipulates these constraints to explore neighboring paths and detect errors. Dart first extracts the program’s external interfaces, such as user inputs, console outputs, and database interactions, through static source code analysis. It then automatically generates a test driver for these interfaces to supply inputs and execute the program. Finally, Dart dynamically analyzes the program’s behavior under these test inputs, collecting path predicates that evaluated to true or false, and uses a constraint solver to generate new inputs that systematically guide the program through different execution paths.
+</p>
+      <p>For instance, consider a program with a function `h(x, y)` that has two nested if statements and a function `f(x)` that returns `2*x`. The error in this program is triggered only if `x` is not equal to `y` and `f(x)` equals `x + 10`. Random testing is unlikely to detect this error because the second condition is highly specific. Dart, however, starts with a random input, executes the program, collects symbolic constraints, and then negates the unsatisfied path predicates to generate new inputs. By systematically exploring these neighboring paths, Dart can reach the error statement that random testing might miss. Symbolic variables in Dart, such as `x0` and `y0`, represent symbolic placeholders for concrete inputs, allowing Dart to track and manipulate symbolic expressions like `2*x0 = x0 + 10` during execution. These symbolic expressions are formed through interprocedural dynamic tracing, where values from function calls are substituted back into the calling context.
+</p>
+      <p>The execution model of Dart relies on representing symbolic variables as memory addresses, treating expressions over these symbolic variables similarly to arithmetic, logical, relational, and pointer expressions in conventional programming. The state of a program is represented as a tuple of variable values and a program counter, and program execution is modeled as transitions between states based on statements executed. Dart works on a restricted syntax of programs with assignment statements, conditional statements, and special statements like `abort` or `halt`, though other constructs can be expressed using these primitives. Concrete semantics provide the actual values stored in memory locations, while symbolic semantics allow Dart to evaluate expressions symbolically. Program execution alternates between sequences of assignments and conditional statements, ending either normally with `halt` or abnormally with `abort`. This execution model enables Dart to perform side-by-side concrete and symbolic execution, systematically exploring program paths to identify errors that random testing alone may not reveal.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l50_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

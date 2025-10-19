@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 52 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>DART : Directed Automates Random testing 3</h3>
+    </section>
+    <section>
+      <p>Directed Automated Random Testing, or Dart, is an independent unit testing tool for C and Java programs that performs concolic execution, combining concrete and symbolic execution. Dart begins by generating a random test input for the program, ensuring the input is correctly formatted. The program is executed with this input, during which Dart collects information about the execution path and the constraints encountered along the path. These constraints are stored in a stack. If a constraint is nonlinear and cannot be handled by a constraint solver, Dart substitutes concrete values for the variables and sets a flag indicating that the symbolic evaluation for that path cannot continue. Once the initial path constraints are collected, Dart systematically explores neighboring paths by negating one constraint at a time from the stack and executing the program along the new path. This process continues until Dart either completes a reasonably thorough directed search, encounters an abort statement indicating a bug, or may run indefinitely if completeness flags such as `all_linear` or `all_locs_definite` are set to zero.
+</p>
+      <p>For C programs, Dart first performs interface extraction to identify the program’s inputs. Inputs are typically found in uninitialized memory locations and can include external variables, arguments to the top-level function, or values returned by external or library functions. Dart determines the type of each input to generate random values compatible with that type. Types can include basic C types such as integers or floats, pointers, arrays, structs, or user-defined types. Program functions defined within the program are handled directly, while external or library functions are treated as unknown deterministic functions, with values of compatible type substituted without instrumenting the function code.
+</p>
+      <p>Once the external interfaces are identified, Dart generates a random test driver that initializes inputs using a recursive random initialization function. For basic types, random bits are generated; for pointers, a fair coin toss determines whether the pointer is null or points to newly allocated memory, which is recursively initialized. Structs and arrays are recursively initialized field by field or element by element. The test driver also simulates external functions by generating a variable of the function’s return type, initializing it randomly, and returning it. The driver repeatedly calls the program’s top-level function with these randomly initialized inputs, up to a specified depth determined by the tester.
+</p>
+      <p>After generating the random test driver, Dart instruments the program to perform symbolic execution. It sets up symbolic memory, maintains a stack of path constraints, updates symbolic expressions, and invokes a constraint solver to explore unexplored program paths. Dart can terminate in three ways: by successfully exploring all feasible paths, by finding a bug and reaching an abort statement, or by running indefinitely due to the undecidable nature of path exploration. For C programs, Dart leverages the OCaml-based CIL tool to parse and analyze the code for symbolic updates, while IP-Solve or other constraint solvers handle path constraints. Dart has evolved into a full-fledged tool called Cute for C programs, with related open-source tools like Crest available for experimentation. For Java, symbolic execution can be performed using JCute. These tools facilitate automated, systematic unit testing using a combination of concrete and symbolic execution to uncover errors that may be difficult to detect with traditional testing methods.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l52_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

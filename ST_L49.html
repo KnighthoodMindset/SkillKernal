@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 49 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Symbolic testing</h3>
+    </section>
+    <section>
+      <p>Symbolic execution is a program analysis technique where inputs are treated as symbolic values rather than concrete data. In programs with loops, symbolic execution can become challenging because the number of possible execution paths can be infinite. For instance, a program that reads integer inputs in a loop and adds them to a sum will continue iterating as long as the inputs are positive. The termination of such a loop depends entirely on user input, making it possible for the loop to run indefinitely. Symbolic execution in this case involves assigning symbolic values to inputs, generating symbolic expressions for internal variables, and collecting path constraints based on decision statements. For loops, the path constraints must account for multiple iterations, capturing sequences of conditions that evaluate to true for a number of iterations followed by a condition that evaluates to false, if such a point exists. The inability to determine whether a loop will terminate or whether a symbolic condition can be satisfied exemplifies a limitation of symbolic execution. The symbolic state keeps track of variable expressions, while the path constraints define the conditions under which certain paths are taken. Solving these path constraints is equivalent to a satisfiability problem, which can be undecidable or computationally hard, particularly for predicates over integers or functions whose implementations are unavailable.
+</p>
+      <p>One solution to the limitations of pure symbolic execution is concolic testing, which combines concrete and symbolic execution. Concolic testing maintains both concrete values and symbolic expressions for program variables. It begins by generating a random concrete input and executing the program, while simultaneously performing symbolic execution to collect path constraints. For each branch in the program, the symbolic constraints corresponding to the concrete execution are recorded, and systematic negation of these constraints is used to explore alternative paths. A constraint solver is employed to determine concrete inputs that satisfy the negated path constraints, allowing systematic exploration of different execution paths. This approach addresses the problem of path constraints that are difficult to solve in purely symbolic execution by leveraging concrete executions to guide the symbolic analysis.
+</p>
+      <p>Concolic testing works effectively for programs with conditional statements and loops. By exploring different paths through constraint negation, it can reach error conditions or untested branches. For example, given a program with a function that doubles an input and a conditional abort statement, concolic testing generates random inputs, symbolically evaluates the conditions, and then systematically negates constraints to generate new inputs that drive execution toward the abort statement. This method ensures systematic coverage of feasible paths while avoiding the problem of infinite symbolic paths.
+</p>
+      <p>Modern symbolic and concolic testing rely on advanced constraint solvers capable of handling a wide range of functions and logical expressions, although limitations remain for certain complex functions or large-scale programs. Several tools have been developed to implement these techniques, including CUTE for C programs, JCUTE for Java, PEX for .NET, and SAGE for automated testing in various contexts. Concolic testing, particularly directed automated random testing (DART), has emerged as a practical technique to overcome the scalability and constraint-solving challenges of symbolic execution, allowing systematic exploration of program paths and identification of potential errors in software.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l49_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

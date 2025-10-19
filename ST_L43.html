@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 43 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing of web applications and web services</h3>
+    </section>
+    <section>
+      <p>Web application testing introduces a new class of software that differs significantly from traditional program testing due to its deployment on the web and its distributed, heterogeneous, and dynamic nature. A web application is essentially a program hosted on a web server, accessible via a web browser, and communicates with clients using the Hypertext Transfer Protocol (HTTP). It can be broadly categorized into static hypertext websites and dynamic web applications. Static websites consist of fixed HTML files that remain the same for all users, whereas dynamic web applications generate content on demand, often based on previous user inputs, session data, and other runtime conditions. Web applications may include loosely coupled components developed using different technologies such as JSP, ASP, Java, JavaScript, PHP, or AJAX, making testing complex due to the diversity of technologies and the distributed architecture.
+</p>
+      <p>The architecture of a web application typically includes multiple layers: a presentation layer for HTML and UI output, a data content layer for computation and data access, a data representation layer for memory operations, and a data storage layer for permanent storage. Testing must address both individual layers and system-level integration across these layers. Key challenges in testing web applications arise from the stateless nature of HTTP, which requires mechanisms like cookies and session objects to maintain state. Additionally, observability and controllability are limited because input is often received through complex HTML forms and user actions, while server-side state is generally inaccessible for security reasons. The highly distributed and loosely coupled nature of components, as well as dynamic user interactions such as pressing back, forward, or refresh buttons, further complicates testing.
+</p>
+      <p>Classical testing techniques such as control flow graphs, call graphs, state machines, logic predicates, and mutation operators have limited applicability for system-level testing of web applications. While these techniques can be applied for unit testing of individual programs within a web application, they do not effectively model the behavior of distributed, dynamic web systems. Therefore, new testing approaches need to be developed, with traditional graph-based testing being applicable primarily to static websites. Test cases for web applications are defined as sequences of interactions between client-side and server-side components, often represented as paths through the web application.
+</p>
+      <p>Static websites can be tested by modeling the website as a graph, where nodes represent individual web pages and edges represent hyperlinks. Starting from a homepage such as index.html, a breadth-first search of hyperlinks generates the graph. Edge coverage is the primary criterion, ensuring that each hyperlink functions correctly and leads to the intended page. Static website testing primarily focuses on verifying the correctness of hyperlinks, without addressing dynamic content, performance, or load issues.
+</p>
+      <p>Dynamic web applications, in contrast, require separate consideration of client-side and server-side testing. Client-side testing focuses on the execution of scripts and the user interface rendered in the browser, while server-side testing addresses the processing of requests, dynamic content generation, and interaction with backend data stores. Test cases for dynamic web applications must account for changing user inputs, session states, and dynamic addition of software components, making them more challenging to generate and execute. Functional testing of system-level behavior remains the focus, while non-functional aspects like performance, load handling, and access control are acknowledged but not the primary concern in this context.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l43_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

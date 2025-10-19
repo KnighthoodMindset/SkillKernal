@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 56 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Regression</h3>
+    </section>
+    <section>
+      <p>Regression testing is a process performed on software after it has been released and is under maintenance. It involves validating modified software to ensure that changes or bug fixes have not introduced new errors and that the existing functionality continues to work correctly. Regression testing typically focuses on the modified portions of the software rather than retesting the entire system. The process begins with a program or procedure, referred to as P, which is modified to create a new version, P prime. An existing set of test cases, T, developed for the original program, is used to select a subset, T prime, to test the modified program. Additional new test cases, T double prime, may be created to cover modifications not addressed by T prime, and a combined set, T triple prime, is maintained for future regression testing. The first step, selecting T prime, is known as the regression test selection problem, while creating T double prime addresses coverage identification. Executing the selected test cases corresponds to the test suite execution problem, and maintaining the test suite for future use addresses the test suite maintenance problem. Regression testing can be applied whether specifications have changed or not. If specifications have changed, obsolete test cases that are no longer valid for the modified program must be identified and removed before selection.
+</p>
+      <p>Regression test selection involves knowledge of the system, domain, and areas most affected by modifications. Tests are chosen based on areas prone to defects, frequently modified code, and critical features. Five primary techniques are commonly used for regression test selection. Minimization techniques aim to select the smallest set of test cases that covers modified portions of the program, sometimes using integer programming for simple, linear code structures. Data flow techniques select test cases that exercise definitions and uses of variables affected by modifications. Safe regression techniques ensure that the selected test cases will detect all faults present in the modified program by covering modified or deleted statements. Random test selection involves choosing test cases arbitrarily from the existing suite, offering no guarantees but often used in practice when time is limited. The retest-all approach executes every test case from the original set to ensure coverage, though it can be time-consuming and inefficient. Choosing a regression test selection technique involves trade-offs between cost, coverage, and efficiency, and empirical studies show that the selection algorithm significantly impacts the total cost of regression testing.
+</p>
+      <p>Regression testing is heavily automated, particularly for test execution, using record-and-playback tools that rerun previously executed or newly created test cases on new builds. Several proprietary tools support regression testing, including Regression Tester, TimeShiftX, and tools from Micro Focus, especially for legacy code such as COBOL. These tools typically capture test case execution and expected outcomes for automated verification, reducing manual effort and ensuring consistency in repeated regression testing.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l56_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

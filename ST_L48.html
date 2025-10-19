@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 48 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Symbolic testing</h3>
+    </section>
+    <section>
+      <p>Symbolic testing is a set of techniques that bridges the gap between traditional program testing and program proving, allowing systematic exploration of program behavior without requiring exhaustive concrete test cases. Unlike program proving, which mathematically demonstrates correctness for all possible inputs using formal methods such as model checking, theorem proving, or program analysis, symbolic testing executes programs with symbolic values instead of concrete inputs. In symbolic execution, program inputs are represented as symbolic variables, and program variables are expressed as symbolic expressions over these inputs. As the program executes, a symbolic state is maintained, recording the symbolic expressions of all variables at each point in the program, while path constraints are collected from conditional statements. These path constraints represent the logical conditions necessary for reaching specific points in the program, expressed as quantifier-free predicate logic formulas. By constructing an execution tree of all possible branches, symbolic execution explores every feasible path through the program. After symbolic execution, constraint solvers are used to find concrete input values that satisfy the collected path constraints, ensuring coverage of all execution paths. This approach allows testers to systematically identify inputs that trigger errors or specific behaviors, even in complex programs with multiple branches. Symbolic execution is particularly valuable for programs with loops, conditional statements, and functions, as it enables automated generation of test inputs that exercise diverse paths, providing a more thorough and efficient testing strategy compared to traditional input-based testing methods.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l48_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

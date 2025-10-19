@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 53 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing of object oriented applications</h3>
+    </section>
+    <section>
+      <p>Object-oriented software testing focuses on ensuring the correct interaction between classes, methods, and objects, particularly during integration testing. Key features of object-oriented software include abstraction, inheritance, and polymorphism, which introduce complexity in visualizing interactions and detecting faults. Coupling variables are central to object-oriented integration testing, representing variables defined in one method or instance and used in another, creating potential state space interactions between called methods with respect to the calling method. In object-oriented programs, coupling can occur directly, where definitions and uses happen within instances of the same or different classes, or indirectly, where methods use other methods, making the execution path uncertain due to polymorphism. The concept of last definition and first use from traditional data flow testing extends to object-oriented testing, where the last definition of a variable in one method or instance reaches its first use in another through method calls, including return values.
+</p>
+      <p>Polymorphic methods complicate testing because a method call may execute different versions depending on the runtime type of the object. A polymorphic call set is the set of all methods that can potentially execute through a given instance. Testing objectives include evaluating interactions for objects bound to different class types and ensuring all potential method executions in polymorphic contexts are considered. Four coverage criteria are defined for object-oriented integration testing. All Coupling Sequences (ACS) requires at least one test case to execute each coupling path. All Polyclasses (APC) extends ACS by including at least one test case for every type that the object may be bound to, addressing polymorphic behavior. All Coupling Definitions and Uses (ACDU) requires that every last definition of a coupling variable reaches at least one corresponding first use, without considering inheritance or polymorphism. Finally, the most comprehensive criterion considers every last definition to every first use across all coupling variables, incorporating inheritance, polymorphism, and object bindings to ensure maximal coverage of interactions. These criteria enable systematic detection of faults arising from object-oriented features such as inheritance, polymorphism, and method interactions, ensuring robust integration testing of object-oriented software.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l53_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

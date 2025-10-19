@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 46 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing object oriented applications</h3>
+    </section>
+    <section>
+      <p>Object-oriented applications are tested differently from procedural applications, focusing on class-level interactions rather than just individual methods. The central features of object-oriented programming, such as abstraction, inheritance, polymorphism, and dynamic binding, play a key role in testing. Abstraction allows the creation of classes that encapsulate data and define connections between components. New types can be created through inheritance, either as extensions, which introduce new methods without overriding parent methods, or as refinements, which override methods while maintaining semantic consistency with the parent. Two kinds of inheritance are relevant: subtype inheritance, based on the Liskov substitution principle, allows a subclass to be freely substituted for its parent class, maintaining all expected behaviors, whereas subclass inheritance reuses methods and variables without necessarily satisfying the parent class specifications. Polymorphic methods occur when a method is defined in both a parent and a descendant class, and the actual method executed depends on the runtime type of the object, forming a polymorphic call set.
+</p>
+      <p>Testing in object-oriented software occurs at four levels. Intra-method testing examines individual methods using traditional coverage techniques. Inter-method testing focuses on interactions between methods within a module. Intra-class testing evaluates sequences of method calls within a single class, while inter-class testing examines interactions between multiple classes. The primary challenges arise from polymorphism, inheritance, and dynamic binding, which make it difficult to determine which method version is executed during runtime and to visualize the interactions across classes. Dataflow anomalies can occur when overridden methods in descendant classes fail to define or properly propagate state variables needed by subsequent method calls, potentially causing incorrect behavior. To address these complexities, the concept of a yo-yo graph is introduced, where nodes represent methods and edges represent calls, including overridden and inherited methods. The graph illustrates method call sequences that can bounce up and down the class hierarchy like a yo-yo, capturing the dynamic behavior and potential anomalies arising from inheritance and polymorphism, allowing systematic identification of faults in object-oriented software.
+</p>
+    </section>
+
+
+          
+  </main>
+
+    <footer>
+    <a href="ST_l46_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

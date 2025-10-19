@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 45 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing of web applications and web services</h3>
+    </section>
+    <section>
+      <p>Web application testing can be broadly categorized into three areas: testing static hypertext websites, client-side testing, and server-side testing. Static website testing was covered in earlier lectures, focusing on the challenges inherent in verifying content and structure. Client-side testing, particularly bypass testing, involves verifying the system’s response to inputs that circumvent intended client-side controls. Server-side testing, which is the focus of system-level evaluation, examines the behavior of web applications from the server perspective, considering the complete integration of server code and client interactions. System-level server testing seeks to design effective test cases that expose faults in dynamic web applications, as simple random testing may not reliably uncover errors. Test inputs can be derived from user session logs, domain knowledge, or dynamic server-side techniques, with bypass testing being one approach on the client side. Server-side errors can manifest in multiple ways: handled errors generate valid responses, potentially with explicit or generic error messages, or by ignoring invalid input; unhandled faults may result in abnormal failures visible to the client; and severe errors can cause permanent data corruption. Traditional white-box methods like control flow or data flow testing apply to method- or component-level testing but do not capture system-level dynamic behavior, necessitating new graph-based models for server-side system testing.
+</p>
+      <p>Two specific graph models are used to model server-side behavior: the Component Interaction Model (CIM) and the Application Transition Graph (ATG). The CIM represents intra-component behavior, with nodes corresponding to atomic sections of dynamically generated HTML files and edges representing transitions between these sections. An atomic section is a portion of HTML that is transmitted to the client in its entirety or not at all and may include dynamically generated content provided by content variables. Atomic sections can be combined using operators akin to regular expressions, including sequential composition, selection (union), iteration, and aggregation, to represent all possible server responses in a component. Transitions within CIMs can occur through simple hyperlinks, form submissions, component expression outputs, abnormal operational actions from the client such as refresh or back button presses, and internal server redirects.
+</p>
+      <p>The ATG models inter-component behavior, where each node represents a CIM for a particular server component, and edges denote transitions across components. Components of a web application, including login pages, servlets, or other dynamic modules, are represented as nodes, while transitions may involve HTTP requests, client inputs, abnormal interactions, or server-initiated redirects. Content variables such as user ID, password, or other dynamic data define the system state, while start pages identify entry points. The ATG captures the overall dynamic behavior of the presentation layer, combining the execution sequences of CIMs and transitions between components. Example cases, such as a grade-report servlet, illustrate how CIMs represent sequences of atomic sections for valid and invalid inputs, including retries and empty outputs, and how ATGs map transitions between login, grade-report, email, or syllabus pages.
+</p>
+      <p>System-level testing using CIMs and ATGs enables comprehensive evaluation of dynamic web pages, handling operational transitions and distributed integration. While generating CIMs can be partially automated, ATG creation remains largely manual, requiring effort to map complex server interactions. Despite this, these models provide valuable insights into system behavior and facilitate testing for faults, failures, and abnormal conditions in dynamic web applications. Challenges remain in extending these models to capture system-level data flow across dynamic pages, automated ATG generation, and concurrency handling for multiple clients, representing active areas for research. Web application testing continues to be a rich domain, encompassing both functional and non-functional testing, with ongoing development of tools and methods to address evolving complexities. Key references include work on client-side bypass testing, session-based testing, and server-side CIM and ATG modeling, which provide detailed methodologies for rigorous server-side web application testing.
+</p>
+    </section>
+          
+  </main>
+
+    <footer>
+    <a href="ST_l45_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 47 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Testing object oriented applications</h3>
+    </section>
+    <section>
+      <p>Object-oriented applications introduce specific faults and anomalies that arise due to features such as inheritance, polymorphism, constructors, and visibility. Testing at the intra-class and inter-class levels focuses on interactions among components, where dynamic behavior makes static analysis challenging. Method calls in object-oriented programs may be overridden or polymorphic, creating dynamically changing integration patterns. Aggregation and use relationships further increase complexity, and encapsulation and abstraction often leave visibility issues for testers to handle. Faults are considered language-independent, arising in any object-oriented language using these features. One common fault is inconsistent type use, which occurs when a descendant class does not override any inherited methods, leading to polymorphism being absent. In such cases, methods of an ancestor class may put an object into a state inconsistent with the descendant, as illustrated by a stack class using inherited vector methods where additional operations unexpectedly alter the state. Another fault, state definition anomaly, arises when refining methods in a descendant class fail to define variables required by overridden methods, causing undefined state values. State definition inconsistency occurs when a local variable in a descendant class hides an inherited variable, potentially leading to unexpected behavior during method calls. State visibility anomaly occurs when access levels prevent a descendant method from correctly using variables defined in an ancestor, such as when private variables cannot be accessed by overriding methods. Other faults include state defined incorrectly, where overriding methods redefine the same variable inconsistently, and indirect inconsistent state definition, where extension methods in descendants define inherited variables, creating potential anomalies. These faults illustrate the challenges in detecting and managing state and method interactions in object-oriented programs, emphasizing the need for specialized testing approaches that extend traditional integration and data flow testing to address object-oriented coupling and polymorphic behavior.
+</p>
+    </section>
+
+  </main>
+
+    <footer>
+    <a href="ST_l47_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>
