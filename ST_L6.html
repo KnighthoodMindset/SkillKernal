@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 6 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Structural graph coverage criteria</h3>
+    </section>
+    <section>
+      <h4>Graph-Based Test Case Design</h4>
+      <p>Graph-based testing is one of the most fundamental approaches to designing test cases in software testing. It allows testers to represent software artifacts such as code, design, or requirements as graphs and then define coverage criteria based on graph structures. Each node, edge, or path in the graph can represent specific elements of software — such as statements, decisions, or control flows. The primary goal of this method is to use the structure of the graph to generate systematic test cases that ensure thorough coverage of the program’s logic.</p>
+      <p>Before learning to apply this method, it is essential to recall the basic graph concepts such as <abbr>degree of a vertex, paths, edges</abbr> and <abbr>nodes</abbr>. Once these fundamentals are clear, we can use graphs to design test cases, define coverage requirements, and derive paths that should be executed during testing. Initially, we study structural coverage criteria that are purely based on the graph’s topology — focusing only on nodes, edges, and paths without considering specific software semantics. Later, when we associate variables or data with edges or nodes, we move into <abbr>data flow coverage criteria</abbr>.</p>
+
+      <h5>1. Node (Vertex) Coverage</h5>
+      <p>Node coverage** (also called vertex coverage) is the simplest form of structural coverage. The test requirement here is that every reachable node in the graph should be visited at least once during testing. In the context of a control flow graph (CFG), this means every statement in the program should be executed by at least one test case.</p>
+      <p>If a graph is disconnected, node coverage must be achieved separately for each reachable component. A <abbr>test path</abbr> is a path that starts from the initial node and ends at a final node. To satisfy node coverage, we must design a set of test paths that together visit all reachable nodes.</p>
+      <li><Strong>Example: </Strong>Consider a simple graph with three nodes (1, 2, 3) and edges (1→2), (1→3), and (2→3). To achieve node coverage, the path (1, 2, 3) is sufficient since it visits all nodes. If we only take the path (1, 3), node 2 is not covered. Hence, node coverage ensures that each node is executed at least once, verifying that all statements are reachable and executable.</li>
+
+      <h5>2. Edge Coverage</h5>
+      <p>Edge coverage is a step ahead of node coverage. Here, the test requirement is to ensure that every edge in the graph is traversed at least once. Each edge can be considered as a path of length one. To make edge coverage subsume node coverage, it is defined as “visiting all paths of length up to one,” meaning the test paths should cover both individual nodes (length 0) and edges (length 1).</p>
+      <li><strong>Example: </strong>Using the same three-node graph, edge coverage requires visiting edges (1,2), (1,3), and (2,3). The path (1,2,3) covers (1,2) and (2,3), but misses (1,3). Therefore, we need another path (1,3) to achieve complete edge coverage. Thus, two test paths — (1,2,3) and (1,3) — together meet this requirement. Edge coverage ensures that every control transfer between statements is tested at least once.</li>
+
+      <h5>3. Edge-Pair Coverage</h5>
+      <p>Edge-pair coverage considers pairs of consecutive edges, which correspond to paths of length two. The objective is to cover all paths of length up to two, meaning the test suite should execute every possible pair of adjacent edges in the graph. This criterion ensures that transitions involving two consecutive decisions or branches are tested.</p>
+      <li><strong>Example: </strong>Consider a graph where node 4 has outgoing edges to nodes 5 and 6, representing a branching statement (like an *if-else* condition). Edge-pair coverage ensures both branches (4→5 and 4→6) are executed. Essentially, it captures all the pairs like (1→4→5), (2→4→6), etc. This type of coverage is useful for validating that all branches and their immediate successors behave correctly.</li>
+
+      <h5>4. Path Coverage</h5>
+      <p>Path coverage aims to execute all possible paths in the program graph. The test requirement includes every distinct path from the initial to the final node. However, if the graph contains loops, there are infinitely many possible paths because a loop can be traversed repeatedly. Hence, complete path coverage is generally infeasible in practical scenarios.</p>
+      <li><strong>Example: </strong> Path coverage aims to execute all possible paths in the program graph. The test requirement includes every distinct path from the initial to the final node. However, if the graph contains loops, there are infinitely many possible paths because a loop can be traversed repeatedly. Hence, complete path coverage is generally infeasible in practical scenarios.</li>
+      <p>To make it realistic, testers often use <abbr>specified path coverage</abbr>, where only certain meaningful paths (chosen by the test engineer) are required to be covered. These could be critical paths, error-handling paths, or boundary conditions. Thus, instead of trying to execute every possible path, testers focus on those most relevant to correctness and reliability.</p>
+
+      <h5>5. Prime Path Coverage</h5>
+      <p>Since complete path coverage is impossible when loops exist, we use <abbr>prime path coverage</abbr> as a practical and powerful alternative. Before defining prime paths, we must understand what <strong>simple paths</strong> are.</p>
+      <p>A <abbr>simple path</abbr> is a path that does not repeat any node except possibly the first and the last node (in case of a cycle).</p>
+      <p>A <abbr>prime path</abbr> is a simple path that is <strong>not a subpath of any other simple path</strong> — meaning it is maximal in length without internal repetitions.</p>
+      <strong>Example:</strong>
+      <p>In a four-node graph (1, 2, 3, 4), several simple paths exist, but only the longest independent ones (that cannot be found as subpaths of others) are considered prime paths. Prime path coverage requires test cases that execute all prime paths in the graph at least once.</p>
+      <p>This type of coverage effectively ensures that both <strong>loop boundaries and loop bodies</strong> are tested. In other words, it confirms that loops are executed zero times (skipped) and one or more times (executed). Thus, prime path coverage satisfies loop testing criteria — covering both the boundary and normal behavior of loops.</p>
+
+      <h4>Conclusion</h4>
+      <p>Graph-based testing provides a structured and visual way to derive test cases based on control or data flow relationships in software. Starting from basic coverage like node and edge coverage, we move toward more advanced and practical techniques such as edge-pair and prime path coverage. While complete path coverage offers the highest assurance theoretically, it is infeasible for programs with loops. Therefore, <strong>prime path coverage</strong> serves as a practical compromise — ensuring thorough testing around loop boundaries and complex paths without the impossibility of infinite paths. Ultimately, this approach helps testers identify missing paths, unexecuted branches, and potential logic flaws early in the development cycle.
+</p>
+    </section>
+
+
+
+
+---
+
+Would you like me to continue this same paragraph-style formatting for the **next lecture (Week 2 – Graph-based Coverage Algorithms)** too?
+
+
+        
+  </main>
+
+    <footer>
+    <a href="ST_l6_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

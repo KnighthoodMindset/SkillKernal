@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 7 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Elementary graph algorithms-BFS</h3>
+    </section>
+    <section>
+      <h4>Elementary Graph Algorithms – Breadth First Search (BFS)</h4>
+      <p>In software testing, graphs are often used to model structural coverage criteria such as node, edge, and path coverage. To design test paths and requirements that satisfy these criteria, we rely on elementary graph algorithms, primarily the Breadth First Search (BFS) and Depth First Search (DFS). These algorithms help traverse graphs systematically to generate test paths efficiently. BFS is particularly useful for generating minimal test paths that satisfy various graph coverage criteria.</p>
+    </section>
+    <section>
+      <h4>Graph Representations</h4>
+      <p>Graphs can be represented in two standard forms: the <abbr>adjacency list</abbr> and the <abbr>adjacency matrix</abbr>. Both directed and undirected graphs can be represented using these methods, but in software testing, directed graphs are more common since they better model software flows, control paths, and dependencies.</p>
+      <p>An <strong>adjacency list</strong> is an array of lists—one list per vertex. Each list contains all vertices adjacent to the corresponding vertex. For a directed graph, each edge ((u, v)) appears only once; hence, the size of the adjacency list is proportional to ( |V| + |E| ). For an undirected graph, each edge appears twice (once in each direction), making its size roughly ( |V| + 2|E| ). Thus, adjacency lists are efficient for <abbr>sparse graphs</abbr>, where the number of edges is relatively small compared to vertices.</p>
+      <p>An <strong>adjacency matrix</strong>, on the other hand, is a square matrix of size ( |V| \times |V| ) containing entries of 0 or 1. An entry at row (i) and column (j) is 1 if there is an edge from vertex (v_i) to (v_j); otherwise, it is 0. This representation consumes ( \Theta(V^2) ) memory, making it better suited for dense graphs with many edges. For undirected graphs, the adjacency matrix is symmetric, meaning its transpose equals itself. While adjacency lists are preferred for sparse graphs due to memory efficiency, adjacency matrices are simpler and faster to access in dense graphs. In most algorithmic contexts, especially in software testing, adjacency lists are used due to their flexibility.</p>
+    </section>
+    <section>
+      <h4>Breadth First Search (BFS)</h4>
+      <p>The <strong>Breadth First Search (BFS)</strong> algorithm is used to traverse or search through a graph systematically. It begins at a designated source vertex (s) and explores all its immediate neighbors before moving deeper into the graph. This exploration strategy is called “breadth-first” because it processes all vertices at a given distance from the source before moving to the next level of vertices.</p>
+      <p>BFS works by maintaining a <strong>queue</strong> to store vertices to be explored. Initially, the source vertex is added to the queue. Each vertex in the graph is assigned a color attribute to track its exploration status:</p>
+      <li><strong>White : </strong>Vertex has not been discovered yet.</li>
+      <li><strong>Gray : </strong>Vertex has been discovered but not fully explored.</li>
+      <li><strong>Black : </strong>Vertex and all its neighbors have been fully explored.</li>
+      <p>Each vertex also maintains two other attributes:</p>
+      <li><strong>Distance (d) : </strong>The number of edges between the vertex and the source.</li>
+      <li><strong>Predecessor (π) : </strong>The vertex from which it was first discovered (its parent in the BFS tree).</li>
+      <p>At the start, all vertices are colored white, their distance is set to infinity (∞), and their predecessor is NIL. The source vertex is colored gray, its distance is set to 0, and it is enqueued. The algorithm repeatedly dequeues the first vertex from the queue, explores all its white neighbors, colors them gray, updates their distance and predecessor, and enqueues them. Once all neighbors of a vertex are explored, that vertex is colored black. This process continues until the queue becomes empty.</p>
+    </section>
+    <section>
+      <h4>Illustration of BFS Working</h4>
+      <p>Consider a graph with vertices ( s, r, t, u, v, w, x, y ), where ( s ) is the source. Initially, ( s ) is gray with distance 0, and all other vertices are white with infinite distance. The adjacency list of ( s ) includes ( r ) and ( w ). These are discovered first, colored gray, and their distance is set to 1. They are added to the queue, and their predecessor is marked as ( s ).</p>
+      <p>Next, the algorithm explores ( w ), which leads to discovering ( t ) and ( x ). These are added to the queue with distance 2, and their predecessor is ( w ). The process continues, exploring vertices in queue order, gradually discovering ( u, v, ) and ( y ). Once all vertices are processed, each vertex’s distance represents the shortest path (in terms of edge count) from the source ( s ). The set of predecessor relationships forms a Breadth First Tree (BFT), which shows how each vertex is connected to the source through the shortest possible path.</p>
+      <h5>Output of BFS</h5>
+      <p>The BFS algorithm produces two important results:</p>
+      <li><abbr>The Breadth First Tree (BFT) : </abbr>a tree that contains all vertices reachable from the source along with the shortest edges.</li>
+      <li><abbr>Shortest Path Distances : </abbr>the minimum number of edges from the source to each vertex.</li>
+      <p>If some vertices are not reachable from the source, BFS can be restarted with another source vertex to explore the remaining components of the graph. In such cases, BFS produces a forest of trees instead of a single tree.</p>
+      <h5>BFS Algorithm Complexity</h5>
+      <p>The running time of BFS is <strong>O(V + E)</strong>. This is because each vertex is enqueued and dequeued exactly once (O(V)), and each edge in the graph is examined at most once (O(E)). Therefore, BFS runs in linear time relative to the size of the graph, making it highly efficient for large-scale traversal.</p>
+      <h5>Shortest Path Property</h5>
+      <p>A crucial property of BFS is that it always finds the shortest path (in terms of the number of edges) from the source to every other reachable vertex. The distance value ( \delta(s, v) ) denotes the shortest path length from ( s ) to ( v ). BFS guarantees that the computed distance ( v.d ) is exactly equal to ( \delta(s, v) ). This is because the algorithm explores vertices level by level, ensuring that the first time a vertex is discovered, it is via the shortest possible path.</p>
+    </section>
+    <section>
+      <h4>Correctness of BFS</h4>
+      <p>To prove BFS correctness, a few key lemmas are used:</p>
+      <p><strong>1. Triangular Inequality Lemma : </strong>For every edge ((u, v)), the shortest path distance ( \delta(s, v) \leq \delta(s, u) + 1 ).</p>
+      <p><strong>2. Distance Lemma : </strong>The computed distance ( v.d ) is always greater than or equal to the true shortest path distance ( \delta(s, v) ).</p>
+      <p><strong>3. Monotonicity Lemma : </strong>Distances discovered during BFS increase monotonically as the algorithm progresses.</p>
+      <p><strong>4. Queue Order Lemma : </strong>The BFS queue ensures that vertices are explored in non-decreasing order of their distance from the source.</p>
+      <p>These properties ensure that BFS correctly explores all reachable vertices and assigns accurate shortest path distances.</p>
+    </section>
+    <section>
+      <h4>Conclusion</h4>
+      <p>Breadth First Search is one of the fundamental algorithms for graph traversal. It explores vertices in increasing order of their distance from a source, making it ideal for finding the shortest path in unweighted graphs. In the context of software testing, BFS is essential for generating test paths and ensuring complete structural coverage. It runs efficiently in ( O(V + E) ) time and produces a tree or forest representing the shortest connections between components. In the next module, the focus shifts to <strong>Depth First Search (DFS)</strong> and its applications, including computing <abbr>strongly connected components</abbr> and <abbr>connected subgraphs</abbr>, which further aid in advanced testing strategies.</p>
+    </section>
+        
+  </main>
+
+    <footer>
+    <a href="ST_l7_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

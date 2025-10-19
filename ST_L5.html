@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 5 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Basics of Graphics as used in testing </h3>
+    </section>
+    <section>
+      <h4>Test Case Design Algorithms – Graph-Based Testing</h4>
+      <p>In software testing, graph-based test case design is a powerful and systematic approach that uses mathematical models to represent and analyze software behavior. Every piece of software can be represented in multiple ways depending on the type of information we want to capture. Among these, the graph-based representation is the most widely used because it clearly shows the logical flow and control structure of a program. Graphs can model how the control moves from one statement to another, how data flows between operations, or how functions call one another. This is why understanding graph theory is essential for designing effective test cases.
+</p>
+      <p>A graph, in its basic form, is made up of a set of vertices and a set of edges. Vertices, also called nodes, represent points such as statements, decision points, or states in a program. Edges, on the other hand, represent transitions or connections between these points. For example, when one statement leads to another, it can be represented as an edge between two vertices. Graphs can be directed or undirected. In directed graphs, every edge has a specific direction showing the flow of control, while in undirected graphs, edges simply connect nodes without indicating direction. In software testing, directed graphs are more common because program control always moves in a particular direction. Graphs used in testing are always finite because they represent programs with a limited number of statements or states.
+</p>
+      <p>Each vertex in a graph can have edges entering or leaving it. The number of edges entering a vertex is called its in-degree, while the number of edges leaving it is called its out-degree. The vertex from which control starts is known as the initial vertex, and the one where control ends is called the final vertex. Every program or function must have one initial vertex to ensure deterministic behavior, although there can be multiple final vertices representing different termination points. Sometimes, the same vertex can serve as both initial and final if the program begins and ends at the same point.
+</p>
+      <p>Graphs are useful in modeling many kinds of software artifacts. For instance, a control flow graph (CFG) represents the sequence of program statements and the conditions under which control flows from one part to another. A data flow graph (DFG) represents how data values move between computations. Similarly, a call graph represents function calls between modules, and UML diagrams like activity diagrams or state charts can also be represented as graphs. In each case, vertices often represent operations or states, while edges show control or data movement. Conditions or decisions, such as if–else statements, can be modeled as branching edges with predicates.
+</p>
+      <p>Consider a simple if–else statement in a program. The graph representation of this code would have a decision node for the condition, one edge representing the true branch, another edge representing the false branch, and finally, both branches would merge again before termination. Such a model forms a basic control flow graph, which is the foundation for most graph-based testing algorithms.
+</p>
+      <p>In graph theory, a path is defined as a sequence of vertices where each pair of consecutive vertices is connected by an edge. Paths are crucial because each one represents a possible execution sequence through the program. Paths can be finite or cyclic. When a path starts and ends at the same vertex, it is called a cycle. In testing, we are particularly interested in paths that start at an initial vertex and end at a final vertex, because these represent complete executions of the program from start to finish. Such paths are called test paths. However, not all paths in a program are executable. Some paths may never be taken due to unreachable code or contradictory conditions. These are known as infeasible test paths, while those that can actually be executed by some test input are called feasible test paths.
+</p>
+      <p>A vertex or edge in a graph is said to be reachable if there exists at least one path from the initial vertex to that vertex or edge. Reachability analysis helps identify dead or unreachable code in a program. The two most common algorithms used to explore reachability are Breadth-First Search (BFS) and Depth-First Search (DFS). BFS explores all nodes level by level, while DFS explores deeper paths first. These algorithms form the basis of most graph-based test generation techniques.
+</p>
+      <p>In software testing, a test path is said to visit a vertex or an edge if it includes that vertex or edge during traversal. A path is said to tour another path if it contains that path as a sub-path. For example, if a test path moves through vertices u, x, and w, it is said to visit these three vertices and the edges connecting them, and it also tours any smaller path segments like x–w that occur within it. Understanding visits and tours is important when defining coverage criteria.
+</p>
+      <p>Graph-based testing is closely tied to the concepts of reachability and feasibility. In real-world programs, conditions attached to edges, like if or switch statements, can make certain paths impossible to execute. For instance, a section of code might only execute under a specific input condition, while another branch may be logically unreachable. When different sections of a program are completely disconnected in the graph, it indicates unreachable or dead code.
+</p>
+      <p>The main purpose of graph-based testing is to ensure that all critical parts of the program are exercised at least once through appropriate test cases. To formalize this, we define test requirements and test criteria. A test requirement specifies a particular property that a test path should satisfy, such as covering a specific edge or node. A test criterion, on the other hand, defines a collection of such requirements that a set of test cases must meet. For example, if we are applying the branch coverage criterion to a vertex that has three outgoing edges, then at least three test cases are required so that each outgoing edge is traversed at least once.
+</p>
+      <p>In conclusion, graph-based testing provides a mathematical and structured way to design test cases by modeling software as a graph of nodes and edges. It allows testers to analyze program structure, determine reachability, detect dead code, and design test cases that achieve desired levels of coverage. By converting software logic into graph form, we can ensure systematic test design, improve coverage, and reduce redundancy in testing. This approach serves as a foundation for advanced testing strategies such as path coverage, node coverage, and edge coverage, which will be discussed in further lectures.
+</p>
+    </section>
+
+          
+  </main>
+
+    <footer>
+    <a href="ST_l5_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

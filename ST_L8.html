@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 8 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Elementary graph algorithms-DFS</h3>
+    </section>
+    <section>
+      <h4>Depth First Search (DFS)</h4>
+      <p><strong>Depth First Search (DFS)</strong> is one of the most fundamental graph traversal algorithms used to explore vertices and edges in a graph systematically. Unlike Breadth First Search (BFS), which explores neighbors level by level, DFS dives deep into the graph, exploring as far along each branch as possible before backtracking. The algorithm starts at a selected source vertex, marks it as visited, and then recursively visits all its adjacent unvisited vertices. Once it reaches a vertex that has no unvisited adjacent vertices, it backtracks to the previous vertex and continues the process until all vertices reachable from the source are explored. If there are still vertices that remain unvisited after completing one DFS call, the algorithm initiates a new DFS from the next unvisited vertex, eventually covering all connected components of the graph.</p>
+      <p>Each vertex in DFS is associated with certain attributes to track its state during traversal. The algorithm uses three colors — white, gray, and black — to represent whether a vertex is unvisited, discovered but not fully explored, or completely explored, respectively. In addition, each vertex has a predecessor (denoted as π) to indicate its parent in the DFS tree, and two timestamps: the discovery time (d) and finish time (f). The discovery time is recorded when a vertex is first encountered, and the finish time is assigned once all its adjacent vertices have been explored. These timestamps help to understand the order of traversal and are crucial in many graph-based analyses.</p>
+      <p>At the start of the algorithm, all vertices are colored white, and their predecessors are set to NIL. A global time counter is initialized to zero. The DFS algorithm iterates through all vertices, and for each white vertex, it calls the recursive procedure DFS-VISIT. Inside this procedure, the time counter is incremented, and the discovery time of the vertex is updated. The vertex is then colored gray, indicating it has been discovered. For each adjacent vertex of the current vertex, if that vertex is still white, it means it has not been visited, and DFS-VISIT is called recursively for that vertex. When all adjacent vertices have been processed, the vertex is colored black, the time counter is incremented again, and its finish time is recorded. This recursive approach enables DFS to explore deep paths before backtracking, ensuring that every edge and vertex is examined.</p>
+      <p>For example, consider a directed graph with vertices labeled u, v, w, x, y, and z. If DFS starts from vertex u, it might first explore vertices v, y, and x, depending on the adjacency structure. The discovery and finish times are assigned in increasing order as each vertex is explored and completed. When a vertex has no more white neighbors, DFS backtracks to explore the remaining unvisited parts of the graph. If the graph is disconnected, DFS will eventually restart from another unvisited vertex such as w or z, forming a second tree. The collection of all such trees created during DFS is called a depth-first forest, where each tree represents a connected component of the graph.</p>
+      <p>The time complexity of DFS is O(V + E), where V is the number of vertices and E is the number of edges. This efficiency arises because every vertex is discovered exactly once, and every edge is examined once during the traversal. DFS is, therefore, a linear-time algorithm and serves as a foundation for several important graph-based algorithms such as topological sorting, cycle detection, and strongly connected component detection.</p>
+      <p>During traversal, the edges in the graph can be categorized into four types based on the timestamps of discovery and finish times. These include tree edges, which are part of the depth-first tree; back edges, which connect a vertex to one of its ancestors in the DFS tree; forward edges, which connect a vertex to one of its descendants but are not part of the DFS tree; and cross edges, which connect vertices in different DFS subtrees or components. This classification helps in understanding the graph structure and is essential in analyzing the presence of cycles.</p>
+    </section>
+    <section>
+      <h4>Strongly Connected Components (SCCs)</h4>
+      <p>In directed graphs, connectivity plays a more complex role compared to undirected graphs. A directed graph is said to be strongly connected if there is a path from every vertex to every other vertex in the graph. A Strongly Connected Component (SCC) is a maximal subgraph in which every vertex is reachable from every other vertex within that subgraph. For instance, if vertices v, x, and y form a cycle such that there exists a path from v to x, x to y, and y back to v, then these three vertices together form a strongly connected component.</p>
+      <p>Depth First Search is a powerful tool used to find all strongly connected components of a directed graph. The most widely used method for this purpose is <abbr>Kosaraju’s algorithm</abbr>, which efficiently identifies SCCs using two passes of DFS. The algorithm first performs DFS on the original graph G to compute the finishing times for all vertices. Once the first DFS traversal is complete, a <strong>transpose graph (Gᵗ)</strong> is constructed by reversing the direction of every edge in the graph. This transpose graph has the same set of vertices but reversed edges. The key idea is that the SCCs of G and Gᵗ are identical in terms of vertex composition, but the traversal order must be carefully managed to reveal them.</p>
+      <p>After constructing the transpose graph, DFS is performed again, but this time the vertices are processed in the decreasing order of their finish times obtained from the first DFS. This order ensures that each DFS call in the second phase explores exactly one strongly connected component. Each tree formed in this second DFS represents a single SCC. The algorithm thus systematically separates the graph into its individual strongly connected components.</p>
+      <p>Once all SCCs are identified, they can be visualized as nodes in a new component graph, where each node represents one SCC, and edges represent directed connections between different components. This new graph is always a <strong>Directed Acyclic Graph (DAG)</strong> because there cannot be any cycles between SCCs—if there were, those components would have been part of a single SCC instead. This acyclic nature of the component graph allows various optimizations and analyses, such as topological sorting and dependency resolution, to be performed efficiently.</p>
+    </section>
+    <section>
+      <h4>Conclusion</h4>
+      <p>Depth First Search is a fundamental graph traversal technique that explores graphs deeply using recursion. It helps uncover the structure of a graph by classifying edges and establishing discovery and finishing times for vertices. DFS operates efficiently in linear time and is an essential building block for numerous graph algorithms. Its recursive nature allows it to explore complex relationships within a graph and identify important features such as connectivity, cycles, and component hierarchies. When combined with the concept of strongly connected components, DFS provides a deeper understanding of directed graphs, helping in tasks like network analysis, dependency detection, and component decomposition. Overall, DFS and SCC analysis together form the backbone of many applications in computer science, including compiler design, data flow analysis, and communication network analysis.</p>
+    </section>
+
+
+
+        
+  </main>
+
+    <footer>
+    <a href="ST_l8_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>

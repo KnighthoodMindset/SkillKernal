@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about Toward Efficient Parsing">
+  <title>Software Testing | lecture 9 | SkillKernal</title>
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <h1>SkillKernal</h1>
+    <h2>Your Core for Growth</h2>
+  </div>
+
+  <main>
+
+    <section>
+        <h3>Algorithms: Structural coverage criteria</h3>
+    </section>
+    <section>
+      <h4>Structural Coverage Criteria on Graphs</h4>
+      <p><strong>Structural coverage criteria</strong> are fundamental in software testing, especially when software artifacts are represented as graphs. These criteria focus on covering specific structural elements of a program’s control flow graph, such as nodes, edges, and paths. The main goal is to ensure that the test cases adequately traverse the graph structure, revealing possible defects that might arise during execution. The major structural coverage criteria include <strong>node coverage, edge coverage, edge-pair coverage</strong>, and <strong>path coverage</strong>.</p>
+    </section>
+    <section>
+      <h5>Node and Edge Coverage</h5>
+      <p>Node coverage ensures that every node or vertex in the control flow graph is executed at least once during testing. The test requirements in this case are simply all the nodes of the graph. Similarly, edge coverage requires that every edge connecting two nodes is traversed at least once, ensuring all control transfers between program components are tested. These criteria are simple yet effective in detecting missing or unexecuted parts of the code. Algorithms like <strong>Breadth-First Search (BFS)</strong> and <strong>Depth-First Search (DFS)</strong> are typically used to generate test paths for these criteria. Starting from an initial node, BFS or DFS can systematically explore all reachable nodes and edges, generating paths that cover the required structure.</p>
+      <h5>Edge-Pair Coverage</h5>
+      <p>Edge-pair coverage extends the concept of edge coverage by considering pairs of consecutive edges. It requires that every possible sequence of two edges in the graph be included in at least one test path. This helps capture potential interactions between consecutive control transfers that might not be detected by simple edge coverage. To identify all edge pairs, the adjacency list of each node and its successors is analyzed, and BFS or DFS is again employed to generate paths that include these pairs.</p>
+      <h5>Path Coverage and Prime Path Coverage</h5>
+      <p>Path coverage is a more comprehensive criterion that demands testing of paths through the graph. However, complete path coverage is often infeasible when loops exist, as there can be infinitely many paths. Therefore, a practical and efficient alternative is <abbr>prime path coverage</abbr>. A <strong>prime path</strong> is defined as a maximal simple path — a simple path that does not repeat nodes and is not a subpath of any other simple path. Prime paths are important because they effectively represent loop behaviors, including scenarios where a loop is not executed, executed once, or multiple times.</p>
+      <h5>Algorithm for Finding Prime Paths</h5>
+      <p>The algorithm to identify prime paths starts by enumerating all simple paths in the graph, beginning from paths of length zero (single nodes) and extending them step-by-step. If a path can no longer be extended due to reaching a node with no outgoing edges, it is marked with an exclamation mark (!). If extending it would create a cycle and violate simplicity, it is marked with an asterisk (*). After all possible extensions are explored, the marked paths are collected as the set of prime paths. These represent the **test requirements** for prime path coverage. For example, prime paths such as (0,1,2,3), (1,2,3,1), or (0,4,6) illustrate both linear and looping behaviors in a program.</p>
+      <h5>Generating Test Paths from Prime Paths</h5>
+      <p>Once the prime paths (test requirements) are identified, the next task is to generate test paths that fulfill them. A heuristic algorithm is used for this purpose. It begins with the longest prime paths and extends them toward the initial node and the final node to form complete executable paths. For example, a prime path like (2,3,1,5,6) can be extended to (0,1,2,3,1,5,6), ensuring it starts and ends at appropriate points in the graph. These test paths may contain repeated nodes because the objective is full coverage rather than simplicity. After generation, redundant paths that are entirely contained within longer ones may be eliminated to avoid duplication.</p>
+      <h5>Round-Trip Coverage</h5>
+      <p>Round-trip coverage focuses on paths that start and end at the same node, representing cyclic behaviors in programs. **Complete round-trip coverage** ensures that all such round trips are covered, whereas simple round-trip coverage ensures at least one occurrence is included. This criterion helps in verifying the correctness of cyclic structures in software, such as loops and repeated control transfers.</p>
+
+    </section>
+    <section>
+      <h4>ConClusion</h4>
+      <p>Structural coverage criteria form the foundation of graph-based software testing. They provide systematic ways to ensure that all essential control structures of a program are tested. Node, edge, and edge-pair coverage guarantee basic structural verification, while prime path and round-trip coverage extend this to complex and looping paths. Algorithms like BFS, DFS, and path extension play a crucial role in identifying test requirements and generating corresponding test paths. By applying these techniques, testers can ensure thorough structural validation of software before moving toward more advanced coverage criteria such as data flow-based testing.</p>
+    </section>
+   
+  </main>
+
+    <footer>
+    <a href="ST_l9_Quiz.html" class="back-btn">Attempt Quiz</a>
+    </footer>
+
+ </body>
+</html>
