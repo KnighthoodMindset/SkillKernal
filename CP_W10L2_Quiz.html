@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <!-- Quiz Section -->
+  <main class="quiz-container">
+    <h2>Cybersecurity - Week 10 lecture 2 Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What does anonymity in privacy refer to?</p>
+  <label><input type="radio" name="q1" value="a"> Limiting access to information while ensuring accuracy</label><br>
+  <label><input type="radio" name="q1" value="b"> Concealing a person's identity in full, pseudonymity, or identifiability forms</label><br>
+  <label><input type="radio" name="q1" value="c"> Intentionally providing misleading information</label><br>
+  <label><input type="radio" name="q1" value="d"> Openly sharing accurate information</label>
+  <div class="answer" data-correct="b" data-expl="Anonymity involves concealing a person's identity, which can be full, pseudonymous, or identifiable only by certain authorities."></div>
+</div>
+
+<div class="question">
+  <p>How does pseudonymity protect privacy?</p>
+  <label><input type="radio" name="q2" value="a"> By hiding all personal identifiers from everyone</label><br>
+  <label><input type="radio" name="q2" value="b"> By generating a pseudo-identifier that can only be linked to an individual by the issuing authority</label><br>
+  <label><input type="radio" name="q2" value="c"> By encrypting all data end-to-end</label><br>
+  <label><input type="radio" name="q2" value="d"> By making all information public</label>
+  <div class="answer" data-correct="b" data-expl="Pseudonymity assigns a pseudo-identifier that can be linked to the individual by the authority, but not by external entities."></div>
+</div>
+
+<div class="question">
+  <p>Which concept involves intentionally concealing information, sometimes using misleading details?</p>
+  <label><input type="radio" name="q3" value="a"> Anonymity</label><br>
+  <label><input type="radio" name="q3" value="b"> Secrecy</label><br>
+  <label><input type="radio" name="q3" value="c"> Confidentiality</label><br>
+  <label><input type="radio" name="q3" value="d"> Transparency</label>
+  <div class="answer" data-correct="b" data-expl="Secrecy involves concealing information and may include providing misleading details."></div>
+</div>
+
+<div class="question">
+  <p>What distinguishes confidentiality from secrecy?</p>
+  <label><input type="radio" name="q4" value="a"> Confidentiality shares accurate information selectively, while secrecy may conceal or mislead</label><br>
+  <label><input type="radio" name="q4" value="b"> Confidentiality hides all personal data, secrecy shares data</label><br>
+  <label><input type="radio" name="q4" value="c"> Confidentiality is unethical, secrecy is ethical</label><br>
+  <label><input type="radio" name="q4" value="d"> They are identical concepts</label>
+  <div class="answer" data-correct="a" data-expl="Confidentiality limits sharing but ensures accuracy, whereas secrecy may conceal or provide misleading information."></div>
+</div>
+
+<div class="question">
+  <p>Which privacy-preserving technique adds noise to data before sharing to protect individual identities?</p>
+  <label><input type="radio" name="q5" value="a"> Anonymization</label><br>
+  <label><input type="radio" name="q5" value="b"> Randomization</label><br>
+  <label><input type="radio" name="q5" value="c"> Encryption</label><br>
+  <label><input type="radio" name="q5" value="d"> Pseudonymity</label>
+  <div class="answer" data-correct="b" data-expl="Randomization adds noise to data to hide exact values while keeping aggregate patterns useful."></div>
+</div>
+
+<div class="question">
+  <p>What is k-anonymity in privacy-preserving data mining?</p>
+  <label><input type="radio" name="q6" value="a"> A method of encrypting messages using a key</label><br>
+  <label><input type="radio" name="q6" value="b"> Generalizing or suppressing data so individuals cannot be uniquely identified</label><br>
+  <label><input type="radio" name="q6" value="c"> Deleting all user data permanently</label><br>
+  <label><input type="radio" name="q6" value="d"> Sharing raw data without modification</label>
+  <div class="answer" data-correct="b" data-expl="K-anonymity generalizes or suppresses data to prevent unique identification of individuals."></div>
+</div>
+
+<div class="question">
+  <p>What is the fundamental trade-off in privacy-preserving analytics?</p>
+  <label><input type="radio" name="q7" value="a"> Between data utility and privacy risk</label><br>
+  <label><input type="radio" name="q7" value="b"> Between data collection and government surveillance</label><br>
+  <label><input type="radio" name="q7" value="c"> Between encryption strength and speed</label><br>
+  <label><input type="radio" name="q7" value="d"> Between anonymity and secrecy</label>
+  <div class="answer" data-correct="a" data-expl="The trade-off is between maximizing the usefulness of data and minimizing privacy risk."></div>
+</div>
+
+<div class="question">
+  <p>Which international framework evolved into the GDPR in Europe?</p>
+  <label><input type="radio" name="q8" value="a"> HIPAA</label><br>
+  <label><input type="radio" name="q8" value="b"> OECD’s Fair Information Practice Principles (FIPPs)</label><br>
+  <label><input type="radio" name="q8" value="c"> ISO 27001</label><br>
+  <label><input type="radio" name="q8" value="d"> NIST Privacy Framework</label>
+  <div class="answer" data-correct="b" data-expl="FIPPs were early guidelines that influenced the EU Data Protection Directive, later becoming GDPR."></div>
+</div>
+
+<div class="question">
+  <p>What is the challenge of anonymized data in practice?</p>
+  <label><input type="radio" name="q9" value="a"> It cannot be used for any analysis</label><br>
+  <label><input type="radio" name="q9" value="b"> Linking anonymized data with other datasets can re-identify individuals</label><br>
+  <label><input type="radio" name="q9" value="c"> It automatically deletes after 24 hours</label><br>
+  <label><input type="radio" name="q9" value="d"> It requires user consent every time</label>
+  <div class="answer" data-correct="b" data-expl="Anonymized data can sometimes be re-identified when combined with other datasets, posing a privacy risk."></div>
+</div>
+
+<div class="question">
+  <p>Why is privacy regulation important in data-driven governance?</p>
+  <label><input type="radio" name="q10" value="a"> To completely prevent data collection</label><br>
+  <label><input type="radio" name="q10" value="b"> To balance privacy concerns with the utility and service delivery of data-driven systems</label><br>
+  <label><input type="radio" name="q10" value="c"> To remove all anonymization techniques</label><br>
+  <label><input type="radio" name="q10" value="d"> To ensure all data is shared publicly</label>
+  <div class="answer" data-correct="b" data-expl="Regulation is necessary to protect privacy while allowing data to be used effectively for governance and services."></div>
+</div>
+
+
+
+                  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+  </main>
+
+
+  <div id="result" class="result-box"></div>
+    <script src="quiz.js"></script>
+
+</body>
+</html>

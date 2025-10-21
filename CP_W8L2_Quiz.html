@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <!-- Quiz Section -->
+  <main class="quiz-container">
+    <h2>Cybersecurity - Week 8 lecture 2 Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What are the four steps of access control in cybersecurity?</p>
+  <label><input type="radio" name="q1" value="a"> Identification, Authentication, Authorization, Accountability</label><br>
+  <label><input type="radio" name="q1" value="b"> Encryption, Decryption, Authorization, Logging</label><br>
+  <label><input type="radio" name="q1" value="c"> Identification, Password, Encryption, Authorization</label><br>
+  <label><input type="radio" name="q1" value="d"> Authentication, Access, Logging, Monitoring</label>
+  <div class="answer" data-correct="a" data-expl="Access control involves Identification (who the user is), Authentication (verifying the claim), Authorization (granting access), and Accountability (tracking actions)."></div>
+</div>
+
+<div class="question">
+  <p>How does multi-factor authentication (MFA) strengthen access control?</p>
+  <label><input type="radio" name="q2" value="a"> By requiring users to memorize longer passwords</label><br>
+  <label><input type="radio" name="q2" value="b"> By combining multiple authentication methods like something you know, have, or are</label><br>
+  <label><input type="radio" name="q2" value="c"> By using only biometric methods</label><br>
+  <label><input type="radio" name="q2" value="d"> By disabling single sign-on systems</label>
+  <div class="answer" data-correct="b" data-expl="MFA strengthens access control by requiring users to authenticate using multiple factors, e.g., passwords, devices, and biometrics, making unauthorized access more difficult."></div>
+</div>
+
+<div class="question">
+  <p>What is the Crossover Error Rate (CER) in biometric systems?</p>
+  <label><input type="radio" name="q3" value="a"> The rate at which a system fails to enroll users</label><br>
+  <label><input type="radio" name="q3" value="b"> The point where false acceptance and false rejection rates are equal</label><br>
+  <label><input type="radio" name="q3" value="c"> The maximum allowable authentication time</label><br>
+  <label><input type="radio" name="q3" value="d"> The average number of failed login attempts</label>
+  <div class="answer" data-correct="b" data-expl="CER is the point in a biometric system where the False Acceptance Rate (FAR) equals the False Rejection Rate (FRR), balancing security and usability."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a limitation of biometric authentication?</p>
+  <label><input type="radio" name="q4" value="a"> It cannot uniquely identify individuals</label><br>
+  <label><input type="radio" name="q4" value="b"> It has false acceptance and rejection rates and may be affected by wear or injury</label><br>
+  <label><input type="radio" name="q4" value="c"> It does not require user cooperation</label><br>
+  <label><input type="radio" name="q4" value="d"> It replaces the need for passwords entirely</label>
+  <div class="answer" data-correct="b" data-expl="Biometric systems may fail due to false acceptances, false rejections, or physical changes such as worn fingerprints, affecting reliability."></div>
+</div>
+
+<div class="question">
+  <p>What role does a firewall play in network security?</p>
+  <label><input type="radio" name="q5" value="a"> Encrypts all network traffic</label><br>
+  <label><input type="radio" name="q5" value="b"> Separates trusted and untrusted networks, controlling access based on rules</label><br>
+  <label><input type="radio" name="q5" value="c"> Replaces antivirus software</label><br>
+  <label><input type="radio" name="q5" value="d"> Monitors user behavior only</label>
+  <div class="answer" data-correct="b" data-expl="Firewalls control network access by separating trusted internal networks from untrusted external networks and enforcing security rules."></div>
+</div>
+
+<div class="question">
+  <p>Which statement best describes symmetric and asymmetric encryption?</p>
+  <label><input type="radio" name="q6" value="a"> Symmetric uses one key for encryption/decryption, asymmetric uses separate public/private keys</label><br>
+  <label><input type="radio" name="q6" value="b"> Symmetric is unbreakable, asymmetric is weak</label><br>
+  <label><input type="radio" name="q6" value="c"> Both always use public keys only</label><br>
+  <label><input type="radio" name="q6" value="d"> Asymmetric encryption requires passwords instead of keys</label>
+  <div class="answer" data-correct="a" data-expl="Symmetric encryption uses a single shared key, while asymmetric encryption uses a pair of public and private keys to enable secure communication over unsecured networks."></div>
+</div>
+
+<div class="question">
+  <p>How do digital signatures and certificates enhance security?</p>
+  <label><input type="radio" name="q7" value="a"> By encrypting all data</label><br>
+  <label><input type="radio" name="q7" value="b"> By ensuring message authenticity and non-repudiation</label><br>
+  <label><input type="radio" name="q7" value="c"> By preventing phishing emails automatically</label><br>
+  <label><input type="radio" name="q7" value="d"> By replacing firewalls</label>
+  <div class="answer" data-correct="b" data-expl="Digital signatures and certificates prove that a message or transaction is authentic and prevent the sender from denying their involvement."></div>
+</div>
+
+<div class="question">
+  <p>What is the main purpose of cryptography in data transmission?</p>
+  <label><input type="radio" name="q8" value="a"> To make data unintelligible to unauthorized parties</label><br>
+  <label><input type="radio" name="q8" value="b"> To compress data for faster transmission</label><br>
+  <label><input type="radio" name="q8" value="c"> To replace access control mechanisms</label><br>
+  <label><input type="radio" name="q8" value="d"> To monitor user activity</label>
+  <div class="answer" data-correct="a" data-expl="Cryptography ensures confidentiality by making information unreadable to anyone without the proper decryption key."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following correctly matches encryption methods?</p>
+  <label><input type="radio" name="q9" value="a"> Substitution: replaces plaintext elements; Transposition: changes positions; XOR: exclusive OR operation</label><br>
+  <label><input type="radio" name="q9" value="b"> Substitution: shuffles bits; Transposition: replaces characters; XOR: compresses data</label><br>
+  <label><input type="radio" name="q9" value="c"> Substitution: exclusive OR; Transposition: hashing; XOR: replaces characters</label><br>
+  <label><input type="radio" name="q9" value="d"> All are identical techniques</label>
+  <div class="answer" data-correct="a" data-expl="Substitution replaces plaintext elements with others, transposition changes their positions, and XOR applies an exclusive OR operation to bits."></div>
+</div>
+
+<div class="question">
+  <p>Why is awareness of cybersecurity technologies important for managerial decision-making?</p>
+  <label><input type="radio" name="q10" value="a"> Managers need to implement technical designs themselves</label><br>
+  <label><input type="radio" name="q10" value="b"> Awareness helps managers make informed decisions to safeguard digital assets</label><br>
+  <label><input type="radio" name="q10" value="c"> Managers are responsible for coding encryption algorithms</label><br>
+  <label><input type="radio" name="q10" value="d"> Awareness is unnecessary as IT staff handle everything</label>
+  <div class="answer" data-correct="b" data-expl="Managers need awareness of cybersecurity technologies to make informed decisions, allocate resources, and ensure organizational security policies are effective."></div>
+</div>
+
+
+
+                  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+  </main>
+
+
+  <div id="result" class="result-box"></div>
+    <script src="quiz.js"></script>
+
+</body>
+</html>

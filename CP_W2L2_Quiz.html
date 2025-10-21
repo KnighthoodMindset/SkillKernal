@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <!-- Quiz Section -->
+  <main class="quiz-container">
+    <h2>Cybersecurity - Week 2 lecture 2 Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>Which three foundational concepts play a key role in maintaining confidentiality in cybersecurity?</p>
+  <label><input type="radio" name="q1" value="a"> Identification, Authentication, and Authorization</label><br>
+  <label><input type="radio" name="q1" value="b"> Encryption, Firewall, and VPN</label><br>
+  <label><input type="radio" name="q1" value="c"> Passwords, Biometrics, and Firewalls</label><br>
+  <label><input type="radio" name="q1" value="d"> Accountability, Monitoring, and Logging</label>
+  <div class="answer" data-correct="a" data-expl="The three foundational concepts for maintaining confidentiality are Identification, Authentication, and Authorization."></div>
+</div>
+
+<div class="question">
+  <p>What is the main purpose of identification in cybersecurity?</p>
+  <label><input type="radio" name="q2" value="a"> To verify if a user is real</label><br>
+  <label><input type="radio" name="q2" value="b"> To create a verifiable digital identity for users accessing systems</label><br>
+  <label><input type="radio" name="q2" value="c"> To encrypt user credentials</label><br>
+  <label><input type="radio" name="q2" value="d"> To determine user privileges</label>
+  <div class="answer" data-correct="b" data-expl="Identification creates a verifiable identity for individuals, forming the foundation of access control and confidentiality."></div>
+</div>
+
+<div class="question">
+  <p>Which example best illustrates the concept of identification?</p>
+  <label><input type="radio" name="q3" value="a"> Logging in using a fingerprint</label><br>
+  <label><input type="radio" name="q3" value="b"> Receiving an Aadhaar number after verifying documents</label><br>
+  <label><input type="radio" name="q3" value="c"> Using OTP for verification</label><br>
+  <label><input type="radio" name="q3" value="d"> Accessing files based on permissions</label>
+  <div class="answer" data-correct="b" data-expl="The Aadhaar process assigns a unique identity after verification, demonstrating the identification phase in cybersecurity."></div>
+</div>
+
+<div class="question">
+  <p>What does authentication verify in the cybersecurity process?</p>
+  <label><input type="radio" name="q4" value="a"> What a user can access</label><br>
+  <label><input type="radio" name="q4" value="b"> The truth of the claimed identity</label><br>
+  <label><input type="radio" name="q4" value="c"> The user's access privileges</label><br>
+  <label><input type="radio" name="q4" value="d"> The user's password strength</label>
+  <div class="answer" data-correct="b" data-expl="Authentication verifies that the person claiming an identity truly is who they say they are."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following is an example of authentication?</p>
+  <label><input type="radio" name="q5" value="a"> Providing documents to create an Aadhaar ID</label><br>
+  <label><input type="radio" name="q5" value="b"> Showing an ID card to enter the IIT Madras campus</label><br>
+  <label><input type="radio" name="q5" value="c"> Assigning roles to users in a system</label><br>
+  <label><input type="radio" name="q5" value="d"> Reviewing audit logs after a breach</label>
+  <div class="answer" data-correct="b" data-expl="Showing an ID card to verify that someone is who they claim to be represents authentication."></div>
+</div>
+
+<div class="question">
+  <p>Which combination correctly represents multi-factor authentication (MFA)?</p>
+  <label><input type="radio" name="q6" value="a"> Password and fingerprint</label><br>
+  <label><input type="radio" name="q6" value="b"> Username and password</label><br>
+  <label><input type="radio" name="q6" value="c"> Biometric and retina scan</label><br>
+  <label><input type="radio" name="q6" value="d"> OTP and encryption</label>
+  <div class="answer" data-correct="a" data-expl="Multi-factor authentication combines multiple verification factors such as something you know (password) and something you are (fingerprint)."></div>
+</div>
+
+<div class="question">
+  <p>What does authorization determine in a security system?</p>
+  <label><input type="radio" name="q7" value="a"> Who is accessing the system</label><br>
+  <label><input type="radio" name="q7" value="b"> Whether a user’s password is correct</label><br>
+  <label><input type="radio" name="q7" value="c"> What an authenticated user is allowed to do</label><br>
+  <label><input type="radio" name="q7" value="d"> How many users can access the network</label>
+  <div class="answer" data-correct="c" data-expl="Authorization defines what actions or resources an authenticated user is permitted to access."></div>
+</div>
+
+<div class="question">
+  <p>In the Target Corporation breach, which factor allowed hackers to steal credit card data?</p>
+  <label><input type="radio" name="q8" value="a"> Strong encryption of POS memory</label><br>
+  <label><input type="radio" name="q8" value="b"> Unencrypted data stored in POS memory</label><br>
+  <label><input type="radio" name="q8" value="c"> Limited vendor access</label><br>
+  <label><input type="radio" name="q8" value="d"> Regular malware monitoring</label>
+  <div class="answer" data-correct="b" data-expl="The POS system stored unencrypted credit card data in memory, allowing hackers to extract it easily."></div>
+</div>
+
+<div class="question">
+  <p>What managerial failure contributed to the Target data breach?</p>
+  <label><input type="radio" name="q9" value="a"> Excessive encryption</label><br>
+  <label><input type="radio" name="q9" value="b"> Ignoring malware alerts due to false positives</label><br>
+  <label><input type="radio" name="q9" value="c"> Over-monitoring of logs</label><br>
+  <label><input type="radio" name="q9" value="d"> Disconnecting vendor systems completely</label>
+  <div class="answer" data-correct="b" data-expl="Target employees ignored malware alerts due to frequent false positives, leading to delayed response to the attack."></div>
+</div>
+
+<div class="question">
+  <p>Which lesson from the Target case emphasizes the importance of accountability?</p>
+  <label><input type="radio" name="q10" value="a"> Disabling all alerts improves efficiency</label><br>
+  <label><input type="radio" name="q10" value="b"> Maintaining complete and monitored log files helps detect and trace security incidents</label><br>
+  <label><input type="radio" name="q10" value="c"> Outsourcing security functions ensures safety</label><br>
+  <label><input type="radio" name="q10" value="d"> Firewalls alone can prevent all attacks</label>
+  <div class="answer" data-correct="b" data-expl="Accountability requires maintaining logs and audit trails so that every digital action can be traced to its source."></div>
+</div>
+
+
+            
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+  </main>
+
+
+  <div id="result" class="result-box"></div>
+    <script src="quiz.js"></script>
+
+</body>
+</html>

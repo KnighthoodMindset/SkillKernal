@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <!-- Quiz Section -->
+  <main class="quiz-container">
+    <h2>Cybersecurity - Week 9 lecture 1 Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the primary purpose of encryption in cybersecurity?</p>
+  <label><input type="radio" name="q1" value="a"> To prevent physical theft of devices</label><br>
+  <label><input type="radio" name="q1" value="b"> To protect transmitted data so intruders cannot decipher it</label><br>
+  <label><input type="radio" name="q1" value="c"> To monitor employee activity</label><br>
+  <label><input type="radio" name="q1" value="d"> To replace access control mechanisms</label>
+  <div class="answer" data-correct="b" data-expl="Encryption secures transmitted data, ensuring that even if intercepted, unauthorized parties cannot decipher it."></div>
+</div>
+
+<div class="question">
+  <p>Which technologies are central to blockchain security?</p>
+  <label><input type="radio" name="q2" value="a"> Firewalls and antivirus only</label><br>
+  <label><input type="radio" name="q2" value="b"> Encryption, cryptographic hash functions, and private keys</label><br>
+  <label><input type="radio" name="q2" value="c"> VPNs and intrusion detection systems</label><br>
+  <label><input type="radio" name="q2" value="d"> Biometric authentication only</label>
+  <div class="answer" data-correct="b" data-expl="Blockchain uses encryption, cryptographic hash functions, and unique private keys to ensure confidentiality, immutability, and non-repudiation."></div>
+</div>
+
+<div class="question">
+  <p>Which encryption standards replaced DES for stronger security?</p>
+  <label><input type="radio" name="q3" value="a"> Triple DES, AES, and RSA</label><br>
+  <label><input type="radio" name="q3" value="b"> MD5 and SHA-1</label><br>
+  <label><input type="radio" name="q3" value="c"> VPN and TLS</label><br>
+  <label><input type="radio" name="q3" value="d"> WEP and WPA</label>
+  <div class="answer" data-correct="a" data-expl="DES was replaced by more secure standards such as Triple DES, AES, and RSA to provide stronger encryption."></div>
+</div>
+
+<div class="question">
+  <p>What is a key risk to privacy even when encryption is used?</p>
+  <label><input type="radio" name="q4" value="a"> Malware attacks only</label><br>
+  <label><input type="radio" name="q4" value="b"> Unencrypted data backups leading to potential breaches</label><br>
+  <label><input type="radio" name="q4" value="c"> VPN usage</label><br>
+  <label><input type="radio" name="q4" value="d"> Firewall misconfiguration only</label>
+  <div class="answer" data-correct="b" data-expl="Even if communication is encrypted, unencrypted backups can lead to privacy breaches, as seen in incidents like WhatsApp leaks."></div>
+</div>
+
+<div class="question">
+  <p>Who defined the “right to be let alone” in 1890?</p>
+  <label><input type="radio" name="q5" value="a"> Aristotle</label><br>
+  <label><input type="radio" name="q5" value="b"> Samuel Warren and Louis Brandeis</label><br>
+  <label><input type="radio" name="q5" value="c"> Dorothy Denning</label><br>
+  <label><input type="radio" name="q5" value="d"> Robert M. Lee</label>
+  <div class="answer" data-correct="b" data-expl="Samuel Warren and Louis Brandeis published 'The Right to Privacy,' defining it as the right to be let alone."></div>
+</div>
+
+<div class="question">
+  <p>Which aspect does privacy primarily address beyond cybersecurity?</p>
+  <label><input type="radio" name="q6" value="a"> Right to control personal information</label><br>
+  <label><input type="radio" name="q6" value="b"> Network monitoring</label><br>
+  <label><input type="radio" name="q6" value="c"> Firewall configuration</label><br>
+  <label><input type="radio" name="q6" value="d"> Virus scanning only</label>
+  <div class="answer" data-correct="a" data-expl="Privacy concerns the right of individuals to control their personal information and maintain autonomy."></div>
+</div>
+
+<div class="question">
+  <p>What does blockchain ensure through cryptographic hash functions?</p>
+  <label><input type="radio" name="q7" value="a"> Faster internet connectivity</label><br>
+  <label><input type="radio" name="q7" value="b"> Immutability of data</label><br>
+  <label><input type="radio" name="q7" value="c"> Physical security of devices</label><br>
+  <label><input type="radio" name="q7" value="d"> Password protection only</label>
+  <div class="answer" data-correct="b" data-expl="Cryptographic hash functions ensure that once data is recorded in a blockchain, it cannot be altered without detection, maintaining immutability."></div>
+</div>
+
+<div class="question">
+  <p>Which philosophical distinction underpins the modern understanding of privacy?</p>
+  <label><input type="radio" name="q8" value="a"> Public sphere (“polis”) vs private sphere (“oikos”) by Aristotle</label><br>
+  <label><input type="radio" name="q8" value="b"> Firewall vs antivirus</label><br>
+  <label><input type="radio" name="q8" value="c"> Hardware vs software</label><br>
+  <label><input type="radio" name="q8" value="d"> TCP vs UDP</label>
+  <div class="answer" data-correct="a" data-expl="Aristotle distinguished the public sphere (‘polis’) from the private sphere (‘oikos’), framing privacy as autonomy in private spaces."></div>
+</div>
+
+<div class="question">
+  <p>Why is privacy considered dynamic in the modern context?</p>
+  <label><input type="radio" name="q9" value="a"> Because technology, legal frameworks, ethics, and societal values continuously shape it</label><br>
+  <label><input type="radio" name="q9" value="b"> Because it never changes</label><br>
+  <label><input type="radio" name="q9" value="c"> Because hardware evolves faster than software</label><br>
+  <label><input type="radio" name="q9" value="d"> Because firewalls automatically update</label>
+  <div class="answer" data-correct="a" data-expl="Privacy evolves with changes in technology, law, ethical standards, and societal norms, making it a dynamic concept."></div>
+</div>
+
+<div class="question">
+  <p>Which factor can limit absolute privacy according to the text?</p>
+  <label><input type="radio" name="q10" value="a"> Public interest and national security considerations</label><br>
+  <label><input type="radio" name="q10" value="b"> Installing firewalls only</label><br>
+  <label><input type="radio" name="q10" value="c"> Using biometric authentication only</label><br>
+  <label><input type="radio" name="q10" value="d"> Using VPNs only</label>
+  <div class="answer" data-correct="a" data-expl="Privacy is balanced against public interest and national security, which can justify certain intrusions or access under regulation and oversight."></div>
+</div>
+
+
+
+                  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+  </main>
+
+
+  <div id="result" class="result-box"></div>
+    <script src="quiz.js"></script>
+
+</body>
+</html>

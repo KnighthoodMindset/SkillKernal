@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <!-- Quiz Section -->
+  <main class="quiz-container">
+    <h2>Cybersecurity - Week 7 lecture 1 Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>Which principle ensures that only authorized users can access data?</p>
+  <label><input type="radio" name="q1" value="a"> Availability</label><br>
+  <label><input type="radio" name="q1" value="b"> Confidentiality</label><br>
+  <label><input type="radio" name="q1" value="c"> Accountability</label><br>
+  <label><input type="radio" name="q1" value="d"> Auditability</label>
+  <div class="answer" data-correct="b" data-expl="Confidentiality ensures that data is accessed only by authorized users."></div>
+</div>
+
+<div class="question">
+  <p>What role do operating systems play in cybersecurity?</p>
+  <label><input type="radio" name="q2" value="a"> Only manage user accounts</label><br>
+  <label><input type="radio" name="q2" value="b"> Act as the interface between hardware and humans, managing computational and I/O processes</label><br>
+  <label><input type="radio" name="q2" value="c"> Replace cryptography</label><br>
+  <label><input type="radio" name="q2" value="d"> Monitor social engineering attacks</label>
+  <div class="answer" data-correct="b" data-expl="Operating systems serve as the interface between hardware and humans, managing computational and input/output processes."></div>
+</div>
+
+<div class="question">
+  <p>What are “rings” in operating system security?</p>
+  <label><input type="radio" name="q3" value="a"> Firewalls for network traffic</label><br>
+  <label><input type="radio" name="q3" value="b"> Hierarchical privilege levels that control access to system resources</label><br>
+  <label><input type="radio" name="q3" value="c"> Types of encryption keys</label><br>
+  <label><input type="radio" name="q3" value="d"> Levels of user authentication</label>
+  <div class="answer" data-correct="b" data-expl="Rings are hierarchical privilege levels determining how much control a process or user has over system resources."></div>
+</div>
+
+<div class="question">
+  <p>Which principle of cybersecurity ensures data remains unaltered during storage or transmission?</p>
+  <label><input type="radio" name="q4" value="a"> Integrity</label><br>
+  <label><input type="radio" name="q4" value="b"> Confidentiality</label><br>
+  <label><input type="radio" name="q4" value="c"> Auditability</label><br>
+  <label><input type="radio" name="q4" value="d"> Availability</label>
+  <div class="answer" data-correct="a" data-expl="Integrity ensures that data is not altered during transmission or storage."></div>
+</div>
+
+<div class="question">
+  <p>What advantage does public-key cryptography provide?</p>
+  <label><input type="radio" name="q5" value="a"> Encrypts data without needing to share secret keys beforehand</label><br>
+  <label><input type="radio" name="q5" value="b"> Automatically detects malware</label><br>
+  <label><input type="radio" name="q5" value="c"> Replaces firewalls entirely</label><br>
+  <label><input type="radio" name="q5" value="d"> Improves network speed</label>
+  <div class="answer" data-correct="a" data-expl="Public-key cryptography allows secure communication without exchanging secret keys in advance."></div>
+</div>
+
+<div class="question">
+  <p>What is the main role of hash functions in cybersecurity?</p>
+  <label><input type="radio" name="q6" value="a"> Encrypting communication</label><br>
+  <label><input type="radio" name="q6" value="b"> Converting data into fixed-length values to ensure integrity</label><br>
+  <label><input type="radio" name="q6" value="c"> Monitoring network traffic</label><br>
+  <label><input type="radio" name="q6" value="d"> Authenticating users via LDAP</label>
+  <div class="answer" data-correct="b" data-expl="Hash functions generate fixed-length values that detect any changes to data, ensuring integrity."></div>
+</div>
+
+<div class="question">
+  <p>Which protocol guarantees reliable and ordered delivery of data packets?</p>
+  <label><input type="radio" name="q7" value="a"> UDP</label><br>
+  <label><input type="radio" name="q7" value="b"> TCP</label><br>
+  <label><input type="radio" name="q7" value="c"> LDAP</label><br>
+  <label><input type="radio" name="q7" value="d"> RADIUS</label>
+  <div class="answer" data-correct="b" data-expl="TCP ensures reliable and ordered delivery of data across networks."></div>
+</div>
+
+<div class="question">
+  <p>Which cybersecurity threat often exploits human behavior?</p>
+  <label><input type="radio" name="q8" value="a"> Privilege escalation</label><br>
+  <label><input type="radio" name="q8" value="b"> Social engineering</label><br>
+  <label><input type="radio" name="q8" value="c"> Hash function collision</label><br>
+  <label><input type="radio" name="q8" value="d"> OS ring bypass</label>
+  <div class="answer" data-correct="b" data-expl="Social engineering manipulates human behavior to gain unauthorized access."></div>
+</div>
+
+<div class="question">
+  <p>What is the key difference between cyber espionage and cyber warfare?</p>
+  <label><input type="radio" name="q9" value="a"> Espionage focuses on intelligence gathering; warfare aims to cause damage or disruption</label><br>
+  <label><input type="radio" name="q9" value="b"> Espionage uses TCP; warfare uses UDP</label><br>
+  <label><input type="radio" name="q9" value="c"> Espionage targets operating systems; warfare targets applications</label><br>
+  <label><input type="radio" name="q9" value="d"> There is no difference; they are synonyms</label>
+  <div class="answer" data-correct="a" data-expl="Cyber espionage aims to gather intelligence, while cyber warfare seeks to cause harm or disruption."></div>
+</div>
+
+<div class="question">
+  <p>Why must cybersecurity evolve from being an afterthought to an integral part of organizational design?</p>
+  <label><input type="radio" name="q10" value="a"> To reduce software licensing costs</label><br>
+  <label><input type="radio" name="q10" value="b"> To ensure resilience against attacks and protect critical systems as digital transformation accelerates</label><br>
+  <label><input type="radio" name="q10" value="c"> To allow unrestricted network access</label><br>
+  <label><input type="radio" name="q10" value="d"> To replace operating systems</label>
+  <div class="answer" data-correct="b" data-expl="Cybersecurity must be integral to organizational design to build resilient systems and protect against evolving digital threats."></div>
+</div>
+
+
+
+                  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+  </main>
+
+
+  <div id="result" class="result-box"></div>
+    <script src="quiz.js"></script>
+
+</body>
+</html>
