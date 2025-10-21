@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 15 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What does a node represent in a control flow graph (CFG) for source code testing?</p>
+  <label><input type="radio" name="q1" value="a"> A loop only</label><br>
+  <label><input type="radio" name="q1" value="b"> A statement or block of statements</label><br>
+  <label><input type="radio" name="q1" value="c"> A variable</label><br>
+  <label><input type="radio" name="q1" value="d"> A function call</label><br>
+  <div class="answer" data-correct="b">In a CFG, each node represents a statement or block of statements in the program.</div>
+</div>
+
+<div class="question">
+  <p>What is the main purpose of extending a control flow graph with variable definitions and uses?</p>
+  <label><input type="radio" name="q2" value="a"> To simplify code</label><br>
+  <label><input type="radio" name="q2" value="b"> To apply data flow coverage criteria for better white-box testing</label><br>
+  <label><input type="radio" name="q2" value="c"> To reduce the number of test cases</label><br>
+  <label><input type="radio" name="q2" value="d"> To measure performance</label><br>
+  <div class="answer" data-correct="b">Adding definitions and uses to the CFG allows testers to apply data flow coverage criteria for thorough testing of variables.</div>
+</div>
+
+<div class="question">
+  <p>What actions does a variable undergo in data flow testing?</p>
+  <label><input type="radio" name="q3" value="a"> Assignment and deletion</label><br>
+  <label><input type="radio" name="q3" value="b"> Definition and use</label><br>
+  <label><input type="radio" name="q3" value="c"> Declaration and compilation</label><br>
+  <label><input type="radio" name="q3" value="d"> Initialization and printing</label><br>
+  <div class="answer" data-correct="b">In data flow testing, variables undergo definition (assignment) and use (reading or referencing in expressions or conditions).</div>
+</div>
+
+<div class="question">
+  <p>What is a def-use path in data flow testing?</p>
+  <label><input type="radio" name="q4" value="a"> A sequence connecting two loops</label><br>
+  <label><input type="radio" name="q4" value="b"> A path connecting a variable’s definition to its use without redefinition</label><br>
+  <label><input type="radio" name="q4" value="c"> A path from program start to end</label><br>
+  <label><input type="radio" name="q4" value="d"> A path covering all nodes</label><br>
+  <div class="answer" data-correct="b">A def-use path is a sequence of statements connecting a variable’s definition to its use without redefinition in between.</div>
+</div>
+
+<div class="question">
+  <p>Which data flow testing criterion ensures that each definition of a variable reaches at least one of its uses?</p>
+  <label><input type="radio" name="q5" value="a"> All-Uses Coverage</label><br>
+  <label><input type="radio" name="q5" value="b"> All-DU-Paths Coverage</label><br>
+  <label><input type="radio" name="q5" value="c"> All-Defs Coverage</label><br>
+  <label><input type="radio" name="q5" value="d"> Node Coverage</label><br>
+  <div class="answer" data-correct="c">All-Defs Coverage ensures that each variable definition reaches at least one of its uses.</div>
+</div>
+
+<div class="question">
+  <p>Which criterion in data flow testing is the strongest and requires every possible def-use path to be executed at least once?</p>
+  <label><input type="radio" name="q6" value="a"> All-Defs Coverage</label><br>
+  <label><input type="radio" name="q6" value="b"> All-Uses Coverage</label><br>
+  <label><input type="radio" name="q6" value="c"> All-DU-Paths Coverage</label><br>
+  <label><input type="radio" name="q6" value="d"> Statement Coverage</label><br>
+  <div class="answer" data-correct="c">All-DU-Paths Coverage is the most rigorous, requiring every possible definition-clear path from each definition to each use to be executed.</div>
+</div>
+
+<div class="question">
+  <p>How does data flow testing help identify unused definitions and incorrect variable updates?</p>
+  <label><input type="radio" name="q7" value="a"> By checking only loop executions</label><br>
+  <label><input type="radio" name="q7" value="b"> By verifying that each variable definition reaches its uses correctly</label><br>
+  <label><input type="radio" name="q7" value="c"> By executing only edge paths</label><br>
+  <label><input type="radio" name="q7" value="d"> By ignoring conditional statements</label><br>
+  <div class="answer" data-correct="b">Data flow testing detects unused definitions and incorrect updates by ensuring that variable definitions correctly reach their uses along definition-clear paths.</div>
+</div>
+
+<div class="question">
+  <p>Why is testing through graph models considered more structured?</p>
+  <label><input type="radio" name="q8" value="a"> It uses random test cases</label><br>
+  <label><input type="radio" name="q8" value="b"> It systematically analyzes control and data flow interactions</label><br>
+  <label><input type="radio" name="q8" value="c"> It tests only statements sequentially</label><br>
+  <label><input type="radio" name="q8" value="d"> It ignores variable lifetimes</label><br>
+  <div class="answer" data-correct="b">Graph-based testing provides a structured view by analyzing the interactions of control flow and data flow in the program.</div>
+</div>
+
+<div class="question">
+  <p>What are definition-clear paths in data flow testing?</p>
+  <label><input type="radio" name="q9" value="a"> Paths where loops are skipped</label><br>
+  <label><input type="radio" name="q9" value="b"> Paths from definition to use without redefining the variable</label><br>
+  <label><input type="radio" name="q9" value="c"> Paths covering all nodes</label><br>
+  <label><input type="radio" name="q9" value="d"> Paths only in conditional branches</label><br>
+  <div class="answer" data-correct="b">Definition-clear paths are those connecting a variable’s definition to its use without any redefinition in between.</div>
+</div>
+
+<div class="question">
+  <p>How does data flow testing strengthen structural testing of a program?</p>
+  <label><input type="radio" name="q10" value="a"> By ignoring loops</label><br>
+  <label><input type="radio" name="q10" value="b"> By combining analysis of control flow and data flow, ensuring variable lifetimes and dependencies are correct</label><br>
+  <label><input type="radio" name="q10" value="c"> By testing only edges</label><br>
+  <label><input type="radio" name="q10" value="d"> By focusing only on declarations</label><br>
+  <div class="answer" data-correct="b">Data flow testing strengthens structural testing by analyzing both control flow and data flow, verifying variable lifetimes and dependencies.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

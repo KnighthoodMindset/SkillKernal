@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Week 2 - lecture 6 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="questions">
+  <div class="question">
+    <p>What is the primary goal of graph-based test case design?</p>
+    <label><input type="radio" name="q1" value="a"> To measure software performance</label><br>
+    <label><input type="radio" name="q1" value="b"> To generate systematic test cases ensuring logical coverage of programs</label><br>
+    <label><input type="radio" name="q1" value="c"> To replace manual testing entirely</label><br>
+    <label><input type="radio" name="q1" value="d"> To minimize code execution time</label>
+    <div class="answer" data-correct="b" data-expl="Graph-based test case design aims to create systematic test cases that ensure comprehensive coverage of the program’s logic."></div>
+  </div>
+
+  <div class="question">
+    <p>What does node coverage require in graph-based testing?</p>
+    <label><input type="radio" name="q2" value="a"> Every edge should be executed at least once</label><br>
+    <label><input type="radio" name="q2" value="b"> Every reachable node should be visited at least once</label><br>
+    <label><input type="radio" name="q2" value="c"> Every input combination should be tested</label><br>
+    <label><input type="radio" name="q2" value="d"> Only initial and final nodes should be executed</label>
+    <div class="answer" data-correct="b" data-expl="Node coverage ensures that every reachable node in the graph is visited at least once during testing."></div>
+  </div>
+
+  <div class="question">
+    <p>In node coverage, what is a test path?</p>
+    <label><input type="radio" name="q3" value="a"> A path that starts from the final node and ends at any node</label><br>
+    <label><input type="radio" name="q3" value="b"> A path connecting any two nodes randomly</label><br>
+    <label><input type="radio" name="q3" value="c"> A path that starts from the initial node and ends at a final node</label><br>
+    <label><input type="radio" name="q3" value="d"> A path that skips unreachable nodes</label>
+    <div class="answer" data-correct="c" data-expl="A test path begins at the initial node and ends at a final node, representing a complete execution sequence."></div>
+  </div>
+
+  <div class="question">
+    <p>How does edge coverage differ from node coverage?</p>
+    <label><input type="radio" name="q4" value="a"> It focuses on testing all conditions in the code</label><br>
+    <label><input type="radio" name="q4" value="b"> It ensures all nodes are covered at least twice</label><br>
+    <label><input type="radio" name="q4" value="c"> It requires every edge in the graph to be traversed at least once</label><br>
+    <label><input type="radio" name="q4" value="d"> It ignores unreachable nodes</label>
+    <div class="answer" data-correct="c" data-expl="Edge coverage ensures every control transfer (edge) between statements is executed at least once."></div>
+  </div>
+
+  <div class="question">
+    <p>What does edge-pair coverage focus on testing?</p>
+    <label><input type="radio" name="q5" value="a"> Pairs of consecutive edges in the program graph</label><br>
+    <label><input type="radio" name="q5" value="b"> Only nodes with multiple incoming edges</label><br>
+    <label><input type="radio" name="q5" value="c"> Data dependencies between variables</label><br>
+    <label><input type="radio" name="q5" value="d"> Loops and recursion only</label>
+    <div class="answer" data-correct="a" data-expl="Edge-pair coverage ensures that every pair of consecutive edges (paths of length two) is executed at least once."></div>
+  </div>
+
+  <div class="question">
+    <p>Why is complete path coverage generally infeasible in real programs?</p>
+    <label><input type="radio" name="q6" value="a"> Because loops create infinitely many possible paths</label><br>
+    <label><input type="radio" name="q6" value="b"> Because test cases cannot execute conditional statements</label><br>
+    <label><input type="radio" name="q6" value="c"> Because nodes are always unreachable</label><br>
+    <label><input type="radio" name="q6" value="d"> Because only a limited number of inputs are available</label>
+    <div class="answer" data-correct="a" data-expl="Loops create infinite possible paths, making complete path coverage impractical."></div>
+  </div>
+
+  <div class="question">
+    <p>What is a simple path in graph-based testing?</p>
+    <label><input type="radio" name="q7" value="a"> A path that visits every node multiple times</label><br>
+    <label><input type="radio" name="q7" value="b"> A path that does not repeat any node except possibly the first and last</label><br>
+    <label><input type="radio" name="q7" value="c"> A path with a single edge only</label><br>
+    <label><input type="radio" name="q7" value="d"> A path that connects loops together</label>
+    <div class="answer" data-correct="b" data-expl="A simple path does not repeat any node except possibly the first and last nodes in the case of a cycle."></div>
+  </div>
+
+  <div class="question">
+    <p>What distinguishes a prime path from other simple paths?</p>
+    <label><input type="radio" name="q8" value="a"> It is the shortest simple path in the graph</label><br>
+    <label><input type="radio" name="q8" value="b"> It is a simple path that is not a subpath of any other simple path</label><br>
+    <label><input type="radio" name="q8" value="c"> It always begins and ends with the same node</label><br>
+    <label><input type="radio" name="q8" value="d"> It contains repeated nodes</label>
+    <div class="answer" data-correct="b" data-expl="A prime path is a simple path that is not a subpath of any longer simple path, making it maximal."></div>
+  </div>
+
+  <div class="question">
+    <p>What does prime path coverage ensure in testing?</p>
+    <label><input type="radio" name="q9" value="a"> Only nodes are covered once</label><br>
+    <label><input type="radio" name="q9" value="b"> Loops are tested for both boundary and normal behavior</label><br>
+    <label><input type="radio" name="q9" value="c"> Data flow between functions is verified</label><br>
+    <label><input type="radio" name="q9" value="d"> Unreachable code is ignored</label>
+    <div class="answer" data-correct="b" data-expl="Prime path coverage ensures that both loop boundaries and loop bodies are tested, validating loop behavior."></div>
+  </div>
+
+  <div class="question">
+    <p>Why is prime path coverage considered a practical alternative to complete path coverage?</p>
+    <label><input type="radio" name="q10" value="a"> It eliminates the need for testing loops</label><br>
+    <label><input type="radio" name="q10" value="b"> It covers important paths without requiring infinite test cases</label><br>
+    <label><input type="radio" name="q10" value="c"> It only tests the shortest paths</label><br>
+    <label><input type="radio" name="q10" value="d"> It avoids branch testing</label>
+    <div class="answer" data-correct="b" data-expl="Prime path coverage tests all maximal simple paths, providing thorough testing without infinite paths caused by loops."></div>
+  </div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

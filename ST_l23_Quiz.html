@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 23  Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the main purpose of logic coverage criteria in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> To evaluate hardware components</label><br>
+  <label><input type="radio" name="q1" value="b"> To ensure predicates in programs are thoroughly tested</label><br>
+  <label><input type="radio" name="q1" value="c"> To replace unit testing</label><br>
+  <label><input type="radio" name="q1" value="d"> To compile code efficiently</label><br>
+  <div class="answer" data-correct="b">Logic coverage criteria ensure that the behavior of predicates in a program is thoroughly tested.</div>
+</div>
+
+<div class="question">
+  <p>What does predicate coverage require?</p>
+  <label><input type="radio" name="q2" value="a"> Each clause is tested individually</label><br>
+  <label><input type="radio" name="q2" value="b"> Each predicate is evaluated as both true and false at least once</label><br>
+  <label><input type="radio" name="q2" value="c"> Only major clauses are tested</label><br>
+  <label><input type="radio" name="q2" value="d"> All possible system states are tested</label><br>
+  <div class="answer" data-correct="b">Predicate coverage tests the predicate to be both true and false at least once.</div>
+</div>
+
+<div class="question">
+  <p>What is the difference between clause coverage (CC) and all combinations coverage?</p>
+  <label><input type="radio" name="q3" value="a"> CC tests all clauses individually, while all combinations coverage tests every possible combination of clause values</label><br>
+  <label><input type="radio" name="q3" value="b"> CC is exhaustive, all combinations coverage is not</label><br>
+  <label><input type="radio" name="q3" value="c"> CC only tests major clauses</label><br>
+  <label><input type="radio" name="q3" value="d"> Both are identical</label><br>
+  <div class="answer" data-correct="a">Clause coverage tests each clause individually, while all combinations coverage tests every possible combination of clause truth values.</div>
+</div>
+
+<div class="question">
+  <p>What is the focus of active clause coverage (ACC)?</p>
+  <label><input type="radio" name="q4" value="a"> To test all predicates at once</label><br>
+  <label><input type="radio" name="q4" value="b"> To determine how individual clauses influence the predicate</label><br>
+  <label><input type="radio" name="q4" value="c"> To ignore minor clauses entirely</label><br>
+  <label><input type="radio" name="q4" value="d"> To test only false predicates</label><br>
+  <div class="answer" data-correct="b">Active clause coverage focuses on how each major clause influences the overall predicate.</div>
+</div>
+
+<div class="question">
+  <p>Which ACC variation allows minor clauses to take any values?</p>
+  <label><input type="radio" name="q5" value="a"> Generalized ACC (GACC)</label><br>
+  <label><input type="radio" name="q5" value="b"> Correlated ACC (CACC)</label><br>
+  <label><input type="radio" name="q5" value="c"> Restricted ACC (RACC)</label><br>
+  <label><input type="radio" name="q5" value="d"> Predicate coverage</label><br>
+  <div class="answer" data-correct="a">GACC allows minor clauses to take any values while testing the major clause.</div>
+</div>
+
+<div class="question">
+  <p>What is inactive clause coverage (ICC) used for?</p>
+  <label><input type="radio" name="q6" value="a"> To test predicates without considering clauses</label><br>
+  <label><input type="radio" name="q6" value="b"> To evaluate how a major clause does not influence the predicate</label><br>
+  <label><input type="radio" name="q6" value="c"> To combine all clauses in one test</label><br>
+  <label><input type="radio" name="q6" value="d"> To ignore infeasible test cases</label><br>
+  <div class="answer" data-correct="b">ICC focuses on ensuring that the major clause does not affect the truth or falsity of a predicate.</div>
+</div>
+
+<div class="question">
+  <p>How does restricted ICC differ from generalized ICC?</p>
+  <label><input type="radio" name="q7" value="a"> Minor clauses are fixed in pairs of test cases</label><br>
+  <label><input type="radio" name="q7" value="b"> Minor clauses can take any values</label><br>
+  <label><input type="radio" name="q7" value="c"> Major clause is ignored</label><br>
+  <label><input type="radio" name="q7" value="d"> ICC does not test predicates</label><br>
+  <div class="answer" data-correct="a">Restricted ICC requires minor clauses to assume the same values in pairs of test cases corresponding to the predicate being true and false.</div>
+</div>
+
+<div class="question">
+  <p>Why might some logic coverage criteria be infeasible in practice?</p>
+  <label><input type="radio" name="q8" value="a"> Due to software bugs</label><br>
+  <label><input type="radio" name="q8" value="b"> Because of system constraints that limit feasible test case combinations</label><br>
+  <label><input type="radio" name="q8" value="c"> Because predicates cannot be evaluated</label><br>
+  <label><input type="radio" name="q8" value="d"> Because clauses are always active</label><br>
+  <div class="answer" data-correct="b">Infeasibility arises when system constraints prevent certain combinations of clause values from being valid test cases.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion subsumes predicate coverage?</p>
+  <label><input type="radio" name="q9" value="a"> Clause coverage</label><br>
+  <label><input type="radio" name="q9" value="b"> All inactive clause coverage criteria</label><br>
+  <label><input type="radio" name="q9" value="c"> None</label><br>
+  <label><input type="radio" name="q9" value="d"> Combinatorial coverage</label><br>
+  <div class="answer" data-correct="b">All inactive clause coverage criteria subsume predicate coverage by testing predicates as both true and false.</div>
+</div>
+
+<div class="question">
+  <p>What is the most comprehensive logic coverage criterion?</p>
+  <label><input type="radio" name="q10" value="a"> Predicate coverage</label><br>
+  <label><input type="radio" name="q10" value="b"> Clause coverage</label><br>
+  <label><input type="radio" name="q10" value="c"> Combinatorial coverage</label><br>
+  <label><input type="radio" name="q10" value="d"> Generalized ACC</label><br>
+  <div class="answer" data-correct="c">Combinatorial coverage tests the predicate for every possible combination of clause values, subsuming all other logic coverage criteria.</div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

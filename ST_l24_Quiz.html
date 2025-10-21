@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 24  Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the primary purpose of logic coverage criteria in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> To ensure all hardware components function</label><br>
+  <label><input type="radio" name="q1" value="b"> To design test cases based on the logical structure of predicates</label><br>
+  <label><input type="radio" name="q1" value="c"> To optimize software performance</label><br>
+  <label><input type="radio" name="q1" value="d"> To replace unit testing entirely</label><br>
+  <div class="answer" data-correct="b">Logic coverage criteria provide a structured framework for designing test cases based on the logical structure of predicates.</div>
+</div>
+
+<div class="question">
+  <p>What does predicate coverage require?</p>
+  <label><input type="radio" name="q2" value="a"> Each predicate evaluates to both true and false at least once</label><br>
+  <label><input type="radio" name="q2" value="b"> Each clause evaluates independently to both true and false</label><br>
+  <label><input type="radio" name="q2" value="c"> All possible combinations of clauses are tested</label><br>
+  <label><input type="radio" name="q2" value="d"> Only major clauses are tested</label><br>
+  <div class="answer" data-correct="a">Predicate coverage requires testing each predicate to evaluate to both true and false at least once.</div>
+</div>
+
+<div class="question">
+  <p>How does clause coverage differ from predicate coverage?</p>
+  <label><input type="radio" name="q3" value="a"> Clause coverage tests each predicate as a whole</label><br>
+  <label><input type="radio" name="q3" value="b"> Clause coverage tests each individual clause within a predicate for true and false</label><br>
+  <label><input type="radio" name="q3" value="c"> Clause coverage tests all combinations of predicates</label><br>
+  <label><input type="radio" name="q3" value="d"> Clause coverage only tests redundant clauses</label><br>
+  <div class="answer" data-correct="b">Clause coverage ensures each individual clause within a predicate takes true and false values.</div>
+</div>
+
+<div class="question">
+  <p>Why is all combinations coverage often impractical?</p>
+  <label><input type="radio" name="q4" value="a"> It ignores minor clauses</label><br>
+  <label><input type="radio" name="q4" value="b"> It requires testing every possible combination of clause values, leading to an exponential number of test cases</label><br>
+  <label><input type="radio" name="q4" value="c"> It only tests predicates as true</label><br>
+  <label><input type="radio" name="q4" value="d"> It cannot be applied to finite state machines</label><br>
+  <div class="answer" data-correct="b">All combinations coverage quickly becomes impractical due to the exponential growth in test cases as the number of clauses increases.</div>
+</div>
+
+<div class="question">
+  <p>In active clause coverage, what is the role of minor clauses?</p>
+  <label><input type="radio" name="q5" value="a"> Minor clauses are ignored completely</label><br>
+  <label><input type="radio" name="q5" value="b"> Minor clauses take values that allow the major clause to determine the predicate</label><br>
+  <label><input type="radio" name="q5" value="c"> Minor clauses are always true</label><br>
+  <label><input type="radio" name="q5" value="d"> Minor clauses are tested for all possible values independently</label><br>
+  <div class="answer" data-correct="b">Minor clauses take values that allow the major clause to influence the outcome of the predicate.</div>
+</div>
+
+<div class="question">
+  <p>How can testers determine the conditions under which a major clause influences a predicate?</p>
+  <label><input type="radio" name="q6" value="a"> By ignoring minor clauses</label><br>
+  <label><input type="radio" name="q6" value="b"> By replacing the major clause with true and false, simplifying predicates, and computing their XOR</label><br>
+  <label><input type="radio" name="q6" value="c"> By testing only redundant clauses</label><br>
+  <label><input type="radio" name="q6" value="d"> By applying unit testing</label><br>
+  <div class="answer" data-correct="b">Testers identify major clause determination by replacing it with true and false, simplifying predicates, and computing their XOR.</div>
+</div>
+
+<div class="question">
+  <p>What is an example of a clause that may never determine a predicate?</p>
+  <label><input type="radio" name="q7" value="a"> a in 'a or b'</label><br>
+  <label><input type="radio" name="q7" value="b"> a in 'a if and only if b'</label><br>
+  <label><input type="radio" name="q7" value="c"> b in 'a and b'</label><br>
+  <label><input type="radio" name="q7" value="d"> c in 'a and b or c'</label><br>
+  <div class="answer" data-correct="b">In equivalence predicates like 'a if and only if b', a clause may never determine the predicate.</div>
+</div>
+
+<div class="question">
+  <p>What distinguishes restricted active clause coverage (RACC) from generalized active clause coverage (GACC)?</p>
+  <label><input type="radio" name="q8" value="a"> Minor clauses can take any values in RACC</label><br>
+  <label><input type="radio" name="q8" value="b"> Minor clauses must maintain consistent values across truth assignments of the major clause in RACC</label><br>
+  <label><input type="radio" name="q8" value="c"> Major clauses are ignored in RACC</label><br>
+  <label><input type="radio" name="q8" value="d"> RACC does not test predicates</label><br>
+  <div class="answer" data-correct="b">In RACC, minor clauses must maintain consistent values across both truth assignments of the major clause, unlike GACC.</div>
+</div>
+
+<div class="question">
+  <p>Why is constructing a truth table useful in active clause coverage testing?</p>
+  <label><input type="radio" name="q9" value="a"> It helps visualize relationships and select minimal test cases without repetition</label><br>
+  <label><input type="radio" name="q9" value="b"> It replaces unit testing</label><br>
+  <label><input type="radio" name="q9" value="c"> It determines hardware requirements</label><br>
+  <label><input type="radio" name="q9" value="d"> It ignores minor clauses</label><br>
+  <div class="answer" data-correct="a">Constructing a truth table helps visualize clause relationships and ensures minimal, non-redundant test cases.</div>
+</div>
+
+<div class="question">
+  <p>How do these logic coverage principles apply to practical program testing?</p>
+  <label><input type="radio" name="q10" value="a"> They only apply to unit testing</label><br>
+  <label><input type="radio" name="q10" value="b"> They enable systematic generation of test cases, accounting for observability and controllability, and can extend to specifications like finite state machines</label><br>
+  <label><input type="radio" name="q10" value="c"> They replace functional testing entirely</label><br>
+  <label><input type="radio" name="q10" value="d"> They only test redundant clauses</label><br>
+  <div class="answer" data-correct="b">These principles allow systematic test case generation, ensuring thorough testing and applicability to program logic and behavioral models such as FSMs.</div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

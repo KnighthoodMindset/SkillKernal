@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Week 7 - lecture 7 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the primary use of the Breadth First Search (BFS) algorithm in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> To calculate the total number of test cases</label><br>
+  <label><input type="radio" name="q1" value="b"> To traverse graphs systematically and generate minimal test paths</label><br>
+  <label><input type="radio" name="q1" value="c"> To find loops in code</label><br>
+  <label><input type="radio" name="q1" value="d"> To calculate memory usage in test cases</label><br>
+  <div class="answer" data-correct="b">BFS is used to traverse graphs systematically and generate minimal test paths that satisfy coverage criteria.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following graph representations is more efficient for sparse graphs?</p>
+  <label><input type="radio" name="q2" value="a"> Adjacency matrix</label><br>
+  <label><input type="radio" name="q2" value="b"> Incidence matrix</label><br>
+  <label><input type="radio" name="q2" value="c"> Adjacency list</label><br>
+  <label><input type="radio" name="q2" value="d"> Linked matrix</label><br>
+  <div class="answer" data-correct="c">Adjacency lists are efficient for sparse graphs since they store only existing edges.</div>
+</div>
+
+<div class="question">
+  <p>In a directed graph represented using an adjacency list, how many times does each edge appear?</p>
+  <label><input type="radio" name="q3" value="a"> Twice</label><br>
+  <label><input type="radio" name="q3" value="b"> Once</label><br>
+  <label><input type="radio" name="q3" value="c"> Three times</label><br>
+  <label><input type="radio" name="q3" value="d"> Four times</label><br>
+  <div class="answer" data-correct="b">In a directed graph, each edge appears only once in the adjacency list.</div>
+</div>
+
+<div class="question">
+  <p>What data structure does BFS primarily use to explore vertices?</p>
+  <label><input type="radio" name="q4" value="a"> Stack</label><br>
+  <label><input type="radio" name="q4" value="b"> Queue</label><br>
+  <label><input type="radio" name="q4" value="c"> Linked list</label><br>
+  <label><input type="radio" name="q4" value="d"> Tree</label><br>
+  <div class="answer" data-correct="b">BFS uses a queue to store vertices to be explored in breadth-first order.</div>
+</div>
+
+<div class="question">
+  <p>What color is assigned to a vertex when it has been discovered but not fully explored in BFS?</p>
+  <label><input type="radio" name="q5" value="a"> White</label><br>
+  <label><input type="radio" name="q5" value="b"> Gray</label><br>
+  <label><input type="radio" name="q5" value="c"> Black</label><br>
+  <label><input type="radio" name="q5" value="d"> Red</label><br>
+  <div class="answer" data-correct="b">A gray vertex indicates it has been discovered but not fully explored.</div>
+</div>
+
+<div class="question">
+  <p>What does the Breadth First Tree (BFT) produced by BFS represent?</p>
+  <label><input type="radio" name="q6" value="a"> The longest paths from the source vertex</label><br>
+  <label><input type="radio" name="q6" value="b"> The connections between all unreachable vertices</label><br>
+  <label><input type="radio" name="q6" value="c"> The shortest paths from the source vertex to all reachable vertices</label><br>
+  <label><input type="radio" name="q6" value="d"> The random traversal order of the graph</label><br>
+  <div class="answer" data-correct="c">The Breadth First Tree represents the shortest paths from the source vertex to all reachable vertices.</div>
+</div>
+
+<div class="question">
+  <p>What is the time complexity of the BFS algorithm?</p>
+  <label><input type="radio" name="q7" value="a"> O(V^2)</label><br>
+  <label><input type="radio" name="q7" value="b"> O(V + E)</label><br>
+  <label><input type="radio" name="q7" value="c"> O(VE)</label><br>
+  <label><input type="radio" name="q7" value="d"> O(E^2)</label><br>
+  <div class="answer" data-correct="b">BFS runs in O(V + E) time since each vertex and edge is processed once.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following properties ensures that BFS finds the shortest path in unweighted graphs?</p>
+  <label><input type="radio" name="q8" value="a"> BFS explores vertices randomly</label><br>
+  <label><input type="radio" name="q8" value="b"> BFS explores vertices level by level from the source</label><br>
+  <label><input type="radio" name="q8" value="c"> BFS skips longer paths automatically</label><br>
+  <label><input type="radio" name="q8" value="d"> BFS uses recursion for all paths</label><br>
+  <div class="answer" data-correct="b">BFS explores vertices level by level, ensuring shortest path discovery.</div>
+</div>
+
+<div class="question">
+  <p>What does the Queue Order Lemma state in BFS?</p>
+  <label><input type="radio" name="q9" value="a"> Vertices are explored in non-increasing order of their distance from the source</label><br>
+  <label><input type="radio" name="q9" value="b"> Vertices are explored in non-decreasing order of their distance from the source</label><br>
+  <label><input type="radio" name="q9" value="c"> Vertices are explored in random order</label><br>
+  <label><input type="radio" name="q9" value="d"> Vertices are explored based on their color</label><br>
+  <div class="answer" data-correct="b">The Queue Order Lemma ensures that vertices are explored in non-decreasing order of their distance from the source.</div>
+</div>
+
+<div class="question">
+  <p>What happens when BFS encounters an unconnected graph with multiple components?</p>
+  <label><input type="radio" name="q10" value="a"> BFS terminates immediately</label><br>
+  <label><input type="radio" name="q10" value="b"> BFS skips unreachable vertices</label><br>
+  <label><input type="radio" name="q10" value="c"> BFS restarts with another source vertex to form a forest of trees</label><br>
+  <label><input type="radio" name="q10" value="d"> BFS combines all vertices into a single tree</label><br>
+  <div class="answer" data-correct="c">When BFS encounters unconnected components, it restarts from another source, producing a forest of trees.</div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

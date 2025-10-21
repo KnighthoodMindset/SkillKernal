@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 16 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main purpose of integration testing in software development?</p>
+  <label><input type="radio" name="q1" value="a"> To test individual modules separately</label><br>
+  <label><input type="radio" name="q1" value="b"> To verify interactions between combined modules</label><br>
+  <label><input type="radio" name="q1" value="c"> To test the user interface only</label><br>
+  <label><input type="radio" name="q1" value="d"> To check software performance under load</label><br>
+  <div class="answer" data-correct="b">Integration testing focuses on verifying that combined modules interact correctly according to the software design.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is NOT a type of interface used between software modules?</p>
+  <label><input type="radio" name="q2" value="a"> Procedure call interface</label><br>
+  <label><input type="radio" name="q2" value="b"> Shared memory interface</label><br>
+  <label><input type="radio" name="q2" value="c"> Message passing interface</label><br>
+  <label><input type="radio" name="q2" value="d"> Loop execution interface</label><br>
+  <div class="answer" data-correct="d">Procedure call, shared memory, and message passing are valid interface types; loop execution is not an interface type.</div>
+</div>
+
+<div class="question">
+  <p>Why is testing interfaces critical in software systems?</p>
+  <label><input type="radio" name="q3" value="a"> Interfaces are rarely used in modern software</label><br>
+  <label><input type="radio" name="q3" value="b"> Nearly 25% of software errors arise from interface-related issues</label><br>
+  <label><input type="radio" name="q3" value="c"> Interfaces only affect performance, not functionality</label><br>
+  <label><input type="radio" name="q3" value="d"> Interfaces do not influence data transfer</label><br>
+  <div class="answer" data-correct="b">Empirical studies indicate that about 25% of software errors originate from interface problems, making interface testing crucial.</div>
+</div>
+
+<div class="question">
+  <p>What is the role of a test stub in integration testing?</p>
+  <label><input type="radio" name="q4" value="a"> Simulates a higher-level module</label><br>
+  <label><input type="radio" name="q4" value="b"> Acts as a dummy module for a missing lower-level module</label><br>
+  <label><input type="radio" name="q4" value="c"> Generates random test data</label><br>
+  <label><input type="radio" name="q4" value="d"> Measures code coverage</label><br>
+  <div class="answer" data-correct="b">A test stub simulates a missing lower-level module by returning fixed or simulated outputs for testing purposes.</div>
+</div>
+
+<div class="question">
+  <p>How does a test driver function in integration testing?</p>
+  <label><input type="radio" name="q5" value="a"> Simulates a higher-level module that calls lower-level modules</label><br>
+  <label><input type="radio" name="q5" value="b"> Replaces missing libraries</label><br>
+  <label><input type="radio" name="q5" value="c"> Handles exception logging</label><br>
+  <label><input type="radio" name="q5" value="d"> Optimizes performance</label><br>
+  <div class="answer" data-correct="a">A test driver simulates the higher-level module responsible for invoking lower-level modules during testing.</div>
+</div>
+
+<div class="question">
+  <p>Which integration testing approach starts from the highest-level module and progresses downward?</p>
+  <label><input type="radio" name="q6" value="a"> Bottom-up testing</label><br>
+  <label><input type="radio" name="q6" value="b"> Top-down testing</label><br>
+  <label><input type="radio" name="q6" value="c"> Big bang testing</label><br>
+  <label><input type="radio" name="q6" value="d"> Sandwich testing</label><br>
+  <div class="answer" data-correct="b">Top-down integration testing begins with the highest-level module and uses stubs for lower-level modules initially.</div>
+</div>
+
+<div class="question">
+  <p>In bottom-up integration testing, what is used to simulate unavailable higher-level modules?</p>
+  <label><input type="radio" name="q7" value="a"> Test stubs</label><br>
+  <label><input type="radio" name="q7" value="b"> Test drivers</label><br>
+  <label><input type="radio" name="q7" value="c"> Mock objects</label><br>
+  <label><input type="radio" name="q7" value="d"> Compilers</label><br>
+  <div class="answer" data-correct="b">Test drivers are used to simulate higher-level modules when they are not yet developed in bottom-up testing.</div>
+</div>
+
+<div class="question">
+  <p>What is a key drawback of big bang integration testing?</p>
+  <label><input type="radio" name="q8" value="a"> It requires test stubs</label><br>
+  <label><input type="radio" name="q8" value="b"> Fault isolation is difficult</label><br>
+  <label><input type="radio" name="q8" value="c"> It cannot test interfaces</label><br>
+  <label><input type="radio" name="q8" value="d"> Modules are tested individually</label><br>
+  <div class="answer" data-correct="b">Big bang testing integrates all modules at once, making it hard to isolate and identify the source of faults.</div>
+</div>
+
+<div class="question">
+  <p>Which integration testing approach combines both top-down and bottom-up strategies?</p>
+  <label><input type="radio" name="q9" value="a"> Incremental testing</label><br>
+  <label><input type="radio" name="q9" value="b"> Sandwich testing</label><br>
+  <label><input type="radio" name="q9" value="c"> Big bang testing</label><br>
+  <label><input type="radio" name="q9" value="d"> Unit testing</label><br>
+  <div class="answer" data-correct="b">Sandwich testing uses top-down testing for higher-level modules and bottom-up testing for lower-level modules before combining them.</div>
+</div>
+
+<div class="question">
+  <p>How does integration testing strengthen overall software reliability?</p>
+  <label><input type="radio" name="q10" value="a"> By focusing only on individual module correctness</label><br>
+  <label><input type="radio" name="q10" value="b"> By validating module interactions and detecting interface and communication errors early</label><br>
+  <label><input type="radio" name="q10" value="c"> By executing all modules simultaneously without checking interfaces</label><br>
+  <label><input type="radio" name="q10" value="d"> By skipping testing of lower-level modules</label><br>
+  <div class="answer" data-correct="b">Integration testing strengthens reliability by verifying that modules interact correctly and interfaces function properly, reducing potential errors.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 14 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the purpose of using graph-based models like CFGs and DFGs in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> To represent UI elements</label><br>
+  <label><input type="radio" name="q1" value="b"> To model program structure and data flow for white-box testing</label><br>
+  <label><input type="radio" name="q1" value="c"> To generate random test data</label><br>
+  <label><input type="radio" name="q1" value="d"> To manage project timelines</label><br>
+  <div class="answer" data-correct="b">Graph-based models like CFGs and DFGs are used to represent program execution flow and data dependencies, forming the basis of white-box testing.</div>
+</div>
+
+<div class="question">
+  <p>How does statement coverage relate to node coverage in a control flow graph?</p>
+  <label><input type="radio" name="q2" value="a"> Statement coverage is unrelated to node coverage</label><br>
+  <label><input type="radio" name="q2" value="b"> Statement coverage ensures all edges are executed</label><br>
+  <label><input type="radio" name="q2" value="c"> Statement coverage corresponds to visiting every node at least once</label><br>
+  <label><input type="radio" name="q2" value="d"> Statement coverage only tests loops</label><br>
+  <div class="answer" data-correct="c">Statement coverage ensures that every executable statement is executed at least once, which corresponds to node coverage in the CFG.</div>
+</div>
+
+<div class="question">
+  <p>What does branch coverage ensure in white-box testing, and which graph element does it correspond to?</p>
+  <label><input type="radio" name="q3" value="a"> Ensures all statements are executed; corresponds to nodes</label><br>
+  <label><input type="radio" name="q3" value="b"> Ensures all loops are executed; corresponds to cycles</label><br>
+  <label><input type="radio" name="q3" value="c"> Ensures all branches are tested; corresponds to edges</label><br>
+  <label><input type="radio" name="q3" value="d"> Ensures all functions are called; corresponds to modules</label><br>
+  <div class="answer" data-correct="c">Branch coverage ensures that every branch from decision points like if, switch, or loop conditions is executed, corresponding to edges in the CFG.</div>
+</div>
+
+<div class="question">
+  <p>How does loop coverage relate to prime path coverage in graph-based testing?</p>
+  <label><input type="radio" name="q4" value="a"> Loop coverage tests nodes; prime path tests variables</label><br>
+  <label><input type="radio" name="q4" value="b"> Loop coverage aligns with prime path coverage by testing all maximal simple paths including loops</label><br>
+  <label><input type="radio" name="q4" value="c"> They are unrelated concepts</label><br>
+  <label><input type="radio" name="q4" value="d"> Loop coverage only tests first iteration; prime path tests last iteration</label><br>
+  <div class="answer" data-correct="b">Loop coverage executes loops under different conditions and aligns with prime path coverage, which tests all maximal simple paths including loops.</div>
+</div>
+
+<div class="question">
+  <p>What is the difference between decision coverage and MCDC in white-box testing?</p>
+  <label><input type="radio" name="q5" value="a"> Decision coverage executes every decision once; MCDC ensures each condition independently affects the outcome</label><br>
+  <label><input type="radio" name="q5" value="b"> Decision coverage tests loops; MCDC tests functions</label><br>
+  <label><input type="radio" name="q5" value="c"> Decision coverage ignores branches; MCDC ignores loops</label><br>
+  <label><input type="radio" name="q5" value="d"> Decision coverage tests statements; MCDC tests variables</label><br>
+  <div class="answer" data-correct="a">Decision coverage ensures each decision is executed at least once, while MCDC ensures each condition within a decision independently affects the outcome.</div>
+</div>
+
+<div class="question">
+  <p>Define cyclomatic complexity and explain how it is calculated using the CFG.</p>
+  <label><input type="radio" name="q6" value="a"> Number of lines in the program; M = LOC</label><br>
+  <label><input type="radio" name="q6" value="b"> Measures independent paths; M = E - N + 2P</label><br>
+  <label><input type="radio" name="q6" value="c"> Number of loops only; M = loops + 1</label><br>
+  <label><input type="radio" name="q6" value="d"> Number of nodes minus edges; M = N - E</label><br>
+  <div class="answer" data-correct="b">Cyclomatic complexity measures the number of linearly independent paths in a CFG and is calculated as M = E - N + 2P, where E is edges, N is nodes, and P is connected components.</div>
+</div>
+
+<div class="question">
+  <p>Why is cyclomatic complexity important in determining the number of test cases for branch coverage?</p>
+  <label><input type="radio" name="q7" value="a"> It measures the number of loops only</label><br>
+  <label><input type="radio" name="q7" value="b"> It estimates the minimum number of independent paths that must be tested for full branch coverage</label><br>
+  <label><input type="radio" name="q7" value="c"> It counts the number of statements</label><br>
+  <label><input type="radio" name="q7" value="d"> It is unrelated to branch coverage</label><br>
+  <div class="answer" data-correct="b">Cyclomatic complexity reflects the number of independent execution paths, which helps determine the minimum number of test cases required to achieve complete branch coverage.</div>
+</div>
+
+<div class="question">
+  <p>What is basis path testing, and how does it use cyclomatic complexity to guide test case design?</p>
+  <label><input type="radio" name="q8" value="a"> Tests loops only</label><br>
+  <label><input type="radio" name="q8" value="b"> Uses cyclomatic complexity to identify all linearly independent paths and design minimal yet complete test cases</label><br>
+  <label><input type="radio" name="q8" value="c"> Measures program length</label><br>
+  <label><input type="radio" name="q8" value="d"> Tests only decision statements</label><br>
+  <div class="answer" data-correct="b">Basis path testing uses cyclomatic complexity to determine all linearly independent paths in the CFG, designing a minimal set of test cases that cover all logical paths.</div>
+</div>
+
+<div class="question">
+  <p>Explain the concept of a Decision-to-Decision (DD) path and its significance in CFG analysis.</p>
+  <label><input type="radio" name="q9" value="a"> A path between two loops only</label><br>
+  <label><input type="radio" name="q9" value="b"> A sequence of statements between two decision points to analyze control flow</label><br>
+  <label><input type="radio" name="q9" value="c"> A path covering all nodes</label><br>
+  <label><input type="radio" name="q9" value="d"> A path that skips decision points</label><br>
+  <div class="answer" data-correct="b">A DD-path is a sequence of statements between two decision points in a CFG, used to analyze control flow between decisions and design finer-grained test cases.</div>
+</div>
+
+<div class="question">
+  <p>What are maximal chains in a graph, and how do they relate to DD-path testing?</p>
+  <label><input type="radio" name="q10" value="a"> Paths with loops only</label><br>
+  <label><input type="radio" name="q10" value="b"> Paths whose internal vertices have one incoming and one outgoing edge, forming the backbone of DD-paths</label><br>
+  <label><input type="radio" name="q10" value="c"> Paths that skip nodes</label><br>
+  <label><input type="radio" name="q10" value="d"> Edges connecting separate programs</label><br>
+  <div class="answer" data-correct="b">Maximal chains are paths whose internal vertices each have one incoming and one outgoing edge, and they form part of DD-paths used in testing decision-to-decision transitions.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

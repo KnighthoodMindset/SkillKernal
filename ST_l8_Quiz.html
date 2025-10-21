@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Week 2 - lecture 8 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>1. What is the main difference between Depth First Search (DFS) and Breadth First Search (BFS)?</p>
+  <label><input type="radio" name="q1" value="a"> DFS explores level by level, while BFS explores deeply before backtracking.</label><br>
+  <label><input type="radio" name="q1" value="b"> DFS explores deeply before backtracking, while BFS explores level by level.</label><br>
+  <label><input type="radio" name="q1" value="c"> DFS and BFS both explore in random order.</label><br>
+  <label><input type="radio" name="q1" value="d"> DFS explores edges, while BFS explores vertices only.</label><br>
+  <div class="answer" data-correct="b">DFS dives deep into the graph before backtracking, while BFS explores all neighbors level by level.</div>
+</div>
+
+<div class="question">
+  <p>2. What do the colors white, gray, and black represent in DFS?</p>
+  <label><input type="radio" name="q2" value="a"> Start, middle, and end of recursion</label><br>
+  <label><input type="radio" name="q2" value="b"> Discovered, partially explored, and completed vertices</label><br>
+  <label><input type="radio" name="q2" value="c"> Unvisited, discovered but not fully explored, and completely explored vertices</label><br>
+  <label><input type="radio" name="q2" value="d"> Root, leaf, and branch vertices</label><br>
+  <div class="answer" data-correct="c">In DFS, white means unvisited, gray means discovered but not fully explored, and black means completely explored.</div>
+</div>
+
+<div class="question">
+  <p>3. What are the two timestamps maintained in DFS for each vertex?</p>
+  <label><input type="radio" name="q3" value="a"> Entry time and exit time</label><br>
+  <label><input type="radio" name="q3" value="b"> Discovery time and finish time</label><br>
+  <label><input type="radio" name="q3" value="c"> Start time and completion time</label><br>
+  <label><input type="radio" name="q3" value="d"> Creation time and destruction time</label><br>
+  <div class="answer" data-correct="b">DFS records discovery time when a vertex is first encountered and finish time after all its adjacent vertices are explored.</div>
+</div>
+
+<div class="question">
+  <p>4. What is the time complexity of Depth First Search (DFS)?</p>
+  <label><input type="radio" name="q4" value="a"> O(V)</label><br>
+  <label><input type="radio" name="q4" value="b"> O(E)</label><br>
+  <label><input type="radio" name="q4" value="c"> O(V × E)</label><br>
+  <label><input type="radio" name="q4" value="d"> O(V + E)</label><br>
+  <div class="answer" data-correct="d">DFS runs in linear time proportional to the sum of vertices and edges, O(V + E).</div>
+</div>
+
+<div class="question">
+  <p>5. What is a Depth-First Forest?</p>
+  <label><input type="radio" name="q5" value="a"> A collection of disconnected graphs</label><br>
+  <label><input type="radio" name="q5" value="b"> A collection of trees formed by DFS for disconnected graphs</label><br>
+  <label><input type="radio" name="q5" value="c"> A set of edges forming a single connected graph</label><br>
+  <label><input type="radio" name="q5" value="d"> The adjacency list of the graph</label><br>
+  <div class="answer" data-correct="b">When DFS runs on a disconnected graph, each call creates a tree; all trees together form a depth-first forest.</div>
+</div>
+
+<div class="question">
+  <p>6. Which of the following is NOT a type of edge identified during DFS traversal?</p>
+  <label><input type="radio" name="q6" value="a"> Tree edge</label><br>
+  <label><input type="radio" name="q6" value="b"> Back edge</label><br>
+  <label><input type="radio" name="q6" value="c"> Cross edge</label><br>
+  <label><input type="radio" name="q6" value="d"> Sequential edge</label><br>
+  <div class="answer" data-correct="d">DFS classifies edges as tree, back, forward, or cross edges. Sequential edge is not among them.</div>
+</div>
+
+<div class="question">
+  <p>7. What is a Strongly Connected Component (SCC)?</p>
+  <label><input type="radio" name="q7" value="a"> A subgraph where every vertex has an outgoing edge</label><br>
+  <label><input type="radio" name="q7" value="b"> A maximal subgraph where every vertex is reachable from every other vertex</label><br>
+  <label><input type="radio" name="q7" value="c"> A subgraph with no cycles</label><br>
+  <label><input type="radio" name="q7" value="d"> A single tree within a forest</label><br>
+  <div class="answer" data-correct="b">An SCC is a maximal subgraph in which every vertex is reachable from every other vertex.</div>
+</div>
+
+<div class="question">
+  <p>8. What is the purpose of the transpose graph in Kosaraju’s algorithm?</p>
+  <label><input type="radio" name="q8" value="a"> To reverse the order of vertices</label><br>
+  <label><input type="radio" name="q8" value="b"> To find the shortest path between SCCs</label><br>
+  <label><input type="radio" name="q8" value="c"> To reverse the direction of all edges and identify SCCs</label><br>
+  <label><input type="radio" name="q8" value="d"> To store finish times of all vertices</label><br>
+  <div class="answer" data-correct="c">The transpose graph reverses all edge directions and helps reveal SCCs during the second DFS pass.</div>
+</div>
+
+<div class="question">
+  <p>9. In Kosaraju’s algorithm, in what order are vertices processed during the second DFS?</p>
+  <label><input type="radio" name="q9" value="a"> Increasing order of discovery time</label><br>
+  <label><input type="radio" name="q9" value="b"> Decreasing order of finish time</label><br>
+  <label><input type="radio" name="q9" value="c"> Random order</label><br>
+  <label><input type="radio" name="q9" value="d"> Alphabetical order of vertex names</label><br>
+  <div class="answer" data-correct="b">Vertices are processed in decreasing order of their finish times from the first DFS to correctly identify SCCs.</div>
+</div>
+
+<div class="question">
+  <p>10. What type of graph is formed when each Strongly Connected Component is represented as a single node?</p>
+  <label><input type="radio" name="q10" value="a"> Directed Acyclic Graph (DAG)</label><br>
+  <label><input type="radio" name="q10" value="b"> Complete Graph</label><br>
+  <label><input type="radio" name="q10" value="c"> Weighted Graph</label><br>
+  <label><input type="radio" name="q10" value="d"> Bipartite Graph</label><br>
+  <div class="answer" data-correct="a">When SCCs are treated as single nodes, the resulting component graph is always a Directed Acyclic Graph (DAG).</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Week 2 - lecture 5 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="questions">
+  <div class="question">
+    <p>What is the main purpose of using graph-based test case design in software testing?</p>
+    <label><input type="radio" name="q1" value="a"> To represent data storage mechanisms</label><br>
+    <label><input type="radio" name="q1" value="b"> To systematically model and analyze software behavior</label><br>
+    <label><input type="radio" name="q1" value="c"> To increase code execution speed</label><br>
+    <label><input type="radio" name="q1" value="d"> To reduce program complexity</label>
+    <div class="answer" data-correct="b" data-expl="Graph-based test case design helps systematically model and analyze software behavior using mathematical representations."></div>
+  </div>
+
+  <div class="question">
+    <p>In a graph used for testing, what do vertices represent?</p>
+    <label><input type="radio" name="q2" value="a"> Files and directories</label><br>
+    <label><input type="radio" name="q2" value="b"> Statements, decision points, or states in a program</label><br>
+    <label><input type="radio" name="q2" value="c"> User inputs</label><br>
+    <label><input type="radio" name="q2" value="d"> Memory addresses</label>
+    <div class="answer" data-correct="b" data-expl="Vertices in testing graphs represent statements, decision points, or program states."></div>
+  </div>
+
+  <div class="question">
+    <p>Which type of graph is most commonly used in software testing?</p>
+    <label><input type="radio" name="q3" value="a"> Undirected graphs</label><br>
+    <label><input type="radio" name="q3" value="b"> Directed graphs</label><br>
+    <label><input type="radio" name="q3" value="c"> Weighted graphs</label><br>
+    <label><input type="radio" name="q3" value="d"> Infinite graphs</label>
+    <div class="answer" data-correct="b" data-expl="Directed graphs are most common because control in programs moves in a specific direction."></div>
+  </div>
+
+  <div class="question">
+    <p>What is the significance of an initial vertex in graph-based testing?</p>
+    <label><input type="radio" name="q4" value="a"> It represents a loop in the program</label><br>
+    <label><input type="radio" name="q4" value="b"> It marks the start of program control</label><br>
+    <label><input type="radio" name="q4" value="c"> It represents unreachable code</label><br>
+    <label><input type="radio" name="q4" value="d"> It indicates the end of the program</label>
+    <div class="answer" data-correct="b" data-expl="The initial vertex marks where program control begins, ensuring deterministic behavior."></div>
+  </div>
+
+  <div class="question">
+    <p>What does a control flow graph (CFG) represent?</p>
+    <label><input type="radio" name="q5" value="a"> The flow of data between computations</label><br>
+    <label><input type="radio" name="q5" value="b"> The logical sequence of program statements and control flow</label><br>
+    <label><input type="radio" name="q5" value="c"> The hierarchy of class inheritance</label><br>
+    <label><input type="radio" name="q5" value="d"> The distribution of memory usage</label>
+    <div class="answer" data-correct="b" data-expl="A control flow graph (CFG) shows the logical sequence and flow of control between statements."></div>
+  </div>
+
+  <div class="question">
+    <p>When a path starts and ends at the same vertex, what is it called?</p>
+    <label><input type="radio" name="q6" value="a"> Tour</label><br>
+    <label><input type="radio" name="q6" value="b"> Cycle</label><br>
+    <label><input type="radio" name="q6" value="c"> Branch</label><br>
+    <label><input type="radio" name="q6" value="d"> Sub-path</label>
+    <div class="answer" data-correct="b" data-expl="A path that starts and ends at the same vertex is called a cycle."></div>
+  </div>
+
+  <div class="question">
+    <p>Which algorithms are commonly used for reachability analysis in graph-based testing?</p>
+    <label><input type="radio" name="q7" value="a"> BFS and DFS</label><br>
+    <label><input type="radio" name="q7" value="b"> Dijkstra and Kruskal</label><br>
+    <label><input type="radio" name="q7" value="c"> Prim and Bellman-Ford</label><br>
+    <label><input type="radio" name="q7" value="d"> Floyd and Warshall</label>
+    <div class="answer" data-correct="a" data-expl="Breadth-First Search (BFS) and Depth-First Search (DFS) are used to explore reachability in graphs."></div>
+  </div>
+
+  <div class="question">
+    <p>What are infeasible test paths?</p>
+    <label><input type="radio" name="q8" value="a"> Paths that can be executed by some input</label><br>
+    <label><input type="radio" name="q8" value="b"> Paths that cannot be executed due to contradictory conditions</label><br>
+    <label><input type="radio" name="q8" value="c"> Paths covering all nodes</label><br>
+    <label><input type="radio" name="q8" value="d"> Paths that lead to recursion</label>
+    <div class="answer" data-correct="b" data-expl="Infeasible test paths are those that cannot be executed because of unreachable or contradictory conditions."></div>
+  </div>
+
+  <div class="question">
+    <p>What does a test requirement specify in graph-based testing?</p>
+    <label><input type="radio" name="q9" value="a"> The number of test cases to execute</label><br>
+    <label><input type="radio" name="q9" value="b"> A specific property that a test path should satisfy</label><br>
+    <label><input type="radio" name="q9" value="c"> The execution order of statements</label><br>
+    <label><input type="radio" name="q9" value="d"> The time taken for testing</label>
+    <div class="answer" data-correct="b" data-expl="A test requirement defines a specific property that must be satisfied by a test path, such as covering a node or edge."></div>
+  </div>
+
+  <div class="question">
+    <p>What is the main advantage of graph-based testing?</p>
+    <label><input type="radio" name="q10" value="a"> It increases software execution speed</label><br>
+    <label><input type="radio" name="q10" value="b"> It provides a structured way to design effective and comprehensive test cases</label><br>
+    <label><input type="radio" name="q10" value="c"> It eliminates the need for debugging</label><br>
+    <label><input type="radio" name="q10" value="d"> It removes the need for human testers</label>
+    <div class="answer" data-correct="b" data-expl="Graph-based testing ensures systematic and comprehensive test design with better coverage and reduced redundancy."></div>
+  </div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

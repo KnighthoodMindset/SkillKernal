@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 17 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary purpose of using call graphs in integration testing?</p>
+  <label><input type="radio" name="q1" value="a"> To test individual statements within a module</label><br>
+  <label><input type="radio" name="q1" value="b"> To analyze interactions between software modules</label><br>
+  <label><input type="radio" name="q1" value="c"> To optimize program performance</label><br>
+  <label><input type="radio" name="q1" value="d"> To generate documentation automatically</label><br>
+  <div class="answer" data-correct="b">Call graphs represent modules and their interactions, making them useful for analyzing module communication in integration testing.</div>
+</div>
+
+<div class="question">
+  <p>In a call graph, what do vertices typically represent?</p>
+  <label><input type="radio" name="q2" value="a"> Function calls only</label><br>
+  <label><input type="radio" name="q2" value="b"> Modules, test stubs, or drivers</label><br>
+  <label><input type="radio" name="q2" value="c"> Loops and conditions</label><br>
+  <label><input type="radio" name="q2" value="d"> Data variables</label><br>
+  <div class="answer" data-correct="b">Vertices in a call graph represent modules or, in incremental testing, test stubs and drivers.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion ensures every module in a call graph is invoked at least once?</p>
+  <label><input type="radio" name="q3" value="a"> Edge coverage</label><br>
+  <label><input type="radio" name="q3" value="b"> Node coverage</label><br>
+  <label><input type="radio" name="q3" value="c"> Prime path coverage</label><br>
+  <label><input type="radio" name="q3" value="d"> Statement coverage</label><br>
+  <div class="answer" data-correct="b">Node coverage ensures that every module (node) in the call graph is executed at least once.</div>
+</div>
+
+<div class="question">
+  <p>Why is edge coverage important in call graph-based integration testing?</p>
+  <label><input type="radio" name="q4" value="a"> It tests loops inside modules</label><br>
+  <label><input type="radio" name="q4" value="b"> It ensures every interface call between modules occurs</label><br>
+  <label><input type="radio" name="q4" value="c"> It verifies variable assignments</label><br>
+  <label><input type="radio" name="q4" value="d"> It measures module complexity</label><br>
+  <div class="answer" data-correct="b">Edge coverage ensures that every interface or call between modules is executed at least once.</div>
+</div>
+
+<div class="question">
+  <p>What is the main limitation of applying prime path or edge pair coverage in call graphs?</p>
+  <label><input type="radio" name="q5" value="a"> Loops are uncommon in module calls</label><br>
+  <label><input type="radio" name="q5" value="b"> Modules cannot be tested incrementally</label><br>
+  <label><input type="radio" name="q5" value="c"> Variables cannot be tracked</label><br>
+  <label><input type="radio" name="q5" value="d"> Stubs are unavailable</label><br>
+  <div class="answer" data-correct="a">Prime path or edge pair coverage is less relevant because loops are uncommon in call graphs.</div>
+</div>
+
+<div class="question">
+  <p>In object-oriented software, why are class call graphs less meaningful?</p>
+  <label><input type="radio" name="q6" value="a"> Classes cannot contain methods</label><br>
+  <label><input type="radio" name="q6" value="b"> Classes themselves are not executable</label><br>
+  <label><input type="radio" name="q6" value="c"> Inheritance prevents method calls</label><br>
+  <label><input type="radio" name="q6" value="d"> Objects cannot call other objects</label><br>
+  <div class="answer" data-correct="b">Classes are not executable; coverage is applied to instantiated objects rather than class definitions.</div>
+</div>
+
+<div class="question">
+  <p>What are coupling variables in the context of data flow integration testing?</p>
+  <label><input type="radio" name="q7" value="a"> Variables used only within a single module</label><br>
+  <label><input type="radio" name="q7" value="b"> Variables defined in one module and used in another</label><br>
+  <label><input type="radio" name="q7" value="c"> Variables that are global constants</label><br>
+  <label><input type="radio" name="q7" value="d"> Variables declared in object classes</label><br>
+  <div class="answer" data-correct="b">Coupling variables are defined in one module and used in another, forming the basis for coupling du-paths.</div>
+</div>
+
+<div class="question">
+  <p>Which data flow coverage criterion ensures that each last definition reaches every corresponding first use?</p>
+  <label><input type="radio" name="q8" value="a"> All coupling def coverage</label><br>
+  <label><input type="radio" name="q8" value="b"> All coupling use coverage</label><br>
+  <label><input type="radio" name="q8" value="c"> All coupling du-paths coverage</label><br>
+  <label><input type="radio" name="q8" value="d"> Node coverage</label><br>
+  <div class="answer" data-correct="b">All coupling use coverage ensures that each last definition reaches all corresponding first uses.</div>
+</div>
+
+<div class="question">
+  <p>In the quadratic roots example, what illustrates the concept of a last definition and first use?</p>
+  <label><input type="radio" name="q9" value="a"> Initialization of input parameters in the main method and their usage in the root method</label><br>
+  <label><input type="radio" name="q9" value="b"> Local variable inside the root method only</label><br>
+  <label><input type="radio" name="q9" value="c"> Global constants not used in methods</label><br>
+  <label><input type="radio" name="q9" value="d"> Print statements in the main method</label><br>
+  <div class="answer" data-correct="a">The input parameters are last defined in the main method and first used in the root method, demonstrating coupling.</div>
+</div>
+
+<div class="question">
+  <p>Why is data flow analysis across module interfaces critical in safety-critical software?</p>
+  <label><input type="radio" name="q10" value="a"> To reduce compilation time</label><br>
+  <label><input type="radio" name="q10" value="b"> To provide evidence that parameters and return values are correctly handled between modules</label><br>
+  <label><input type="radio" name="q10" value="c"> To avoid using object-oriented programming</label><br>
+  <label><input type="radio" name="q10" value="d"> To eliminate test drivers</label><br>
+  <div class="answer" data-correct="b">Safety-critical standards require verification that parameters and return values are correctly handled across module interfaces.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 19 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What do finite state machines (FSMs) represent in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> A set of program loops</label><br>
+  <label><input type="radio" name="q1" value="b"> A system as a finite graph with states and transitions</label><br>
+  <label><input type="radio" name="q1" value="c"> Only variable assignments</label><br>
+  <label><input type="radio" name="q1" value="d"> Memory allocation diagrams</label><br>
+  <div class="answer" data-correct="b">FSMs represent a system as a finite graph where nodes are states and edges are transitions.</div>
+</div>
+
+<div class="question">
+  <p>In FSMs, what do edges (transitions) represent?</p>
+  <label><input type="radio" name="q2" value="a"> Variable definitions</label><br>
+  <label><input type="radio" name="q2" value="b"> Changes from one state to another due to program actions</label><br>
+  <label><input type="radio" name="q2" value="c"> File system operations</label><br>
+  <label><input type="radio" name="q2" value="d"> Graph coloring rules</label><br>
+  <div class="answer" data-correct="b">Edges in FSMs represent transitions caused by execution of program statements or actions.</div>
+</div>
+
+<div class="question">
+  <p>What role do guards or preconditions play in FSM transitions?</p>
+  <label><input type="radio" name="q3" value="a"> Determine when a transition can be taken</label><br>
+  <label><input type="radio" name="q3" value="b"> Initialize variables</label><br>
+  <label><input type="radio" name="q3" value="c"> Represent states</label><br>
+  <label><input type="radio" name="q3" value="d"> Merge two nodes</label><br>
+  <div class="answer" data-correct="a">Guards or preconditions control the conditions under which transitions between states can occur.</div>
+</div>
+
+<div class="question">
+  <p>Which structural coverage criteria are commonly applied in FSM testing?</p>
+  <label><input type="radio" name="q4" value="a"> Node, edge, edge pair, and specified path coverage</label><br>
+  <label><input type="radio" name="q4" value="b"> Node only</label><br>
+  <label><input type="radio" name="q4" value="c"> Edge pair only</label><br>
+  <label><input type="radio" name="q4" value="d"> Prime path only</label><br>
+  <div class="answer" data-correct="a">Node, edge, edge pair, and specified path coverage are commonly applied, while prime path is less useful.</div>
+</div>
+
+<div class="question">
+  <p>Why is data flow analysis in FSMs considered complex?</p>
+  <label><input type="radio" name="q5" value="a"> Because FSMs have no transitions</label><br>
+  <label><input type="radio" name="q5" value="b"> Because definitions and uses of variables can occur in entry/exit actions or along edges with guards</label><br>
+  <label><input type="radio" name="q5" value="c"> Because FSMs cannot model states</label><br>
+  <label><input type="radio" name="q5" value="d"> Because variables are not used in FSMs</label><br>
+  <div class="answer" data-correct="b">Data flow analysis is complex since variable definitions and uses can appear in node actions or guarded transitions.</div>
+</div>
+
+<div class="question">
+  <p>How can FSMs be applied to abstract data types like queues?</p>
+  <label><input type="radio" name="q6" value="a"> By representing states as queue contents and transitions as enqueue/dequeue operations</label><br>
+  <label><input type="radio" name="q6" value="b"> By ignoring the queue content</label><br>
+  <label><input type="radio" name="q6" value="c"> By modeling only empty queues</label><br>
+  <label><input type="radio" name="q6" value="d"> By simulating file operations</label><br>
+  <div class="answer" data-correct="a">FSMs model queue states (empty, partially filled, full) and transitions caused by enqueue and dequeue operations.</div>
+</div>
+
+<div class="question">
+  <p>Which operations in a queue FSM do not change the state?</p>
+  <label><input type="radio" name="q7" value="a"> Enqueue and dequeue</label><br>
+  <label><input type="radio" name="q7" value="b"> Checking if the queue is empty or full</label><br>
+  <label><input type="radio" name="q7" value="c"> Initialization</label><br>
+  <label><input type="radio" name="q7" value="d"> All operations change the state</label><br>
+  <div class="answer" data-correct="b">Operations like checking if the queue is empty or full do not alter the FSM state.</div>
+</div>
+
+<div class="question">
+  <p>How do UML diagrams support FSM-based testing?</p>
+  <label><input type="radio" name="q8" value="a"> They provide structural specifications that resemble graphs</label><br>
+  <label><input type="radio" name="q8" value="b"> They only show code syntax</label><br>
+  <label><input type="radio" name="q8" value="c"> They generate random test cases automatically</label><br>
+  <label><input type="radio" name="q8" value="d"> They replace control flow graphs</label><br>
+  <div class="answer" data-correct="a">UML diagrams such as state machines, state charts, and activity diagrams provide graph-like models for applying coverage criteria.</div>
+</div>
+
+<div class="question">
+  <p>What advantage do FSMs have over control flow or call graphs?</p>
+  <label><input type="radio" name="q9" value="a"> FSMs exclude variable values</label><br>
+  <label><input type="radio" name="q9" value="b"> FSMs include variable values in states, giving a more detailed system representation</label><br>
+  <label><input type="radio" name="q9" value="c"> FSMs do not model transitions</label><br>
+  <label><input type="radio" name="q9" value="d"> FSMs ignore test coverage</label><br>
+  <div class="answer" data-correct="b">FSMs explicitly include variable values in states, offering a more detailed representation than control flow or call graphs.</div>
+</div>
+
+<div class="question">
+  <p>What is the role of FSMs in preparing for logical predicate-based testing?</p>
+  <label><input type="radio" name="q10" value="a"> They replace all other testing methods</label><br>
+  <label><input type="radio" name="q10" value="b"> They model complex state-dependent behaviors, laying the foundation for predicate-based testing</label><br>
+  <label><input type="radio" name="q10" value="c"> They generate random variables</label><br>
+  <label><input type="radio" name="q10" value="d"> They optimize program performance</label><br>
+  <div class="answer" data-correct="b">FSMs model complex state-dependent behaviors, preparing the foundation for logical predicate-based testing.</div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

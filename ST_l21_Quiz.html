@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 21 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>Why are logical predicates important in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> They define the hardware requirements</label><br>
+  <label><input type="radio" name="q1" value="b"> They govern decision statements, determining program execution paths</label><br>
+  <label><input type="radio" name="q1" value="c"> They measure program performance</label><br>
+  <label><input type="radio" name="q1" value="d"> They replace unit tests</label><br>
+  <div class="answer" data-correct="b">Logical predicates control decision statements such as if, while, for, and do-while, influencing execution paths.</div>
+</div>
+
+<div class="question">
+  <p>What does propositional logic deal with?</p>
+  <label><input type="radio" name="q2" value="a"> Variables with infinite domains</label><br>
+  <label><input type="radio" name="q2" value="b"> Atomic propositions that are either true or false</label><br>
+  <label><input type="radio" name="q2" value="c"> Memory allocation</label><br>
+  <label><input type="radio" name="q2" value="d"> Hardware interrupts</label><br>
+  <div class="answer" data-correct="b">Propositional logic deals with Boolean atomic propositions that evaluate to true or false.</div>
+</div>
+
+<div class="question">
+  <p>Which Boolean connectives are sufficient to define all propositional formulas?</p>
+  <label><input type="radio" name="q3" value="a"> AND and OR</label><br>
+  <label><input type="radio" name="q3" value="b"> NOT and OR</label><br>
+  <label><input type="radio" name="q3" value="c"> XOR and NAND</label><br>
+  <label><input type="radio" name="q3" value="d"> IMPLIES only</label><br>
+  <div class="answer" data-correct="b">The NOT and OR operators are sufficient to express all propositional formulas.</div>
+</div>
+
+<div class="question">
+  <p>How can the implication “alpha implies beta” be expressed using NOT and OR?</p>
+  <label><input type="radio" name="q4" value="a"> alpha AND beta</label><br>
+  <label><input type="radio" name="q4" value="b"> NOT alpha OR beta</label><br>
+  <label><input type="radio" name="q4" value="c"> alpha OR beta</label><br>
+  <label><input type="radio" name="q4" value="d"> NOT alpha AND beta</label><br>
+  <div class="answer" data-correct="b">“Alpha implies beta” is equivalent to “NOT alpha OR beta” in propositional logic.</div>
+</div>
+
+<div class="question">
+  <p>What is the satisfiability problem in propositional logic?</p>
+  <label><input type="radio" name="q5" value="a"> Determining if a formula is always false</label><br>
+  <label><input type="radio" name="q5" value="b"> Checking whether there exists an assignment of truth values that makes a formula true</label><br>
+  <label><input type="radio" name="q5" value="c"> Calculating program runtime</label><br>
+  <label><input type="radio" name="q5" value="d"> Counting nodes in a CFG</label><br>
+  <div class="answer" data-correct="b">Satisfiability checks if there exists an assignment of truth values that makes a propositional formula true.</div>
+</div>
+
+<div class="question">
+  <p>How does predicate logic extend propositional logic?</p>
+  <label><input type="radio" name="q6" value="a"> By including loops and conditions only</label><br>
+  <label><input type="radio" name="q6" value="b"> By including variables, functions, and relations in expressions</label><br>
+  <label><input type="radio" name="q6" value="c"> By simplifying formulas</label><br>
+  <label><input type="radio" name="q6" value="d"> By ignoring Boolean operators</label><br>
+  <div class="answer" data-correct="b">Predicate logic adds variables, functions, and relations, allowing expression of program conditions.</div>
+</div>
+
+<div class="question">
+  <p>What is a clause in predicate logic?</p>
+  <label><input type="radio" name="q7" value="a"> A Boolean operator</label><br>
+  <label><input type="radio" name="q7" value="b"> An individual component in a predicate without Boolean operators</label><br>
+  <label><input type="radio" name="q7" value="c"> A variable type</label><br>
+  <label><input type="radio" name="q7" value="d"> A transition in FSMs</label><br>
+  <div class="answer" data-correct="b">A clause is a Boolean atomic predicate, an individual component in a predicate that contains no Boolean operator.</div>
+</div>
+
+<div class="question">
+  <p>Why is satisfiability undecidable in general for predicate logic?</p>
+  <label><input type="radio" name="q8" value="a"> Because it has a finite number of variables</label><br>
+  <label><input type="radio" name="q8" value="b"> Because variables can have infinite domains</label><br>
+  <label><input type="radio" name="q8" value="c"> Because it does not use Boolean logic</label><br>
+  <label><input type="radio" name="q8" value="d"> Because it ignores functions</label><br>
+  <div class="answer" data-correct="b">Predicate logic can include variables with infinite domains, making general satisfiability undecidable.</div>
+</div>
+
+<div class="question">
+  <p>Which tools can assist in checking satisfiability for practical predicate logic cases?</p>
+  <label><input type="radio" name="q9" value="a"> SAT solvers and SMT solvers</label><br>
+  <label><input type="radio" name="q9" value="b"> Compilers only</label><br>
+  <label><input type="radio" name="q9" value="c"> Debuggers</label><br>
+  <label><input type="radio" name="q9" value="d"> Text editors</label><br>
+  <div class="answer" data-correct="a">SAT solvers and SMT solvers help check satisfiability in practical predicate logic testing scenarios.</div>
+</div>
+
+<div class="question">
+  <p>What is the primary focus in testing predicates during program execution?</p>
+  <label><input type="radio" name="q10" value="a"> Finding all possible assignments</label><br>
+  <label><input type="radio" name="q10" value="b"> Verifying if a given assignment makes the predicate true</label><br>
+  <label><input type="radio" name="q10" value="c"> Counting predicates in code</label><br>
+  <label><input type="radio" name="q10" value="d"> Modifying predicates</label><br>
+  <div class="answer" data-correct="b">Testing focuses on verifying whether a given assignment of values makes the predicate true during execution.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

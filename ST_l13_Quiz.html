@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 13 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is a Control Flow Graph (CFG) in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> A diagram showing variable definitions and uses only</label><br>
+  <label><input type="radio" name="q1" value="b"> A representation of program statements and control transfers between them</label><br>
+  <label><input type="radio" name="q1" value="c"> A flowchart of input and output operations only</label><br>
+  <label><input type="radio" name="q1" value="d"> A table of all possible test cases</label><br>
+  <div class="answer" data-correct="b">A CFG represents program statements or blocks and the possible transfers of control between them.</div>
+</div>
+
+<div class="question">
+  <p>What do nodes in a CFG represent?</p>
+  <label><input type="radio" name="q2" value="a"> Program statements or basic blocks</label><br>
+  <label><input type="radio" name="q2" value="b"> Test cases</label><br>
+  <label><input type="radio" name="q2" value="c"> Only loops in the program</label><br>
+  <label><input type="radio" name="q2" value="d"> Exception handlers only</label><br>
+  <div class="answer" data-correct="a">Nodes in a CFG represent program statements or basic blocks that execute sequentially without internal branches.</div>
+</div>
+
+<div class="question">
+  <p>How are edges in a CFG interpreted?</p>
+  <label><input type="radio" name="q3" value="a"> As variable assignments</label><br>
+  <label><input type="radio" name="q3" value="b"> As possible transfers of control between nodes</label><br>
+  <label><input type="radio" name="q3" value="c"> As loops only</label><br>
+  <label><input type="radio" name="q3" value="d"> As test case sequences</label><br>
+  <div class="answer" data-correct="b">Edges represent possible transfers of control between nodes in a CFG.</div>
+</div>
+
+<div class="question">
+  <p>How does an if-else statement appear in a CFG?</p>
+  <label><input type="radio" name="q4" value="a"> As a single sequential node</label><br>
+  <label><input type="radio" name="q4" value="b"> As a branching node with edges for the 'then' and 'else' parts</label><br>
+  <label><input type="radio" name="q4" value="c"> As a loop structure</label><br>
+  <label><input type="radio" name="q4" value="d"> As an edge without nodes</label><br>
+  <div class="answer" data-correct="b">An if-else statement introduces a branching node with separate edges for each branch.</div>
+</div>
+
+<div class="question">
+  <p>What special behavior does a break statement introduce in a loop's CFG?</p>
+  <label><input type="radio" name="q5" value="a"> Repeats the loop body</label><br>
+  <label><input type="radio" name="q5" value="b"> Skips the rest of the loop body and exits to the next statement</label><br>
+  <label><input type="radio" name="q5" value="c"> Converts the loop into a conditional branch</label><br>
+  <label><input type="radio" name="q5" value="d"> Has no effect on the CFG</label><br>
+  <div class="answer" data-correct="b">A break statement exits the loop immediately, creating an edge to the statement after the loop.</div>
+</div>
+
+<div class="question">
+  <p>How does a do-while loop differ from a while loop in CFG representation?</p>
+  <label><input type="radio" name="q6" value="a"> The loop body is executed at least once before the predicate check</label><br>
+  <label><input type="radio" name="q6" value="b"> The loop condition is never checked</label><br>
+  <label><input type="radio" name="q6" value="c"> The loop has no edges in the CFG</label><br>
+  <label><input type="radio" name="q6" value="d"> The loop is represented as multiple sequential nodes only</label><br>
+  <div class="answer" data-correct="a">A do-while loop executes the body at least once before checking the predicate, forming a self-loop structure in the CFG.</div>
+</div>
+
+<div class="question">
+  <p>How are try-catch blocks represented in a CFG?</p>
+  <label><input type="radio" name="q7" value="a"> As a single node with no branching</label><br>
+  <label><input type="radio" name="q7" value="b"> The try block is sequential, and each catch block represents an alternate path triggered by exceptions</label><br>
+  <label><input type="radio" name="q7" value="c"> As loop structures</label><br>
+  <label><input type="radio" name="q7" value="d"> As edges only</label><br>
+  <div class="answer" data-correct="b">In CFGs, the try block is sequential, and each catch block represents a possible alternate path for exception handling.</div>
+</div>
+
+<div class="question">
+  <p>In the statistical program example, what nodes represent the loop bodies?</p>
+  <label><input type="radio" name="q8" value="a"> Initialization nodes</label><br>
+  <label><input type="radio" name="q8" value="b"> Nodes performing computations for sum, variance, and standard deviation</label><br>
+  <label><input type="radio" name="q8" value="c"> Print statement nodes</label><br>
+  <label><input type="radio" name="q8" value="d"> Condition-check nodes only</label><br>
+  <div class="answer" data-correct="b">The loop body nodes perform computations such as sum, variance, and standard deviation.</div>
+</div>
+
+<div class="question">
+  <p>How can edge coverage be achieved in a CFG?</p>
+  <label><input type="radio" name="q9" value="a"> By visiting every node at least once</label><br>
+  <label><input type="radio" name="q9" value="b"> By traversing every edge in the graph at least once via test paths</label><br>
+  <label><input type="radio" name="q9" value="c"> By executing loops only once</label><br>
+  <label><input type="radio" name="q9" value="d"> By covering only conditional statements</label><br>
+  <div class="answer" data-correct="b">Edge coverage is achieved by test paths that traverse every edge at least once in the CFG.</div>
+</div>
+
+<div class="question">
+  <p>Why is modeling source code as a CFG useful for software testing?</p>
+  <label><input type="radio" name="q10" value="a"> It eliminates the need for test cases</label><br>
+  <label><input type="radio" name="q10" value="b"> It allows systematic visualization of execution paths and application of coverage criteria</label><br>
+  <label><input type="radio" name="q10" value="c"> It automatically fixes bugs in the code</label><br>
+  <label><input type="radio" name="q10" value="d"> It only helps in defining variables</label><br>
+  <div class="answer" data-correct="b">CFGs allow systematic visualization of execution paths, enabling the application of coverage criteria for better testing.</div>
+</div>
+
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
