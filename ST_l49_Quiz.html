@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 49 - Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the main challenge of symbolic execution in programs with loops?</p>
+  <label><input type="radio" name="q1" value="a"> Loops are ignored during execution</label><br>
+  <label><input type="radio" name="q1" value="b"> The number of possible execution paths can be infinite</label><br>
+  <label><input type="radio" name="q1" value="c"> Loops always terminate</label><br>
+  <label><input type="radio" name="q1" value="d"> Loops only work with concrete inputs</label><br>
+  <div class="answer" data-correct="b">Symbolic execution becomes challenging with loops because the number of possible execution paths can be infinite, depending on input values.</div>
+</div>
+
+<div class="question">
+  <p>How does symbolic execution handle program inputs?</p>
+  <label><input type="radio" name="q2" value="a"> As concrete values only</label><br>
+  <label><input type="radio" name="q2" value="b"> As symbolic values</label><br>
+  <label><input type="radio" name="q2" value="c"> As random numbers only</label><br>
+  <label><input type="radio" name="q2" value="d"> As string literals</label><br>
+  <div class="answer" data-correct="b">In symbolic execution, program inputs are treated as symbolic values rather than concrete data.</div>
+</div>
+
+<div class="question">
+  <p>What do path constraints represent in symbolic execution?</p>
+  <label><input type="radio" name="q3" value="a"> Random inputs</label><br>
+  <label><input type="radio" name="q3" value="b"> Conditions under which certain program paths are taken</label><br>
+  <label><input type="radio" name="q3" value="c"> Memory allocation limits</label><br>
+  <label><input type="radio" name="q3" value="d"> Loop iteration counts only</label><br>
+  <div class="answer" data-correct="b">Path constraints define the conditions under which certain paths are taken in the program.</div>
+</div>
+
+<div class="question">
+  <p>Why can solving path constraints in symbolic execution be difficult?</p>
+  <label><input type="radio" name="q4" value="a"> They are always trivial</label><br>
+  <label><input type="radio" name="q4" value="b"> They can be undecidable or computationally hard, especially for integers or unknown functions</label><br>
+  <label><input type="radio" name="q4" value="c"> They only involve strings</label><br>
+  <label><input type="radio" name="q4" value="d"> They never involve loops</label><br>
+  <div class="answer" data-correct="b">Solving path constraints can be undecidable or computationally hard, particularly for predicates over integers or unknown functions.</div>
+</div>
+
+<div class="question">
+  <p>What is concolic testing?</p>
+  <label><input type="radio" name="q5" value="a"> Pure symbolic execution</label><br>
+  <label><input type="radio" name="q5" value="b"> A combination of concrete and symbolic execution</label><br>
+  <label><input type="radio" name="q5" value="c"> Random testing only</label><br>
+  <label><input type="radio" name="q5" value="d"> Unit testing without symbolic analysis</label><br>
+  <div class="answer" data-correct="b">Concolic testing combines concrete and symbolic execution to systematically explore program paths.</div>
+</div>
+
+<div class="question">
+  <p>How does concolic testing explore alternative program paths?</p>
+  <label><input type="radio" name="q6" value="a"> By ignoring branches</label><br>
+  <label><input type="radio" name="q6" value="b"> By systematically negating symbolic path constraints and solving for new inputs</label><br>
+  <label><input type="radio" name="q6" value="c"> By executing only loops</label><br>
+  <label><input type="radio" name="q6" value="d"> By using random values only</label><br>
+  <div class="answer" data-correct="b">Concolic testing negates path constraints from symbolic execution and uses solvers to generate new inputs for alternative paths.</div>
+</div>
+
+<div class="question">
+  <p>Why is concolic testing useful for programs with loops?</p>
+  <label><input type="radio" name="q7" value="a"> It avoids loops completely</label><br>
+  <label><input type="radio" name="q7" value="b"> It systematically explores feasible paths while avoiding infinite symbolic paths</label><br>
+  <label><input type="radio" name="q7" value="c"> It only tests the first iteration</label><br>
+  <label><input type="radio" name="q7" value="d"> It ignores path constraints</label><br>
+  <div class="answer" data-correct="b">Concolic testing helps handle loops by systematically exploring feasible paths without getting stuck in infinite symbolic paths.</div>
+</div>
+
+<div class="question">
+  <p>Name some tools used for symbolic and concolic testing.</p>
+  <label><input type="radio" name="q8" value="a"> Selenium, JMeter</label><br>
+  <label><input type="radio" name="q8" value="b"> CUTE, JCUTE, PEX, SAGE</label><br>
+  <label><input type="radio" name="q8" value="c"> Git, SVN</label><br>
+  <label><input type="radio" name="q8" value="d"> Eclipse, NetBeans</label><br>
+  <div class="answer" data-correct="b">Tools for symbolic and concolic testing include CUTE (C), JCUTE (Java), PEX (.NET), and SAGE for automated testing.</div>
+</div>
+
+<div class="question">
+  <p>What is the main advantage of combining concrete execution with symbolic execution?</p>
+  <label><input type="radio" name="q9" value="a"> It eliminates the need for constraint solvers</label><br>
+  <label><input type="radio" name="q9" value="b"> It guides symbolic analysis using concrete inputs, making path exploration more feasible</label><br>
+  <label><input type="radio" name="q9" value="c"> It only tests random inputs</label><br>
+  <label><input type="radio" name="q9" value="d"> It ignores loops</label><br>
+  <div class="answer" data-correct="b">Concrete execution guides symbolic analysis, helping explore paths that would be hard to solve purely symbolically.</div>
+</div>
+
+<div class="question">
+  <p>What practical technique has emerged to overcome scalability issues in symbolic execution?</p>
+  <label><input type="radio" name="q10" value="a"> Unit testing</label><br>
+  <label><input type="radio" name="q10" value="b"> Directed automated random testing (DART) using concolic testing</label><br>
+  <label><input type="radio" name="q10" value="c"> Manual test case design</label><br>
+  <label><input type="radio" name="q10" value="d"> Only random fuzzing</label><br>
+  <div class="answer" data-correct="b">Directed automated random testing (DART) uses concolic testing to overcome scalability and constraint-solving challenges.</div>
+</div>
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

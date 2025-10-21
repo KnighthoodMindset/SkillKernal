@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 32  Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main purpose of input space partitioning (ISP) in functional testing?</p>
+  <label><input type="radio" name="q1" value="a"> To test internal code structure</label><br>
+  <label><input type="radio" name="q1" value="b"> To divide input domains into meaningful partitions for test case generation</label><br>
+  <label><input type="radio" name="q1" value="c"> To optimize software performance</label><br>
+  <label><input type="radio" name="q1" value="d"> To reduce the number of functions in the program</label><br>
+  <div class="answer" data-correct="b">ISP divides input domains into partitions to systematically generate test cases and ensure meaningful coverage.</div>
+</div>
+
+<div class="question">
+  <p>What is the difference between interface-based and functionality-based partitioning?</p>
+  <label><input type="radio" name="q2" value="a"> Interface-based considers overall program behavior; functionality-based focuses on each input separately</label><br>
+  <label><input type="radio" name="q2" value="b"> Interface-based focuses on individual input variables; functionality-based considers combined input behavior</label><br>
+  <label><input type="radio" name="q2" value="c"> Both focus on input variables without considering program behavior</label><br>
+  <label><input type="radio" name="q2" value="d"> Interface-based uses random inputs; functionality-based uses exhaustive testing</label><br>
+  <div class="answer" data-correct="b">Interface-based focuses on individual inputs, while functionality-based considers interactions and overall program behavior.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion requires testing every possible combination of input partitions?</p>
+  <label><input type="radio" name="q3" value="a"> Each Choice Coverage (ECC)</label><br>
+  <label><input type="radio" name="q3" value="b"> All Combinations Coverage (ACoC)</label><br>
+  <label><input type="radio" name="q3" value="c"> Pairwise Coverage</label><br>
+  <label><input type="radio" name="q3" value="d"> Base Choice Coverage (BCC)</label><br>
+  <div class="answer" data-correct="b">ACoC is exhaustive, requiring all possible combinations of partitions to be tested.</div>
+</div>
+
+<div class="question">
+  <p>Why is Each Choice Coverage (ECC) considered a weak coverage criterion?</p>
+  <label><input type="radio" name="q4" value="a"> It tests all combinations exhaustively</label><br>
+  <label><input type="radio" name="q4" value="b"> It selects only one representative from each partition, possibly missing critical input interactions</label><br>
+  <label><input type="radio" name="q4" value="c"> It requires multiple base choices</label><br>
+  <label><input type="radio" name="q4" value="d"> It only tests boundary values</label><br>
+  <div class="answer" data-correct="b">ECC selects one value per partition, which may miss important interactions between inputs.</div>
+</div>
+
+<div class="question">
+  <p>How does pairwise coverage reduce the number of test cases compared to All Combinations Coverage?</p>
+  <label><input type="radio" name="q5" value="a"> By testing only a single input value</label><br>
+  <label><input type="radio" name="q5" value="b"> By ensuring that all pairs of input partitions are tested at least once instead of all combinations</label><br>
+  <label><input type="radio" name="q5" value="c"> By testing only the base choices</label><br>
+  <label><input type="radio" name="q5" value="d"> By ignoring input interactions</label><br>
+  <div class="answer" data-correct="b">Pairwise coverage tests all pairs of input partitions, significantly reducing test cases while maintaining high fault detection.</div>
+</div>
+
+<div class="question">
+  <p>What is T-Wise coverage in input space partitioning?</p>
+  <label><input type="radio" name="q6" value="a"> Testing all combinations of T input partitions together</label><br>
+  <label><input type="radio" name="q6" value="b"> Testing only one representative from each partition</label><br>
+  <label><input type="radio" name="q6" value="c"> Testing base choices only</label><br>
+  <label><input type="radio" name="q6" value="d"> Testing inputs sequentially</label><br>
+  <div class="answer" data-correct="a">T-Wise coverage generalizes pairwise testing by ensuring all combinations of T input partitions are tested together.</div>
+</div>
+
+<div class="question">
+  <p>How does Base Choice Coverage (BCC) select test cases?</p>
+  <label><input type="radio" name="q7" value="a"> By testing all combinations exhaustively</label><br>
+  <label><input type="radio" name="q7" value="b"> By selecting one representative from each partition randomly</label><br>
+  <label><input type="radio" name="q7" value="c"> By creating a base test with one chosen value per input and varying one input at a time</label><br>
+  <label><input type="radio" name="q7" value="d"> By ignoring important inputs</label><br>
+  <div class="answer" data-correct="c">BCC uses a base test with selected base choices and varies one input at a time to generate additional tests.</div>
+</div>
+
+<div class="question">
+  <p>What advantage does Multiple Base Choice Coverage (MBCC) have over BCC?</p>
+  <label><input type="radio" name="q8" value="a"> It reduces the number of tests</label><br>
+  <label><input type="radio" name="q8" value="b"> It allows multiple base choices per input, providing more thorough coverage</label><br>
+  <label><input type="radio" name="q8" value="c"> It ignores minor partitions</label><br>
+  <label><input type="radio" name="q8" value="d"> It is equivalent to ECC</label><br>
+  <div class="answer" data-correct="b">MBCC selects multiple significant values as base choices for each input, testing them in combination to increase coverage.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion subsumes all others due to its exhaustive nature?</p>
+  <label><input type="radio" name="q9" value="a"> Each Choice Coverage (ECC)</label><br>
+  <label><input type="radio" name="q9" value="b"> All Combinations Coverage (ACoC)</label><br>
+  <label><input type="radio" name="q9" value="c"> Base Choice Coverage (BCC)</label><br>
+  <label><input type="radio" name="q9" value="d"> Pairwise Coverage</label><br>
+  <div class="answer" data-correct="b">ACoC is exhaustive and covers every possible combination, thus subsuming all other criteria.</div>
+</div>
+
+<div class="question">
+  <p>Why are Pairwise or Base Choice coverage criteria often preferred in practice?</p>
+  <label><input type="radio" name="q10" value="a"> They provide complete exhaustive testing</label><br>
+  <label><input type="radio" name="q10" value="b"> They balance effective fault detection with manageable test suite size</label><br>
+  <label><input type="radio" name="q10" value="c"> They ignore input interactions</label><br>
+  <label><input type="radio" name="q10" value="d"> They test only invalid inputs</label><br>
+  <div class="answer" data-correct="b">Pairwise and Base Choice criteria offer a practical balance between coverage and the number of test cases, making them efficient for real testing scenarios.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

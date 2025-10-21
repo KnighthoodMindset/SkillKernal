@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 36 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary purpose of mutation testing?</p>
+  <label><input type="radio" name="q1" value="a"> To improve program execution speed</label><br>
+  <label><input type="radio" name="q1" value="b"> To evaluate the quality of test cases by introducing small changes and checking if they are detected</label><br>
+  <label><input type="radio" name="q1" value="c"> To rewrite the program entirely</label><br>
+  <label><input type="radio" name="q1" value="d"> To optimize memory usage</label><br>
+  <div class="answer" data-correct="b">Mutation testing evaluates whether existing test cases can detect small syntactic or logical changes in a program.</div>
+</div>
+
+<div class="question">
+  <p>In mutation testing, what is the term for the original version of the program?</p>
+  <label><input type="radio" name="q2" value="a"> Mutant</label><br>
+  <label><input type="radio" name="q2" value="b"> Ground string</label><br>
+  <label><input type="radio" name="q2" value="c"> Test case</label><br>
+  <label><input type="radio" name="q2" value="d"> Operator</label><br>
+  <div class="answer" data-correct="b">The original program is called the ground string.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following describes a mutant?</p>
+  <label><input type="radio" name="q3" value="a"> A test case that fails</label><br>
+  <label><input type="radio" name="q3" value="b"> A modified version of the program obtained by applying a mutation operator</label><br>
+  <label><input type="radio" name="q3" value="c"> The original program</label><br>
+  <label><input type="radio" name="q3" value="d"> An invalid input</label><br>
+  <div class="answer" data-correct="b">A mutant is created by applying a mutation operator to the ground string.</div>
+</div>
+
+<div class="question">
+  <p>What is a stillborn mutant?</p>
+  <label><input type="radio" name="q4" value="a"> A mutant that can be easily killed by any test case</label><br>
+  <label><input type="radio" name="q4" value="b"> A mutant that results in an invalid program that cannot compile</label><br>
+  <label><input type="radio" name="q4" value="c"> A mutant identical to the original program</label><br>
+  <label><input type="radio" name="q4" value="d"> A mutant that has been killed</label><br>
+  <div class="answer" data-correct="b">A stillborn mutant cannot be compiled and is discarded.</div>
+</div>
+
+<div class="question">
+  <p>What defines an equivalent mutant?</p>
+  <label><input type="radio" name="q5" value="a"> A mutant that is invalid</label><br>
+  <label><input type="radio" name="q5" value="b"> A mutant that behaves identically to the original program for all inputs</label><br>
+  <label><input type="radio" name="q5" value="c"> A mutant easily killed by any test case</label><br>
+  <label><input type="radio" name="q5" value="d"> A mutant that introduces runtime errors</label><br>
+  <div class="answer" data-correct="b">An equivalent mutant cannot be killed because it produces the same output as the original program.</div>
+</div>
+
+<div class="question">
+  <p>What are the three key conditions in killing a mutant?</p>
+  <label><input type="radio" name="q6" value="a"> Reachability, infection, propagation</label><br>
+  <label><input type="radio" name="q6" value="b"> Compilation, execution, output comparison</label><br>
+  <label><input type="radio" name="q6" value="c"> Lexical, syntactic, semantic</label><br>
+  <label><input type="radio" name="q6" value="d"> Input, processing, output</label><br>
+  <div class="answer" data-correct="a">Reachability, infection, and propagation describe how a mutant affects program execution and output.</div>
+</div>
+
+<div class="question">
+  <p>What is the difference between strong and weak killing of mutants?</p>
+  <label><input type="radio" name="q7" value="a"> Strong killing only checks internal state, weak killing checks outputs</label><br>
+  <label><input type="radio" name="q7" value="b"> Strong killing requires the mutation effect to propagate to the output, weak killing only requires internal state change</label><br>
+  <label><input type="radio" name="q7" value="c"> Strong killing applies multiple mutants at once, weak killing applies one at a time</label><br>
+  <label><input type="radio" name="q7" value="d"> Strong killing uses invalid inputs, weak killing uses valid inputs</label><br>
+  <div class="answer" data-correct="b">Strong killing requires the output to differ, while weak killing only requires an internal state change.</div>
+</div>
+
+<div class="question">
+  <p>Why are trivial mutants considered of little value in mutation testing?</p>
+  <label><input type="radio" name="q8" value="a"> Because they cannot compile</label><br>
+  <label><input type="radio" name="q8" value="b"> Because almost any test case can kill them easily</label><br>
+  <label><input type="radio" name="q8" value="c"> Because they are equivalent to the ground string</label><br>
+  <label><input type="radio" name="q8" value="d"> Because they are rare</label><br>
+  <div class="answer" data-correct="b">Trivial mutants offer little insight because they are easily killed and do not assess test effectiveness.</div>
+</div>
+
+<div class="question">
+  <p>In the minVal program example, which input condition can help kill the mutant where minVal = b replaces minVal = a?</p>
+  <label><input type="radio" name="q9" value="a"> b is less than a</label><br>
+  <label><input type="radio" name="q9" value="b"> b equals a</label><br>
+  <label><input type="radio" name="q9" value="c"> b is greater than a</label><br>
+  <label><input type="radio" name="q9" value="d"> a equals zero</label><br>
+  <div class="answer" data-correct="c">Providing inputs where b > a ensures the output differs, killing the mutant.</div>
+</div>
+
+<div class="question">
+  <p>Why is mutation testing considered computationally intensive?</p>
+  <label><input type="radio" name="q10" value="a"> Because it requires generating and executing many mutants and designing effective test cases</label><br>
+  <label><input type="radio" name="q10" value="b"> Because it uses random inputs</label><br>
+  <label><input type="radio" name="q10" value="c"> Because it only applies to large programs</label><br>
+  <label><input type="radio" name="q10" value="d"> Because it ignores syntax rules</label><br>
+  <div class="answer" data-correct="a">Mutation testing is resource-intensive due to generating many mutants and designing meaningful test cases.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

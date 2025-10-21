@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 45 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What are the three broad categories of web application testing?</p>
+  <label><input type="radio" name="q1" value="a"> Unit testing, integration testing, system testing</label><br>
+  <label><input type="radio" name="q1" value="b"> Static website testing, client-side testing, server-side testing</label><br>
+  <label><input type="radio" name="q1" value="c"> Functional testing, load testing, security testing</label><br>
+  <label><input type="radio" name="q1" value="d"> Manual testing, automated testing, regression testing</label><br>
+  <div class="answer" data-correct="b">Web application testing is broadly categorized into static website testing, client-side testing, and server-side testing.</div>
+</div>
+
+<div class="question">
+  <p>What is the main goal of system-level server-side testing in web applications?</p>
+  <label><input type="radio" name="q2" value="a"> To test only client-side scripts</label><br>
+  <label><input type="radio" name="q2" value="b"> To design test cases that expose faults in dynamic web applications</label><br>
+  <label><input type="radio" name="q2" value="c"> To validate static HTML pages only</label><br>
+  <label><input type="radio" name="q2" value="d"> To check network connectivity between client and server</label><br>
+  <div class="answer" data-correct="b">System-level server testing aims to design test cases that reveal faults in dynamic web applications.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following can be considered severe errors in server-side testing?</p>
+  <label><input type="radio" name="q3" value="a"> Unhandled faults causing permanent data corruption</label><br>
+  <label><input type="radio" name="q3" value="b"> Client-side input validation warnings</label><br>
+  <label><input type="radio" name="q3" value="c"> Correct rendering of HTML pages</label><br>
+  <label><input type="radio" name="q3" value="d"> CSS layout inconsistencies</label><br>
+  <div class="answer" data-correct="a">Severe errors are those unhandled faults that may lead to permanent data corruption.</div>
+</div>
+
+<div class="question">
+  <p>What does the Component Interaction Model (CIM) represent?</p>
+  <label><input type="radio" name="q4" value="a"> Inter-component transitions across the entire web application</label><br>
+  <label><input type="radio" name="q4" value="b"> Intra-component behavior, with nodes as atomic sections of HTML files</label><br>
+  <label><input type="radio" name="q4" value="c"> Database schema and table relationships</label><br>
+  <label><input type="radio" name="q4" value="d"> Network communication protocols</label><br>
+  <div class="answer" data-correct="b">CIM models intra-component behavior where nodes correspond to atomic HTML sections.</div>
+</div>
+
+<div class="question">
+  <p>What is an atomic section in the context of CIMs?</p>
+  <label><input type="radio" name="q5" value="a"> A single HTML tag</label><br>
+  <label><input type="radio" name="q5" value="b"> A portion of HTML transmitted in its entirety or not at all, potentially including dynamic content</label><br>
+  <label><input type="radio" name="q5" value="c"> A server request</label><br>
+  <label><input type="radio" name="q5" value="d"> A database transaction</label><br>
+  <div class="answer" data-correct="b">An atomic section is a portion of HTML sent entirely or not at all, possibly with dynamic content.</div>
+</div>
+
+<div class="question">
+  <p>How does the Application Transition Graph (ATG) differ from a CIM?</p>
+  <label><input type="radio" name="q6" value="a"> ATG represents client-side validation rules</label><br>
+  <label><input type="radio" name="q6" value="b"> ATG models inter-component behavior, with nodes as CIMs for server components</label><br>
+  <label><input type="radio" name="q6" value="c"> ATG only shows static web pages</label><br>
+  <label><input type="radio" name="q6" value="d"> ATG replaces CIM for database modeling</label><br>
+  <div class="answer" data-correct="b">ATG models inter-component behavior where each node represents a CIM of a server component.</div>
+</div>
+
+<div class="question">
+  <p>Which transitions can occur within a CIM?</p>
+  <label><input type="radio" name="q7" value="a"> Only form submissions</label><br>
+  <label><input type="radio" name="q7" value="b"> Hyperlinks, form submissions, component outputs, abnormal client actions, internal server redirects</label><br>
+  <label><input type="radio" name="q7" value="c"> Only server-to-server communication</label><br>
+  <label><input type="radio" name="q7" value="d"> Only database updates</label><br>
+  <div class="answer" data-correct="b">CIM transitions can include hyperlinks, form submissions, component outputs, abnormal client actions, and internal server redirects.</div>
+</div>
+
+<div class="question">
+  <p>What are content variables in CIM and ATG models?</p>
+  <label><input type="radio" name="q8" value="a"> Fixed HTML files</label><br>
+  <label><input type="radio" name="q8" value="b"> Dynamic data items such as user ID, password, or session-dependent values</label><br>
+  <label><input type="radio" name="q8" value="c"> Server memory addresses</label><br>
+  <label><input type="radio" name="q8" value="d"> Static CSS elements</label><br>
+  <div class="answer" data-correct="b">Content variables represent dynamic data such as user ID, password, or other session-dependent values.</div>
+</div>
+
+<div class="question">
+  <p>Why is ATG creation largely manual compared to CIM generation?</p>
+  <label><input type="radio" name="q9" value="a"> Because ATGs model inter-component behavior, requiring detailed mapping of server interactions</label><br>
+  <label><input type="radio" name="q9" value="b"> Because CIMs cannot be automated at all</label><br>
+  <label><input type="radio" name="q9" value="c"> Because ATGs only represent static content</label><br>
+  <label><input type="radio" name="q9" value="d"> Because ATGs replace databases in modeling</label><br>
+  <div class="answer" data-correct="a">ATG creation is mostly manual because it requires mapping inter-component server interactions, which are complex.</div>
+</div>
+
+<div class="question">
+  <p>What are some active research challenges in server-side web application testing using CIMs and ATGs?</p>
+  <label><input type="radio" name="q10" value="a"> Capturing system-level data flow across dynamic pages, automated ATG generation, and concurrency handling</label><br>
+  <label><input type="radio" name="q10" value="b"> Validating static HTML hyperlinks only</label><br>
+  <label><input type="radio" name="q10" value="c"> Designing client-side JavaScript code</label><br>
+  <label><input type="radio" name="q10" value="d"> Replacing HTML with XML entirely</label><br>
+  <div class="answer" data-correct="a">Research challenges include capturing system-level data flow, automating ATG generation, and handling concurrency for multiple clients.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

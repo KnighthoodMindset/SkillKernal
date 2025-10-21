@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 50 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>Why is solving path constraints in symbolic testing often challenging?</p>
+  <label><input type="radio" name="q1" value="a"> Because all path constraints are linear</label><br>
+  <label><input type="radio" name="q1" value="b"> Because the satisfiability problem is generally undecidable</label><br>
+  <label><input type="radio" name="q1" value="c"> Because programs have no loops</label><br>
+  <label><input type="radio" name="q1" value="d"> Because symbolic variables cannot represent inputs</label><br>
+  <div class="answer" data-correct="b">Solving path constraints is challenging because the satisfiability problem is generally undecidable, especially for non-linear constraints.</div>
+</div>
+
+<div class="question">
+  <p>What is the main idea behind concolic testing?</p>
+  <label><input type="radio" name="q2" value="a"> Pure random testing</label><br>
+  <label><input type="radio" name="q2" value="b"> Combining concrete execution with symbolic execution</label><br>
+  <label><input type="radio" name="q2" value="c"> Ignoring path constraints</label><br>
+  <label><input type="radio" name="q2" value="d"> Manual test driver creation</label><br>
+  <div class="answer" data-correct="b">Concolic testing combines concrete execution with symbolic execution to systematically explore program paths even when constraints are complex.</div>
+</div>
+
+<div class="question">
+  <p>What does Dart stand for in concolic testing?</p>
+  <label><input type="radio" name="q3" value="a"> Dynamic Automated Runtime Testing</label><br>
+  <label><input type="radio" name="q3" value="b"> Directed Automated Random Testing</label><br>
+  <label><input type="radio" name="q3" value="c"> Deterministic Automated Resource Testing</label><br>
+  <label><input type="radio" name="q3" value="d"> Debugging Automated Regression Tool</label><br>
+  <div class="answer" data-correct="b">Dart stands for Directed Automated Random Testing, a concolic testing tool that systematically explores program paths.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart systematically explore program paths?</p>
+  <label><input type="radio" name="q4" value="a"> By executing only the first path</label><br>
+  <label><input type="radio" name="q4" value="b"> By collecting symbolic path constraints and negating unsatisfied predicates to generate new inputs</label><br>
+  <label><input type="radio" name="q4" value="c"> By ignoring constraints and using random inputs</label><br>
+  <label><input type="radio" name="q4" value="d"> By manually writing test cases</label><br>
+  <div class="answer" data-correct="b">Dart explores program paths by collecting symbolic path constraints and systematically negating them to generate new inputs for neighboring paths.</div>
+</div>
+
+<div class="question">
+  <p>Why is Dart particularly useful for unit testing large programs?</p>
+  <label><input type="radio" name="q5" value="a"> Because it only tests loops</label><br>
+  <label><input type="radio" name="q5" value="b"> Because manual test drivers are infeasible and Dart automates input generation and execution</label><br>
+  <label><input type="radio" name="q5" value="c"> Because it ignores symbolic constraints</label><br>
+  <label><input type="radio" name="q5" value="d"> Because it only works with small programs</label><br>
+  <div class="answer" data-correct="b">Dart automates test driver generation and systematic path exploration, making it suitable for large programs where manual testing is impractical.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart represent symbolic variables during execution?</p>
+  <label><input type="radio" name="q6" value="a"> As random numbers</label><br>
+  <label><input type="radio" name="q6" value="b"> As memory addresses with symbolic expressions over concrete inputs</label><br>
+  <label><input type="radio" name="q6" value="c"> As fixed constants</label><br>
+  <label><input type="radio" name="q6" value="d"> As string placeholders only</label><br>
+  <div class="answer" data-correct="b">Symbolic variables in Dart are represented as memory addresses, with expressions over them evaluated symbolically alongside concrete execution.</div>
+</div>
+
+<div class="question">
+  <p>Which types of program statements does Dart’s execution model primarily support?</p>
+  <label><input type="radio" name="q7" value="a"> Only loops and recursion</label><br>
+  <label><input type="radio" name="q7" value="b"> Assignment statements, conditional statements, and special statements like abort or halt</label><br>
+  <label><input type="radio" name="q7" value="c"> Object-oriented constructs only</label><br>
+  <label><input type="radio" name="q7" value="d"> External API calls only</label><br>
+  <div class="answer" data-correct="b">Dart models programs with assignment statements, conditional statements, and special statements like abort or halt, though other constructs can be expressed using these primitives.</div>
+</div>
+
+<div class="question">
+  <p>What is the role of interprocedural dynamic tracing in Dart?</p>
+  <label><input type="radio" name="q8" value="a"> To execute only loops</label><br>
+  <label><input type="radio" name="q8" value="b"> To track symbolic variable values across function calls and substitute them in calling contexts</label><br>
+  <label><input type="radio" name="q8" value="c"> To generate random inputs only</label><br>
+  <label><input type="radio" name="q8" value="d"> To ignore conditional statements</label><br>
+  <div class="answer" data-correct="b">Interprocedural dynamic tracing allows Dart to track symbolic variable values across function calls and substitute them back into calling contexts.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart differ from simple random testing?</p>
+  <label><input type="radio" name="q9" value="a"> Dart uses random inputs only</label><br>
+  <label><input type="radio" name="q9" value="b"> Dart combines concrete execution with symbolic path exploration to detect rare errors</label><br>
+  <label><input type="radio" name="q9" value="c"> Dart ignores program constraints</label><br>
+  <label><input type="radio" name="q9" value="d"> Dart only tests loops</label><br>
+  <div class="answer" data-correct="b">Unlike simple random testing, Dart systematically combines concrete execution and symbolic analysis to explore program paths and detect rare errors.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of using both concrete semantics and symbolic semantics in Dart?</p>
+  <label><input type="radio" name="q10" value="a"> To test only assignment statements</label><br>
+  <label><input type="radio" name="q10" value="b"> To evaluate program behavior with actual values and symbolic expressions for systematic path exploration</label><br>
+  <label><input type="radio" name="q10" value="c"> To replace loops with constants</label><br>
+  <label><input type="radio" name="q10" value="d"> To ignore conditional statements</label><br>
+  <div class="answer" data-correct="b">Concrete semantics provide actual values while symbolic semantics allow evaluation of expressions symbolically, enabling systematic path exploration.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

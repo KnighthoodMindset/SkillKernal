@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 37 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary role of mutation operators in software testing?</p>
+  <label><input type="radio" name="q1" value="a"> To improve program performance</label><br>
+  <label><input type="radio" name="q1" value="b"> To generate mutants by making small syntactic changes in a program</label><br>
+  <label><input type="radio" name="q1" value="c"> To compile programs faster</label><br>
+  <label><input type="radio" name="q1" value="d"> To execute programs automatically</label><br>
+  <div class="answer" data-correct="b">Mutation operators generate mutants by introducing small syntactic changes to evaluate test case effectiveness.</div>
+</div>
+
+<div class="question">
+  <p>At what levels of testing are mutation operators commonly applied?</p>
+  <label><input type="radio" name="q2" value="a"> Only system testing</label><br>
+  <label><input type="radio" name="q2" value="b"> Unit testing and integration testing</label><br>
+  <label><input type="radio" name="q2" value="c"> Only acceptance testing</label><br>
+  <label><input type="radio" name="q2" value="d"> Performance testing</label><br>
+  <div class="answer" data-correct="b">Mutation operators are primarily applied at unit and integration testing levels.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is an example of a mutation operator designed to test exceptional conditions?</p>
+  <label><input type="radio" name="q3" value="a"> Arithmetic operator replacement</label><br>
+  <label><input type="radio" name="q3" value="b"> Fail-on-zero operator</label><br>
+  <label><input type="radio" name="q3" value="c"> Shift operator replacement</label><br>
+  <label><input type="radio" name="q3" value="d"> Unary operator insertion</label><br>
+  <div class="answer" data-correct="b">The fail-on-zero operator tests how a program handles variables with value zero, which may cause runtime errors.</div>
+</div>
+
+<div class="question">
+  <p>Why is it unnecessary to apply all mutation operators exhaustively?</p>
+  <label><input type="radio" name="q4" value="a"> Because some operators do not generate valid mutants</label><br>
+  <label><input type="radio" name="q4" value="b"> Because different programs require only relevant subsets of operators based on structure and functionality</label><br>
+  <label><input type="radio" name="q4" value="c"> Because mutation testing is only for debugging</label><br>
+  <label><input type="radio" name="q4" value="d"> Because it is impossible to compile mutants</label><br>
+  <div class="answer" data-correct="b">Testers select relevant mutation operators based on the program’s characteristics to ensure effective testing.</div>
+</div>
+
+<div class="question">
+  <p>Which types of mutation operators are most commonly effective in detecting programming errors?</p>
+  <label><input type="radio" name="q5" value="a"> Operators modifying arithmetic, relational, or logical operators</label><br>
+  <label><input type="radio" name="q5" value="b"> Operators modifying comments</label><br>
+  <label><input type="radio" name="q5" value="c"> Operators removing print statements</label><br>
+  <label><input type="radio" name="q5" value="d"> Operators changing variable names randomly</label><br>
+  <div class="answer" data-correct="a">Empirical studies show that modifying arithmetic, relational, or logical operators uncovers common programming mistakes.</div>
+</div>
+
+<div class="question">
+  <p>Which mutation operator modifies statements by replacing a variable with its absolute value or negative absolute value?</p>
+  <label><input type="radio" name="q6" value="a"> Shift operator replacement</label><br>
+  <label><input type="radio" name="q6" value="b"> Absolute value insertion</label><br>
+  <label><input type="radio" name="q6" value="c"> Bitwise operator replacement</label><br>
+  <label><input type="radio" name="q6" value="d"> Unary operator insertion</label><br>
+  <div class="answer" data-correct="b">Absolute value insertion replaces a variable with its absolute or negative absolute value.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of the bomb statement mutation operator?</p>
+  <label><input type="radio" name="q7" value="a"> To test arithmetic operations</label><br>
+  <label><input type="radio" name="q7" value="b"> To force program termination at a specific line and verify execution</label><br>
+  <label><input type="radio" name="q7" value="c"> To replace relational operators</label><br>
+  <label><input type="radio" name="q7" value="d"> To test variable references</label><br>
+  <div class="answer" data-correct="b">The bomb statement ensures a program terminates at a specific point to confirm statement execution.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a valid example of an arithmetic operator replacement?</p>
+  <label><input type="radio" name="q8" value="a"> Changing + to - or * in an expression</label><br>
+  <label><input type="radio" name="q8" value="b"> Changing a variable name</label><br>
+  <label><input type="radio" name="q8" value="c"> Removing a loop</label><br>
+  <label><input type="radio" name="q8" value="d"> Adding comments</label><br>
+  <div class="answer" data-correct="a">Arithmetic operator replacement changes operators like +, -, *, or / to test errors in calculations.</div>
+</div>
+
+<div class="question">
+  <p>How do relational and conditional operator replacements function as mutation operators?</p>
+  <label><input type="radio" name="q9" value="a"> By substituting operators with others of the same type to test logic errors</label><br>
+  <label><input type="radio" name="q9" value="b"> By changing variable types</label><br>
+  <label><input type="radio" name="q9" value="c"> By adding print statements</label><br>
+  <label><input type="radio" name="q9" value="d"> By inserting absolute values</label><br>
+  <div class="answer" data-correct="a">They replace operators like >, <, >=, <=, and logical operators to simulate common mistakes.</div>
+</div>
+
+<div class="question">
+  <p>Why must all mutants produced by mutation operators be syntactically valid?</p>
+  <label><input type="radio" name="q10" value="a"> To ensure the program can be compiled and executed for testing</label><br>
+  <label><input type="radio" name="q10" value="b"> To make the code more readable</label><br>
+  <label><input type="radio" name="q10" value="c"> To increase program performance</label><br>
+  <label><input type="radio" name="q10" value="d"> To reduce program size</label><br>
+  <div class="answer" data-correct="a">Syntactically valid mutants ensure they can compile and run, allowing test cases to detect faults effectively.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

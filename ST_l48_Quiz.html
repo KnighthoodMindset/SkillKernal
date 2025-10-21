@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 48 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main purpose of symbolic testing?</p>
+  <label><input type="radio" name="q1" value="a"> To execute programs with random inputs</label><br>
+  <label><input type="radio" name="q1" value="b"> To bridge program testing and program proving, systematically exploring program behavior</label><br>
+  <label><input type="radio" name="q1" value="c"> To prove program correctness mathematically for all inputs</label><br>
+  <label><input type="radio" name="q1" value="d"> To replace unit testing entirely</label><br>
+  <div class="answer" data-correct="b">Symbolic testing bridges traditional program testing and program proving, systematically exploring program behavior without exhaustive concrete inputs.</div>
+</div>
+
+<div class="question">
+  <p>How does symbolic testing differ from program proving?</p>
+  <label><input type="radio" name="q2" value="a"> Symbolic testing uses random values</label><br>
+  <label><input type="radio" name="q2" value="b"> Symbolic testing executes programs with symbolic inputs rather than mathematically proving correctness for all inputs</label><br>
+  <label><input type="radio" name="q2" value="c"> Symbolic testing ignores conditional statements</label><br>
+  <label><input type="radio" name="q2" value="d"> Symbolic testing only checks syntax</label><br>
+  <div class="answer" data-correct="b">Symbolic testing executes programs with symbolic values instead of proving correctness mathematically for all inputs.</div>
+</div>
+
+<div class="question">
+  <p>What represents program inputs in symbolic execution?</p>
+  <label><input type="radio" name="q3" value="a"> Random numbers</label><br>
+  <label><input type="radio" name="q3" value="b"> Symbolic variables</label><br>
+  <label><input type="radio" name="q3" value="c"> Concrete values only</label><br>
+  <label><input type="radio" name="q3" value="d"> Strings only</label><br>
+  <div class="answer" data-correct="b">In symbolic execution, program inputs are represented as symbolic variables.</div>
+</div>
+
+<div class="question">
+  <p>What are path constraints in symbolic execution?</p>
+  <label><input type="radio" name="q4" value="a"> Errors detected during execution</label><br>
+  <label><input type="radio" name="q4" value="b"> Logical conditions collected from conditional statements necessary to reach specific points</label><br>
+  <label><input type="radio" name="q4" value="c"> Randomly generated input values</label><br>
+  <label><input type="radio" name="q4" value="d"> Execution times of program statements</label><br>
+  <div class="answer" data-correct="b">Path constraints represent logical conditions collected from conditional statements, necessary to reach specific program points.</div>
+</div>
+
+<div class="question">
+  <p>How are concrete input values generated in symbolic testing?</p>
+  <label><input type="radio" name="q5" value="a"> By guessing randomly</label><br>
+  <label><input type="radio" name="q5" value="b"> By using constraint solvers to satisfy path constraints</label><br>
+  <label><input type="radio" name="q5" value="c"> By manually providing inputs</label><br>
+  <label><input type="radio" name="q5" value="d"> By running unit tests</label><br>
+  <div class="answer" data-correct="b">Concrete input values are generated using constraint solvers that satisfy the collected path constraints.</div>
+</div>
+
+<div class="question">
+  <p>Why is symbolic execution especially valuable for programs with loops and conditional statements?</p>
+  <label><input type="radio" name="q6" value="a"> Because it ignores loops</label><br>
+  <label><input type="radio" name="q6" value="b"> Because it systematically explores diverse execution paths and generates test inputs</label><br>
+  <label><input type="radio" name="q6" value="c"> Because it only executes the first branch</label><br>
+  <label><input type="radio" name="q6" value="d"> Because it only validates syntax</label><br>
+  <div class="answer" data-correct="b">Symbolic execution systematically explores loops, conditionals, and multiple branches to generate diverse test inputs.</div>
+</div>
+
+<div class="question">
+  <p>What is maintained during symbolic execution to track variable states?</p>
+  <label><input type="radio" name="q7" value="a"> A concrete memory snapshot</label><br>
+  <label><input type="radio" name="q7" value="b"> A symbolic state recording symbolic expressions of variables</label><br>
+  <label><input type="radio" name="q7" value="c"> Only input types</label><br>
+  <label><input type="radio" name="q7" value="d"> A call stack trace</label><br>
+  <div class="answer" data-correct="b">A symbolic state is maintained, recording symbolic expressions of variables throughout execution.</div>
+</div>
+
+<div class="question">
+  <p>What does the execution tree in symbolic testing represent?</p>
+  <label><input type="radio" name="q8" value="a"> Only the first execution path</label><br>
+  <label><input type="radio" name="q8" value="b"> All possible branches and feasible paths through the program</label><br>
+  <label><input type="radio" name="q8" value="c"> Only loop iterations</label><br>
+  <label><input type="radio" name="q8" value="d"> Only function calls</label><br>
+  <div class="answer" data-correct="b">The execution tree represents all possible branches and feasible paths in the program.</div>
+</div>
+
+<div class="question">
+  <p>How does symbolic testing improve testing efficiency compared to traditional input-based testing?</p>
+  <label><input type="radio" name="q9" value="a"> By using random inputs</label><br>
+  <label><input type="radio" name="q9" value="b"> By systematically generating inputs that exercise diverse paths without exhaustive enumeration</label><br>
+  <label><input type="radio" name="q9" value="c"> By skipping conditional statements</label><br>
+  <label><input type="radio" name="q9" value="d"> By ignoring loops</label><br>
+  <div class="answer" data-correct="b">Symbolic testing systematically generates test inputs for diverse paths, improving efficiency over traditional methods.</div>
+</div>
+
+<div class="question">
+  <p>What types of programs benefit most from symbolic execution?</p>
+  <label><input type="radio" name="q10" value="a"> Programs without conditionals or loops</label><br>
+  <label><input type="radio" name="q10" value="b"> Complex programs with loops, conditional statements, and functions</label><br>
+  <label><input type="radio" name="q10" value="c"> Only small scripts</label><br>
+  <label><input type="radio" name="q10" value="d"> Programs with only static inputs</label><br>
+  <div class="answer" data-correct="b">Symbolic execution is particularly valuable for complex programs with loops, conditionals, and functions.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

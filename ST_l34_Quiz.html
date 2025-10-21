@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 34 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary focus of syntax-based testing?</p>
+  <label><input type="radio" name="q1" value="a"> Testing software performance</label><br>
+  <label><input type="radio" name="q1" value="b"> Designing test cases using the syntactical structure of software artifacts</label><br>
+  <label><input type="radio" name="q1" value="c"> Testing only the semantic correctness of programs</label><br>
+  <label><input type="radio" name="q1" value="d"> Ignoring invalid inputs</label><br>
+  <div class="answer" data-correct="b">Syntax-based testing focuses on exploiting syntactical structures of software to generate valid and invalid test cases.</div>
+</div>
+
+<div class="question">
+  <p>Which levels of programming language syntax are primarily considered in syntax-based testing?</p>
+  <label><input type="radio" name="q2" value="a"> Lexical and phrase levels</label><br>
+  <label><input type="radio" name="q2" value="b"> Phrase and context-sensitive levels</label><br>
+  <label><input type="radio" name="q2" value="c"> Lexical and context-sensitive levels</label><br>
+  <label><input type="radio" name="q2" value="d"> All three levels equally</label><br>
+  <div class="answer" data-correct="a">Lexical and phrase levels are focused on because they directly describe the structure for generating test cases.</div>
+</div>
+
+<div class="question">
+  <p>What is the main role of regular expressions in syntax-based testing?</p>
+  <label><input type="radio" name="q3" value="a"> To define semantic rules</label><br>
+  <label><input type="radio" name="q3" value="b"> To describe lexical-level tokens and regular languages</label><br>
+  <label><input type="radio" name="q3" value="c"> To check runtime behavior</label><br>
+  <label><input type="radio" name="q3" value="d"> To execute programs</label><br>
+  <div class="answer" data-correct="b">Regular expressions define how characters combine to form valid tokens at the lexical level.</div>
+</div>
+
+<div class="question">
+  <p>Which theorem establishes the relationship between regular expressions and finite automata?</p>
+  <label><input type="radio" name="q4" value="a"> Chomsky's theorem</label><br>
+  <label><input type="radio" name="q4" value="b"> Kleene’s theorem</label><br>
+  <label><input type="radio" name="q4" value="c"> Gödel’s incompleteness theorem</label><br>
+  <label><input type="radio" name="q4" value="d"> Rice's theorem</label><br>
+  <div class="answer" data-correct="b">Kleene’s theorem states that every regular expression corresponds to a finite automaton and vice versa.</div>
+</div>
+
+<div class="question">
+  <p>What defines a context-free grammar?</p>
+  <label><input type="radio" name="q5" value="a"> A grammar where production rules depend on surrounding context</label><br>
+  <label><input type="radio" name="q5" value="b"> A set of terminals, non-terminals, a start symbol, and production rules replacing a single non-terminal</label><br>
+  <label><input type="radio" name="q5" value="c"> A set of only terminal symbols</label><br>
+  <label><input type="radio" name="q5" value="d"> A grammar used only for lexical analysis</label><br>
+  <div class="answer" data-correct="b">Context-free grammars consist of terminals, non-terminals, a start symbol, and production rules replacing a single non-terminal.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of terminal symbol coverage in syntax-based testing?</p>
+  <label><input type="radio" name="q6" value="a"> To ensure every production rule is applied at least once</label><br>
+  <label><input type="radio" name="q6" value="b"> To ensure every terminal in the grammar appears in at least one test case</label><br>
+  <label><input type="radio" name="q6" value="c"> To generate infinite strings from the grammar</label><br>
+  <label><input type="radio" name="q6" value="d"> To ignore invalid inputs</label><br>
+  <div class="answer" data-correct="b">Terminal symbol coverage ensures each terminal symbol is included in at least one generated test case.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion ensures that every production rule is used at least once?</p>
+  <label><input type="radio" name="q7" value="a"> Terminal symbol coverage</label><br>
+  <label><input type="radio" name="q7" value="b"> Production coverage</label><br>
+  <label><input type="radio" name="q7" value="c"> Derivation coverage</label><br>
+  <label><input type="radio" name="q7" value="d"> Pairwise coverage</label><br>
+  <div class="answer" data-correct="b">Production coverage ensures that each production rule in the grammar is used at least once.</div>
+</div>
+
+<div class="question">
+  <p>Why is derivation coverage often infeasible in syntax-based testing?</p>
+  <label><input type="radio" name="q8" value="a"> Because grammars generate finite languages</label><br>
+  <label><input type="radio" name="q8" value="b"> Because grammars can generate infinite languages due to recursion</label><br>
+  <label><input type="radio" name="q8" value="c"> Because terminals cannot be covered</label><br>
+  <label><input type="radio" name="q8" value="d"> Because production rules are ignored</label><br>
+  <div class="answer" data-correct="b">Derivation coverage is infeasible because recursive grammars can produce an infinite number of strings.</div>
+</div>
+
+<div class="question">
+  <p>At the lexical level, what is a token?</p>
+  <label><input type="radio" name="q9" value="a"> A syntactic rule for combining non-terminals</label><br>
+  <label><input type="radio" name="q9" value="b"> A word or symbol formed from characters that is valid in the language</label><br>
+  <label><input type="radio" name="q9" value="c"> A production rule in context-free grammar</label><br>
+  <label><input type="radio" name="q9" value="d"> A semantic rule for variable declaration</label><br>
+  <div class="answer" data-correct="b">A token is a valid lexical unit formed from characters, such as identifiers, numbers, or keywords.</div>
+</div>
+
+<div class="question">
+  <p>What is the main benefit of syntax-based testing for software components?</p>
+  <label><input type="radio" name="q10" value="a"> Ensures software handles valid inputs correctly and rejects invalid inputs</label><br>
+  <label><input type="radio" name="q10" value="b"> Improves program execution speed</label><br>
+  <label><input type="radio" name="q10" value="c"> Reduces the number of code lines</label><br>
+  <label><input type="radio" name="q10" value="d"> Avoids functional testing</label><br>
+  <div class="answer" data-correct="a">Syntax-based testing improves robustness by validating correct handling of valid and invalid inputs.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

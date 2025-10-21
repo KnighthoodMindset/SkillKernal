@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 39 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>In which context is the primary focus of mutation testing for this course?</p>
+  <label><input type="radio" name="q1" value="a"> Algebraic specifications</label><br>
+  <label><input type="radio" name="q1" value="b"> Model checking tools</label><br>
+  <label><input type="radio" name="q1" value="c"> Program-level integration testing</label><br>
+  <label><input type="radio" name="q1" value="d"> BNF grammar-based testing</label><br>
+  <div class="answer" data-correct="c">The course focuses on applying mutation testing to programs for integration testing using mutation operators at the interface level.</div>
+</div>
+
+<div class="question">
+  <p>What is integration mutation in the context of mutation testing?</p>
+  <label><input type="radio" name="q2" value="a"> Mutations applied within individual methods</label><br>
+  <label><input type="radio" name="q2" value="b"> Mutations applied at interfaces or connections between components</label><br>
+  <label><input type="radio" name="q2" value="c"> Mutations that only affect object constructors</label><br>
+  <label><input type="radio" name="q2" value="d"> Mutations applied to variable declarations only</label><br>
+  <div class="answer" data-correct="b">Integration mutation applies mutations at the interfaces between components rather than inside individual methods.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a key integration mutation operator?</p>
+  <label><input type="radio" name="q3" value="a"> Method overloading</label><br>
+  <label><input type="radio" name="q3" value="b"> Integration parameter variable replacement</label><br>
+  <label><input type="radio" name="q3" value="c"> Polymorphic method definition</label><br>
+  <label><input type="radio" name="q3" value="d"> Constructor inheritance</label><br>
+  <div class="answer" data-correct="b">Integration parameter variable replacement is a key operator that changes variables passed to called methods to compatible alternatives.</div>
+</div>
+
+<div class="question">
+  <p>How does unary operator insertion work in integration mutation testing?</p>
+  <label><input type="radio" name="q4" value="a"> It replaces a method with another</label><br>
+  <label><input type="radio" name="q4" value="b"> It modifies expressions in method calls by inserting unary operators</label><br>
+  <label><input type="radio" name="q4" value="c"> It swaps parameters between methods</label><br>
+  <label><input type="radio" name="q4" value="d"> It changes class constructors</label><br>
+  <div class="answer" data-correct="b">Unary operator insertion alters expressions in method calls by adding operators like negation to create different test scenarios.</div>
+</div>
+
+<div class="question">
+  <p>What is the effect of method call deletion in integration mutation testing?</p>
+  <label><input type="radio" name="q5" value="a"> It deletes methods from the class permanently</label><br>
+  <label><input type="radio" name="q5" value="b"> It removes the method call in the interface while maintaining compilability</label><br>
+  <label><input type="radio" name="q5" value="c"> It replaces method calls with constructors</label><br>
+  <label><input type="radio" name="q5" value="d"> It deletes the return statements of all methods</label><br>
+  <div class="answer" data-correct="b">Method call deletion removes the call but maintains compilability by replacing the return value with a suitable constant if needed.</div>
+</div>
+
+<div class="question">
+  <p>Why does integration testing become more complex in object-oriented languages?</p>
+  <label><input type="radio" name="q6" value="a"> Due to procedural programming</label><br>
+  <label><input type="radio" name="q6" value="b"> Because of features like encapsulation, inheritance, polymorphism, and method overloading</label><br>
+  <label><input type="radio" name="q6" value="c"> Because variables are all global</label><br>
+  <label><input type="radio" name="q6" value="d"> Because methods cannot have parameters</label><br>
+  <div class="answer" data-correct="b">Object-oriented features like encapsulation, inheritance, polymorphism, and overloading increase integration testing complexity.</div>
+</div>
+
+<div class="question">
+  <p>What does encapsulation enforce in object-oriented programming?</p>
+  <label><input type="radio" name="q7" value="a"> Method overloading</label><br>
+  <label><input type="radio" name="q7" value="b"> Information hiding with restricted access to members</label><br>
+  <label><input type="radio" name="q7" value="c"> Polymorphic behavior</label><br>
+  <label><input type="radio" name="q7" value="d"> Variable initialization</label><br>
+  <div class="answer" data-correct="b">Encapsulation enforces information hiding using access levels like private, protected, default, and public.</div>
+</div>
+
+<div class="question">
+  <p>Which keyword allows explicit access to parent class members in inheritance?</p>
+  <label><input type="radio" name="q8" value="a"> this</label><br>
+  <label><input type="radio" name="q8" value="b"> super</label><br>
+  <label><input type="radio" name="q8" value="c"> base</label><br>
+  <label><input type="radio" name="q8" value="d"> parent</label><br>
+  <div class="answer" data-correct="b">The super keyword is used to explicitly access variables and methods from a parent class.</div>
+</div>
+
+<div class="question">
+  <p>How does polymorphism affect attributes and methods?</p>
+  <label><input type="radio" name="q9" value="a"> They can take on different types at runtime</label><br>
+  <label><input type="radio" name="q9" value="b"> They cannot be overridden</label><br>
+  <label><input type="radio" name="q9" value="c"> They must be static</label><br>
+  <label><input type="radio" name="q9" value="d"> They always belong to the parent class</label><br>
+  <div class="answer" data-correct="a">Polymorphic attributes and methods can take on different types at runtime, allowing flexibility in object-oriented programs.</div>
+</div>
+
+<div class="question">
+  <p>What is the difference between instance variables and class (static) variables?</p>
+  <label><input type="radio" name="q10" value="a"> Instance variables are shared; class variables are per object</label><br>
+  <label><input type="radio" name="q10" value="b"> Instance variables belong to individual objects; class variables are shared across all instances</label><br>
+  <label><input type="radio" name="q10" value="c"> Both are shared across all objects</label><br>
+  <label><input type="radio" name="q10" value="d"> Both belong to the parent class only</label><br>
+  <div class="answer" data-correct="b">Instance variables are specific to objects, while class variables (static) are shared among all instances.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

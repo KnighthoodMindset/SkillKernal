@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 55 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What are the two broad categories of system-level testing?</p>
+  <label><input type="radio" name="q1" value="a"> Unit testing and integration testing</label><br>
+  <label><input type="radio" name="q1" value="b"> Functional testing and nonfunctional testing</label><br>
+  <label><input type="radio" name="q1" value="c"> Alpha testing and beta testing</label><br>
+  <label><input type="radio" name="q1" value="d"> Smoke testing and sanity testing</label><br>
+  <div class="answer" data-correct="b">System-level testing is categorized into functional testing, which validates specified requirements, and nonfunctional testing, which evaluates quality attributes.</div>
+</div>
+
+<div class="question">
+  <p>What is the primary objective of functional testing at the system level?</p>
+  <label><input type="radio" name="q2" value="a"> To measure system performance under load</label><br>
+  <label><input type="radio" name="q2" value="b"> To validate that the software meets its specified requirements</label><br>
+  <label><input type="radio" name="q2" value="c"> To ensure regulatory compliance</label><br>
+  <label><input type="radio" name="q2" value="d"> To check documentation accuracy</label><br>
+  <div class="answer" data-correct="b">Functional testing ensures that the software correctly implements the specified requirements.</div>
+</div>
+
+<div class="question">
+  <p>Which standards provide metrics for nonfunctional system testing?</p>
+  <label><input type="radio" name="q3" value="a"> ISO 9001 only</label><br>
+  <label><input type="radio" name="q3" value="b"> NISS, including metrics often ending in “-ility” or “-ty”</label><br>
+  <label><input type="radio" name="q3" value="c"> CMMI only</label><br>
+  <label><input type="radio" name="q3" value="d"> IEEE 802 standards</label><br>
+  <div class="answer" data-correct="b">Nonfunctional testing evaluates the system against quality attributes defined by NISS metrics, often ending in “-ility” or “-ty.”</div>
+</div>
+
+<div class="question">
+  <p>What does interoperability testing assess?</p>
+  <label><input type="radio" name="q4" value="a"> System security</label><br>
+  <label><input type="radio" name="q4" value="b"> Whether a system can operate with other software, hardware, or platforms</label><br>
+  <label><input type="radio" name="q4" value="c"> User interface responsiveness</label><br>
+  <label><input type="radio" name="q4" value="d"> Memory usage optimization</label><br>
+  <div class="answer" data-correct="b">Interoperability testing ensures the system can work with other software, hardware, or platforms across OS, languages, and devices.</div>
+</div>
+
+<div class="question">
+  <p>Which type of nonfunctional testing evaluates the system’s ability to function continuously over time?</p>
+  <label><input type="radio" name="q5" value="a"> Performance testing</label><br>
+  <label><input type="radio" name="q5" value="b"> Reliability testing</label><br>
+  <label><input type="radio" name="q5" value="c"> Security testing</label><br>
+  <label><input type="radio" name="q5" value="d"> Documentation testing</label><br>
+  <div class="answer" data-correct="b">Reliability testing measures the system’s ability to operate continuously and reliably over extended periods.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of scalability testing?</p>
+  <label><input type="radio" name="q6" value="a"> To check spelling in user manuals</label><br>
+  <label><input type="radio" name="q6" value="b"> To evaluate system behavior under increasing load while maintaining performance</label><br>
+  <label><input type="radio" name="q6" value="c"> To verify compliance with legal regulations</label><br>
+  <label><input type="radio" name="q6" value="d"> To perform security penetration tests</label><br>
+  <div class="answer" data-correct="b">Scalability testing checks whether a system can handle increasing loads, such as concurrent users, while maintaining performance metrics.</div>
+</div>
+
+<div class="question">
+  <p>Which performance testing type evaluates system limits beyond expected load?</p>
+  <label><input type="radio" name="q7" value="a"> Load testing</label><br>
+  <label><input type="radio" name="q7" value="b"> Stress testing</label><br>
+  <label><input type="radio" name="q7" value="c"> Soak testing</label><br>
+  <label><input type="radio" name="q7" value="d"> Spike testing</label><br>
+  <div class="answer" data-correct="b">Stress testing examines system behavior beyond expected loads to determine limits and potential failures.</div>
+</div>
+
+<div class="question">
+  <p>Which tools are commonly used for performance testing?</p>
+  <label><input type="radio" name="q8" value="a"> HP LoadRunner, NeoLoad, JMeter, Rational Performance Tester, Gatling</label><br>
+  <label><input type="radio" name="q8" value="b"> Selenium, Appium, TestNG</label><br>
+  <label><input type="radio" name="q8" value="c"> Photoshop, Illustrator</label><br>
+  <label><input type="radio" name="q8" value="d"> Wireshark, Fiddler</label><br>
+  <div class="answer" data-correct="a">Performance testing is supported by tools like HP LoadRunner, NeoLoad, JMeter, Rational Performance Tester, and Gatling.</div>
+</div>
+
+<div class="question">
+  <p>What is the focus of regulatory testing?</p>
+  <label><input type="radio" name="q9" value="a"> System stability only</label><br>
+  <label><input type="radio" name="q9" value="b"> Compliance with domain-specific standards and safety-critical regulations</label><br>
+  <label><input type="radio" name="q9" value="c"> User interface consistency</label><br>
+  <label><input type="radio" name="q9" value="d"> Network latency</label><br>
+  <div class="answer" data-correct="b">Regulatory testing ensures the system adheres to domain-specific standards and safety-critical regulations like DO, IEC, MISRA, FSSAI, CE, or FCC.</div>
+</div>
+
+<div class="question">
+  <p>Which aspects of nonfunctional system testing were not covered in this lecture?</p>
+  <label><input type="radio" name="q10" value="a"> Regression testing, usability testing, GUI testing, and in-depth security and reliability testing</label><br>
+  <label><input type="radio" name="q10" value="b"> Functional testing only</label><br>
+  <label><input type="radio" name="q10" value="c"> Scalability testing</label><br>
+  <label><input type="radio" name="q10" value="d"> Load testing only</label><br>
+  <div class="answer" data-correct="a">The lecture did not cover regression testing, usability testing, graphical user interface testing, or detailed security and reliability testing.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

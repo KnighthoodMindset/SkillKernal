@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 53 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main focus of object-oriented software testing?</p>
+  <label><input type="radio" name="q1" value="a"> Testing individual statements only</label><br>
+  <label><input type="radio" name="q1" value="b"> Ensuring correct interaction between classes, methods, and objects</label><br>
+  <label><input type="radio" name="q1" value="c"> Optimizing code performance</label><br>
+  <label><input type="radio" name="q1" value="d"> Verifying compiler output</label><br>
+  <div class="answer" data-correct="b">Object-oriented software testing focuses on ensuring correct interactions between classes, methods, and objects, especially during integration testing.</div>
+</div>
+
+<div class="question">
+  <p>Which features of object-oriented software increase testing complexity?</p>
+  <label><input type="radio" name="q2" value="a"> Abstraction, inheritance, and polymorphism</label><br>
+  <label><input type="radio" name="q2" value="b"> Loops and conditional statements</label><br>
+  <label><input type="radio" name="q2" value="c"> Arrays and pointers</label><br>
+  <label><input type="radio" name="q2" value="d"> Only inheritance</label><br>
+  <div class="answer" data-correct="a">Abstraction, inheritance, and polymorphism complicate visualization of interactions and fault detection in object-oriented software.</div>
+</div>
+
+<div class="question">
+  <p>What are coupling variables in object-oriented integration testing?</p>
+  <label><input type="radio" name="q3" value="a"> Variables defined and used only within a single method</label><br>
+  <label><input type="radio" name="q3" value="b"> Variables defined in one method or instance and used in another</label><br>
+  <label><input type="radio" name="q3" value="c"> Only global variables</label><br>
+  <label><input type="radio" name="q3" value="d"> Constants used in multiple methods</label><br>
+  <div class="answer" data-correct="b">Coupling variables are those defined in one method or instance and used in another, representing potential interactions between methods.</div>
+</div>
+
+<div class="question">
+  <p>How can coupling occur in object-oriented programs?</p>
+  <label><input type="radio" name="q4" value="a"> Only directly within a method</label><br>
+  <label><input type="radio" name="q4" value="b"> Directly between instances or indirectly via method calls</label><br>
+  <label><input type="radio" name="q4" value="c"> Only through global variables</label><br>
+  <label><input type="radio" name="q4" value="d"> Coupling does not occur in object-oriented programs</label><br>
+  <div class="answer" data-correct="b">Coupling occurs directly within instances or indirectly when methods use other methods, with execution paths affected by polymorphism.</div>
+</div>
+
+<div class="question">
+  <p>What is a polymorphic call set?</p>
+  <label><input type="radio" name="q5" value="a"> A set of all variables used in a class</label><br>
+  <label><input type="radio" name="q5" value="b"> A set of all methods that can execute through a given instance depending on its runtime type</label><br>
+  <label><input type="radio" name="q5" value="c"> A set of classes derived from a parent class</label><br>
+  <label><input type="radio" name="q5" value="d"> A set of conditional statements in a program</label><br>
+  <div class="answer" data-correct="b">A polymorphic call set includes all methods that may execute through a given instance depending on its runtime type.</div>
+</div>
+
+<div class="question">
+  <p>What does the All Coupling Sequences (ACS) criterion require?</p>
+  <label><input type="radio" name="q6" value="a"> Each variable must be tested in isolation</label><br>
+  <label><input type="radio" name="q6" value="b"> At least one test case to execute each coupling path</label><br>
+  <label><input type="radio" name="q6" value="c"> All conditional statements must be tested</label><br>
+  <label><input type="radio" name="q6" value="d"> Only polymorphic methods must be tested</label><br>
+  <div class="answer" data-correct="b">ACS requires at least one test case to execute each coupling path between methods.</div>
+</div>
+
+<div class="question">
+  <p>How does the All Polyclasses (APC) criterion extend ACS?</p>
+  <label><input type="radio" name="q7" value="a"> By including all conditional branches</label><br>
+  <label><input type="radio" name="q7" value="b"> By including at least one test case for every object type the instance may be bound to</label><br>
+  <label><input type="radio" name="q7" value="c"> By testing only base class methods</label><br>
+  <label><input type="radio" name="q7" value="d"> By ignoring coupling variables</label><br>
+  <div class="answer" data-correct="b">APC extends ACS by ensuring at least one test case is executed for every object type an instance may be bound to, addressing polymorphism.</div>
+</div>
+
+<div class="question">
+  <p>What is the requirement of the All Coupling Definitions and Uses (ACDU) criterion?</p>
+  <label><input type="radio" name="q8" value="a"> Every last definition of a coupling variable must reach at least one corresponding first use</label><br>
+  <label><input type="radio" name="q8" value="b"> Only base class variables are tested</label><br>
+  <label><input type="radio" name="q8" value="c"> All methods must execute sequentially</label><br>
+  <label><input type="radio" name="q8" value="d"> Polymorphism is ignored</label><br>
+  <div class="answer" data-correct="a">ACDU requires that every last definition of a coupling variable reaches at least one corresponding first use.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion is the most comprehensive for object-oriented integration testing?</p>
+  <label><input type="radio" name="q9" value="a"> ACS</label><br>
+  <label><input type="radio" name="q9" value="b"> APC</label><br>
+  <label><input type="radio" name="q9" value="c"> ACDU considering inheritance, polymorphism, and object bindings</label><br>
+  <label><input type="radio" name="q9" value="d"> Only method-level testing</label><br>
+  <div class="answer" data-correct="c">The most comprehensive criterion considers every last definition to every first use across all coupling variables, including inheritance, polymorphism, and object bindings.</div>
+</div>
+
+<div class="question">
+  <p>Why is systematic coverage of coupling and polymorphism important in object-oriented testing?</p>
+  <label><input type="radio" name="q10" value="a"> To improve code readability</label><br>
+  <label><input type="radio" name="q10" value="b"> To detect faults arising from inheritance, polymorphism, and method interactions</label><br>
+  <label><input type="radio" name="q10" value="c"> To optimize execution speed</label><br>
+  <label><input type="radio" name="q10" value="d"> To reduce memory usage</label><br>
+  <div class="answer" data-correct="b">Systematic coverage ensures detection of faults caused by object-oriented features such as inheritance, polymorphism, and interactions among methods and objects.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

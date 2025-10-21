@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 47 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What causes faults in object-oriented applications according to the passage?</p>
+  <label><input type="radio" name="q1" value="a"> Only syntax errors</label><br>
+  <label><input type="radio" name="q1" value="b"> Features like inheritance, polymorphism, constructors, and visibility</label><br>
+  <label><input type="radio" name="q1" value="c"> Hardware failures</label><br>
+  <label><input type="radio" name="q1" value="d"> Network latency</label><br>
+  <div class="answer" data-correct="b">Faults in object-oriented applications arise due to features such as inheritance, polymorphism, constructors, and visibility.</div>
+</div>
+
+<div class="question">
+  <p>Which type of testing focuses on interactions among components in object-oriented programs?</p>
+  <label><input type="radio" name="q2" value="a"> Unit testing</label><br>
+  <label><input type="radio" name="q2" value="b"> Integration testing at intra-class and inter-class levels</label><br>
+  <label><input type="radio" name="q2" value="c"> Load testing</label><br>
+  <label><input type="radio" name="q2" value="d"> Static analysis only</label><br>
+  <div class="answer" data-correct="b">Testing at intra-class and inter-class levels focuses on interactions among components in object-oriented programs.</div>
+</div>
+
+<div class="question">
+  <p>What is a common fault called inconsistent type use?</p>
+  <label><input type="radio" name="q3" value="a"> When a variable type is declared incorrectly</label><br>
+  <label><input type="radio" name="q3" value="b"> When a descendant class does not override inherited methods, leading to absent polymorphism</label><br>
+  <label><input type="radio" name="q3" value="c"> When type casting fails at runtime</label><br>
+  <label><input type="radio" name="q3" value="d"> When generic types are misused</label><br>
+  <div class="answer" data-correct="b">Inconsistent type use occurs when a descendant class does not override inherited methods, so polymorphism is absent.</div>
+</div>
+
+<div class="question">
+  <p>What is a state definition anomaly in object-oriented programs?</p>
+  <label><input type="radio" name="q4" value="a"> A variable defined in a parent class is never used</label><br>
+  <label><input type="radio" name="q4" value="b"> Descendant class methods fail to define variables required by overridden methods</label><br>
+  <label><input type="radio" name="q4" value="c"> A variable is visible to all methods</label><br>
+  <label><input type="radio" name="q4" value="d"> A method calls itself recursively</label><br>
+  <div class="answer" data-correct="b">State definition anomaly arises when refining methods in a descendant class fail to define variables required by overridden methods.</div>
+</div>
+
+<div class="question">
+  <p>What happens in a state definition inconsistency fault?</p>
+  <label><input type="radio" name="q5" value="a"> A parent variable is inaccessible</label><br>
+  <label><input type="radio" name="q5" value="b"> A local variable in a descendant class hides an inherited variable, causing unexpected behavior</label><br>
+  <label><input type="radio" name="q5" value="c"> A variable type mismatch occurs at runtime</label><br>
+  <label><input type="radio" name="q5" value="d"> Multiple inheritance is used incorrectly</label><br>
+  <div class="answer" data-correct="b">State definition inconsistency occurs when a local variable in a descendant class hides an inherited variable, leading to unexpected behavior.</div>
+</div>
+
+<div class="question">
+  <p>What is a state visibility anomaly?</p>
+  <label><input type="radio" name="q6" value="a"> When descendant methods cannot access variables due to access level restrictions</label><br>
+  <label><input type="radio" name="q6" value="b"> When variables are initialized incorrectly</label><br>
+  <label><input type="radio" name="q6" value="c"> When polymorphism is missing</label><br>
+  <label><input type="radio" name="q6" value="d"> When methods are overloaded improperly</label><br>
+  <div class="answer" data-correct="a">State visibility anomaly occurs when access levels prevent descendant methods from correctly using inherited variables.</div>
+</div>
+
+<div class="question">
+  <p>Which fault occurs when overriding methods redefine the same variable inconsistently?</p>
+  <label><input type="radio" name="q7" value="a"> Inconsistent type use</label><br>
+  <label><input type="radio" name="q7" value="b"> State defined incorrectly</label><br>
+  <label><input type="radio" name="q7" value="c"> State definition anomaly</label><br>
+  <label><input type="radio" name="q7" value="d"> Indirect inconsistent state definition</label><br>
+  <div class="answer" data-correct="b">State defined incorrectly refers to overriding methods redefining the same variable inconsistently.</div>
+</div>
+
+<div class="question">
+  <p>What is indirect inconsistent state definition?</p>
+  <label><input type="radio" name="q8" value="a"> When inherited variables are defined by extension methods in descendants, potentially causing anomalies</label><br>
+  <label><input type="radio" name="q8" value="b"> When parent class variables are deleted</label><br>
+  <label><input type="radio" name="q8" value="c"> When polymorphic methods are missing</label><br>
+  <label><input type="radio" name="q8" value="d"> When static variables are misused</label><br>
+  <div class="answer" data-correct="a">Indirect inconsistent state definition occurs when extension methods in descendant classes define inherited variables, creating potential anomalies.</div>
+</div>
+
+<div class="question">
+  <p>Why is static analysis challenging for object-oriented programs?</p>
+  <label><input type="radio" name="q9" value="a"> Because the code is written in multiple languages</label><br>
+  <label><input type="radio" name="q9" value="b"> Due to dynamic behavior, overridden and polymorphic method calls, and encapsulation</label><br>
+  <label><input type="radio" name="q9" value="c"> Because memory is limited</label><br>
+  <label><input type="radio" name="q9" value="d"> Because unit tests are missing</label><br>
+  <div class="answer" data-correct="b">Dynamic behavior, polymorphism, overridden methods, and encapsulation make static analysis challenging in object-oriented programs.</div>
+</div>
+
+<div class="question">
+  <p>What specialized approaches are needed for testing object-oriented programs?</p>
+  <label><input type="radio" name="q10" value="a"> Only traditional integration and data flow testing</label><br>
+  <label><input type="radio" name="q10" value="b"> Techniques that address object-oriented coupling, polymorphism, and dynamic state interactions</label><br>
+  <label><input type="radio" name="q10" value="c"> Automated UI testing only</label><br>
+  <label><input type="radio" name="q10" value="d"> Load and performance testing only</label><br>
+  <div class="answer" data-correct="b">Specialized approaches extend traditional testing to handle object-oriented coupling, polymorphism, and dynamic state interactions.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

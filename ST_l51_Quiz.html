@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 51 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>In Dart, what types of statements are considered in the restricted execution model?</p>
+  <label><input type="radio" name="q1" value="a"> Only loops and recursion</label><br>
+  <label><input type="radio" name="q1" value="b"> Assignment statements and conditional statements</label><br>
+  <label><input type="radio" name="q1" value="c"> Function calls only</label><br>
+  <label><input type="radio" name="q1" value="d"> Input/output statements only</label><br>
+  <div class="answer" data-correct="b">Dart's execution model considers programs with only assignment statements and conditional statements, ending with abort or halt.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart represent program execution for analysis?</p>
+  <label><input type="radio" name="q2" value="a"> As a single linear sequence</label><br>
+  <label><input type="radio" name="q2" value="b"> As an execution tree with branches for conditionals and leaves for abort or halt</label><br>
+  <label><input type="radio" name="q2" value="c"> As a set of independent functions</label><br>
+  <label><input type="radio" name="q2" value="d"> As a random graph</label><br>
+  <div class="answer" data-correct="b">Dart models program execution as an execution tree, with assignment nodes having a single successor, conditional nodes branching, and leaves labeled by abort or halt.</div>
+</div>
+
+<div class="question">
+  <p>What is symbolic memory in Dart?</p>
+  <label><input type="radio" name="q3" value="a"> A mapping from memory addresses to concrete values only</label><br>
+  <label><input type="radio" name="q3" value="b"> A mapping from memory addresses to symbolic expressions representing variable values</label><br>
+  <label><input type="radio" name="q3" value="c"> A random memory allocation table</label><br>
+  <label><input type="radio" name="q3" value="d"> A stack of executed statements</label><br>
+  <div class="answer" data-correct="b">Symbolic memory maps memory addresses to symbolic expressions, allowing Dart to evaluate program variables symbolically.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart handle nonlinear expressions during symbolic evaluation?</p>
+  <label><input type="radio" name="q4" value="a"> Ignores them completely</label><br>
+  <label><input type="radio" name="q4" value="b"> Switches to concrete evaluation for those expressions</label><br>
+  <label><input type="radio" name="q4" value="c"> Treats them as zero</label><br>
+  <label><input type="radio" name="q4" value="d"> Randomly approximates a value</label><br>
+  <div class="answer" data-correct="b">Nonlinear expressions that cannot be reliably handled by constraint solvers are evaluated concretely in Dart.</div>
+</div>
+
+<div class="question">
+  <p>What do the completeness flags `all_linear` and `all_locs_definite` indicate in Dart?</p>
+  <label><input type="radio" name="q5" value="a"> `all_linear` indicates memory usage; `all_locs_definite` indicates loop count</label><br>
+  <label><input type="radio" name="q5" value="b"> `all_linear` is false for nonlinear expressions; `all_locs_definite` is false for unknown memory locations</label><br>
+  <label><input type="radio" name="q5" value="c"> Both flags indicate program correctness</label><br>
+  <label><input type="radio" name="q5" value="d"> Flags are used for random input generation only</label><br>
+  <div class="answer" data-correct="b">`all_linear` is set to false when a nonlinear expression is encountered, and `all_locs_definite` is false when the memory location of a variable cannot be determined.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of the `forcing_ok` variable in Dart?</p>
+  <label><input type="radio" name="q6" value="a"> To indicate whether symbolic memory is initialized</label><br>
+  <label><input type="radio" name="q6" value="b"> To indicate whether a program error has been detected</label><br>
+  <label><input type="radio" name="q6" value="c"> To track the execution path stack</label><br>
+  <label><input type="radio" name="q6" value="d"> To control loop iterations</label><br>
+  <div class="answer" data-correct="b">`forcing_ok` is a boolean that indicates whether an error has been detected during execution.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart explore alternative execution paths?</p>
+  <label><input type="radio" name="q7" value="a"> By executing only the first path</label><br>
+  <label><input type="radio" name="q7" value="b"> By using a stack to track path constraints and a constraint solver to generate new inputs</label><br>
+  <label><input type="radio" name="q7" value="c"> By random guessing of inputs</label><br>
+  <label><input type="radio" name="q7" value="d"> By skipping conditional statements</label><br>
+  <div class="answer" data-correct="b">Dart uses a stack to track path constraints and a constraint solver to generate inputs for unexplored branches, systematically exploring alternative paths.</div>
+</div>
+
+<div class="question">
+  <p>What happens when Dart reaches an abort or halt statement?</p>
+  <label><input type="radio" name="q8" value="a"> Abort ends the run reporting a bug; halt ends the run without errors</label><br>
+  <label><input type="radio" name="q8" value="b"> Both abort and halt continue execution indefinitely</label><br>
+  <label><input type="radio" name="q8" value="c"> Abort continues symbolic execution; halt stops it</label><br>
+  <label><input type="radio" name="q8" value="d"> Both abort and halt ignore path constraints</label><br>
+  <div class="answer" data-correct="a">An abort statement indicates a bug and terminates the run, while a halt statement ends execution normally, allowing Dart to continue exploring other paths.</div>
+</div>
+
+<div class="question">
+  <p>Why might Dart potentially run indefinitely?</p>
+  <label><input type="radio" name="q9" value="a"> Because it only executes random inputs</label><br>
+  <label><input type="radio" name="q9" value="b"> Because completeness flags prevent termination if path constraints cannot be fully resolved</label><br>
+  <label><input type="radio" name="q9" value="c"> Because it ignores conditional statements</label><br>
+  <label><input type="radio" name="q9" value="d"> Because it skips assignment statements</label><br>
+  <div class="answer" data-correct="b">Dart may run indefinitely if completeness flags indicate unsolvable path constraints or unknown memory locations, reflecting the undecidable nature of path exploration.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart ensure that any reported bug corresponds to a real input?</p>
+  <label><input type="radio" name="q10" value="a"> By using purely random inputs</label><br>
+  <label><input type="radio" name="q10" value="b"> By combining symbolic execution with concrete evaluation to validate path feasibility</label><br>
+  <label><input type="radio" name="q10" value="c"> By ignoring conditional statements</label><br>
+  <label><input type="radio" name="q10" value="d"> By halting after the first assignment</label><br>
+  <div class="answer" data-correct="b">Dart combines symbolic execution with concrete evaluation to ensure that any bug reported corresponds to an actual input that triggers an abort.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

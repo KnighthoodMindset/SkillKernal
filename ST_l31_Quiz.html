@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 31  Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main purpose of Equivalence Class Partitioning (ECP) in functional testing?</p>
+  <label><input type="radio" name="q1" value="a"> To test internal code structure</label><br>
+  <label><input type="radio" name="q1" value="b"> To divide the input domain into partitions where inputs in a partition produce similar behavior</label><br>
+  <label><input type="radio" name="q1" value="c"> To optimize program performance</label><br>
+  <label><input type="radio" name="q1" value="d"> To reduce the number of functions in the program</label><br>
+  <div class="answer" data-correct="b">ECP divides the input domain into partitions so that any input in a partition is expected to produce similar program behavior.</div>
+</div>
+
+<div class="question">
+  <p>What are the two essential properties that partitions must satisfy in Equivalence Class Partitioning?</p>
+  <label><input type="radio" name="q2" value="a"> Randomness and uniformity</label><br>
+  <label><input type="radio" name="q2" value="b"> Disjointness and completeness</label><br>
+  <label><input type="radio" name="q2" value="c"> Validity and redundancy</label><br>
+  <label><input type="radio" name="q2" value="d"> Independence and dependency</label><br>
+  <div class="answer" data-correct="b">Partitions must be disjoint (no overlap) and complete (cover all possible inputs).</div>
+</div>
+
+<div class="question">
+  <p>In functional testing, what is considered the input domain of a program?</p>
+  <label><input type="radio" name="q3" value="a"> All possible outputs</label><br>
+  <label><input type="radio" name="q3" value="b"> All possible input values</label><br>
+  <label><input type="radio" name="q3" value="c"> All function names</label><br>
+  <label><input type="radio" name="q3" value="d"> All user manuals</label><br>
+  <div class="answer" data-correct="b">The input domain consists of all possible values that can be provided as inputs to the program.</div>
+</div>
+
+<div class="question">
+  <p>What is an equivalence relation in the context of input space partitioning?</p>
+  <label><input type="radio" name="q4" value="a"> A relationship where inputs in a partition produce identical program behavior</label><br>
+  <label><input type="radio" name="q4" value="b"> A comparison between outputs</label><br>
+  <label><input type="radio" name="q4" value="c"> A method to sort inputs</label><br>
+  <label><input type="radio" name="q4" value="d"> A loop iteration rule</label><br>
+  <div class="answer" data-correct="a">An equivalence relation groups inputs that are expected to produce the same behavior in a partition.</div>
+</div>
+
+<div class="question">
+  <p>Which two major approaches are used for input domain modeling in ECP?</p>
+  <label><input type="radio" name="q5" value="a"> Interface-based and functionality-based approaches</label><br>
+  <label><input type="radio" name="q5" value="b"> Static and dynamic approaches</label><br>
+  <label><input type="radio" name="q5" value="c"> Random and systematic approaches</label><br>
+  <label><input type="radio" name="q5" value="d"> Boundary and equivalence approaches</label><br>
+  <div class="answer" data-correct="a">Interface-based and functionality-based approaches are the two main methods for defining partitions in the input domain.</div>
+</div>
+
+<div class="question">
+  <p>How does the interface-based approach define partitions?</p>
+  <label><input type="radio" name="q6" value="a"> Based on overall program functionality</label><br>
+  <label><input type="radio" name="q6" value="b"> By analyzing individual input parameters independently</label><br>
+  <label><input type="radio" name="q6" value="c"> By generating random inputs</label><br>
+  <label><input type="radio" name="q6" value="d"> By checking outputs only</label><br>
+  <div class="answer" data-correct="b">The interface-based approach partitions inputs based on individual parameters without considering interactions.</div>
+</div>
+
+<div class="question">
+  <p>How does the functionality-based approach differ from the interface-based approach?</p>
+  <label><input type="radio" name="q7" value="a"> It ignores input interactions</label><br>
+  <label><input type="radio" name="q7" value="b"> It defines partitions based on overall program behavior and input interactions</label><br>
+  <label><input type="radio" name="q7" value="c"> It only focuses on valid inputs</label><br>
+  <label><input type="radio" name="q7" value="d"> It applies to random testing only</label><br>
+  <div class="answer" data-correct="b">Functionality-based partitioning considers how inputs interact to affect overall program behavior.</div>
+</div>
+
+<div class="question">
+  <p>Why must partitions include both valid and invalid values?</p>
+  <label><input type="radio" name="q8" value="a"> To test only boundary values</label><br>
+  <label><input type="radio" name="q8" value="b"> To verify correct behavior and error handling across all scenarios</label><br>
+  <label><input type="radio" name="q8" value="c"> To simplify test design</label><br>
+  <label><input type="radio" name="q8" value="d"> To reduce the number of functions tested</label><br>
+  <div class="answer" data-correct="b">Including valid and invalid inputs ensures both normal behavior and error handling are tested.</div>
+</div>
+
+<div class="question">
+  <p>What is the primary goal of equivalence class partitioning in terms of test case design?</p>
+  <label><input type="radio" name="q9" value="a"> To maximize the number of test cases</label><br>
+  <label><input type="radio" name="q9" value="b"> To minimize the number of test cases while maximizing coverage</label><br>
+  <label><input type="radio" name="q9" value="c"> To only test invalid inputs</label><br>
+  <label><input type="radio" name="q9" value="d"> To test code structure directly</label><br>
+  <div class="answer" data-correct="b">ECP aims to select representative inputs to reduce the number of test cases while covering all relevant input scenarios.</div>
+</div>
+
+<div class="question">
+  <p>Why is input space partitioning considered a critical component of black-box testing?</p>
+  <label><input type="radio" name="q10" value="a"> It focuses on code implementation</label><br>
+  <label><input type="radio" name="q10" value="b"> It provides a systematic foundation for designing functional test cases based on inputs and outputs</label><br>
+  <label><input type="radio" name="q10" value="c"> It replaces the need for boundary value testing</label><br>
+  <label><input type="radio" name="q10" value="d"> It only tests invalid inputs</label><br>
+  <div class="answer" data-correct="b">Input space partitioning systematically guides test case design by selecting representative inputs, essential for black-box functional testing.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

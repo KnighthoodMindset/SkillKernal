@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 30 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main focus of functional (black box) testing?</p>
+  <label><input type="radio" name="q1" value="a"> Verifying internal code structure</label><br>
+  <label><input type="radio" name="q1" value="b"> Verifying software functionality based on inputs and outputs</label><br>
+  <label><input type="radio" name="q1" value="c"> Optimizing program performance</label><br>
+  <label><input type="radio" name="q1" value="d"> Debugging syntax errors</label><br>
+  <div class="answer" data-correct="b">Functional testing focuses on verifying software functionality based on inputs and expected outputs without considering internal implementation.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is used to efficiently cover the input space in functional testing?</p>
+  <label><input type="radio" name="q2" value="a"> Control Flow Graph</label><br>
+  <label><input type="radio" name="q2" value="b"> Equivalence Class Partitioning (ECP) or Input Space Partitioning (ISP)</label><br>
+  <label><input type="radio" name="q2" value="c"> Finite State Machine</label><br>
+  <label><input type="radio" name="q2" value="d"> Call Graph Analysis</label><br>
+  <div class="answer" data-correct="b">ECP or ISP divides the input domain into meaningful subsets, testing representative values from each class.</div>
+</div>
+
+<div class="question">
+  <p>What does Boundary Value Analysis (BVA) focus on?</p>
+  <label><input type="radio" name="q3" value="a"> Randomly selecting input values</label><br>
+  <label><input type="radio" name="q3" value="b"> Testing input values at and near the boundaries of equivalence classes</label><br>
+  <label><input type="radio" name="q3" value="c"> Verifying internal loops and branches</label><br>
+  <label><input type="radio" name="q3" value="d"> Optimizing algorithm efficiency</label><br>
+  <div class="answer" data-correct="b">BVA tests inputs at and around the edges of equivalence classes, as most errors occur at boundary conditions.</div>
+</div>
+
+<div class="question">
+  <p>Why is Boundary Value Analysis important alongside Equivalence Class Partitioning?</p>
+  <label><input type="radio" name="q4" value="a"> It replaces ECP entirely</label><br>
+  <label><input type="radio" name="q4" value="b"> It ensures correct handling of edge-case inputs that ECP might miss</label><br>
+  <label><input type="radio" name="q4" value="c"> It tests internal loops</label><br>
+  <label><input type="radio" name="q4" value="d"> It focuses on performance testing</label><br>
+  <div class="answer" data-correct="b">BVA complements ECP by verifying inputs at the boundaries, detecting off-by-one and edge errors.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of Decision Table Testing in functional testing?</p>
+  <label><input type="radio" name="q5" value="a"> To test single-input programs only</label><br>
+  <label><input type="radio" name="q5" value="b"> To systematically handle combinations of multiple input conditions</label><br>
+  <label><input type="radio" name="q5" value="c"> To analyze program control flow</label><br>
+  <label><input type="radio" name="q5" value="d"> To optimize input values for performance</label><br>
+  <div class="answer" data-correct="b">Decision Table Testing lists conditions and corresponding actions to cover all combinations of inputs systematically.</div>
+</div>
+
+<div class="question">
+  <p>How does Random Testing help in functional testing?</p>
+  <label><input type="radio" name="q6" value="a"> By testing every possible input exhaustively</label><br>
+  <label><input type="radio" name="q6" value="b"> By generating random input values to find unexpected bugs and stress-test software</label><br>
+  <label><input type="radio" name="q6" value="c"> By analyzing internal code paths</label><br>
+  <label><input type="radio" name="q6" value="d"> By only testing boundary values</label><br>
+  <div class="answer" data-correct="b">Random Testing generates inputs randomly to detect unexpected bugs and test robustness.</div>
+</div>
+
+<div class="question">
+  <p>What is the main advantage of treating a program as a function in functional testing?</p>
+  <label><input type="radio" name="q7" value="a"> It allows verification of outputs without needing knowledge of internal code structure</label><br>
+  <label><input type="radio" name="q7" value="b"> It simplifies control flow graph analysis</label><br>
+  <label><input type="radio" name="q7" value="c"> It helps optimize algorithm efficiency</label><br>
+  <label><input type="radio" name="q7" value="d"> It ensures all loops are executed</label><br>
+  <div class="answer" data-correct="a">Treating a program as a function allows testing based solely on input-output relationships without internal knowledge.</div>
+</div>
+
+<div class="question">
+  <p>In Input Space Partitioning, what is an equivalence class?</p>
+  <label><input type="radio" name="q8" value="a"> A set of inputs for which the program is expected to behave differently</label><br>
+  <label><input type="radio" name="q8" value="b"> A set of inputs for which the program is expected to behave similarly</label><br>
+  <label><input type="radio" name="q8" value="c"> A random selection of input values</label><br>
+  <label><input type="radio" name="q8" value="d"> A set of outputs produced by the program</label><br>
+  <div class="answer" data-correct="b">An equivalence class is a subset of inputs for which the program is expected to produce similar behavior.</div>
+</div>
+
+<div class="question">
+  <p>Why are boundary values considered critical in testing?</p>
+  <label><input type="radio" name="q9" value="a"> Because programming errors often occur at boundary conditions</label><br>
+  <label><input type="radio" name="q9" value="b"> Because they are the easiest to test</label><br>
+  <label><input type="radio" name="q9" value="c"> Because they require fewer test cases</label><br>
+  <label><input type="radio" name="q9" value="d"> Because they are always invalid</label><br>
+  <div class="answer" data-correct="a">Boundary values are critical since off-by-one errors and incorrect comparisons often occur at input boundaries.</div>
+</div>
+
+<div class="question">
+  <p>How do functional testing techniques collectively improve software reliability?</p>
+  <label><input type="radio" name="q10" value="a"> By focusing solely on internal code correctness</label><br>
+  <label><input type="radio" name="q10" value="b"> By combining equivalence class partitioning, boundary value analysis, decision table testing, and random testing to cover typical and edge-case inputs</label><br>
+  <label><input type="radio" name="q10" value="c"> By reducing the number of inputs tested</label><br>
+  <label><input type="radio" name="q10" value="d"> By automating code compilation</label><br>
+  <div class="answer" data-correct="b">Functional testing techniques together ensure coverage of typical and boundary inputs, systematically improving reliability.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 37 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>Why is mutation testing considered a stronger testing criterion compared to graph-based and logical predicate testing?</p>
+  <label><input type="radio" name="q1" value="a"> It only ensures statement execution</label><br>
+  <label><input type="radio" name="q1" value="b"> It verifies internal execution and output differences through mutants</label><br>
+  <label><input type="radio" name="q1" value="c"> It focuses only on input validation</label><br>
+  <label><input type="radio" name="q1" value="d"> It requires fewer test cases</label><br>
+  <div class="answer" data-correct="b">Mutation testing verifies that mutants are executed, cause internal state changes, and propagate to affect outputs, making it stronger than local criteria.</div>
+</div>
+
+<div class="question">
+  <p>Which model explains the strict conditions that mutation testing imposes to kill mutants?</p>
+  <label><input type="radio" name="q2" value="a"> Control flow model</label><br>
+  <label><input type="radio" name="q2" value="b"> Reachability, infection, and propagation model</label><br>
+  <label><input type="radio" name="q2" value="c"> Data flow model</label><br>
+  <label><input type="radio" name="q2" value="d"> Combinatorial model</label><br>
+  <div class="answer" data-correct="b">Mutation testing relies on reachability, infection, and propagation to ensure that mutations affect program output.</div>
+</div>
+
+<div class="question">
+  <p>How does mutation testing subsume node coverage in graph-based testing?</p>
+  <label><input type="radio" name="q3" value="a"> By executing loops multiple times</label><br>
+  <label><input type="radio" name="q3" value="b"> By inserting bomb statements at specific nodes to confirm execution</label><br>
+  <label><input type="radio" name="q3" value="c"> By ignoring unexecuted statements</label><br>
+  <label><input type="radio" name="q3" value="d"> By generating random test inputs</label><br>
+  <div class="answer" data-correct="b">Bomb statements are used to verify that each node in the control flow graph is executed at least once.</div>
+</div>
+
+<div class="question">
+  <p>Which mutation operators help mutation testing subsume edge coverage?</p>
+  <label><input type="radio" name="q4" value="a"> Variable reference replacements</label><br>
+  <label><input type="radio" name="q4" value="b"> Relational operator replacements</label><br>
+  <label><input type="radio" name="q4" value="c"> Unary operator insertions</label><br>
+  <label><input type="radio" name="q4" value="d"> Absolute value insertions</label><br>
+  <div class="answer" data-correct="b">Relational operator replacements flip decision predicates, ensuring both true and false branches are executed.</div>
+</div>
+
+<div class="question">
+  <p>Which logical coverage criteria are subsumed by mutation testing?</p>
+  <label><input type="radio" name="q5" value="a"> Predicate, clause, and generalized active clause coverage</label><br>
+  <label><input type="radio" name="q5" value="b"> Combinatorial coverage and CACC</label><br>
+  <label><input type="radio" name="q5" value="c"> RACC and all-uses coverage</label><br>
+  <label><input type="radio" name="q5" value="d"> Only predicate coverage</label><br>
+  <div class="answer" data-correct="a">Mutation testing inherently covers predicate, clause, and generalized active clause coverage by flipping conditions.</div>
+</div>
+
+<div class="question">
+  <p>Why does mutation testing not subsume correlated active clause coverage (CACC)?</p>
+  <label><input type="radio" name="q6" value="a"> Because CACC requires testing output only</label><br>
+  <label><input type="radio" name="q6" value="b"> Because CACC requires simultaneous control over multiple clauses, while mutation testing modifies one clause at a time</label><br>
+  <label><input type="radio" name="q6" value="c"> Because mutation testing cannot handle predicates</label><br>
+  <label><input type="radio" name="q6" value="d"> Because CACC is less strict than mutation testing</label><br>
+  <div class="answer" data-correct="b">Mutation testing typically modifies one clause at a time and cannot enforce simultaneous control required by CACC.</div>
+</div>
+
+<div class="question">
+  <p>How does mutation testing subsume the all-definitions (all-defs) criterion in data flow coverage?</p>
+  <label><input type="radio" name="q7" value="a"> By generating multiple outputs for each variable</label><br>
+  <label><input type="radio" name="q7" value="b"> By deleting a variable definition to create a mutant that leads to incorrect output propagation</label><br>
+  <label><input type="radio" name="q7" value="c"> By executing loops repeatedly</label><br>
+  <label><input type="radio" name="q7" value="d"> By inserting random statements</label><br>
+  <div class="answer" data-correct="b">Removing a variable definition ensures that its absence leads to errors, satisfying all-defs coverage.</div>
+</div>
+
+<div class="question">
+  <p>Which testing criteria are NOT subsumed by mutation testing?</p>
+  <label><input type="radio" name="q8" value="a"> Node and edge coverage</label><br>
+  <label><input type="radio" name="q8" value="b"> Prime path coverage, complete path coverage, combinatorial coverage, CACC, and RACC</label><br>
+  <label><input type="radio" name="q8" value="c"> Predicate and clause coverage</label><br>
+  <label><input type="radio" name="q8" value="d"> All-defs coverage</label><br>
+  <div class="answer" data-correct="b">Mutation testing does not subsume complex criteria like prime path, complete path, combinatorial coverage, CACC, or RACC.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage model uses the insertion of bomb statements to confirm execution of specific elements?</p>
+  <label><input type="radio" name="q9" value="a"> Data flow coverage</label><br>
+  <label><input type="radio" name="q9" value="b"> Node coverage under graph-based testing</label><br>
+  <label><input type="radio" name="q9" value="c"> Clause coverage</label><br>
+  <label><input type="radio" name="q9" value="d"> Predicate coverage</label><br>
+  <div class="answer" data-correct="b">Bomb statements are used in mutation testing to verify node coverage by confirming specific nodes are visited.</div>
+</div>
+
+<div class="question">
+  <p>Why is mutation testing considered a global testing criterion?</p>
+  <label><input type="radio" name="q10" value="a"> Because it only focuses on individual statements</label><br>
+  <label><input type="radio" name="q10" value="b"> Because it verifies both the internal execution and the final output differences for mutants</label><br>
+  <label><input type="radio" name="q10" value="c"> Because it tests only the input space</label><br>
+  <label><input type="radio" name="q10" value="d"> Because it does not require any execution</label><br>
+  <div class="answer" data-correct="b">Mutation testing is global as it ensures that executing mutants causes state changes and propagates differences to outputs.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

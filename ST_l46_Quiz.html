@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 46 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary focus of testing object-oriented applications compared to procedural applications?</p>
+  <label><input type="radio" name="q1" value="a"> Testing individual procedures only</label><br>
+  <label><input type="radio" name="q1" value="b"> Testing class-level interactions and relationships</label><br>
+  <label><input type="radio" name="q1" value="c"> Testing database integration only</label><br>
+  <label><input type="radio" name="q1" value="d"> Testing static HTML pages</label><br>
+  <div class="answer" data-correct="b">Object-oriented testing focuses on class-level interactions and relationships rather than just individual methods.</div>
+</div>
+
+<div class="question">
+  <p>Which feature of object-oriented programming allows creating classes that encapsulate data and define connections between components?</p>
+  <label><input type="radio" name="q2" value="a"> Inheritance</label><br>
+  <label><input type="radio" name="q2" value="b"> Abstraction</label><br>
+  <label><input type="radio" name="q2" value="c"> Polymorphism</label><br>
+  <label><input type="radio" name="q2" value="d"> Dynamic binding</label><br>
+  <div class="answer" data-correct="b">Abstraction allows the creation of classes that encapsulate data and define connections between components.</div>
+</div>
+
+<div class="question">
+  <p>What distinguishes subtype inheritance from subclass inheritance in object-oriented testing?</p>
+  <label><input type="radio" name="q3" value="a"> Subtype inheritance reuses methods without maintaining parent behavior, subclass inheritance follows Liskov principle</label><br>
+  <label><input type="radio" name="q3" value="b"> Subtype inheritance allows substitution maintaining parent behavior, subclass inheritance reuses methods without guaranteeing parent specifications</label><br>
+  <label><input type="radio" name="q3" value="c"> Subtype inheritance only applies to variables, subclass inheritance only to methods</label><br>
+  <label><input type="radio" name="q3" value="d"> Subtype inheritance is static, subclass inheritance is dynamic</label><br>
+  <div class="answer" data-correct="b">Subtype inheritance allows a subclass to be substituted for a parent class while maintaining expected behaviors, whereas subclass inheritance reuses methods without necessarily meeting parent specifications.</div>
+</div>
+
+<div class="question">
+  <p>What defines a polymorphic method in object-oriented software?</p>
+  <label><input type="radio" name="q4" value="a"> A method defined only in the parent class</label><br>
+  <label><input type="radio" name="q4" value="b"> A method whose execution depends on the runtime type of the object</label><br>
+  <label><input type="radio" name="q4" value="c"> A static method not overridden by subclasses</label><br>
+  <label><input type="radio" name="q4" value="d"> A method that cannot be called outside the class</label><br>
+  <div class="answer" data-correct="b">Polymorphic methods are those where the actual method executed depends on the runtime type of the object.</div>
+</div>
+
+<div class="question">
+  <p>Which level of object-oriented testing evaluates sequences of method calls within a single class?</p>
+  <label><input type="radio" name="q5" value="a"> Intra-method testing</label><br>
+  <label><input type="radio" name="q5" value="b"> Inter-method testing</label><br>
+  <label><input type="radio" name="q5" value="c"> Intra-class testing</label><br>
+  <label><input type="radio" name="q5" value="d"> Inter-class testing</label><br>
+  <div class="answer" data-correct="c">Intra-class testing evaluates sequences of method calls within a single class.</div>
+</div>
+
+<div class="question">
+  <p>What is the main challenge in determining method execution in object-oriented testing?</p>
+  <label><input type="radio" name="q6" value="a"> Dynamic binding and polymorphism make it difficult to know which method version executes at runtime</label><br>
+  <label><input type="radio" name="q6" value="b"> Lack of compiler optimizations</label><br>
+  <label><input type="radio" name="q6" value="c"> Static analysis tools do not exist</label><br>
+  <label><input type="radio" name="q6" value="d"> Method signatures are always ambiguous</label><br>
+  <div class="answer" data-correct="a">Polymorphism, inheritance, and dynamic binding make it hard to determine which method executes at runtime.</div>
+</div>
+
+<div class="question">
+  <p>What are dataflow anomalies in object-oriented software?</p>
+  <label><input type="radio" name="q7" value="a"> Incorrect variable names in method definitions</label><br>
+  <label><input type="radio" name="q7" value="b"> Failures when overridden methods do not define or propagate state variables needed by subsequent calls</label><br>
+  <label><input type="radio" name="q7" value="c"> Runtime exceptions caused by invalid input types</label><br>
+  <label><input type="radio" name="q7" value="d"> Unreachable code due to loops</label><br>
+  <div class="answer" data-correct="b">Dataflow anomalies occur when overridden methods fail to define or propagate state variables needed by later method calls.</div>
+</div>
+
+<div class="question">
+  <p>What is a yo-yo graph in object-oriented testing?</p>
+  <label><input type="radio" name="q8" value="a"> A graph showing inheritance depth only</label><br>
+  <label><input type="radio" name="q8" value="b"> A graph where nodes are methods and edges represent calls, including overridden and inherited methods</label><br>
+  <label><input type="radio" name="q8" value="c"> A performance graph of method execution times</label><br>
+  <label><input type="radio" name="q8" value="d"> A graph representing static variable usage</label><br>
+  <div class="answer" data-correct="b">A yo-yo graph represents methods as nodes and calls (including overridden and inherited methods) as edges, capturing dynamic behavior.</div>
+</div>
+
+<div class="question">
+  <p>How does a yo-yo graph help in object-oriented testing?</p>
+  <label><input type="radio" name="q9" value="a"> It tracks memory usage of each method</label><br>
+  <label><input type="radio" name="q9" value="b"> It visualizes method call sequences up and down the class hierarchy to identify potential faults</label><br>
+  <label><input type="radio" name="q9" value="c"> It ensures all variables are initialized</label><br>
+  <label><input type="radio" name="q9" value="d"> It measures execution speed of polymorphic calls</label><br>
+  <div class="answer" data-correct="b">Yo-yo graphs illustrate method call sequences bouncing across class hierarchies, highlighting potential anomalies and faults.</div>
+</div>
+
+<div class="question">
+  <p>Which feature primarily complicates object-oriented testing at both intra-class and inter-class levels?</p>
+  <label><input type="radio" name="q10" value="a"> Static typing</label><br>
+  <label><input type="radio" name="q10" value="b"> Polymorphism, inheritance, and dynamic binding</label><br>
+  <label><input type="radio" name="q10" value="c"> Single-threaded execution</label><br>
+  <label><input type="radio" name="q10" value="d"> Use of global variables</label><br>
+  <div class="answer" data-correct="b">Polymorphism, inheritance, and dynamic binding make object-oriented testing complex at intra-class and inter-class levels.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

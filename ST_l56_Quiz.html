@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 56 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary purpose of regression testing?</p>
+  <label><input type="radio" name="q1" value="a"> To test a new software system from scratch</label><br>
+  <label><input type="radio" name="q1" value="b"> To validate that modifications or bug fixes do not introduce new errors and existing functionality remains correct</label><br>
+  <label><input type="radio" name="q1" value="c"> To perform performance testing under heavy load</label><br>
+  <label><input type="radio" name="q1" value="d"> To evaluate usability and user experience</label><br>
+  <div class="answer" data-correct="b">Regression testing ensures that software modifications or bug fixes do not break existing functionality.</div>
+</div>
+
+<div class="question">
+  <p>What is the term used for selecting a subset of existing test cases to test modified software?</p>
+  <label><input type="radio" name="q2" value="a"> Test suite execution</label><br>
+  <label><input type="radio" name="q2" value="b"> Regression test selection</label><br>
+  <label><input type="radio" name="q2" value="c"> Test case minimization</label><br>
+  <label><input type="radio" name="q2" value="d"> Coverage identification</label><br>
+  <div class="answer" data-correct="b">Selecting a subset of existing test cases to test modified software is called regression test selection.</div>
+</div>
+
+<div class="question">
+  <p>Which set of test cases is created specifically to cover modifications not addressed by the selected subset?</p>
+  <label><input type="radio" name="q3" value="a"> T prime</label><br>
+  <label><input type="radio" name="q3" value="b"> T double prime</label><br>
+  <label><input type="radio" name="q3" value="c"> T triple prime</label><br>
+  <label><input type="radio" name="q3" value="d"> T original</label><br>
+  <div class="answer" data-correct="b">T double prime represents newly created test cases covering modifications not addressed by the selected subset T prime.</div>
+</div>
+
+<div class="question">
+  <p>What problem does creating a combined set of test cases for future regression testing address?</p>
+  <label><input type="radio" name="q4" value="a"> Regression test selection problem</label><br>
+  <label><input type="radio" name="q4" value="b"> Test suite maintenance problem</label><br>
+  <label><input type="radio" name="q4" value="c"> Coverage identification problem</label><br>
+  <label><input type="radio" name="q4" value="d"> Test driver generation problem</label><br>
+  <div class="answer" data-correct="b">Maintaining a combined set of test cases (T triple prime) addresses the test suite maintenance problem for future regression testing.</div>
+</div>
+
+<div class="question">
+  <p>Which regression test selection technique ensures that all faults in the modified program are detectable?</p>
+  <label><input type="radio" name="q5" value="a"> Minimization technique</label><br>
+  <label><input type="radio" name="q5" value="b"> Data flow technique</label><br>
+  <label><input type="radio" name="q5" value="c"> Safe regression technique</label><br>
+  <label><input type="radio" name="q5" value="d"> Random test selection</label><br>
+  <div class="answer" data-correct="c">Safe regression technique ensures that selected test cases detect all faults present in the modified program.</div>
+</div>
+
+<div class="question">
+  <p>Which approach involves executing every test case from the original suite to ensure coverage?</p>
+  <label><input type="radio" name="q6" value="a"> Retest-all approach</label><br>
+  <label><input type="radio" name="q6" value="b"> Random test selection</label><br>
+  <label><input type="radio" name="q6" value="c"> Minimization technique</label><br>
+  <label><input type="radio" name="q6" value="d"> Data flow technique</label><br>
+  <div class="answer" data-correct="a">The retest-all approach executes every test case from the original set to ensure full coverage.</div>
+</div>
+
+<div class="question">
+  <p>What factors are considered when selecting test cases for regression testing?</p>
+  <label><input type="radio" name="q7" value="a"> Random code segments only</label><br>
+  <label><input type="radio" name="q7" value="b"> Areas prone to defects, frequently modified code, and critical features</label><br>
+  <label><input type="radio" name="q7" value="c"> Only newly added modules</label><br>
+  <label><input type="radio" name="q7" value="d"> Unrelated legacy code</label><br>
+  <div class="answer" data-correct="b">Regression test selection relies on system knowledge, focusing on defect-prone areas, frequently modified code, and critical features.</div>
+</div>
+
+<div class="question">
+  <p>Which tools are commonly used for automated regression testing?</p>
+  <label><input type="radio" name="q8" value="a"> Selenium and JMeter</label><br>
+  <label><input type="radio" name="q8" value="b"> Regression Tester, TimeShiftX, and Micro Focus tools</label><br>
+  <label><input type="radio" name="q8" value="c"> Git and SVN</label><br>
+  <label><input type="radio" name="q8" value="d"> HP LoadRunner and NeoLoad</label><br>
+  <div class="answer" data-correct="b">Automated regression testing tools include Regression Tester, TimeShiftX, and Micro Focus tools for legacy systems.</div>
+</div>
+
+<div class="question">
+  <p>What is the main advantage of record-and-playback tools in regression testing?</p>
+  <label><input type="radio" name="q9" value="a"> They generate new program code automatically</label><br>
+  <label><input type="radio" name="q9" value="b"> They rerun previously executed test cases with automated verification</label><br>
+  <label><input type="radio" name="q9" value="c"> They perform static code analysis</label><br>
+  <label><input type="radio" name="q9" value="d"> They reduce memory usage</label><br>
+  <div class="answer" data-correct="b">Record-and-playback tools automate execution of previously run or newly created test cases, verifying expected outcomes consistently.</div>
+</div>
+
+<div class="question">
+  <p>Why must obsolete test cases be removed when specifications change during regression testing?</p>
+  <label><input type="radio" name="q10" value="a"> They slow down the test execution</label><br>
+  <label><input type="radio" name="q10" value="b"> They are no longer valid for the modified program and may produce incorrect results</label><br>
+  <label><input type="radio" name="q10" value="c"> They are replaced by performance tests</label><br>
+  <label><input type="radio" name="q10" value="d"> They are required for security testing</label><br>
+  <div class="answer" data-correct="b">Obsolete test cases must be removed because they are invalid for the modified program and could lead to incorrect results.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

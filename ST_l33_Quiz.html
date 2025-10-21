@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 33 Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the main goal of Input Space Partitioning (ISP) in functional testing?</p>
+  <label><input type="radio" name="q1" value="a"> To optimize program performance</label><br>
+  <label><input type="radio" name="q1" value="b"> To divide the input domain into meaningful partitions for systematic test case selection</label><br>
+  <label><input type="radio" name="q1" value="c"> To test internal code structure</label><br>
+  <label><input type="radio" name="q1" value="d"> To reduce the number of program functions</label><br>
+  <div class="answer" data-correct="b">ISP divides input domains into partitions to systematically generate test cases and ensure meaningful coverage.</div>
+</div>
+
+<div class="question">
+  <p>Which coverage criterion tests every possible combination of partitions from all input variables?</p>
+  <label><input type="radio" name="q2" value="a"> Each Choice Coverage (ECC)</label><br>
+  <label><input type="radio" name="q2" value="b"> All Combinations Coverage (ACoC)</label><br>
+  <label><input type="radio" name="q2" value="c"> Pairwise Coverage</label><br>
+  <label><input type="radio" name="q2" value="d"> Base Choice Coverage (BCC)</label><br>
+  <div class="answer" data-correct="b">All Combinations Coverage (ACoC) is exhaustive and tests every possible combination of input partitions.</div>
+</div>
+
+<div class="question">
+  <p>Why is Each Choice Coverage (ECC) considered weak?</p>
+  <label><input type="radio" name="q3" value="a"> It selects all possible combinations of partitions</label><br>
+  <label><input type="radio" name="q3" value="b"> It selects only one value from each partition, possibly missing interactions between inputs</label><br>
+  <label><input type="radio" name="q3" value="c"> It ignores boundary values</label><br>
+  <label><input type="radio" name="q3" value="d"> It requires multiple base choices</label><br>
+  <div class="answer" data-correct="b">ECC may miss critical interactions because it tests only one representative value from each partition.</div>
+</div>
+
+<div class="question">
+  <p>How does Pairwise Coverage reduce the number of test cases compared to All Combinations Coverage?</p>
+  <label><input type="radio" name="q4" value="a"> By testing only one input value per partition</label><br>
+  <label><input type="radio" name="q4" value="b"> By ensuring all possible pairs of partitions from different inputs are tested at least once</label><br>
+  <label><input type="radio" name="q4" value="c"> By ignoring base choices</label><br>
+  <label><input type="radio" name="q4" value="d"> By only testing invalid partitions</label><br>
+  <div class="answer" data-correct="b">Pairwise Coverage tests all pairs of partitions, covering important interactions without testing every full combination.</div>
+</div>
+
+<div class="question">
+  <p>What does T-Wise Coverage represent?</p>
+  <label><input type="radio" name="q5" value="a"> Testing only one representative from each partition</label><br>
+  <label><input type="radio" name="q5" value="b"> Testing all partitions exhaustively</label><br>
+  <label><input type="radio" name="q5" value="c"> Testing combinations of T input partitions together</label><br>
+  <label><input type="radio" name="q5" value="d"> Ignoring minor partitions</label><br>
+  <div class="answer" data-correct="c">T-Wise Coverage ensures that all combinations of T partitions are tested together.</div>
+</div>
+
+<div class="question">
+  <p>How does Base Choice Coverage (BCC) select test cases?</p>
+  <label><input type="radio" name="q6" value="a"> By testing all combinations exhaustively</label><br>
+  <label><input type="radio" name="q6" value="b"> By selecting one base choice per input and varying one input at a time while keeping others fixed</label><br>
+  <label><input type="radio" name="q6" value="c"> By testing only invalid partitions</label><br>
+  <label><input type="radio" name="q6" value="d"> By ignoring interactions</label><br>
+  <div class="answer" data-correct="b">BCC creates a base test using base choices and generates additional tests by varying one input at a time.</div>
+</div>
+
+<div class="question">
+  <p>What is the key difference between BCC and MBCC?</p>
+  <label><input type="radio" name="q7" value="a"> MBCC allows multiple base choices per input, providing more thorough coverage</label><br>
+  <label><input type="radio" name="q7" value="b"> BCC tests all combinations exhaustively</label><br>
+  <label><input type="radio" name="q7" value="c"> MBCC ignores invalid partitions</label><br>
+  <label><input type="radio" name="q7" value="d"> BCC is a weak coverage criterion</label><br>
+  <div class="answer" data-correct="a">MBCC extends BCC by allowing several base choices per input to increase coverage while controlling test case count.</div>
+</div>
+
+<div class="question">
+  <p>In the triangle classification example, how many test cases are required for All Combinations Coverage if each side has 4 partitions?</p>
+  <label><input type="radio" name="q8" value="a"> 16</label><br>
+  <label><input type="radio" name="q8" value="b"> 32</label><br>
+  <label><input type="radio" name="q8" value="c"> 64</label><br>
+  <label><input type="radio" name="q8" value="d"> 128</label><br>
+  <div class="answer" data-correct="c">Each of the 3 sides has 4 partitions, so 4 × 4 × 4 = 64 test cases for All Combinations Coverage.</div>
+</div>
+
+<div class="question">
+  <p>What are infeasible test requirements in input space partitioning?</p>
+  <label><input type="radio" name="q9" value="a"> Test cases that cover all partitions</label><br>
+  <label><input type="radio" name="q9" value="b"> Combinations of partitions that cannot logically occur together</label><br>
+  <label><input type="radio" name="q9" value="c"> Randomly selected partitions</label><br>
+  <label><input type="radio" name="q9" value="d"> Base choices for inputs</label><br>
+  <div class="answer" data-correct="b">Infeasible requirements are partition combinations that are logically impossible in the program context.</div>
+</div>
+
+<div class="question">
+  <p>How can infeasible test requirements be handled in Base Choice or Multiple Base Choice Coverage?</p>
+  <label><input type="radio" name="q10" value="a"> By dropping all infeasible partitions</label><br>
+  <label><input type="radio" name="q10" value="b"> By selecting base choices strategically to minimize infeasible cases</label><br>
+  <label><input type="radio" name="q10" value="c"> By ignoring coverage criteria</label><br>
+  <label><input type="radio" name="q10" value="d"> By testing only invalid inputs</label><br>
+  <div class="answer" data-correct="b">Strategic selection of base choices helps reduce infeasible test cases while maintaining meaningful coverage.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

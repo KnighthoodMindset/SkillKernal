@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 44 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What distinguishes web applications from traditional software in terms of testing?</p>
+  <label><input type="radio" name="q1" value="a"> They always have access to server-side source code</label><br>
+  <label><input type="radio" name="q1" value="b"> They are distributed, heterogeneous, and often dynamic, requiring system-level testing across multiple layers</label><br>
+  <label><input type="radio" name="q1" value="c"> They do not interact with databases</label><br>
+  <label><input type="radio" name="q1" value="d"> They only use static HTML pages</label><br>
+  <div class="answer" data-correct="b">Web applications are distributed, heterogeneous, and dynamic, requiring testing of multiple layers and integrated system-level tests.</div>
+</div>
+
+<div class="question">
+  <p>Which layer of a web application is responsible for business logic and computations?</p>
+  <label><input type="radio" name="q2" value="a"> Presentation layer</label><br>
+  <label><input type="radio" name="q2" value="b"> Data-content layer</label><br>
+  <label><input type="radio" name="q2" value="c"> Data-representation layer</label><br>
+  <label><input type="radio" name="q2" value="d"> Data-storage layer</label><br>
+  <div class="answer" data-correct="b">The data-content layer handles business logic and computations in a web application.</div>
+</div>
+
+<div class="question">
+  <p>What is the main focus of client-side testing in dynamic web applications?</p>
+  <label><input type="radio" name="q3" value="a"> Request processing on the server</label><br>
+  <label><input type="radio" name="q3" value="b"> Scripts, form controls, and browser behavior</label><br>
+  <label><input type="radio" name="q3" value="c"> Database schema validation</label><br>
+  <label><input type="radio" name="q3" value="d"> Network load handling</label><br>
+  <div class="answer" data-correct="b">Client-side testing focuses on scripts, form controls, and browser behavior.</div>
+</div>
+
+<div class="question">
+  <p>Why is exhaustive input testing often infeasible for realistic web applications?</p>
+  <label><input type="radio" name="q4" value="a"> Because web apps never process user inputs</label><br>
+  <label><input type="radio" name="q4" value="b"> Because the input space is too large and complex</label><br>
+  <label><input type="radio" name="q4" value="c"> Because clients cannot submit forms</label><br>
+  <label><input type="radio" name="q4" value="d"> Because HTML is always static</label><br>
+  <div class="answer" data-correct="b">Exhaustive input testing is infeasible due to the large and complex input space of web applications.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of bypass testing in web applications?</p>
+  <label><input type="radio" name="q5" value="a"> To test static hyperlinks</label><br>
+  <label><input type="radio" name="q5" value="b"> To circumvent client-side validation and test server robustness against malformed inputs</label><br>
+  <label><input type="radio" name="q5" value="c"> To improve UI rendering speed</label><br>
+  <label><input type="radio" name="q5" value="d"> To generate random inputs for unit testing</label><br>
+  <div class="answer" data-correct="b">Bypass testing removes or alters client-side checks to see if the server safely handles invalid or malicious inputs.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is NOT a typical client-side constraint that can be bypassed?</p>
+  <label><input type="radio" name="q6" value="a"> Maximum input length</label><br>
+  <label><input type="radio" name="q6" value="b"> Allowed character sets</label><br>
+  <label><input type="radio" name="q6" value="c"> Server-side database schema</label><br>
+  <label><input type="radio" name="q6" value="d"> JavaScript format validations</label><br>
+  <div class="answer" data-correct="c">Server-side database schema is not a client-side constraint and cannot be bypassed from the browser.</div>
+</div>
+
+<div class="question">
+  <p>Why are session-derived inputs often more effective than random inputs for web application testing?</p>
+  <label><input type="radio" name="q7" value="a"> They cover only static HTML pages</label><br>
+  <label><input type="radio" name="q7" value="b"> They reflect realistic user interactions and usage patterns</label><br>
+  <label><input type="radio" name="q7" value="c"> They bypass server-side validation automatically</label><br>
+  <label><input type="radio" name="q7" value="d"> They require no testing heuristics</label><br>
+  <div class="answer" data-correct="b">Session-derived inputs are effective because they reflect realistic user interactions and patterns.</div>
+</div>
+
+<div class="question">
+  <p>What challenge arises due to HTTP being stateless in web applications?</p>
+  <label><input type="radio" name="q8" value="a"> Maintaining distributed state using cookies or sessions</label><br>
+  <label><input type="radio" name="q8" value="b"> Rendering static HTML pages</label><br>
+  <label><input type="radio" name="q8" value="c"> Executing compiled binaries on the server</label><br>
+  <label><input type="radio" name="q8" value="d"> Disabling hyperlinks</label><br>
+  <div class="answer" data-correct="a">HTTP is stateless, so distributed state must be managed via cookies or session objects.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following should be included in client-side test suites for robustness and security testing?</p>
+  <label><input type="radio" name="q9" value="a"> Boundary and out-of-range values, missing/extra fields, altered request metadata</label><br>
+  <label><input type="radio" name="q9" value="b"> Only valid HTML form submissions</label><br>
+  <label><input type="radio" name="q9" value="c"> Only static page content checks</label><br>
+  <label><input type="radio" name="q9" value="d"> Only server CPU usage monitoring</label><br>
+  <div class="answer" data-correct="a">Client-side test suites should include boundary values, malformed inputs, missing/extra fields, and altered request metadata.</div>
+</div>
+
+<div class="question">
+  <p>Why must testers design inputs via the public interface rather than accessing server internals directly?</p>
+  <label><input type="radio" name="q10" value="a"> Because the server is always offline</label><br>
+  <label><input type="radio" name="q10" value="b"> Because observability and controllability of server internals are limited for security reasons</label><br>
+  <label><input type="radio" name="q10" value="c"> Because client-side scripts never validate input</label><br>
+  <label><input type="radio" name="q10" value="d"> Because HTTP cannot send data</label><br>
+  <div class="answer" data-correct="b">Testers must design inputs through the public interface because server internals are often inaccessible for security reasons.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

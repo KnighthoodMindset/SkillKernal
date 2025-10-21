@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 40 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary focus of the current part of the course?</p>
+  <label><input type="radio" name="q1" value="a"> Unit testing using mutation operators</label><br>
+  <label><input type="radio" name="q1" value="b"> Integration testing of programs using mutation testing</label><br>
+  <label><input type="radio" name="q1" value="c"> Testing XML input models</label><br>
+  <label><input type="radio" name="q1" value="d"> Compiler construction using mutation operators</label><br>
+  <div class="answer" data-correct="b">The focus is on applying mutation testing for program integration testing.</div>
+</div>
+
+<div class="question">
+  <p>Which programming paradigm is emphasized for object-oriented integration mutation testing in this course?</p>
+  <label><input type="radio" name="q2" value="a"> Procedural programming</label><br>
+  <label><input type="radio" name="q2" value="b"> Functional programming</label><br>
+  <label><input type="radio" name="q2" value="c"> Object-oriented programming</label><br>
+  <label><input type="radio" name="q2" value="d"> Logic programming</label><br>
+  <div class="answer" data-correct="c">Object-oriented programming is emphasized, especially for languages like Java.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of the access modifier change operator?</p>
+  <label><input type="radio" name="q3" value="a"> To delete methods from a class</label><br>
+  <label><input type="radio" name="q3" value="b"> To modify access levels of instance variables and methods</label><br>
+  <label><input type="radio" name="q3" value="c"> To swap argument orders</label><br>
+  <label><input type="radio" name="q3" value="d"> To rename methods in the class</label><br>
+  <div class="answer" data-correct="b">It modifies access levels to test whether accessibility rules for variables and methods are enforced.</div>
+</div>
+
+<div class="question">
+  <p>How does hiding variable deletion operator work in object-oriented integration testing?</p>
+  <label><input type="radio" name="q4" value="a"> It removes local variables</label><br>
+  <label><input type="radio" name="q4" value="b"> It removes overriding or hidden variables to access parent or ancestor variables</label><br>
+  <label><input type="radio" name="q4" value="c"> It inserts new variable declarations</label><br>
+  <label><input type="radio" name="q4" value="d"> It changes variable types</label><br>
+  <div class="answer" data-correct="b">Hiding variable deletion removes overriding or hidden variables so that references access parent or ancestor variables, detecting integration errors.</div>
+</div>
+
+<div class="question">
+  <p>Which operator modifies the order or number of arguments in method calls?</p>
+  <label><input type="radio" name="q5" value="a"> Type change</label><br>
+  <label><input type="radio" name="q5" value="b"> Argument order change and number of arguments change</label><br>
+  <label><input type="radio" name="q5" value="c"> Access modifier change</label><br>
+  <label><input type="radio" name="q5" value="d"> Static modifier change</label><br>
+  <div class="answer" data-correct="b">These operators modify the order and quantity of arguments in method calls to test overloading usage.</div>
+</div>
+
+<div class="question">
+  <p>What is the purpose of the overriding method deletion operator?</p>
+  <label><input type="radio" name="q6" value="a"> To remove parent class methods</label><br>
+  <label><input type="radio" name="q6" value="b"> To remove overriding methods so that parent methods are used</label><br>
+  <label><input type="radio" name="q6" value="c"> To rename methods in the class</label><br>
+  <label><input type="radio" name="q6" value="d"> To insert new variables hiding parent variables</label><br>
+  <div class="answer" data-correct="b">Overriding method deletion removes overriding methods so that references use the parent method, testing method invocation correctness.</div>
+</div>
+
+<div class="question">
+  <p>Which operator tests correct usage of the this keyword?</p>
+  <label><input type="radio" name="q7" value="a"> this keyword deletion</label><br>
+  <label><input type="radio" name="q7" value="b"> super keyword deletion</label><br>
+  <label><input type="radio" name="q7" value="c"> Static modifier change</label><br>
+  <label><input type="radio" name="q7" value="d"> Access modifier change</label><br>
+  <div class="answer" data-correct="a">The this keyword deletion operator tests if member variables are correctly accessed when hidden by local variables or parameters.</div>
+</div>
+
+<div class="question">
+  <p>What does static modifier change test in object-oriented integration testing?</p>
+  <label><input type="radio" name="q8" value="a"> Access levels of methods</label><br>
+  <label><input type="radio" name="q8" value="b"> Correct usage of static and instance members</label><br>
+  <label><input type="radio" name="q8" value="c"> Variable hiding detection</label><br>
+  <label><input type="radio" name="q8" value="d"> Constructor invocation</label><br>
+  <div class="answer" data-correct="b">Static modifier change switches instance and class variables to test correct usage of static and instance members.</div>
+</div>
+
+<div class="question">
+  <p>How does parent constructor deletion operator help in testing?</p>
+  <label><input type="radio" name="q9" value="a"> It removes all constructors in the program</label><br>
+  <label><input type="radio" name="q9" value="b"> It deletes calls to super constructors to check if default parent constructor causes incorrect initial states</label><br>
+  <label><input type="radio" name="q9" value="c"> It removes method overloading</label><br>
+  <label><input type="radio" name="q9" value="d"> It changes argument order in methods</label><br>
+  <div class="answer" data-correct="b">Parent constructor deletion removes calls to super constructors to verify whether default initialization of parent class leads to errors.</div>
+</div>
+
+<div class="question">
+  <p>Approximately how many object-oriented integration mutation operators are described in this section?</p>
+  <label><input type="radio" name="q10" value="a"> 5</label><br>
+  <label><input type="radio" name="q10" value="b"> 10</label><br>
+  <label><input type="radio" name="q10" value="c"> 20</label><br>
+  <label><input type="radio" name="q10" value="d"> 50</label><br>
+  <div class="answer" data-correct="c">There are about twenty mutation operators covering integration testing of methods, classes, inheritance, overloading, access levels, and related interactions.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

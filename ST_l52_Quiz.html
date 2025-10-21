@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Testing - Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - lecture 52 - Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>What is the primary purpose of Dart in program testing?</p>
+  <label><input type="radio" name="q1" value="a"> To perform random testing only</label><br>
+  <label><input type="radio" name="q1" value="b"> To perform concolic execution combining concrete and symbolic execution</label><br>
+  <label><input type="radio" name="q1" value="c"> To replace unit tests with manual debugging</label><br>
+  <label><input type="radio" name="q1" value="d"> To optimize program performance</label><br>
+  <div class="answer" data-correct="b">Dart performs concolic execution, combining concrete and symbolic execution for systematic unit testing.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart explore neighboring paths after collecting initial path constraints?</p>
+  <label><input type="radio" name="q2" value="a"> By generating completely random inputs again</label><br>
+  <label><input type="radio" name="q2" value="b"> By negating one constraint at a time from the stack and executing the new path</label><br>
+  <label><input type="radio" name="q2" value="c"> By ignoring constraints and using default values</label><br>
+  <label><input type="radio" name="q2" value="d"> By skipping assignment statements</label><br>
+  <div class="answer" data-correct="b">Dart systematically explores neighboring paths by negating constraints from the stack and executing along these new paths.</div>
+</div>
+
+<div class="question">
+  <p>What happens when Dart encounters a nonlinear constraint that cannot be handled by a solver?</p>
+  <label><input type="radio" name="q3" value="a"> It ignores the constraint completely</label><br>
+  <label><input type="radio" name="q3" value="b"> It substitutes concrete values for the variables and sets a flag</label><br>
+  <label><input type="radio" name="q3" value="c"> It aborts execution immediately</label><br>
+  <label><input type="radio" name="q3" value="d"> It treats the constraint as linear</label><br>
+  <div class="answer" data-correct="b">Dart substitutes concrete values for variables in nonlinear constraints and sets a flag to indicate symbolic evaluation cannot continue.</div>
+</div>
+
+<div class="question">
+  <p>During interface extraction in C programs, what types of inputs does Dart identify?</p>
+  <label><input type="radio" name="q4" value="a"> Only local variables</label><br>
+  <label><input type="radio" name="q4" value="b"> Uninitialized memory locations, arguments, and values returned by external or library functions</label><br>
+  <label><input type="radio" name="q4" value="c"> Only constant literals</label><br>
+  <label><input type="radio" name="q4" value="d"> Only pointer variables</label><br>
+  <div class="answer" data-correct="b">Dart identifies inputs from uninitialized memory, top-level function arguments, and values returned by external or library functions.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart initialize pointers in its random test driver for C programs?</p>
+  <label><input type="radio" name="q5" value="a"> Always assigns null</label><br>
+  <label><input type="radio" name="q5" value="b"> Uses a fair coin toss to decide between null or newly allocated memory</label><br>
+  <label><input type="radio" name="q5" value="c"> Always points to global memory</label><br>
+  <label><input type="radio" name="q5" value="d"> Leaves them uninitialized</label><br>
+  <div class="answer" data-correct="b">Pointers are initialized randomly, using a coin toss to choose between null or newly allocated memory.</div>
+</div>
+
+<div class="question">
+  <p>Which tool does Dart use to parse and analyze C programs for symbolic updates?</p>
+  <label><input type="radio" name="q6" value="a"> JCute</label><br>
+  <label><input type="radio" name="q6" value="b"> CIL (OCaml-based)</label><br>
+  <label><input type="radio" name="q6" value="c"> IP-Solve</label><br>
+  <label><input type="radio" name="q6" value="d"> Crest</label><br>
+  <div class="answer" data-correct="b">Dart uses the OCaml-based CIL tool to parse and analyze C programs for symbolic execution.</div>
+</div>
+
+<div class="question">
+  <p>What are the possible termination outcomes for Dart?</p>
+  <label><input type="radio" name="q7" value="a"> Successfully exploring all paths, finding a bug, or running indefinitely</label><br>
+  <label><input type="radio" name="q7" value="b"> Always terminating normally</label><br>
+  <label><input type="radio" name="q7" value="c"> Crashing the program intentionally</label><br>
+  <label><input type="radio" name="q7" value="d"> Halting after the first input</label><br>
+  <div class="answer" data-correct="a">Dart can terminate by successfully exploring all paths, detecting a bug with an abort, or potentially running indefinitely due to undecidable path exploration.</div>
+</div>
+
+<div class="question">
+  <p>How does Dart handle external or library functions during test driver generation?</p>
+  <label><input type="radio" name="q8" value="a"> It instruments them fully</label><br>
+  <label><input type="radio" name="q8" value="b"> Treats them as unknown deterministic functions with compatible type values</label><br>
+  <label><input type="radio" name="q8" value="c"> Ignores them</label><br>
+  <label><input type="radio" name="q8" value="d"> Replaces them with concrete inputs only</label><br>
+  <div class="answer" data-correct="b">External or library functions are treated as unknown deterministic functions, substituting compatible type values without instrumenting their code.</div>
+</div>
+
+<div class="question">
+  <p>Which tools have evolved from Dart for automated C program testing?</p>
+  <label><input type="radio" name="q9" value="a"> JCute and Crest</label><br>
+  <label><input type="radio" name="q9" value="b"> Cute and Crest</label><br>
+  <label><input type="radio" name="q9" value="c"> IP-Solve and JCute</label><br>
+  <label><input type="radio" name="q9" value="d"> Only Dart exists</label><br>
+  <div class="answer" data-correct="b">Dart has evolved into Cute for C programs, with related tools like Crest available for experimentation.</div>
+</div>
+
+<div class="question">
+  <p>What is the role of the constraint solver in Dart?</p>
+  <label><input type="radio" name="q10" value="a"> To execute program statements</label><br>
+  <label><input type="radio" name="q10" value="b"> To explore unexplored program paths by solving path constraints</label><br>
+  <label><input type="radio" name="q10" value="c"> To generate random memory allocations</label><br>
+  <label><input type="radio" name="q10" value="d"> To terminate the program after execution</label><br>
+  <div class="answer" data-correct="b">The constraint solver is used to find input values that satisfy path constraints, allowing Dart to systematically explore different execution paths.</div>
+</div>
+
+      
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
