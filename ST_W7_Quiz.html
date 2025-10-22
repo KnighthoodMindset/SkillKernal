@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+<p>For the first five questions, consider the following set of requirements for a college job placement process. If the CGPA is ≥ 8 (out of 10), then the students are eligible for companies that offer salaries ≥ INR 20,00,000/= per annum. If the CGPA is between 6 and 8 then they are eligible for companies that offer salaries less than INR 20,00,000/= per annum. If there aren’t any companies with salary offers ≥ INR 20,00,000/= per annum in a particular period, then those with CGPA ≥ 8 will also appear in the companies in the lower salary categories. Those with less than 6 CGPA will not be assisted by the college placement office for their placements. Answer the following questions related to equivalence partitioning based testing of these requirements.</p>
+
+<div class="question">
+  <p>How many partitions will there be for the input CGPA if we consider only valid inputs?</p>
+  <label><input type="radio" name="q1" value="a"> Two partitions</label><br>
+  <label><input type="radio" name="q1" value="b"> Three partitions</label><br>
+  <label><input type="radio" name="q1" value="c"> Four partitions</label><br>
+  <label><input type="radio" name="q1" value="d"> Five partitions</label><br>
+  <div class="answer" data-correct="b">Three partitions. CGPA is divided into three valid ranges: less than 6, 6 to less than 8, and 8 or above.</div>
+</div>
+
+<div class="question">
+  <p>Do the test inputs {CGPA = 8, CGPA = 9, CGPA = 9.5} belong to the same partition?</p>
+  <label><input type="radio" name="q2" value="a"> Yes, they belong to the same partition</label><br>
+  <label><input type="radio" name="q2" value="b"> No, they belong to different partitions</label><br>
+  <div class="answer" data-correct="a">Yes, all these values fall into the CGPA ≥ 8 partition.</div>
+</div>
+
+<div class="question">
+  <p>What is the expected output for the test case containing CGPA = 8 as input?</p>
+  <label><input type="radio" name="q3" value="a"> Only eligible for offers above INR 20,00,000 per annum</label><br>
+  <label><input type="radio" name="q3" value="b"> Eligibility for offers above INR 20,00,000 per annum and if no such offers exist, eligible for all offers</label><br>
+  <div class="answer" data-correct="b">The student is eligible for offers above INR 20,00,000, and if no such offers exist, they are also eligible for offers in the lower salary category.</div>
+</div>
+
+<div class="question">
+  <p>A student has a CGPA of 6. Will they be eligible to appear for placements for companies offering a salary of INR 20,00,000 per annum?</p>
+  <label><input type="radio" name="q4" value="a"> True</label><br>
+  <label><input type="radio" name="q4" value="b"> False</label><br>
+  <div class="answer" data-correct="b">False. A student with CGPA 6 is eligible only for companies offering salaries less than INR 20,00,000 per annum.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a correct partitioning of salary inputs?</p>
+  <label><input type="radio" name="q5" value="a"> Salary range: INR x to INR 20,00,000, and INR 20,00,001 to INR y, where x is the minimum and y is the maximum salary</label><br>
+  <label><input type="radio" name="q5" value="b"> Salary range: INR 0 to INR 20,00,000, and ≥ INR 20,00,000</label><br>
+  <label><input type="radio" name="q5" value="c"> Both options are valid partitions</label><br>
+  <label><input type="radio" name="q5" value="d"> None of the options are valid partitions</label><br>
+  <div class="answer" data-correct="c">Both options are valid partitions. Salary inputs can be divided in either way for equivalence partitioning testing.</div>
+</div>
+
+
+<div class="question">
+  <p>Amongst the various coverage criteria for input space partitioning, which is the most expressive and which is the least expressive?</p>
+  <label><input type="radio" name="q6" value="a"> All combinations coverage is the least expressive and multiple base choice coverage is the most expressive</label><br>
+  <label><input type="radio" name="q6" value="b"> All combinations coverage is the most expressive and multiple base choice coverage is the least expressive</label><br>
+  <label><input type="radio" name="q6" value="c"> Each choice coverage is the most expressive and all combinations coverage is the least expressive</label><br>
+  <label><input type="radio" name="q6" value="d"> Each choice coverage is the least expressive and all combinations coverage is the most expressive</label><br>
+  <div class="answer" data-correct="d">Each choice coverage is the least expressive, and all combinations coverage is the most expressive because it tests all possible input combinations.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: Multiple base choice coverage subsumes pair-wise coverage.</p>
+  <label><input type="radio" name="q7" value="a"> True</label><br>
+  <label><input type="radio" name="q7" value="b"> False</label><br>
+  <div class="answer" data-correct="b">False. Multiple base choice coverage does not guarantee coverage of all pairwise combinations.</div>
+</div>
+
+<div class="question">
+  <p>Which criterion below will have a maximum number of test cases?</p>
+  <label><input type="radio" name="q8" value="a"> Each choice criterion</label><br>
+  <label><input type="radio" name="q8" value="b"> All combinations criterion</label><br>
+  <label><input type="radio" name="q8" value="c"> Base choice coverage criterion</label><br>
+  <label><input type="radio" name="q8" value="d"> Multiple base choice coverage criterion</label><br>
+  <div class="answer" data-correct="b">All combinations criterion generates the maximum number of test cases because it considers all possible combinations of input partitions.</div>
+</div>
+
+<div class="question">
+  <p>When does T-wise coverage criterion become the same as all combinations coverage criterion?</p>
+  <label><input type="radio" name="q9" value="a"> When the value for T is the maximum value in a partition</label><br>
+  <label><input type="radio" name="q9" value="b"> When the value for T is equal to the number of partitions</label><br>
+  <div class="answer" data-correct="b">T-wise coverage becomes equivalent to all combinations coverage when T equals the number of input partitions.</div>
+</div>
+
+<div class="question">
+  <p>State yes or no: While partitioning the inputs using equivalence partitioning, both valid and invalid inputs need to be considered.</p>
+  <label><input type="radio" name="q10" value="a"> Yes</label><br>
+  <label><input type="radio" name="q10" value="b"> No</label><br>
+  <div class="answer" data-correct="a">Yes. Equivalence partitioning requires considering both valid and invalid inputs to ensure thorough testing.</div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

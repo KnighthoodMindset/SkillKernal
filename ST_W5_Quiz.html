@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+
+
+<div class="question">
+  <p>State true or false: GACC subsumes predicate coverage.</p>
+  <label><input type="radio" name="q1" value="a"> True.</label><br>
+  <label><input type="radio" name="q1" value="b"> False.</label><br>
+  <div class="answer" data-correct="False.">Correct Answer: False.</div>
+</div>
+
+<div class="question">
+  <p>When we test to check if a particular clause does not determine a predicate, which kind of coverage criteria are we considering?</p>
+  <label><input type="radio" name="q2" value="a"> Active coverage criteria.</label><br>
+  <label><input type="radio" name="q2" value="b"> Inactive coverage criteria.</label><br>
+  <div class="answer" data-correct="Inactive coverage criteria">Correct Answer: Inactive coverage criteria</div>
+</div>
+
+<div class="question">
+  <p>Which of the following represents a correct order of subsumption amongst logic coverage criteria? In the options below, read → as ‘subsumes’.</p>
+  <label><input type="radio" name="q3" value="a"> Correlated active clause coverage → Predicate coverage → Clause coverage.</label><br>
+  <label><input type="radio" name="q3" value="b"> Combinatorial coverage → Predicate coverage → Clause coverage.</label><br>
+  <label><input type="radio" name="q3" value="c"> Combinatorial coverage → Correlated active clause coverage → Predicate coverage.</label><br>
+  <label><input type="radio" name="q3" value="d"> General active clause coverage → Correlated active clause coverage → Clause coverage.</label><br>
+  <div class="answer" data-correct="Combinatorial coverage → Correlated active clause coverage → Predicate coverage.">Correct Answer: Combinatorial coverage → Correlated active clause coverage → Predicate coverage.</div>
+</div>
+
+<div class="question">
+  <p>Consider the logical predicate p = a ∨ (b ∧ c). Which of the following represents pa, the conditions under which clause a determines p?</p>
+  <label><input type="radio" name="q4" value="a"> b ∧ c.</label><br>
+  <label><input type="radio" name="q4" value="b"> b ∨ c.</label><br>
+  <label><input type="radio" name="q4" value="c"> ¬b ∨ ¬c.</label><br>
+  <label><input type="radio" name="q4" value="d"> ¬b ∧ ¬c.</label><br>
+  <div class="answer" data-correct="¬b ∨ ¬c.">Correct Answer: ¬b ∨ ¬c.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following represents pb, the conditions under which clause b determines p?</p>
+  <label><input type="radio" name="q5" value="a"> a ∧ c.</label><br>
+  <label><input type="radio" name="q5" value="b"> a ∨ c.</label><br>
+  <label><input type="radio" name="q5" value="c"> ¬a ∧ c.</label><br>
+  <label><input type="radio" name="q5" value="d"> ¬a ∨ ¬c.</label><br>
+  <div class="answer" data-correct="¬a ∧ c.">Correct Answer: ¬a ∧ c.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following represents pc, the conditions under which clause c determines p?</p>
+  <label><input type="radio" name="q6" value="a"> ¬a ∧ b.</label><br>
+  <label><input type="radio" name="q6" value="b"> ¬a ∨ b.</label><br>
+  <div class="answer" data-correct="¬a ∧ b.">Correct Answer: ¬a ∧ b.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following represents GACC pairs for clause a? (Note: Numbers represent rows from the truth table)</p>
+  <label><input type="radio" name="q7" value="a"> {2,3,4} × {6,7,8}.</label><br>
+  <label><input type="radio" name="q7" value="b"> {1,3,4} × {5,6,7}.</label><br>
+  <div class="answer" data-correct="{2,3,4} × {6,7,8}.">Correct Answer: {2,3,4} × {6,7,8}.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: GACC pairs for clauses b and c are the same.</p>
+  <label><input type="radio" name="q8" value="a"> True.</label><br>
+  <label><input type="radio" name="q8" value="b"> False.</label><br>
+  <div class="answer" data-correct="False">Correct Answer: False</div>
+</div>
+
+<div class="question">
+  <p>The set {(2,6),(3,7),(4,8)} is the set of RACC pairs for which clause?</p>
+  <label><input type="radio" name="q9" value="a"> Clause a.</label><br>
+  <label><input type="radio" name="q9" value="b"> Clause b.</label><br>
+  <div class="answer" data-correct="Clause a.">Correct Answer: Clause a.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: CACC pairs for clauses a, b and c are different from GACC pairs for these clauses.</p>
+  <label><input type="radio" name="q10" value="a"> True.</label><br>
+  <label><input type="radio" name="q10" value="b"> False.</label><br>
+  <div class="answer" data-correct="False">Correct Answer: False</div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

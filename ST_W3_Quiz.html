@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+
+
+<div class="question">
+  <p>Which of the following represents a basic block in a control flow graph?</p>
+  <label><input type="radio" name="q1" value="a"> A basic block of statements is a set of all statements that are a part of a function that the control flow graph represents.</label><br>
+  <label><input type="radio" name="q1" value="b"> A basic block of statements is a sequence of statements such that if the first statement in the sequence is executed then all the statements in the sequence will also be executed.</label><br>
+  <div class="answer" data-correct="A basic block of statements is a sequence of statements such that if the first statement in the sequence is executed then all the statements in the sequence will also be executed.">Correct Answer: A basic block of statements is a sequence of statements such that if the first statement in the sequence is executed then all the statements in the sequence will also be executed.</div>
+</div>
+
+<div class="question">
+  <p>Consider a variable count of type int. Suppose there is a statement count++ in a method. Which of the following statements are correct regarding the data flow definition of count?</p>
+  <label><input type="radio" name="q2" value="a"> The statement is a definition of count.</label><br>
+  <label><input type="radio" name="q2" value="b"> The statement is a use of count.</label><br>
+  <label><input type="radio" name="q2" value="c"> The statement is both a definition and use of count.</label><br>
+  <label><input type="radio" name="q2" value="d"> The statement is neither a definition nor a use of count.</label><br>
+  <div class="answer" data-correct="The statement is both a definition and use of count.">Correct Answer: The statement is both a definition and use of count.</div>
+</div>
+
+<div class="question">
+  <p>Consider a variable x of type double. Suppose there is a statement if(Math.log(x) >= 4.2) in a method. Is this considered a definition or use of x?</p>
+  <label><input type="radio" name="q3" value="a"> The statement is a definition of x.</label><br>
+  <label><input type="radio" name="q3" value="b"> The statement is a use of x.</label><br>
+  <div class="answer" data-correct="The statement is a use of x.">Correct Answer: The statement is a use of x.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: Consider a variable x in a program. Not every definition of x will always reach a use.</p>
+  <label><input type="radio" name="q4" value="a"> True.</label><br>
+  <label><input type="radio" name="q4" value="b"> False.</label><br>
+  <div class="answer" data-correct="True.">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following best defines a du-path for a variable x?</p>
+  <label><input type="radio" name="q5" value="a"> A du-path is a simple path from a definition of x to a use of x without any further definitions of x in-between.</label><br>
+  <label><input type="radio" name="q5" value="b"> A du-path is a path from a definition of x to a use of x without any further definitions of x in-between.</label><br>
+  <label><input type="radio" name="q5" value="c"> A du-path is a simple path from a definition of x to a use of x without any further uses of x in-between.</label><br>
+  <label><input type="radio" name="q5" value="d"> A du-path is a path from a definition of x to a use of x without any further uses of x in-between.</label><br>
+  <div class="answer" data-correct="A du-path is a simple path from a definition of x to a use of x without any further definitions of x in-between.">Correct Answer: A du-path is a simple path from a definition of x to a use of x without any further definitions of x in-between.</div>
+</div>
+
+<div class="question">
+  <p>State yes or no: We group du-paths with respect to a variable by their definitions.</p>
+  <label><input type="radio" name="q6" value="a"> Yes.</label><br>
+  <label><input type="radio" name="q6" value="b"> No.</label><br>
+  <div class="answer" data-correct="Yes.">Correct Answer: Yes.</div>
+</div>
+
+<div class="question">
+  <p>Is it true that the all-du-paths data flow coverage criterion subsumes prime path coverage?</p>
+  <label><input type="radio" name="q7" value="a"> Yes.</label><br>
+  <label><input type="radio" name="q7" value="b"> No.</label><br>
+  <div class="answer" data-correct="No.">Correct Answer: No.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following statements are true when comparing traditional source code coverage criteria with graph-based coverage criteria?</p>
+  <label><input type="radio" name="q8" value="a"> Node and statement coverage are the same, edge and branch coverage are the same.</label><br>
+  <label><input type="radio" name="q8" value="b"> Edge and decision coverage are the same.</label><br>
+  <div class="answer" data-correct="Node and statement coverage are the same, edge and branch coverage are the same.">Correct Answer: Node and statement coverage are the same, edge and branch coverage are the same.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following defines a linearly independent path of execution in a control flow graph?</p>
+  <label><input type="radio" name="q9" value="a"> A path in which there are no branches.</label><br>
+  <label><input type="radio" name="q9" value="b"> A path which does not contain other paths within it.</label><br>
+  <label><input type="radio" name="q9" value="c"> A path that represents structural complexity of a program.</label><br>
+  <label><input type="radio" name="q9" value="d"> A path within a connected component.</label><br>
+  <div class="answer" data-correct="A path which does not contain other paths within it.">Correct Answer: A path which does not contain other paths within it.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: Node and edge coverage, as test requirements for structural coverage over graphs, are given with the input graph itself.</p>
+  <label><input type="radio" name="q10" value="a"> True.</label><br>
+  <label><input type="radio" name="q10" value="b"> False.</label><br>
+  <div class="answer" data-correct="True.">Correct Answer: True.</div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

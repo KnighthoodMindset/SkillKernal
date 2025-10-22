@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Cybersecurity - Overall Quiz</h2>
+    <form id="quizForm">
+
+<div class="question">
+  <p>What is the primary purpose of the McCumber Cube?</p>
+  <label><input type="radio" name="q1" value="a"> To develop network security protocols</label><br>
+  <label><input type="radio" name="q1" value="b"> To create operating systems</label><br>
+  <label><input type="radio" name="q1" value="c"> To establish and evaluate information security programs</label><br>
+  <label><input type="radio" name="q1" value="d"> To analyze network traffic performance</label>
+  <div class="answer" data-correct="c" data-expl="The McCumber Cube provides a framework for establishing, implementing, and evaluating information security programs by addressing confidentiality, integrity, and availability across data states and security measures."></div>
+</div>
+
+<div class="question">
+  <p>Consider the following statements:<br>
+  a. The first dimension of the McCumber cube identifies the goals to protect the cyber world.<br>
+  b. The second dimension of the McCumber cube focuses on the problems of protecting all of the states of data in the cyber world.<br>
+  c. The third dimension of the McCumber cube defines the types of controls used to protect the cyber world.<br>
+  Which of the above statements are True?</p>
+  <label><input type="radio" name="q2" value="a"> Only a is true</label><br>
+  <label><input type="radio" name="q2" value="b"> a and b are true</label><br>
+  <label><input type="radio" name="q2" value="c"> b and c are true</label><br>
+  <label><input type="radio" name="q2" value="d"> a, b, and c are true</label>
+  <div class="answer" data-correct="d" data-expl="All three statements are correct. The McCumber Cube’s three dimensions address security goals (confidentiality, integrity, availability), information states (storage, processing, transmission), and security measures (technology, policies, and practices)."></div>
+</div>
+
+<div class="question">
+  <p>In a malware detection system, when legitimate business software is incorrectly identified as malicious, this represents:</p>
+  <label><input type="radio" name="q3" value="a"> True Positive (TP)</label><br>
+  <label><input type="radio" name="q3" value="b"> False Positive (FP)</label><br>
+  <label><input type="radio" name="q3" value="c"> True Negative (TN)</label><br>
+  <label><input type="radio" name="q3" value="d"> False Negative (FN)</label>
+  <div class="answer" data-correct="b" data-expl="A False Positive occurs when a system incorrectly flags safe or legitimate software as malicious, leading to unnecessary alerts or blocking."></div>
+</div>
+
+<div class="question">
+  <p>True or False: A False Negative in malware detection means the system correctly identifies a safe file as non-malicious.</p>
+  <label><input type="radio" name="q4" value="a"> True</label><br>
+  <label><input type="radio" name="q4" value="b"> False</label>
+  <div class="answer" data-correct="b" data-expl="A False Negative means the system fails to detect a malicious file and incorrectly classifies it as safe, not a correct identification."></div>
+</div>
+
+<div class="question">
+  <p>A vulnerability in cybersecurity is best defined as:</p>
+  <label><input type="radio" name="q5" value="a"> A malicious program designed to damage systems</label><br>
+  <label><input type="radio" name="q5" value="b"> A security patch released by software vendors</label><br>
+  <label><input type="radio" name="q5" value="c"> A method used by attackers to gain unauthorized access</label><br>
+  <label><input type="radio" name="q5" value="d"> A weakness or flaw in technology, processes, or human behavior that leaves systems open to exploitation</label>
+  <div class="answer" data-correct="d" data-expl="A vulnerability is a flaw or weakness that can be exploited by attackers to compromise a system’s confidentiality, integrity, or availability."></div>
+</div>
+
+<div class="question">
+  <p>An exploit is primarily:</p>
+  <label><input type="radio" name="q6" value="a"> A weakness in system security that needs patching</label><br>
+  <label><input type="radio" name="q6" value="b"> A technique used to compromise a system</label><br>
+  <label><input type="radio" name="q6" value="c"> A novel self-protecting antivirus software</label><br>
+  <label><input type="radio" name="q6" value="d"> A security framework for risk assessment</label>
+  <div class="answer" data-correct="b" data-expl="An exploit is a method or piece of code used by attackers to take advantage of a vulnerability in a system, allowing them to gain unauthorized access or control."></div>
+</div>
+
+<div class="question">
+  <p>True or False: Accuracy is an attribute of information that describes how data is genuine or original rather than reproduced or fabricated.</p>
+  <label><input type="radio" name="q7" value="a"> True</label><br>
+  <label><input type="radio" name="q7" value="b"> False</label>
+  <div class="answer" data-correct="b" data-expl="Accuracy refers to the correctness and precision of data, not its authenticity. The attribute that describes genuineness or originality is authenticity."></div>
+</div>
+
+<div class="question">
+  <p>What is a recommended defense against phishing emails?</p>
+  <label><input type="radio" name="q8" value="a"> Always open attachments to check content</label><br>
+  <label><input type="radio" name="q8" value="b"> Click links only if the sender is familiar</label><br>
+  <label><input type="radio" name="q8" value="c"> Verify the source and avoid clicking suspicious links</label><br>
+  <label><input type="radio" name="q8" value="d"> Forward the email to colleagues</label>
+  <div class="answer" data-correct="c" data-expl="Phishing attacks rely on tricking users into clicking malicious links. Verifying the sender’s authenticity and avoiding suspicious links prevents credential theft and malware infection."></div>
+</div>
+
+<div class="question">
+  <p>Which of the following are best practices for balancing information security and access? (Select all that apply.)</p>
+  <label><input type="checkbox" name="q9" value="a"> Regular review of user access rights</label><br>
+  <label><input type="checkbox" name="q9" value="b"> Implementing role-based access control</label><br>
+  <label><input type="checkbox" name="q9" value="c"> Granting blanket access to all employees</label><br>
+  <label><input type="checkbox" name="q9" value="d"> Monitoring and auditing access logs</label>
+  <div class="answer" data-correct="a,b,d" data-expl="Balancing security and access requires regular access reviews, implementing role-based access control, and monitoring access logs. Granting blanket access violates the principle of least privilege."></div>
+</div>
+
+<div class="question">
+  <p>In an information system, which component is responsible for enabling communication and data transfer between devices?</p>
+  <label><input type="radio" name="q10" value="a"> Hardware</label><br>
+  <label><input type="radio" name="q10" value="b"> Software</label><br>
+  <label><input type="radio" name="q10" value="c"> Networks</label><br>
+  <label><input type="radio" name="q10" value="d"> Data</label>
+  <div class="answer" data-correct="c" data-expl="Networks connect devices and facilitate communication and data transfer, allowing systems to share resources and exchange information."></div>
+</div>
+
+
+
+      
+
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+
+
+<div class="question">
+  <p>State true or false: Regression testing is a white-box testing technique as it tests for the changes done to the code.</p>
+  <label><input type="radio" name="q1" value="a"> True</label><br>
+  <label><input type="radio" name="q1" value="b"> False</label><br>
+  <div class="answer" data-correct="b">False. Regression testing is primarily a validation technique used to ensure that code changes do not introduce new faults; it is not limited to white-box testing.</div>
+</div>
+
+<div class="question">
+  <p>Let P be a program and let P′ be a modified version of P. When do we say that a particular test case t is obsolete for P′?</p>
+  <label><input type="radio" name="q2" value="a"> Test case t is obsolete for P′ if it has an input that is not valid for P′</label><br>
+  <label><input type="radio" name="q2" value="b"> Test case t is obsolete for P′ if it does not produce an output on execution</label><br>
+  <div class="answer" data-correct="a">A test case is considered obsolete if its input is no longer valid for the modified program P′, meaning it cannot be executed correctly or meaningfully on P′.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: Testing for non-functional or quality requirements can be done at all the phases of software development.</p>
+  <label><input type="radio" name="q3" value="a"> True</label><br>
+  <label><input type="radio" name="q3" value="b"> False</label><br>
+  <div class="answer" data-correct="b">False. Non-functional testing such as performance, security, or usability is typically done during specific phases, often later in development or during system testing.</div>
+</div>
+
+<div class="question">
+  <p>If a software application version X released in 2007 can be used on version Y of the same application released in 2010, what does it indicate regarding its compatibility?</p>
+  <label><input type="radio" name="q4" value="a"> The application X is forward compatible</label><br>
+  <label><input type="radio" name="q4" value="b"> The application X is backward compatible</label><br>
+  <div class="answer" data-correct="a">Forward compatibility means that an older version of the software (X) can work with a newer version of the system or environment (Y).</div>
+</div>
+
+<div class="question">
+  <p>If a particular file available in a web link is set to have “Readonly” access to all users, then it is an example of which kind of quality requirement?</p>
+  <label><input type="radio" name="q5" value="a"> It is an example of a confidentiality requirement</label><br>
+  <label><input type="radio" name="q5" value="b"> It is an example of a reliability requirement</label><br>
+  <label><input type="radio" name="q5" value="c"> It is an example of a security authorization requirement</label><br>
+  <label><input type="radio" name="q5" value="d"> It is an example of a security authentication requirement</label><br>
+  <div class="answer" data-correct="c">Setting a file to “Readonly” for all users is a security authorization requirement, controlling the permitted actions on the resource.</div>
+</div>
+
+<div class="question">
+  <p>Installation instructions are made available as a part of the software package. What are these instructions a part of?</p>
+  <label><input type="radio" name="q6" value="a"> They are a part of the software documentation</label><br>
+  <label><input type="radio" name="q6" value="b"> They are a part of the software operations procedure</label><br>
+  <label><input type="radio" name="q6" value="c"> They are a part of the regulatory requirements for the software</label><br>
+  <label><input type="radio" name="q6" value="d"> They are a part of the availability requirements of the software</label><br>
+  <div class="answer" data-correct="a">Installation instructions are included as part of the software documentation to guide users in correctly installing and configuring the software.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following terms represents the testing that is done to find the upper limit capacity of the inputs that a particular system can handle?</p>
+  <label><input type="radio" name="q7" value="a"> Performance testing</label><br>
+  <label><input type="radio" name="q7" value="b"> Load testing</label><br>
+  <label><input type="radio" name="q7" value="c"> Spike testing</label><br>
+  <label><input type="radio" name="q7" value="d"> Stress testing</label><br>
+  <div class="answer" data-correct="d">Stress testing evaluates the upper limits of a system by pushing it beyond normal operational capacity to observe its behavior under extreme conditions.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a list of key challenges in testing of mobile applications?</p>
+  <label><input type="radio" name="q8" value="a"> Device fragmentation, different mobile networks, compatibility across platforms</label><br>
+  <label><input type="radio" name="q8" value="b"> Key challenge is related to mobile applications being different from that of desktop applications</label><br>
+  <label><input type="radio" name="q8" value="c"> Mobile applications have to be tested within a mobile phone only, this is the key challenge</label><br>
+  <label><input type="radio" name="q8" value="d"> Testing across platforms is the only key challenge</label><br>
+  <div class="answer" data-correct="a">Mobile testing challenges include handling device fragmentation, varying mobile networks, and ensuring compatibility across different platforms and devices.</div>
+</div>
+
+<div class="question">
+  <p>When performance testing is considered for mobile applications, which of the following aspects are tested for?</p>
+  <label><input type="radio" name="q9" value="a"> Screen size, operating systems and browsers</label><br>
+  <label><input type="radio" name="q9" value="b"> Network coverage, memory and battery</label><br>
+  <label><input type="radio" name="q9" value="c"> Speed with uniform user experience</label><br>
+  <label><input type="radio" name="q9" value="d"> Load and stress in terms of the number of users</label><br>
+  <div class="answer" data-correct="b">Mobile performance testing focuses on network coverage, memory usage, and battery consumption to ensure the application performs well on real devices.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a list of interrupts that mobile applications are tested for?</p>
+  <label><input type="radio" name="q10" value="a"> Network coverage, memory and battery</label><br>
+  <label><input type="radio" name="q10" value="b"> Network outage, incoming/outgoing calls and messages</label><br>
+  <div class="answer" data-correct="b">Mobile applications are tested for interrupts like network outages and incoming or outgoing calls/messages to ensure they handle interruptions gracefully.</div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

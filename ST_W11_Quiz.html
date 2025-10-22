@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+
+
+<div class="question">
+  <p>State yes or no: Is concolic testing a white-box testing technique?</p>
+  <label><input type="radio" name="q1" value="a"> Yes</label><br>
+  <label><input type="radio" name="q1" value="b"> No</label><br>
+  <div class="answer" data-correct="a">Yes. Concolic testing is a white-box testing technique that combines concrete execution with symbolic execution to systematically explore program paths.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is true about concolic testing?</p>
+  <label><input type="radio" name="q2" value="a"> Concolic testing is used instead of symbolic testing when the latter fails</label><br>
+  <label><input type="radio" name="q2" value="b"> Concolic testing keeps concrete state and symbolic state</label><br>
+  <div class="answer" data-correct="b">Concolic testing simultaneously maintains concrete state for execution and symbolic state for path constraint analysis.</div>
+</div>
+
+<div class="question">
+  <p>What is the use of a SAT/SMT solver in symbolic testing?</p>
+  <label><input type="radio" name="q3" value="a"> SAT/SMT solvers are used to collect path constraints in symbolic testing</label><br>
+  <label><input type="radio" name="q3" value="b"> SAT/SMT solvers are used to solve path constraints and get values that can be used as test inputs</label><br>
+  <label><input type="radio" name="q3" value="c"> Constraint solvers are not useful in symbolic testing as not all path constraints can be collected and solved</label><br>
+  <label><input type="radio" name="q3" value="d"> Constraint solvers on predicates always return true or false values which helps to decide the execution paths</label><br>
+  <div class="answer" data-correct="b">SAT/SMT solvers are used to solve symbolic path constraints and generate concrete input values that will follow the desired execution paths.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: Symbolic execution can be used to detect non-termination in programs.</p>
+  <label><input type="radio" name="q4" value="a"> True</label><br>
+  <label><input type="radio" name="q4" value="b"> False</label><br>
+  <div class="answer" data-correct="b">False. Symbolic execution cannot reliably detect non-termination because it does not execute all paths indefinitely; it primarily focuses on exploring feasible paths symbolically.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is a list of techniques used in the algorithm deployed by DART?</p>
+  <label><input type="radio" name="q5" value="a"> Random testing, symbolic testing and constraint solvers</label><br>
+  <label><input type="radio" name="q5" value="b"> Symbolic testing and automated testing</label><br>
+  <label><input type="radio" name="q5" value="c"> Directed search, random testing and constraint solvers</label><br>
+  <label><input type="radio" name="q5" value="d"> Concrete testing and symbolic testing</label><br>
+  <div class="answer" data-correct="c">DART combines directed search, random testing, and constraint solvers to automatically explore program paths and generate test inputs.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following strategy is used for input search in concolic testing?</p>
+  <label><input type="radio" name="q6" value="a"> Random search</label><br>
+  <label><input type="radio" name="q6" value="b"> Systematic, random search interleaved with path-sensitive search</label><br>
+  <div class="answer" data-correct="b">Concolic testing uses a combination of systematic and random search interleaved with path-sensitive symbolic analysis to explore program execution paths efficiently.</div>
+</div>
+
+<div class="question">
+  <p>Consider the code fragment given below. What does the code fragment do?</p>
+  <pre>
+0: int x, y;
+1: if (x > y) {
+2:    x = x + y;
+3:    y = x - y;
+4:    x = x - y;
+5:    if (x - y > 0)
+6:      --- error ---;
+}
+  </pre>
+  <label><input type="radio" name="q7" value="a"> It checks if x is greater than y</label><br>
+  <label><input type="radio" name="q7" value="b"> It checks if y is greater than x</label><br>
+  <label><input type="radio" name="q7" value="c"> It swaps the values of x and y</label><br>
+  <label><input type="radio" name="q7" value="d"> It swaps the values of x and y twice</label><br>
+  <div class="answer" data-correct="c">The code swaps the values of x and y using the standard swap algorithm with arithmetic operations.</div>
+</div>
+
+<div class="question">
+  <p>How many decision points and execution paths are there in the code fragment?</p>
+  <label><input type="radio" name="q8" value="a"> Two decision points and three execution paths</label><br>
+  <label><input type="radio" name="q8" value="b"> Three decision points and four execution paths</label><br>
+  <div class="answer" data-correct="a">There are two decision points (the two if statements) and three execution paths depending on the conditions at each decision point.</div>
+</div>
+
+<div class="question">
+  <p>What will be the path constraint at line 1 of the code fragment such that program exits without further execution?</p>
+  <label><input type="radio" name="q9" value="a"> x > y</label><br>
+  <label><input type="radio" name="q9" value="b"> x <= y</label><br>
+  <div class="answer" data-correct="b">If x <= y at line 1, the first if condition fails and the program exits without executing the swap logic.</div>
+</div>
+
+<div class="question">
+  <p>State yes or no: Is the error statement reachable in the given program fragment?</p>
+  <label><input type="radio" name="q10" value="a"> Yes</label><br>
+  <label><input type="radio" name="q10" value="b"> No</label><br>
+  <div class="answer" data-correct="b">No. Based on symbolic execution, the error statement is never reachable because the path constraints required to reach it are unsatisfiable.</div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+
+<div class="question">
+  <p>How is overloading different from overriding in object oriented programming?</p>
+  <label><input type="radio" name="q1" value="a"> Overloading occurs between two methods in the same class and overriding occurs between methods in a class and one of its descendants</label><br>
+  <label><input type="radio" name="q1" value="b"> Overloading occurs between a method in a class and one of its descendants and overriding occurs between two methods in the same class</label><br>
+  <div class="answer" data-correct="a">Overloading occurs between two methods in the same class with different parameter lists, whereas overriding occurs when a subclass provides a new implementation for a method inherited from its parent class.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following represents use of super() keyword?</p>
+  <label><input type="radio" name="q2" value="a"> Sub-classes can explicitly use their parent's variables and methods using the keyword super()</label><br>
+  <label><input type="radio" name="q2" value="b"> Sub-classes can use their own variables and methods and not the inherited ones using the keyword super()</label><br>
+  <div class="answer" data-correct="a">The super() keyword allows a subclass to explicitly access the parent class's variables, methods, or constructors.</div>
+</div>
+
+<div class="question">
+  <p>While applying the mutation operator that deletes a method call, how is the value to be returned by the deleted method passed back to the caller method?</p>
+  <label><input type="radio" name="q3" value="a"> The method itself is deleted, so the call should also be deleted in the caller method</label><br>
+  <label><input type="radio" name="q3" value="b"> The value returned by the deleted method is replaced with a suitable statement in the caller</label><br>
+  <label><input type="radio" name="q3" value="c"> A message is sent to the caller indicating that there is no value to be returned as the method is deleted</label><br>
+  <label><input type="radio" name="q3" value="d"> The value returned by the deleted method is replaced with a fixed, constant value</label><br>
+  <div class="answer" data-correct="d">The value returned by the deleted method is replaced with a fixed, constant value to maintain program consistency during mutation testing.</div>
+</div>
+
+<div class="question">
+  <p>When mutation testing is applied as a black-box testing technique to mutate the inputs, which of the following statements hold true?</p>
+  <label><input type="radio" name="q4" value="a"> Both the inputs and the program which is accepting the inputs have to be mutated with one mutation operator</label><br>
+  <label><input type="radio" name="q4" value="b"> Only the inputs are mutated, the program which is accepting the inputs remains the same</label><br>
+  <label><input type="radio" name="q4" value="c"> The inputs are not mutated, the program is mutated at a random statement</label><br>
+  <label><input type="radio" name="q4" value="d"> The inputs are not mutated, the program is mutated at one of the statements that process the inputs</label><br>
+  <div class="answer" data-correct="b">In black-box mutation testing, only the inputs are mutated to simulate errors, while the program under test remains unchanged.</div>
+</div>
+
+<div class="question">
+  <p>When we change a method call is-divisible(a,b) to is-divisible(b,a) is an example of which of the mutation operators listed below?</p>
+  <label><input type="radio" name="q5" value="a"> Integration parameter variable replacement</label><br>
+  <label><input type="radio" name="q5" value="b"> Integration parameter variable exchange</label><br>
+  <div class="answer" data-correct="b">Integration parameter variable exchange changes the order of arguments in a method call, swapping them to simulate potential errors.</div>
+</div>
+
+<div class="question">
+  <p>State yes or no: The programming language Java does not support multiple class inheritance and hence each class only has a single parent.</p>
+  <label><input type="radio" name="q6" value="a"> Yes</label><br>
+  <label><input type="radio" name="q6" value="b"> No</label><br>
+  <div class="answer" data-correct="a">Yes, Java restricts classes to single inheritance to avoid ambiguity and complexity from multiple class inheritance.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following integration mutation operator represents changing the order of arguments in method invocations to be the same as that of another overloading method, if one exists?</p>
+  <label><input type="radio" name="q7" value="a"> Overloading method change</label><br>
+  <label><input type="radio" name="q7" value="b"> Argument number change</label><br>
+  <label><input type="radio" name="q7" value="c"> Argument order change</label><br>
+  <label><input type="radio" name="q7" value="d"> Reference type change</label><br>
+  <div class="answer" data-correct="c">Argument order change modifies the order of arguments in a method invocation, matching the order of another overloaded method to test integration issues.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: While testing inputs using mutation testing, the inputs always have to adhere to their underlying syntax.</p>
+  <label><input type="radio" name="q8" value="a"> True</label><br>
+  <label><input type="radio" name="q8" value="b"> False</label><br>
+  <div class="answer" data-correct="b">False. Mutation testing may generate inputs that intentionally violate syntax to test robustness and error handling.</div>
+</div>
+
+<div class="question">
+  <p>Towards ensuring that mutation testing subsumes edge coverage, which of the following mutation operators are used?</p>
+  <label><input type="radio" name="q9" value="a"> Relational operator replacement</label><br>
+  <label><input type="radio" name="q9" value="b"> Statement replacement</label><br>
+  <label><input type="radio" name="q9" value="c"> Logical operator replacement</label><br>
+  <label><input type="radio" name="q9" value="d"> Condition statement replacement</label><br>
+  <div class="answer" data-correct="a">Relational operator replacement ensures that edges in the control flow graph are exercised, aiding edge coverage during testing.</div>
+</div>
+
+<div class="question">
+  <p>Which of the statements below are true with reference to mutation testing subsuming all-defs coverage?</p>
+  <label><input type="radio" name="q10" value="a"> We need to consider strong mutation to be applied to the statements that contain variable definitions</label><br>
+  <label><input type="radio" name="q10" value="b"> Both weak and strong mutation on the statements that contain variable definitions will work</label><br>
+  <div class="answer" data-correct="a">Strong mutation must be applied to statements containing variable definitions to ensure that all definitions are tested, thus subsuming all-defs coverage.</div>
+</div>
+
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>

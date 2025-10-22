@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Quiz | SkillKernal</title>
+  <link rel="stylesheet" href="Quiz.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SK</div>
+    <div>
+      <h1>SkillKernal</h1>
+      <p class="tagline">Your Core for Growth</p>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <h2>Software testing - Overall Quiz</h2>
+    <form id="quizForm">
+
+
+
+<div class="question">
+  <p>Which of the following best describes a test driver?</p>
+  <label><input type="radio" name="q1" value="a"> It is a special purpose implementation of a software module, used to develop or test a component that calls it.</label><br>
+  <label><input type="radio" name="q1" value="b"> It is a software component that replaces another component that takes care of the control and/or the calling of a software component.</label><br>
+  <div class="answer" data-correct="It is a software component that replaces another component that takes care of the control and/or the calling of a software component.">Correct Answer: It is a software component that replaces another component that takes care of the control and/or the calling of a software component.</div>
+</div>
+
+<div class="question">
+  <p>If method A uses a variable v shared with method B, where A writes to v and B reads from v, then, it is an example of which kind of coupling interface listed below?</p>
+  <label><input type="radio" name="q2" value="a"> Parameter coupling.</label><br>
+  <label><input type="radio" name="q2" value="b"> Interface coupling.</label><br>
+  <label><input type="radio" name="q2" value="c"> External coupling.</label><br>
+  <label><input type="radio" name="q2" value="d"> Shared data coupling.</label><br>
+  <div class="answer" data-correct="Shared data coupling.">Correct Answer: Shared data coupling.</div>
+</div>
+
+<div class="question">
+  <p>To test sequencing constraints that occur as requirements specification, which of the following tests are used?</p>
+  <label><input type="radio" name="q3" value="a"> Tests are inputs to sequencing constraints that violate the constraints.</label><br>
+  <label><input type="radio" name="q3" value="b"> Tests are inputs to sequencing constraints that satisfy the constraints.</label><br>
+  <label><input type="radio" name="q3" value="c"> Tests are sequences of method calls, as they occur in the specification.</label><br>
+  <label><input type="radio" name="q3" value="d"> Tests are randomly generated sequencing constraints.</label><br>
+  <div class="answer" data-correct="Tests are sequences of method calls, as they occur in the specification.">Correct Answer: Tests are sequences of method calls, as they occur in the specification.</div>
+</div>
+
+<div class="question">
+  <p>A simple path from the last definition to the first use of a coupling variable is called as:</p>
+  <label><input type="radio" name="q4" value="a"> A du-path.</label><br>
+  <label><input type="radio" name="q4" value="b"> A coupling du-path.</label><br>
+  <div class="answer" data-correct="A coupling du-path.">Correct Answer: A coupling du-path.</div>
+</div>
+
+<div class="question">
+  <p>State Yes or No: Are control flow graphs representing code the same as finite state machines that represent the same code?</p>
+  <label><input type="radio" name="q5" value="a"> Yes.</label><br>
+  <label><input type="radio" name="q5" value="b"> No.</label><br>
+  <div class="answer" data-correct="No.">Correct Answer: No.</div>
+</div>
+
+<div class="question">
+  <p>Which of the following is true with reference to the graph satisfying the sequencing constraints (1) An open(f) must be executed before every write(t), (2) An open(f) must be executed before every close(), (3) A write(f) may not be executed after a close() unless there is an open(f) in between, (4) A write(t) should be executed before every close()?</p>
+  <label><input type="radio" name="q6" value="a"> All the sequencing constraints are satisfied.</label><br>
+  <label><input type="radio" name="q6" value="b"> Constraints (1) and (2) are satisfied but (3) and (4) are not.</label><br>
+  <label><input type="radio" name="q6" value="c"> Constraints (1), (2) and (3) are satisfied but (4) is not.</label><br>
+  <label><input type="radio" name="q6" value="d"> All constraints are violated.</label><br>
+  <div class="answer" data-correct="Constraints (1), (2) and (3) are satisfied but (4) is not.">Correct Answer: Constraints (1), (2) and (3) are satisfied but (4) is not.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: The path (1,4,5,7) satisfies constraint (4).</p>
+  <label><input type="radio" name="q7" value="a"> True.</label><br>
+  <label><input type="radio" name="q7" value="b"> False.</label><br>
+  <div class="answer" data-correct="False.">Correct Answer: False.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: The path (1,2,3,7) satisfies all the constraints.</p>
+  <label><input type="radio" name="q8" value="a"> True.</label><br>
+  <label><input type="radio" name="q8" value="b"> False.</label><br>
+  <div class="answer" data-correct="True.">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+  <p>State yes or no: Does the path (1,4,6,7) violate any of the constraints?</p>
+  <label><input type="radio" name="q9" value="a"> Yes.</label><br>
+  <label><input type="radio" name="q9" value="b"> No.</label><br>
+  <div class="answer" data-correct="No.">Correct Answer: No.</div>
+</div>
+
+<div class="question">
+  <p>State true or false: The path (1,4,6,4,6,7) satisfies all the constraints.</p>
+  <label><input type="radio" name="q10" value="a"> Yes.</label><br>
+  <label><input type="radio" name="q10" value="b"> No.</label><br>
+  <div class="answer" data-correct="Yes.">Correct Answer: Yes.</div>
+</div>
+
+
+
+
+      
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="OA_Quiz.js"></script>
+</body>
+</html>
